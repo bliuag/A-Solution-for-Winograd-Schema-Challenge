@@ -32,17 +32,42 @@ def google_search(q):
         return 0
 
 
-def pick_by_google(pron, c0, c1, i):
+def pick_by_google(p1, p2, pron, c0, c1, i):
+
+    for token in p1["sentences"][0]["tokens"]:
+        if token["word"] in c0 and token["ner"] == "PERSON":
+            return pick_by_nc(p1, p2, pron, c0, c1, i)
+        elif token["word"] in c1 and token["ner"] == "PERSON":
+            return pick_by_nc(p1, p2, pron, c0, c1, i)
+
     q0 = sent2[i].replace(pron, c0)
     num0 = google_search(q0)
     q1 = sent2[i].replace(pron, c1)
     num1 = google_search(q1)
+    print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
     if num0 > num1:  # *5 and num1!=0 :
         return c0
     elif num1 > num0:  # *5 and num1!=0:
         return c1
     else:
-        return "No Decision"
+        r = p2["sentences"][0]["enhancedDependencies"][0]["dependentGloss"]
+        for token in p2["sentences"][0]["tokens"]:
+            if token["word"] == r:
+                if 'V' in token["pos"]:
+                    q0 = c0 + " " + r
+                    q1 = c1 + " " + r
+                else:
+                    q0 = r + " " + c0
+                    q1 = r + " " + c1
+        num0 = google_search(q0)
+        num1 = google_search(q1)
+        print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
+        if num0 > num1:  # *5 and num1!=0 :
+            return c0
+        elif num1 > num0:  # *5 and num1!=0:
+            return c1
+        else:
+            return "No Decision"
 
 
 def check_nc(v1, v2, role_of_pron):
@@ -74,23 +99,32 @@ def check_nc(v1, v2, role_of_pron):
 
 def pick_by_nc(p1, p2, pron, c0, c1, i):
 
+    r1 = ""
+    r2 = ""
+    r2_2 = ""
+
     r1index = p1["sentences"][0]["enhancedDependencies"][0]["dependent"]
     for token in p1["sentences"][0]["tokens"]:
         if token["index"] == r1index:
-            if 'V' in token["pos"]:
                 r1 = token["lemma"]
-            else:
-                return "No Decision"
 
     r2index = p2["sentences"][0]["enhancedDependencies"][0]["dependent"]
     for token in p2["sentences"][0]["tokens"]:
         if token["index"] == r2index:
-            if 'V' in token["pos"]:
                 r2 = token["lemma"]
-            else:
-                return "No Decision"
+
+
+    for dependency in p2["sentences"][0]["enhancedDependencies"]:
+        if "subj" in dependency['dep'] and dependency['dependentGloss'] in pron and dependency['governorGloss'] != r2:
+            r2_2index = dependency["governor"]
+            for token in p2["sentences"][0]["tokens"]:
+                if token["index"] == r2_2index:
+                        r2_2 = token["lemma"]
 
     role = check_nc(r1, r2, 's')
+    # if role == "No Decision":
+    #     r2 = r2_2
+    #     role = check_nc(r1, r2_2, '')
     print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
     if role == 's':
         return c0
@@ -101,8 +135,8 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
 
 
 def pick_ans(p1, p2, pron, c0, c1, i):
-    # return pick_by_google(pron,c0,c1,i)
-    return pick_by_nc(p1, p2, pron, c0, c1, i)
+    return pick_by_google(p1, p2, pron,c0,c1,i)
+    # return pick_by_nc(p1, p2, pron, c0, c1, i)
 
 
 sentences = []
@@ -117,7 +151,7 @@ flags = []
 conjList = [' because ', ',because ', ',since ', ' since ', ' or ', ',or ',' but ', ',but ', ' after ', ',after ', ' so ', ',so ',  ' even if ', ',even if ', ' though ', ',though ',  ' and ', ',and ', ' that ', ',that']
 
 # input the data
-data = open('train.c.txt', 'r')
+data = open('test.c.txt', 'r')
 counter = 0
 size = 0
 for line in data:
@@ -256,4 +290,4 @@ for i in range(size):
         correct += 1
     else:
         wrong += 1
-print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d" % (size, correct*100/size, wrong*100/size, noDecision*100/size))
+print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d, error: %f" % (size, correct*100/size, wrong*100/size, noDecision*100/size, 1.0*(wrong+noDecision/2)/size))
