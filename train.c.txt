@@ -7,3 +7,13 @@ The bee landed on the flower because it wanted pollen.
 it
 The bee,the flower
 The bee
+
+When Debbie splashed Tina, she got in trouble.
+she
+Debbie,Tina
+Debbie
+
+When Debbie splashed Tina, she got wet.
+she
+Debbie,Tina
+Tina
