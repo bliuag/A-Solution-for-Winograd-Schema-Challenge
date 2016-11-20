@@ -17,3 +17,33 @@ When Debbie splashed Tina, she got wet.
 she
 Debbie,Tina
 Tina
+
+The bus driver yelled at a kid after she drove her vehicle.
+she
+The bus driver,a kid
+The bus driver
+
+The bus driver yelled at a kid after she broke a window.
+she
+The bus driver,a kid
+a kid
+
+Jimbo was running from Bobbert because he smelled awful.
+he
+Jimbo,Bobbert
+Bobbert
+
+Jimbo was running from Bobbert because he wanted to get to the car first.
+he
+Jimbo,Bobbert
+Jimbo
+
+Jimbo attacked Bobbert because he stole an elephant from the zoo.
+he
+Jimbo,Bobbert
+Bobbert
+
+Jimbo attacked Bobbert because he could not control his rage.
+he
+Jimbo,Bobbert
+Jimbo

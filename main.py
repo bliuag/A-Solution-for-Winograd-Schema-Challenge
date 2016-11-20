@@ -9,39 +9,73 @@ import json
 import re
 import requests
 from bs4 import BeautifulSoup
-import argparse
+import random
+import time
 
 
 def google_search(q):
-    r = requests.get('http://www.google.com/search',
+    # t = random.uniform(0, 1)
+    # time.sleep(t)
+    r = requests.get('http://www.bing.com/search',
                      params={'q': '"' + q + '"',
                              "tbs": "li:1"}
                      )
 
     soup = BeautifulSoup(r.text, 'html.parser')
-    # print(soup)
-    resultstr = soup.find('div', {'id': 'resultStats'}).text
+    try:
+        resultstr = soup.find('div', {'id': 'b_tween'}).text
+    except Exception:
+        return 0
     try:
         return int(re.sub("[^0-9]", "", resultstr))
     except ValueError:
         return 0
 
 
-def pick_ans(p1, p2, pron, c0, c1, i):
+def pick_by_google(pron, c0, c1, i):
     q0 = sent2[i].replace(pron, c0)
-    print(q0)
     num0 = google_search(q0)
-    print(num0)
     q1 = sent2[i].replace(pron, c1)
-    print(q1)
     num1 = google_search(q1)
-    print(num1)
-    if num0 > num1:#*5 and num1!=0 :
+    if num0 > num1:  # *5 and num1!=0 :
         return c0
-    elif num1 > num0:#*5 and num1!=0:
+    elif num1 > num0:  # *5 and num1!=0:
         return c1
     else:
         return "No Decision"
+
+
+def check_nc(v1, v2, role1, role2):
+
+    return
+
+
+def pick_by_nc(p1, p2, pron, c0, c1, i):
+
+    r1index = p1["sentences"][0]["enhancedDependencies"][0]["dependent"]
+    for token in p1["sentences"][0]["tokens"]:
+        if token["index"] == r1index:
+            if 'V' in token["pos"]:
+                r1 = token["lemma"]
+            else:
+                return "No Decision"
+
+    r2index = p2["sentences"][0]["enhancedDependencies"][0]["dependent"]
+    for token in p2["sentences"][0]["tokens"]:
+        if token["index"] == r2index:
+            if 'V' in token["pos"]:
+                r2 = token["lemma"]
+            else:
+                return "No Decision"
+
+    result = check_nc(r1, r2, 's', 's')
+
+    return result
+
+
+def pick_ans(p1, p2, pron, c0, c1, i):
+    return "fake"
+    # return pick_by_google(pron,c0,c1,i)
 
 
 sentences = []
@@ -99,6 +133,26 @@ for line in data:
 
 data.close()
 
+# input Narrative Chain
+nc_file = open('schemas-size12.txt', 'r')
+nc = []
+nc_object = {}
+nc_chains = []
+for line in nc_file:
+    if line == "":
+        pass
+    elif line == "*****":
+        nc_object = {}
+        nc_chains = []
+    elif line[:7] == "Events":
+        nc_object["events"] = line[7:].strip().split(" ")
+    elif line[0] == "[":
+        end = line.find("]")
+        nc_chains.append(line[1:end].strip().split(" "))
+
+
+
+
 # cut the sentence to two parts according to conjunctions
 for i in range(size):
     sent = sentences[i]
@@ -140,33 +194,31 @@ for i in range(size):
 fileList.close()
 
 # use Stanford CoreNLP to get the parse result
-# os.system('corenlp.sh -props prop.properties')
+os.system('corenlp.sh -props prop.properties')
 
 # for each question
 for i in range(size):
     if flags[i] != "No Decision":
-        # with open(os.path.join(subdirectory, str(i)+'p1.out'), 'r') as fp1:
-        #     p1 = json.load(fp1)
-        # with open(os.path.join(subdirectory, str(i)+'p2.out'), 'r') as fp2:
-        #     p2 = json.load(fp2)
-        p1 = ""
-        p2 = ""
+        with open(os.path.join(subdirectory, str(i)+'p1.out'), 'r') as fp1:
+            p1 = json.load(fp1)
+        with open(os.path.join(subdirectory, str(i)+'p2.out'), 'r') as fp2:
+            p2 = json.load(fp2)
         ans = pick_ans(p1, p2, prons[i], choice0[i], choice1[i], i)
         print(ans)
         flags[i] = ans
 
 
 # evaluation
-correct = 0
-wrong = 0
-noDecision = 0
-print(flags)
-print(answer)
-for i in range(size):
-    if flags[i] == 'No Decision':
-        noDecision += 1
-    elif flags[i] == answer[i]:
-        correct += 1
-    else:
-        wrong += 1
-print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d" % (size, correct*100/size, wrong*100/size, noDecision*100/size))
+# correct = 0
+# wrong = 0
+# noDecision = 0
+# print(flags)
+# print(answer)
+# for i in range(size):
+#     if flags[i] == 'No Decision':
+#         noDecision += 1
+#     elif flags[i] == answer[i]:
+#         correct += 1
+#     else:
+#         wrong += 1
+# print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d" % (size, correct*100/size, wrong*100/size, noDecision*100/size))
