@@ -46,22 +46,30 @@ def pick_by_google(pron, c0, c1, i):
 
 
 def check_nc(v1, v2, role_of_pron):
-    flag = 'waiting'
-    for nc_object in nc:
-        if v1 in nc_object['events'] and v2 in nc_object['events']:
+    flag = {'s': 0, 'o': 0}
+    for nc_item in nc:
+        if v1 in nc_item['events'] and v2 in nc_item['events']:
+            print(nc_item['events'])
             item = v2+'-'+role_of_pron
-            for nc_chain in nc_object['chains']:
+            for nc_chain in nc_item['chains']:
                 if item in nc_chain:
                     for node in nc_chain:
-                        if v1 in node:
-                            if flag != node[-1] and flag != 'waiting':
-                                return "No Decision"
-                            else:
-                                flag = node[-1]
-    if flag == 'waiting':
+                        if v1 == node[:-2]:
+                            # if flag != node[-1] and flag != 'waiting':
+                            #     return "No Decision"
+                            # else:
+                            #     flag = node[-1]
+                            flag[node[-1]] += 1
+    # if flag == 'waiting':
+    #     return "No Decision"
+    # else:
+    #     return flag
+    if flag['s'] == 0 and flag['o']==0:
         return "No Decision"
+    elif flag['s'] > flag['o']:
+        return 's'
     else:
-        return flag
+        return 'o'
 
 
 def pick_by_nc(p1, p2, pron, c0, c1, i):
@@ -83,6 +91,7 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
                 return "No Decision"
 
     role = check_nc(r1, r2, 's')
+    print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
     if role == 's':
         return c0
     elif role == 'o':
@@ -158,7 +167,7 @@ nc_object = {}
 nc_chains = []
 for line in nc_file:
     line.strip()
-    if line == "*****":
+    if "*****" in line:
         if nc_object != {}:
             nc_object["chains"] = nc_chains
             nc.append(nc_object)
@@ -173,6 +182,8 @@ if nc_object != {}:
     nc_object["chains"] = nc_chains
     nc.append(nc_object)
 nc_file.close()
+nc_output = open('nc_output.txt', 'w')
+
 # print(nc)
 
 # cut the sentence to two parts according to conjunctions
@@ -228,6 +239,8 @@ for i in range(size):
         ans = pick_ans(p1, p2, prons[i], choice0[i], choice1[i], i)
         # print(ans)
         flags[i] = ans
+
+# print(check_nc("give", "want", 's'))
 
 
 # evaluation
