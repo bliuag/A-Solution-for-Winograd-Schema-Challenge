@@ -45,9 +45,23 @@ def pick_by_google(pron, c0, c1, i):
         return "No Decision"
 
 
-def check_nc(v1, v2, role1, role2):
-
-    return
+def check_nc(v1, v2, role_of_pron):
+    flag = 'waiting'
+    for nc_object in nc:
+        if v1 in nc_object['events'] and v2 in nc_object['events']:
+            item = v2+'-'+role_of_pron
+            for nc_chain in nc_object['chains']:
+                if item in nc_chain:
+                    for node in nc_chain:
+                        if v1 in node:
+                            if flag != node[-1] and flag != 'waiting':
+                                return "No Decision"
+                            else:
+                                flag = node[-1]
+    if flag == 'waiting':
+        return "No Decision"
+    else:
+        return flag
 
 
 def pick_by_nc(p1, p2, pron, c0, c1, i):
@@ -68,14 +82,18 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
             else:
                 return "No Decision"
 
-    result = check_nc(r1, r2, 's', 's')
-
-    return result
+    role = check_nc(r1, r2, 's')
+    if role == 's':
+        return c0
+    elif role == 'o':
+        return c1
+    else:
+        return "No Decision"
 
 
 def pick_ans(p1, p2, pron, c0, c1, i):
-    return "fake"
     # return pick_by_google(pron,c0,c1,i)
+    return pick_by_nc(p1, p2, pron, c0, c1, i)
 
 
 sentences = []
@@ -139,19 +157,23 @@ nc = []
 nc_object = {}
 nc_chains = []
 for line in nc_file:
-    if line == "":
-        pass
-    elif line == "*****":
+    line.strip()
+    if line == "*****":
+        if nc_object != {}:
+            nc_object["chains"] = nc_chains
+            nc.append(nc_object)
         nc_object = {}
         nc_chains = []
-    elif line[:7] == "Events":
+    elif line[:7] == "Events:":
         nc_object["events"] = line[7:].strip().split(" ")
     elif line[0] == "[":
         end = line.find("]")
         nc_chains.append(line[1:end].strip().split(" "))
-
-
-
+if nc_object != {}:
+    nc_object["chains"] = nc_chains
+    nc.append(nc_object)
+nc_file.close()
+# print(nc)
 
 # cut the sentence to two parts according to conjunctions
 for i in range(size):
@@ -204,21 +226,21 @@ for i in range(size):
         with open(os.path.join(subdirectory, str(i)+'p2.out'), 'r') as fp2:
             p2 = json.load(fp2)
         ans = pick_ans(p1, p2, prons[i], choice0[i], choice1[i], i)
-        print(ans)
+        # print(ans)
         flags[i] = ans
 
 
 # evaluation
-# correct = 0
-# wrong = 0
-# noDecision = 0
-# print(flags)
-# print(answer)
-# for i in range(size):
-#     if flags[i] == 'No Decision':
-#         noDecision += 1
-#     elif flags[i] == answer[i]:
-#         correct += 1
-#     else:
-#         wrong += 1
-# print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d" % (size, correct*100/size, wrong*100/size, noDecision*100/size))
+correct = 0
+wrong = 0
+noDecision = 0
+print(flags)
+print(answer)
+for i in range(size):
+    if flags[i] == 'No Decision':
+        noDecision += 1
+    elif flags[i] == answer[i]:
+        correct += 1
+    else:
+        wrong += 1
+print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d" % (size, correct*100/size, wrong*100/size, noDecision*100/size))
