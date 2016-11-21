@@ -45,9 +45,9 @@ def pick_by_google(p1, p2, pron, c0, c1, i):
     q1 = sent2[i].replace(pron, c1)
     num1 = google_search(q1)
     print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
-    if num0 > num1:  # *5 and num1!=0 :
+    if num0 > num1 * 1.2:  # *5 and num1!=0 :
         return c0
-    elif num1 > num0:  # *5 and num1!=0:
+    elif num1 > num0 * 1.2:  # *5 and num1!=0:
         return c1
     else:
         r = p2["sentences"][0]["enhancedDependencies"][0]["dependentGloss"]
@@ -56,9 +56,15 @@ def pick_by_google(p1, p2, pron, c0, c1, i):
                 if 'V' in token["pos"]:
                     q0 = c0 + " " + r
                     q1 = c1 + " " + r
-                else:
+                elif 'JJ' in token["pos"]:
                     q0 = r + " " + c0
                     q1 = r + " " + c1
+                else:
+                    for dependency in p2["sentences"][0]["enhancedDependencies"]:
+                        if dependency["governorGloss"] == r and dependency["dep"] == 'cop':
+                            q0 = c0 + ' ' + dependency['dependentGloss'] + ' ' + r
+                            q1 = c1 + ' ' + dependency['dependentGloss'] + ' ' + r
+
         num0 = google_search(q0)
         num1 = google_search(q1)
         print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
@@ -67,14 +73,15 @@ def pick_by_google(p1, p2, pron, c0, c1, i):
         elif num1 > num0:  # *5 and num1!=0:
             return c1
         else:
-            return "No Decision"
+            return pick_by_nc(p1, p2, pron, c0, c1, i)
 
 
 def check_nc(v1, v2, role_of_pron):
+    total = 0
     flag = {'s': 0, 'o': 0}
     for nc_item in nc:
         if v1 in nc_item['events'] and v2 in nc_item['events']:
-            print(nc_item['events'])
+            # print(nc_item['events'])
             item = v2+'-'+role_of_pron
             for nc_chain in nc_item['chains']:
                 if item in nc_chain:
@@ -85,50 +92,80 @@ def check_nc(v1, v2, role_of_pron):
                             # else:
                             #     flag = node[-1]
                             flag[node[-1]] += 1
+                            total += 1
     # if flag == 'waiting':
     #     return "No Decision"
     # else:
     #     return flag
-    if flag['s'] == 0 and flag['o']==0:
-        return "No Decision"
-    elif flag['s'] > flag['o']:
-        return 's'
-    else:
-        return 'o'
+    # if flag['s'] == 0 and flag['o']==0:
+    #     return "No Decision"
+    # elif flag['s'] > flag['o']:
+    #     return 's'
+    # else:
+    #     return 'o'
+    # print("total: %d, s-o: %d" % (total, flag['s'] - flag['o']))
+    return [total, flag['s'] - flag['o']]
 
 
 def pick_by_nc(p1, p2, pron, c0, c1, i):
 
-    r1 = ""
-    r2 = ""
-    r2_2 = ""
+    r1 = []
+    mark1 = []
+    r2 = []
+    mark2 = []
 
-    r1index = p1["sentences"][0]["enhancedDependencies"][0]["dependent"]
-    for token in p1["sentences"][0]["tokens"]:
-        if token["index"] == r1index:
-                r1 = token["lemma"]
-
-    r2index = p2["sentences"][0]["enhancedDependencies"][0]["dependent"]
-    for token in p2["sentences"][0]["tokens"]:
-        if token["index"] == r2index:
-                r2 = token["lemma"]
-
+    # r1index = p1["sentences"][0]["enhancedDependencies"][0]["dependent"]
+    # for token in p1["sentences"][0]["tokens"]:
+    #     if token["index"] == r1index:
+    #             r1 = token["lemma"]
+    #
+    # r2index = p2["sentences"][0]["enhancedDependencies"][0]["dependent"]
+    # for token in p2["sentences"][0]["tokens"]:
+    #     if token["index"] == r2index:
+    #             r2 = token["lemma"]
+    total = 0
+    for dependency in p1["sentences"][0]["enhancedDependencies"]:
+        if "subj" in dependency['dep'] and dependency['dependentGloss'] in c0:
+            r1index = dependency["governor"]
+            for token in p1["sentences"][0]["tokens"]:
+                if token["index"] == r1index:
+                    r1.append(token["lemma"])
+                    if 'pass' in dependency['dep']:
+                        mark1.append('pass')
+                    else:
+                        mark1.append('acti')
 
     for dependency in p2["sentences"][0]["enhancedDependencies"]:
-        if "subj" in dependency['dep'] and dependency['dependentGloss'] in pron and dependency['governorGloss'] != r2:
-            r2_2index = dependency["governor"]
+        if "subj" in dependency['dep'] and dependency['dependentGloss'] in pron:
+            r2index = dependency["governor"]
             for token in p2["sentences"][0]["tokens"]:
-                if token["index"] == r2_2index:
-                        r2_2 = token["lemma"]
+                if token["index"] == r2index:
+                    r2.append(token["lemma"])
+                    if 'pass' in dependency['dep']:
+                        mark2.append('pass')
+                    else:
+                        mark2.append('acti')
 
-    role = check_nc(r1, r2, 's')
-    # if role == "No Decision":
-    #     r2 = r2_2
-    #     role = check_nc(r1, r2_2, '')
-    print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
-    if role == 's':
+    s_o = 0
+    for p, v1 in enumerate(r1):
+        for q, v2 in enumerate(r2):
+            if mark2[q] == 'acti':
+                pr = 's'
+            else:
+                pr = 'o'
+            temp = check_nc(v1, v2, pr)
+            total += temp[0]
+            temp = temp[1]
+            if mark1[p] == 'pass':
+                temp = -temp
+            s_o += temp
+    # print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
+    if total == 0:
+        return "No Decision"
+    print(1.0 * s_o / total)
+    if 1.0 * s_o / total > 0.3:
         return c0
-    elif role == 'o':
+    elif 1.0 * s_o / total < -0.3:
         return c1
     else:
         return "No Decision"
@@ -148,6 +185,7 @@ choice0 = []
 choice1 = []
 answer = []
 flags = []
+
 conjList = [' because ', ',because ', ',since ', ' since ', ' or ', ',or ',' but ', ',but ', ' after ', ',after ', ' so ', ',so ',  ' even if ', ',even if ', ' though ', ',though ',  ' and ', ',and ', ' that ', ',that']
 
 # input the data
@@ -195,7 +233,7 @@ for line in data:
 data.close()
 
 # input Narrative Chain
-nc_file = open('schemas-size12.txt', 'r')
+nc_file = open('schemas.txt', 'r')
 nc = []
 nc_object = {}
 nc_chains = []
@@ -263,6 +301,26 @@ fileList.close()
 # use Stanford CoreNLP to get the parse result
 os.system('corenlp.sh -props prop.properties')
 
+# use Stanford Resolve
+srsubdirectory = "srfiles"
+srfilelist = open('srFileList.txt')
+
+try:
+    os.system('rm -fr '+srsubdirectory)
+    os.mkdir(srsubdirectory)
+except Exception:
+    pass
+
+for i in range(size):
+    tempf = open(os.path.join(srsubdirectory, str(i)+'.in'), 'w')
+    tempf.write(sentences[i])
+    fileList.write(os.path.join(srsubdirectory, str(i)+'.in')+'\n')
+    tempf.close()
+
+fileList.close()
+
+os.system('corenlp.sh -props stanRes.properties')
+
 # for each question
 for i in range(size):
     if flags[i] != "No Decision":
@@ -290,4 +348,4 @@ for i in range(size):
         correct += 1
     else:
         wrong += 1
-print("Total data: %d, Correct: %d, Wrong: %d, No Decision: %d, error: %f" % (size, correct*100/size, wrong*100/size, noDecision*100/size, 1.0*(wrong+noDecision/2)/size))
+print("Total data: %d, Correct: %f, Wrong: %f, No Decision: %f, error: %f" % (size, 1.0*correct*100/size, 1.0*wrong*100/size, 1.0*noDecision*100/size, 1.0*(wrong+noDecision/2)/size))
