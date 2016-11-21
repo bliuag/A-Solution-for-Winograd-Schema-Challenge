@@ -9,6 +9,7 @@ import json
 import re
 import requests
 from bs4 import BeautifulSoup
+import xml.etree.ElementTree
 import random
 import time
 
@@ -189,9 +190,9 @@ choice1 = []
 answer = []
 flags = []
 
-conjList = [' because ', ',because ', ',since ', ' since ', ' or ', ',or ',' but ', ',but ', ' after ', ',after ', ' so ', ',so ',  ' even if ', ',even if ', ' though ', ',though ',  ' and ', ',and ', ' that ', ',that']
+conjList = [' because ', ',because ', ',since ', ' since ', ' or ', ',or ',' but ', ',but ', ' after ', ',after ', ' so ', ',so ',  ' even if ', ',even if ', ' though ', ',though ',  ' and ', ',and ', ' that ', ',that ']
 
-# input the data
+# input the data by txt
 data = open('test.c.txt', 'r')
 counter = 0
 size = 0
@@ -235,6 +236,51 @@ for line in data:
 
 data.close()
 
+# # input data by xml
+# e = xml.etree.ElementTree.parse('WSCollection.xml').getroot()
+# size = 0
+# for schema in e.findall('schema'):
+#     sent1.append(schema[0][0].text)
+#     sent2.append(schema[0][2].text)
+#     prons.append(schema[0][1].text)
+#     c0 = schema[2][0].text
+#     c1 = schema[2][1].text
+#     prons[size] = prons[size].strip()
+#     sent1[size] = sent1[size].strip()
+#     sent2[size] = sent2[size].strip()
+#     sent1[size] = sent1[size].strip('.')
+#     sent2[size] = sent2[size].strip('.')
+#     sent1[size] = sent1[size].strip(',')
+#     sent2[size] = sent2[size].strip(',')
+#     sent1[size] = sent1[size].replace('\n','')
+#     sent2[size] = sent2[size].replace('\n', '')
+#     c0 = c0.strip()
+#     c1 = c1.strip()
+#     c0 = c0.replace('a ', '')
+#     c1 = c1.replace('a ', '')
+#     c0 = c0.replace('the ', '')
+#     c1 = c1.replace('the ', '')
+#     c0 = c0.replace('A ', '')
+#     c1 = c1.replace('A ', '')
+#     c0 = c0.replace('The ', '')
+#     c1 = c1.replace('The ', '')
+#     c0 = c0.replace('an ', '')
+#     c1 = c1.replace('an ', '')
+#     c0 = c0.replace('An ', '')
+#     c1 = c1.replace('An ', '')
+#     choice0.append(c0)
+#     choice1.append(c1)
+#     answ = schema[3].text.strip()
+#     if answ == 'A':
+#         answer.append(c0)
+#     else:
+#         answer.append(c1)
+#     flags.append('waiting')
+#     sentences.append(sent1[size] + ' ' + prons[size] + ' ' + sent2[size])
+#     conjs.append("")
+#     size += 1
+
+
 # input Narrative Chain
 nc_file = open('schemas.txt', 'r')
 nc = []
@@ -265,17 +311,28 @@ nc_output = open('nc_output.txt', 'w')
 for i in range(size):
     sent = sentences[i]
     con = ""
+    last = -1
     for conj in conjList:
-        if conj in sent:
-            con = conj
-            break
+        while sent.find(conj, last+1) != -1:
+            print (last)
+            print (conj)
+            if sent.find(conj, last+1) > sent.find(choice0[i]) and sent.find(conj, last+1) > sent.find(choice1[i]):
+                con = conj
+                break
+            last = sent.find(conj, last + 1)
     if con != "":
         conjs[i] = con
-        subs = sent.split(con)
-        sent1[i] = subs[0]
+        subs = sent[last+1:].split(con)
+        sent1[i] = sent[:last+1]+subs[0]
         sent2[i] = subs[1]
     else:
         flags[i] = "No Decision"
+    print(sentences[i])
+    print(sent1[i])
+    print(sent2[i])
+    print(choice0[i])
+    print(choice1[i])
+    print(answer[i])
 
 
 # write 2 part of sentences to batches of files with a fileList

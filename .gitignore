@@ -1,5 +1,6 @@
 !.gitkeep
 files/
+srfiles/
 fileList.txt
 .DS_Store
 *.log.idea
