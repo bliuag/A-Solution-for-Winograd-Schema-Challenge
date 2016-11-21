@@ -1,0 +1,104 @@
+Sentence #1 (32 tokens):
+Research studies recently revealed that Netflix consumes over 37 percent of the world's internet bandwidth, but they may not be entirely accurate now due to recent changes in Netflix subscribers
+[Text=Research CharacterOffsetBegin=0 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=research NamedEntityTag=O]
+[Text=studies CharacterOffsetBegin=9 CharacterOffsetEnd=16 PartOfSpeech=NNS Lemma=study NamedEntityTag=O]
+[Text=recently CharacterOffsetBegin=17 CharacterOffsetEnd=25 PartOfSpeech=RB Lemma=recently NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">recently</TIMEX3>]
+[Text=revealed CharacterOffsetBegin=26 CharacterOffsetEnd=34 PartOfSpeech=VBD Lemma=reveal NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=35 CharacterOffsetEnd=39 PartOfSpeech=IN Lemma=that NamedEntityTag=O]
+[Text=Netflix CharacterOffsetBegin=40 CharacterOffsetEnd=47 PartOfSpeech=NNP Lemma=Netflix NamedEntityTag=ORGANIZATION]
+[Text=consumes CharacterOffsetBegin=48 CharacterOffsetEnd=56 PartOfSpeech=VBZ Lemma=consume NamedEntityTag=O]
+[Text=over CharacterOffsetBegin=57 CharacterOffsetEnd=61 PartOfSpeech=IN Lemma=over NamedEntityTag=O]
+[Text=37 CharacterOffsetBegin=62 CharacterOffsetEnd=64 PartOfSpeech=CD Lemma=37 NamedEntityTag=PERCENT NormalizedNamedEntityTag=>%37.0]
+[Text=percent CharacterOffsetBegin=65 CharacterOffsetEnd=72 PartOfSpeech=NN Lemma=percent NamedEntityTag=PERCENT NormalizedNamedEntityTag=>%37.0]
+[Text=of CharacterOffsetBegin=73 CharacterOffsetEnd=75 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=76 CharacterOffsetEnd=79 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=world CharacterOffsetBegin=80 CharacterOffsetEnd=85 PartOfSpeech=NN Lemma=world NamedEntityTag=O]
+[Text='s CharacterOffsetBegin=85 CharacterOffsetEnd=87 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=internet CharacterOffsetBegin=88 CharacterOffsetEnd=96 PartOfSpeech=NN Lemma=internet NamedEntityTag=O]
+[Text=bandwidth CharacterOffsetBegin=97 CharacterOffsetEnd=106 PartOfSpeech=NN Lemma=bandwidth NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=106 CharacterOffsetEnd=107 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=108 CharacterOffsetEnd=111 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=112 CharacterOffsetEnd=116 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=may CharacterOffsetBegin=117 CharacterOffsetEnd=120 PartOfSpeech=MD Lemma=may NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=121 CharacterOffsetEnd=124 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=125 CharacterOffsetEnd=127 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=entirely CharacterOffsetBegin=128 CharacterOffsetEnd=136 PartOfSpeech=RB Lemma=entirely NamedEntityTag=O]
+[Text=accurate CharacterOffsetBegin=137 CharacterOffsetEnd=145 PartOfSpeech=JJ Lemma=accurate NamedEntityTag=O]
+[Text=now CharacterOffsetBegin=146 CharacterOffsetEnd=149 PartOfSpeech=RB Lemma=now NamedEntityTag=DATE NormalizedNamedEntityTag=PRESENT_REF Timex=<TIMEX3 tid="t2" type="DATE" value="PRESENT_REF">now</TIMEX3>]
+[Text=due CharacterOffsetBegin=150 CharacterOffsetEnd=153 PartOfSpeech=JJ Lemma=due NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=154 CharacterOffsetEnd=156 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=recent CharacterOffsetBegin=157 CharacterOffsetEnd=163 PartOfSpeech=JJ Lemma=recent NamedEntityTag=O]
+[Text=changes CharacterOffsetBegin=164 CharacterOffsetEnd=171 PartOfSpeech=NNS Lemma=change NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=172 CharacterOffsetEnd=174 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=Netflix CharacterOffsetBegin=175 CharacterOffsetEnd=182 PartOfSpeech=NNP Lemma=Netflix NamedEntityTag=ORGANIZATION]
+[Text=subscribers CharacterOffsetBegin=183 CharacterOffsetEnd=194 PartOfSpeech=NNS Lemma=subscriber NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NN Research) (NNS studies))
+    (VP
+      (ADVP (RB recently))
+      (VBD revealed)
+      (SBAR (IN that)
+        (S
+          (S
+            (NP (NNP Netflix))
+            (VP (VBZ consumes)
+              (PP (IN over)
+                (NP
+                  (NP (CD 37) (NN percent))
+                  (PP (IN of)
+                    (NP
+                      (NP (DT the) (NN world) (POS 's))
+                      (NN internet) (NN bandwidth)))))))
+          (, ,)
+          (CC but)
+          (S
+            (NP (PRP they))
+            (VP (MD may) (RB not)
+              (VP (VB be)
+                (ADJP (RB entirely) (JJ accurate))
+                (PP
+                  (ADVP (RB now))
+                  (JJ due)
+                  (PP (TO to)
+                    (NP
+                      (NP (JJ recent) (NNS changes))
+                      (PP (IN in)
+                        (NP (NNP Netflix) (NNS subscribers))))))))))))))
+
+root(ROOT-0, revealed-4)
+compound(studies-2, Research-1)
+nsubj(revealed-4, studies-2)
+advmod(revealed-4, recently-3)
+mark(consumes-7, that-5)
+nsubj(consumes-7, Netflix-6)
+ccomp(revealed-4, consumes-7)
+case(percent-10, over-8)
+nummod(percent-10, 37-9)
+nmod:over(consumes-7, percent-10)
+case(bandwidth-16, of-11)
+det(world-13, the-12)
+nmod:poss(bandwidth-16, world-13)
+case(world-13, 's-14)
+compound(bandwidth-16, internet-15)
+nmod:of(percent-10, bandwidth-16)
+punct(consumes-7, ,-17)
+cc(consumes-7, but-18)
+nsubj(accurate-24, they-19)
+aux(accurate-24, may-20)
+neg(accurate-24, not-21)
+cop(accurate-24, be-22)
+advmod(accurate-24, entirely-23)
+ccomp(revealed-4, accurate-24)
+conj:but(consumes-7, accurate-24)
+advcl:due(accurate-24, now-25)
+case(now-25, due-26)
+case(changes-29, to-27)
+amod(changes-29, recent-28)
+nmod:to(now-25, changes-29)
+case(subscribers-32, in-30)
+compound(subscribers-32, Netflix-31)
+nmod:in(changes-29, subscribers-32)
+
+Coreference set:
+	(1,31,[31,32]) -> (1,6,[6,7]), that is: "Netflix" -> "Netflix"

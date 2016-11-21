@@ -1,0 +1,41 @@
+Sentence #1 (11 tokens):
+The criminal shocked John, because he was not expecting it
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=criminal CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=JJ Lemma=criminal NamedEntityTag=O]
+[Text=shocked CharacterOffsetBegin=13 CharacterOffsetEnd=20 PartOfSpeech=JJ Lemma=shocked NamedEntityTag=O]
+[Text=John CharacterOffsetBegin=21 CharacterOffsetEnd=25 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=25 CharacterOffsetEnd=26 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=27 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=38 CharacterOffsetEnd=41 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=42 CharacterOffsetEnd=45 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=expecting CharacterOffsetBegin=46 CharacterOffsetEnd=55 PartOfSpeech=VBG Lemma=expect NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=56 CharacterOffsetEnd=58 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (JJ criminal))
+    (VP (JJ shocked)
+      (NP
+        (NP (NNP John))
+        (, ,)
+        (SBAR (IN because)
+          (S
+            (NP (PRP he))
+            (VP (VBD was) (RB not)
+              (VP (VBG expecting)
+                (NP (PRP it))))))))))
+
+root(ROOT-0, shocked-3)
+det(criminal-2, The-1)
+nsubj(shocked-3, criminal-2)
+dobj(shocked-3, John-4)
+punct(John-4, ,-5)
+mark(expecting-10, because-6)
+nsubj(expecting-10, he-7)
+aux(expecting-10, was-8)
+neg(expecting-10, not-9)
+dep(John-4, expecting-10)
+dobj(expecting-10, it-11)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "he" -> "The criminal"

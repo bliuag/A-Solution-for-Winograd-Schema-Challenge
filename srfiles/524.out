@@ -1,0 +1,81 @@
+Sentence #1 (24 tokens):
+Apple was in talks with Verizon to be their dedicated phone provider initially, but they gave the deal to AT&T in the end
+[Text=Apple CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Apple NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=6 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=talks CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=NNS Lemma=talk NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=Verizon CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=NNP Lemma=Verizon NamedEntityTag=ORGANIZATION]
+[Text=to CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=dedicated CharacterOffsetBegin=44 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=dedicated NamedEntityTag=O]
+[Text=phone CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=NN Lemma=phone NamedEntityTag=O]
+[Text=provider CharacterOffsetBegin=60 CharacterOffsetEnd=68 PartOfSpeech=NN Lemma=provider NamedEntityTag=O]
+[Text=initially CharacterOffsetBegin=69 CharacterOffsetEnd=78 PartOfSpeech=RB Lemma=initially NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=78 CharacterOffsetEnd=79 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=80 CharacterOffsetEnd=83 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=84 CharacterOffsetEnd=88 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=gave CharacterOffsetBegin=89 CharacterOffsetEnd=93 PartOfSpeech=VBD Lemma=give NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=94 CharacterOffsetEnd=97 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=deal CharacterOffsetBegin=98 CharacterOffsetEnd=102 PartOfSpeech=NN Lemma=deal NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=103 CharacterOffsetEnd=105 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=AT&T CharacterOffsetBegin=106 CharacterOffsetEnd=110 PartOfSpeech=NNP Lemma=AT&T NamedEntityTag=ORGANIZATION]
+[Text=in CharacterOffsetBegin=111 CharacterOffsetEnd=113 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=114 CharacterOffsetEnd=117 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=end CharacterOffsetBegin=118 CharacterOffsetEnd=121 PartOfSpeech=NN Lemma=end NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Apple))
+        (VP (VBD was)
+          (PP (IN in)
+            (NP
+              (NP (NNS talks))
+              (PP (IN with)
+                (NP (NNP Verizon)))))
+          (S
+            (VP (TO to)
+              (VP (VB be)
+                (NP (PRP$ their) (JJ dedicated) (NN phone) (NN provider))
+                (ADVP (RB initially)))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBD gave)
+          (NP (DT the) (NN deal))
+          (PP (TO to)
+            (NP (NNP AT&T)))
+          (PP (IN in)
+            (NP (DT the) (NN end))))))))
+
+root(ROOT-0, talks-4)
+nsubj(talks-4, Apple-1)
+nsubj:xsubj(provider-12, Apple-1)
+cop(talks-4, was-2)
+case(talks-4, in-3)
+case(Verizon-6, with-5)
+nmod:with(talks-4, Verizon-6)
+mark(provider-12, to-7)
+cop(provider-12, be-8)
+nmod:poss(provider-12, their-9)
+amod(provider-12, dedicated-10)
+compound(provider-12, phone-11)
+xcomp(talks-4, provider-12)
+advmod(provider-12, initially-13)
+punct(talks-4, ,-14)
+cc(talks-4, but-15)
+nsubj(gave-17, they-16)
+conj:but(talks-4, gave-17)
+det(deal-19, the-18)
+dobj(gave-17, deal-19)
+case(AT&T-21, to-20)
+nmod:to(gave-17, AT&T-21)
+case(end-24, in-22)
+det(end-24, the-23)
+nmod:in(gave-17, end-24)
+
+Coreference set:
+	(1,16,[16,17]) -> (1,9,[9,10]), that is: "they" -> "their"

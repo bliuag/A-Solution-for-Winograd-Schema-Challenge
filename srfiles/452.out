@@ -1,0 +1,63 @@
+Sentence #1 (17 tokens):
+The alter boy assisted Knight Mordron in his mission because he hopes he will get knighted afterwards
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=alter CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=VBP Lemma=alter NamedEntityTag=O]
+[Text=boy CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=NN Lemma=boy NamedEntityTag=O]
+[Text=assisted CharacterOffsetBegin=14 CharacterOffsetEnd=22 PartOfSpeech=JJ Lemma=assisted NamedEntityTag=O]
+[Text=Knight CharacterOffsetBegin=23 CharacterOffsetEnd=29 PartOfSpeech=NNP Lemma=Knight NamedEntityTag=PERSON]
+[Text=Mordron CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=NNP Lemma=Mordron NamedEntityTag=PERSON]
+[Text=in CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=mission CharacterOffsetBegin=45 CharacterOffsetEnd=52 PartOfSpeech=NN Lemma=mission NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=53 CharacterOffsetEnd=60 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=61 CharacterOffsetEnd=63 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=hopes CharacterOffsetBegin=64 CharacterOffsetEnd=69 PartOfSpeech=VBZ Lemma=hope NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=70 CharacterOffsetEnd=72 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=73 CharacterOffsetEnd=77 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=get CharacterOffsetBegin=78 CharacterOffsetEnd=81 PartOfSpeech=VB Lemma=get NamedEntityTag=O]
+[Text=knighted CharacterOffsetBegin=82 CharacterOffsetEnd=90 PartOfSpeech=VBN Lemma=knight NamedEntityTag=O]
+[Text=afterwards CharacterOffsetBegin=91 CharacterOffsetEnd=101 PartOfSpeech=RB Lemma=afterwards NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The))
+    (VP (VBP alter)
+      (S
+        (NP (NN boy))
+        (VP (JJ assisted)
+          (NP
+            (NP (NNP Knight) (NNP Mordron))
+            (PP (IN in)
+              (NP (PRP$ his) (NN mission))))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBZ hopes)
+            (SBAR
+              (S
+                (NP (PRP he))
+                (VP (MD will)
+                  (VP (VB get)
+                    (VP (VBN knighted)
+                      (ADVP (RB afterwards)))))))))))))
+
+root(ROOT-0, alter-2)
+nsubj(alter-2, The-1)
+nsubj(assisted-4, boy-3)
+ccomp(alter-2, assisted-4)
+compound(Mordron-6, Knight-5)
+dobj(assisted-4, Mordron-6)
+case(mission-9, in-7)
+nmod:poss(mission-9, his-8)
+nmod:in(Mordron-6, mission-9)
+mark(hopes-12, because-10)
+nsubj(hopes-12, he-11)
+advcl:because(alter-2, hopes-12)
+nsubjpass(knighted-16, he-13)
+aux(knighted-16, will-14)
+auxpass(knighted-16, get-15)
+ccomp(hopes-12, knighted-16)
+advmod(knighted-16, afterwards-17)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,8,[8,9]), that is: "he" -> "his"
+	(1,13,[13,14]) -> (1,8,[8,9]), that is: "he" -> "his"

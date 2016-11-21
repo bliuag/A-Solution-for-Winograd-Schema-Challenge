@@ -1,0 +1,35 @@
+Sentence #1 (9 tokens):
+Jim hunted the monster, because he was scary
+[Text=Jim CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Jim NamedEntityTag=PERSON]
+[Text=hunted CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=hunt NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=11 CharacterOffsetEnd=14 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=monster CharacterOffsetBegin=15 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=monster NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=22 CharacterOffsetEnd=23 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=scary CharacterOffsetBegin=39 CharacterOffsetEnd=44 PartOfSpeech=JJ Lemma=scary NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Jim))
+    (VP (VBD hunted)
+      (NP (DT the) (NN monster))
+      (, ,)
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (ADJP (JJ scary))))))))
+
+root(ROOT-0, hunted-2)
+nsubj(hunted-2, Jim-1)
+det(monster-4, the-3)
+dobj(hunted-2, monster-4)
+punct(hunted-2, ,-5)
+mark(scary-9, because-6)
+nsubj(scary-9, he-7)
+cop(scary-9, was-8)
+advcl:because(hunted-2, scary-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,1,[1,2]), that is: "he" -> "Jim"

@@ -1,0 +1,61 @@
+Sentence #1 (16 tokens):
+Donald Trump fired his servant, Luigi, because he felt his service was below average
+[Text=Donald CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Donald NamedEntityTag=PERSON]
+[Text=Trump CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=NNP Lemma=Trump NamedEntityTag=PERSON]
+[Text=fired CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=VBD Lemma=fire NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=19 CharacterOffsetEnd=22 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=servant CharacterOffsetBegin=23 CharacterOffsetEnd=30 PartOfSpeech=NN Lemma=servant NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=30 CharacterOffsetEnd=31 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=Luigi CharacterOffsetBegin=32 CharacterOffsetEnd=37 PartOfSpeech=NNP Lemma=Luigi NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=37 CharacterOffsetEnd=38 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=39 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=47 CharacterOffsetEnd=49 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=felt CharacterOffsetBegin=50 CharacterOffsetEnd=54 PartOfSpeech=VBD Lemma=feel NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=service CharacterOffsetBegin=59 CharacterOffsetEnd=66 PartOfSpeech=NN Lemma=service NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=67 CharacterOffsetEnd=70 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=below CharacterOffsetBegin=71 CharacterOffsetEnd=76 PartOfSpeech=IN Lemma=below NamedEntityTag=O]
+[Text=average CharacterOffsetBegin=77 CharacterOffsetEnd=84 PartOfSpeech=NN Lemma=average NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Donald) (NNP Trump))
+    (VP (VBD fired)
+      (NP
+        (NP (PRP$ his) (NN servant))
+        (, ,)
+        (NP (NNP Luigi))
+        (, ,)
+        (SBAR (IN because)
+          (S
+            (NP (PRP he))
+            (VP (VBD felt)
+              (SBAR
+                (S
+                  (NP (PRP$ his) (NN service))
+                  (VP (VBD was)
+                    (PP (IN below)
+                      (NP (NN average)))))))))))))
+
+root(ROOT-0, fired-3)
+compound(Trump-2, Donald-1)
+nsubj(fired-3, Trump-2)
+nmod:poss(servant-5, his-4)
+dobj(fired-3, servant-5)
+punct(servant-5, ,-6)
+appos(servant-5, Luigi-7)
+punct(servant-5, ,-8)
+mark(felt-11, because-9)
+nsubj(felt-11, he-10)
+dep(servant-5, felt-11)
+nmod:poss(service-13, his-12)
+nsubj(average-16, service-13)
+cop(average-16, was-14)
+case(average-16, below-15)
+ccomp(felt-11, average-16)
+
+Coreference set:
+	(1,4,[4,5]) -> (1,2,[1,3]), that is: "his" -> "Donald Trump"
+	(1,10,[10,11]) -> (1,2,[1,3]), that is: "he" -> "Donald Trump"
+	(1,12,[12,13]) -> (1,2,[1,3]), that is: "his" -> "Donald Trump"
+Coreference set:
+	(1,5,[4,6]) -> (1,7,[7,8]), that is: "his servant" -> "Luigi"

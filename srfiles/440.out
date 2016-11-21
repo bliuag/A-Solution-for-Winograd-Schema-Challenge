@@ -1,0 +1,65 @@
+Sentence #1 (21 tokens):
+The Next Generation was well received by Trekkies because they stayed true to the roots established in the first Star Trek
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Next CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=JJ Lemma=next NamedEntityTag=O]
+[Text=Generation CharacterOffsetBegin=9 CharacterOffsetEnd=19 PartOfSpeech=NN Lemma=generation NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=well CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=RB Lemma=well NamedEntityTag=O]
+[Text=received CharacterOffsetBegin=29 CharacterOffsetEnd=37 PartOfSpeech=VBN Lemma=receive NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=Trekkies CharacterOffsetBegin=41 CharacterOffsetEnd=49 PartOfSpeech=NNPS Lemma=Trekkies NamedEntityTag=MISC]
+[Text=because CharacterOffsetBegin=50 CharacterOffsetEnd=57 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=stayed CharacterOffsetBegin=63 CharacterOffsetEnd=69 PartOfSpeech=VBD Lemma=stay NamedEntityTag=O]
+[Text=true CharacterOffsetBegin=70 CharacterOffsetEnd=74 PartOfSpeech=JJ Lemma=true NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=75 CharacterOffsetEnd=77 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=78 CharacterOffsetEnd=81 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=roots CharacterOffsetBegin=82 CharacterOffsetEnd=87 PartOfSpeech=NNS Lemma=root NamedEntityTag=O]
+[Text=established CharacterOffsetBegin=88 CharacterOffsetEnd=99 PartOfSpeech=VBN Lemma=establish NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=100 CharacterOffsetEnd=102 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=103 CharacterOffsetEnd=106 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=first CharacterOffsetBegin=107 CharacterOffsetEnd=112 PartOfSpeech=JJ Lemma=first NamedEntityTag=ORDINAL NormalizedNamedEntityTag=1.0]
+[Text=Star CharacterOffsetBegin=113 CharacterOffsetEnd=117 PartOfSpeech=NNP Lemma=Star NamedEntityTag=O]
+[Text=Trek CharacterOffsetBegin=118 CharacterOffsetEnd=122 PartOfSpeech=NNP Lemma=Trek NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (JJ Next) (NN Generation))
+    (VP (VBD was)
+      (ADVP (RB well))
+      (VP (VBN received)
+        (PP (IN by)
+          (NP (NNPS Trekkies)))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBD stayed)
+              (ADJP (JJ true)
+                (PP (TO to)
+                  (NP
+                    (NP (DT the) (NNS roots))
+                    (VP (VBN established)
+                      (PP (IN in)
+                        (NP (DT the) (JJ first) (NNP Star) (NNP Trek))))))))))))))
+
+root(ROOT-0, received-6)
+det(Generation-3, The-1)
+amod(Generation-3, Next-2)
+nsubjpass(received-6, Generation-3)
+auxpass(received-6, was-4)
+advmod(received-6, well-5)
+case(Trekkies-8, by-7)
+nmod:agent(received-6, Trekkies-8)
+mark(stayed-11, because-9)
+nsubj(stayed-11, they-10)
+advcl:because(received-6, stayed-11)
+xcomp(stayed-11, true-12)
+case(roots-15, to-13)
+det(roots-15, the-14)
+nmod:to(true-12, roots-15)
+acl(roots-15, established-16)
+case(Trek-21, in-17)
+det(Trek-21, the-18)
+amod(Trek-21, first-19)
+compound(Trek-21, Star-20)
+nmod:in(established-16, Trek-21)
+

@@ -1,0 +1,50 @@
+Sentence #1 (13 tokens):
+Parents care for their children considerably since they are their pride and joy
+[Text=Parents CharacterOffsetBegin=0 CharacterOffsetEnd=7 PartOfSpeech=NNS Lemma=parent NamedEntityTag=O]
+[Text=care CharacterOffsetBegin=8 CharacterOffsetEnd=12 PartOfSpeech=VBP Lemma=care NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=13 CharacterOffsetEnd=16 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=17 CharacterOffsetEnd=22 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=children CharacterOffsetBegin=23 CharacterOffsetEnd=31 PartOfSpeech=NNS Lemma=child NamedEntityTag=O]
+[Text=considerably CharacterOffsetBegin=32 CharacterOffsetEnd=44 PartOfSpeech=RB Lemma=considerably NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=45 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=51 CharacterOffsetEnd=55 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=56 CharacterOffsetEnd=59 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=60 CharacterOffsetEnd=65 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=pride CharacterOffsetBegin=66 CharacterOffsetEnd=71 PartOfSpeech=NN Lemma=pride NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=72 CharacterOffsetEnd=75 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=joy CharacterOffsetBegin=76 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=joy NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNS Parents))
+    (VP (VBP care)
+      (PP (IN for)
+        (NP (PRP$ their) (NNS children)))
+      (SBAR
+        (ADVP (RB considerably))
+        (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBP are)
+            (NP (PRP$ their) (NN pride)
+              (CC and)
+              (NN joy))))))))
+
+root(ROOT-0, care-2)
+nsubj(care-2, Parents-1)
+case(children-5, for-3)
+nmod:poss(children-5, their-4)
+nmod:for(care-2, children-5)
+advmod(pride-11, considerably-6)
+mark(pride-11, since-7)
+nsubj(pride-11, they-8)
+cop(pride-11, are-9)
+nmod:poss(pride-11, their-10)
+advcl:since(care-2, pride-11)
+cc(pride-11, and-12)
+advcl:since(care-2, joy-13)
+conj:and(pride-11, joy-13)
+
+Coreference set:
+	(1,4,[4,5]) -> (1,1,[1,2]), that is: "their" -> "Parents"
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "they" -> "Parents"
+	(1,10,[10,11]) -> (1,1,[1,2]), that is: "their" -> "Parents"

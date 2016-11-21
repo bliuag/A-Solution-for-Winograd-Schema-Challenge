@@ -1,0 +1,82 @@
+Sentence #1 (26 tokens):
+The SWAT team moved in on the compound to prevent the terrorists from launching a deadly missile because they were trying to terrorize the global population
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=SWAT CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=NNP Lemma=SWAT NamedEntityTag=O]
+[Text=team CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=NN Lemma=team NamedEntityTag=O]
+[Text=moved CharacterOffsetBegin=14 CharacterOffsetEnd=19 PartOfSpeech=VBD Lemma=move NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=20 CharacterOffsetEnd=22 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=compound CharacterOffsetBegin=30 CharacterOffsetEnd=38 PartOfSpeech=NN Lemma=compound NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=39 CharacterOffsetEnd=41 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=prevent CharacterOffsetBegin=42 CharacterOffsetEnd=49 PartOfSpeech=VB Lemma=prevent NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=terrorists CharacterOffsetBegin=54 CharacterOffsetEnd=64 PartOfSpeech=NNS Lemma=terrorist NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=65 CharacterOffsetEnd=69 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=launching CharacterOffsetBegin=70 CharacterOffsetEnd=79 PartOfSpeech=VBG Lemma=launch NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=80 CharacterOffsetEnd=81 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=deadly CharacterOffsetBegin=82 CharacterOffsetEnd=88 PartOfSpeech=JJ Lemma=deadly NamedEntityTag=O]
+[Text=missile CharacterOffsetBegin=89 CharacterOffsetEnd=96 PartOfSpeech=NN Lemma=missile NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=97 CharacterOffsetEnd=104 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=105 CharacterOffsetEnd=109 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=110 CharacterOffsetEnd=114 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=trying CharacterOffsetBegin=115 CharacterOffsetEnd=121 PartOfSpeech=VBG Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=122 CharacterOffsetEnd=124 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=terrorize CharacterOffsetBegin=125 CharacterOffsetEnd=134 PartOfSpeech=VB Lemma=terrorize NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=135 CharacterOffsetEnd=138 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=global CharacterOffsetBegin=139 CharacterOffsetEnd=145 PartOfSpeech=JJ Lemma=global NamedEntityTag=O]
+[Text=population CharacterOffsetBegin=146 CharacterOffsetEnd=156 PartOfSpeech=NN Lemma=population NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNP SWAT) (NN team))
+    (VP (VBD moved)
+      (PP (IN in) (IN on)
+        (NP (DT the) (NN compound)
+          (S
+            (VP (TO to)
+              (VP (VB prevent)
+                (NP (DT the) (NNS terrorists))
+                (PP (IN from)
+                  (S
+                    (VP (VBG launching)
+                      (NP (DT a) (JJ deadly) (NN missile))
+                      (SBAR (IN because)
+                        (S
+                          (NP (PRP they))
+                          (VP (VBD were)
+                            (VP (VBG trying)
+                              (S
+                                (VP (TO to)
+                                  (VP (VB terrorize)
+                                    (NP (DT the) (JJ global) (NN population))))))))))))))))))))
+
+root(ROOT-0, moved-4)
+det(team-3, The-1)
+compound(team-3, SWAT-2)
+nsubj(moved-4, team-3)
+case(compound-8, in-5)
+case(compound-8, on-6)
+det(compound-8, the-7)
+nmod:on(moved-4, compound-8)
+mark(prevent-10, to-9)
+acl:to(compound-8, prevent-10)
+det(terrorists-12, the-11)
+dobj(prevent-10, terrorists-12)
+mark(launching-14, from-13)
+advcl:from(prevent-10, launching-14)
+det(missile-17, a-15)
+amod(missile-17, deadly-16)
+dobj(launching-14, missile-17)
+mark(trying-21, because-18)
+nsubj(trying-21, they-19)
+nsubj:xsubj(terrorize-23, they-19)
+aux(trying-21, were-20)
+advcl:because(launching-14, trying-21)
+mark(terrorize-23, to-22)
+xcomp(trying-21, terrorize-23)
+det(population-26, the-24)
+amod(population-26, global-25)
+dobj(terrorize-23, population-26)
+
+Coreference set:
+	(1,19,[19,20]) -> (1,12,[11,13]), that is: "they" -> "the terrorists"

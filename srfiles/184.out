@@ -1,0 +1,49 @@
+Sentence #1 (13 tokens):
+Ken tried to sneak past the boss because he was late for work
+[Text=Ken CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Ken NamedEntityTag=PERSON]
+[Text=tried CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=sneak CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=VB Lemma=sneak NamedEntityTag=O]
+[Text=past CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=past NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">past</TIMEX3>]
+[Text=the CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=boss CharacterOffsetBegin=28 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=boss NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=41 CharacterOffsetEnd=43 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=late CharacterOffsetBegin=48 CharacterOffsetEnd=52 PartOfSpeech=JJ Lemma=late NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=53 CharacterOffsetEnd=56 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=work CharacterOffsetBegin=57 CharacterOffsetEnd=61 PartOfSpeech=NN Lemma=work NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Ken))
+    (VP (VBD tried)
+      (S
+        (VP (TO to)
+          (VP (VB sneak)
+            (PP (IN past)
+              (NP (DT the) (NN boss)))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBD was)
+                  (ADJP (JJ late)
+                    (PP (IN for)
+                      (NP (NN work)))))))))))))
+
+root(ROOT-0, tried-2)
+nsubj(tried-2, Ken-1)
+nsubj:xsubj(sneak-4, Ken-1)
+mark(sneak-4, to-3)
+xcomp(tried-2, sneak-4)
+case(boss-7, past-5)
+det(boss-7, the-6)
+nmod:past(sneak-4, boss-7)
+mark(late-11, because-8)
+nsubj(late-11, he-9)
+cop(late-11, was-10)
+advcl:because(sneak-4, late-11)
+case(work-13, for-12)
+nmod:for(late-11, work-13)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,7,[6,8]), that is: "he" -> "the boss"

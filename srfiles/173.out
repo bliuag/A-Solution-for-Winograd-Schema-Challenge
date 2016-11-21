@@ -1,0 +1,30 @@
+Sentence #1 (7 tokens):
+Tony helped Jeff because he needed help
+[Text=Tony CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Tony NamedEntityTag=PERSON]
+[Text=helped CharacterOffsetBegin=5 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=help NamedEntityTag=O]
+[Text=Jeff CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=NNP Lemma=Jeff NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=17 CharacterOffsetEnd=24 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=25 CharacterOffsetEnd=27 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=needed CharacterOffsetBegin=28 CharacterOffsetEnd=34 PartOfSpeech=VBD Lemma=need NamedEntityTag=O]
+[Text=help CharacterOffsetBegin=35 CharacterOffsetEnd=39 PartOfSpeech=NN Lemma=help NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Tony))
+    (VP (VBD helped)
+      (NP (NNP Jeff))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD needed)
+            (NP (NN help))))))))
+
+root(ROOT-0, helped-2)
+nsubj(helped-2, Tony-1)
+dobj(helped-2, Jeff-3)
+mark(needed-6, because-4)
+nsubj(needed-6, he-5)
+advcl:because(helped-2, needed-6)
+dobj(needed-6, help-7)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "he" -> "Tony"

@@ -1,0 +1,43 @@
+Sentence #1 (12 tokens):
+We took the books to the shops because they would buy them
+[Text=We CharacterOffsetBegin=0 CharacterOffsetEnd=2 PartOfSpeech=PRP Lemma=we NamedEntityTag=O]
+[Text=took CharacterOffsetBegin=3 CharacterOffsetEnd=7 PartOfSpeech=VBD Lemma=take NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=8 CharacterOffsetEnd=11 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=books CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=NNS Lemma=book NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=18 CharacterOffsetEnd=20 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=21 CharacterOffsetEnd=24 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=shops CharacterOffsetBegin=25 CharacterOffsetEnd=30 PartOfSpeech=NNS Lemma=shop NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=31 CharacterOffsetEnd=38 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=would CharacterOffsetBegin=44 CharacterOffsetEnd=49 PartOfSpeech=MD Lemma=would NamedEntityTag=O]
+[Text=buy CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=VB Lemma=buy NamedEntityTag=O]
+[Text=them CharacterOffsetBegin=54 CharacterOffsetEnd=58 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (PRP We))
+    (VP (VBD took)
+      (NP (DT the) (NNS books))
+      (PP (TO to)
+        (NP (DT the) (NNS shops)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (MD would)
+            (VP (VB buy)
+              (NP (PRP them)))))))))
+
+root(ROOT-0, took-2)
+nsubj(took-2, We-1)
+det(books-4, the-3)
+dobj(took-2, books-4)
+case(shops-7, to-5)
+det(shops-7, the-6)
+nmod:to(took-2, shops-7)
+mark(buy-11, because-8)
+nsubj(buy-11, they-9)
+aux(buy-11, would-10)
+advcl:because(took-2, buy-11)
+dobj(buy-11, them-12)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,9,[9,10]), that is: "them" -> "they"

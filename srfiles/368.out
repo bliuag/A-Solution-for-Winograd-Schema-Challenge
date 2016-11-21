@@ -1,0 +1,41 @@
+Sentence #1 (11 tokens):
+Federer consistently beat Nadal since he was the better tennis player
+[Text=Federer CharacterOffsetBegin=0 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Federer NamedEntityTag=PERSON]
+[Text=consistently CharacterOffsetBegin=8 CharacterOffsetEnd=20 PartOfSpeech=RB Lemma=consistently NamedEntityTag=O]
+[Text=beat CharacterOffsetBegin=21 CharacterOffsetEnd=25 PartOfSpeech=VBD Lemma=beat NamedEntityTag=O]
+[Text=Nadal CharacterOffsetBegin=26 CharacterOffsetEnd=31 PartOfSpeech=NNP Lemma=Nadal NamedEntityTag=PERSON]
+[Text=since CharacterOffsetBegin=32 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=49 CharacterOffsetEnd=55 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+[Text=tennis CharacterOffsetBegin=56 CharacterOffsetEnd=62 PartOfSpeech=NN Lemma=tennis NamedEntityTag=O]
+[Text=player CharacterOffsetBegin=63 CharacterOffsetEnd=69 PartOfSpeech=NN Lemma=player NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Federer))
+    (VP
+      (ADVP (RB consistently))
+      (VBD beat)
+      (NP (NNP Nadal))
+      (SBAR (IN since)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (NP (DT the) (JJR better) (NN tennis) (NN player))))))))
+
+root(ROOT-0, beat-3)
+nsubj(beat-3, Federer-1)
+advmod(beat-3, consistently-2)
+dobj(beat-3, Nadal-4)
+mark(player-11, since-5)
+nsubj(player-11, he-6)
+cop(player-11, was-7)
+det(player-11, the-8)
+amod(player-11, better-9)
+compound(player-11, tennis-10)
+advcl:since(beat-3, player-11)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,1,[1,2]), that is: "he" -> "Federer"
+	(1,11,[8,12]) -> (1,1,[1,2]), that is: "the better tennis player" -> "Federer"

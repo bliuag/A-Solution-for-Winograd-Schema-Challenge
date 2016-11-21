@@ -1,0 +1,64 @@
+Sentence #1 (19 tokens):
+The Eagles managed to completely dominate the Cowboys this weekend since they were much stronger in handling the ball
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Eagles CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNPS Lemma=Eagles NamedEntityTag=ORGANIZATION]
+[Text=managed CharacterOffsetBegin=11 CharacterOffsetEnd=18 PartOfSpeech=VBD Lemma=manage NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=19 CharacterOffsetEnd=21 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=completely CharacterOffsetBegin=22 CharacterOffsetEnd=32 PartOfSpeech=RB Lemma=completely NamedEntityTag=O]
+[Text=dominate CharacterOffsetBegin=33 CharacterOffsetEnd=41 PartOfSpeech=VB Lemma=dominate NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=42 CharacterOffsetEnd=45 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Cowboys CharacterOffsetBegin=46 CharacterOffsetEnd=53 PartOfSpeech=NNPS Lemma=Cowboys NamedEntityTag=ORGANIZATION]
+[Text=this CharacterOffsetBegin=54 CharacterOffsetEnd=58 PartOfSpeech=DT Lemma=this NamedEntityTag=DATE NormalizedNamedEntityTag=THIS WE Timex=<TIMEX3 alt_value="THIS WE" anchorTimeID="t0" temporalFunction="true" tid="t1" type="DATE" valueFromFunction="tf0">this weekend</TIMEX3>]
+[Text=weekend CharacterOffsetBegin=59 CharacterOffsetEnd=66 PartOfSpeech=NN Lemma=weekend NamedEntityTag=DATE NormalizedNamedEntityTag=THIS WE Timex=<TIMEX3 alt_value="THIS WE" anchorTimeID="t0" temporalFunction="true" tid="t1" type="DATE" valueFromFunction="tf0">this weekend</TIMEX3>]
+[Text=since CharacterOffsetBegin=67 CharacterOffsetEnd=72 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=73 CharacterOffsetEnd=77 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=78 CharacterOffsetEnd=82 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=much CharacterOffsetBegin=83 CharacterOffsetEnd=87 PartOfSpeech=RB Lemma=much NamedEntityTag=O]
+[Text=stronger CharacterOffsetBegin=88 CharacterOffsetEnd=96 PartOfSpeech=JJR Lemma=stronger NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=97 CharacterOffsetEnd=99 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=handling CharacterOffsetBegin=100 CharacterOffsetEnd=108 PartOfSpeech=VBG Lemma=handle NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=109 CharacterOffsetEnd=112 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=ball CharacterOffsetBegin=113 CharacterOffsetEnd=117 PartOfSpeech=NN Lemma=ball NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNPS Eagles))
+    (VP (VBD managed)
+      (S
+        (VP (TO to)
+          (VP
+            (ADVP (RB completely))
+            (VB dominate)
+            (NP (DT the) (NNPS Cowboys)))))
+      (NP-TMP (DT this) (NN weekend))
+      (SBAR (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP
+              (ADJP (RB much) (JJR stronger))
+              (PP (IN in)
+                (S
+                  (VP (VBG handling)
+                    (NP (DT the) (NN ball))))))))))))
+
+root(ROOT-0, managed-3)
+det(Eagles-2, The-1)
+nsubj(managed-3, Eagles-2)
+nsubj:xsubj(dominate-6, Eagles-2)
+mark(dominate-6, to-4)
+advmod(dominate-6, completely-5)
+xcomp(managed-3, dominate-6)
+det(Cowboys-8, the-7)
+dobj(dominate-6, Cowboys-8)
+det(weekend-10, this-9)
+nmod:tmod(managed-3, weekend-10)
+mark(stronger-15, since-11)
+nsubj(stronger-15, they-12)
+cop(stronger-15, were-13)
+advmod(stronger-15, much-14)
+advcl:since(managed-3, stronger-15)
+mark(handling-17, in-16)
+advcl:in(stronger-15, handling-17)
+det(ball-19, the-18)
+dobj(handling-17, ball-19)
+

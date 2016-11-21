@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The student told the instructor that he talked fast
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=student CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NN Lemma=student NamedEntityTag=O]
+[Text=told CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=VBD Lemma=tell NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=17 CharacterOffsetEnd=20 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=instructor CharacterOffsetBegin=21 CharacterOffsetEnd=31 PartOfSpeech=NN Lemma=instructor NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=that NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=37 CharacterOffsetEnd=39 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=talked CharacterOffsetBegin=40 CharacterOffsetEnd=46 PartOfSpeech=VBD Lemma=talk NamedEntityTag=O]
+[Text=fast CharacterOffsetBegin=47 CharacterOffsetEnd=51 PartOfSpeech=RB Lemma=fast NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN student))
+    (VP (VBD told)
+      (NP (DT the) (NN instructor))
+      (SBAR (IN that)
+        (S
+          (NP (PRP he))
+          (VP (VBD talked)
+            (ADVP (RB fast))))))))
+
+root(ROOT-0, told-3)
+det(student-2, The-1)
+nsubj(told-3, student-2)
+det(instructor-5, the-4)
+dobj(told-3, instructor-5)
+mark(talked-8, that-6)
+nsubj(talked-8, he-7)
+ccomp(told-3, talked-8)
+advmod(talked-8, fast-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "he" -> "The student"

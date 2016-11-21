@@ -1,0 +1,70 @@
+Sentence #1 (21 tokens):
+The Military Police threw the army recruits in the brig since they were enforcing the rules of being in the army
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Military CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=NNP Lemma=Military NamedEntityTag=ORGANIZATION]
+[Text=Police CharacterOffsetBegin=13 CharacterOffsetEnd=19 PartOfSpeech=NNP Lemma=Police NamedEntityTag=ORGANIZATION]
+[Text=threw CharacterOffsetBegin=20 CharacterOffsetEnd=25 PartOfSpeech=VBD Lemma=throw NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=army CharacterOffsetBegin=30 CharacterOffsetEnd=34 PartOfSpeech=NN Lemma=army NamedEntityTag=O]
+[Text=recruits CharacterOffsetBegin=35 CharacterOffsetEnd=43 PartOfSpeech=VBZ Lemma=recruit NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=brig CharacterOffsetBegin=51 CharacterOffsetEnd=55 PartOfSpeech=NN Lemma=brig NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=56 CharacterOffsetEnd=61 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=62 CharacterOffsetEnd=66 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=67 CharacterOffsetEnd=71 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=enforcing CharacterOffsetBegin=72 CharacterOffsetEnd=81 PartOfSpeech=VBG Lemma=enforce NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=82 CharacterOffsetEnd=85 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=rules CharacterOffsetBegin=86 CharacterOffsetEnd=91 PartOfSpeech=NNS Lemma=rule NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=92 CharacterOffsetEnd=94 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=95 CharacterOffsetEnd=100 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=101 CharacterOffsetEnd=103 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=104 CharacterOffsetEnd=107 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=army CharacterOffsetBegin=108 CharacterOffsetEnd=112 PartOfSpeech=NN Lemma=army NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNP Military) (NNP Police))
+    (VP (VBD threw)
+      (SBAR
+        (S
+          (NP (DT the) (NN army))
+          (VP (VBZ recruits)
+            (PP (IN in)
+              (NP (DT the) (NN brig)))
+            (SBAR (IN since)
+              (S
+                (NP (PRP they))
+                (VP (VBD were)
+                  (VP (VBG enforcing)
+                    (NP
+                      (NP (DT the) (NNS rules))
+                      (PP (IN of)
+                        (S
+                          (VP (VBG being)
+                            (PP (IN in)
+                              (NP (DT the) (NN army)))))))))))))))))
+
+root(ROOT-0, threw-4)
+det(Police-3, The-1)
+compound(Police-3, Military-2)
+nsubj(threw-4, Police-3)
+det(army-6, the-5)
+nsubj(recruits-7, army-6)
+ccomp(threw-4, recruits-7)
+case(brig-10, in-8)
+det(brig-10, the-9)
+nmod:in(recruits-7, brig-10)
+mark(enforcing-14, since-11)
+nsubj(enforcing-14, they-12)
+aux(enforcing-14, were-13)
+advcl:since(recruits-7, enforcing-14)
+det(rules-16, the-15)
+dobj(enforcing-14, rules-16)
+mark(army-21, of-17)
+cop(army-21, being-18)
+case(army-21, in-19)
+det(army-21, the-20)
+acl:in(rules-16, army-21)
+
+Coreference set:
+	(1,21,[20,22]) -> (1,6,[5,7]), that is: "the army" -> "the army"

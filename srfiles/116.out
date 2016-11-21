@@ -1,0 +1,42 @@
+Sentence #1 (11 tokens):
+The needle punctured the skin but it failed to register pain
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=needle CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=needle NamedEntityTag=O]
+[Text=punctured CharacterOffsetBegin=11 CharacterOffsetEnd=20 PartOfSpeech=VBD Lemma=puncture NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=21 CharacterOffsetEnd=24 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=skin CharacterOffsetBegin=25 CharacterOffsetEnd=29 PartOfSpeech=NN Lemma=skin NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=30 CharacterOffsetEnd=33 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=failed CharacterOffsetBegin=37 CharacterOffsetEnd=43 PartOfSpeech=VBD Lemma=fail NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=register CharacterOffsetBegin=47 CharacterOffsetEnd=55 PartOfSpeech=VB Lemma=register NamedEntityTag=O]
+[Text=pain CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=NN Lemma=pain NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN needle))
+    (VP (VBD punctured)
+      (NP (DT the) (NN skin))
+      (SBAR (CC but)
+        (S
+          (NP (PRP it))
+          (VP (VBD failed)
+            (S
+              (VP (TO to)
+                (VP (VB register)
+                  (NP (NN pain)))))))))))
+
+root(ROOT-0, punctured-3)
+det(needle-2, The-1)
+nsubj(punctured-3, needle-2)
+det(skin-5, the-4)
+dobj(punctured-3, skin-5)
+cc(failed-8, but-6)
+nsubj(failed-8, it-7)
+nsubj:xsubj(register-10, it-7)
+dep(punctured-3, failed-8)
+mark(register-10, to-9)
+xcomp(failed-8, register-10)
+dobj(register-10, pain-11)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "it" -> "The needle"

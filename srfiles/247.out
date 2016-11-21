@@ -1,0 +1,41 @@
+Sentence #1 (11 tokens):
+Watson beat Ken at Jeopardy because he is an inferior human
+[Text=Watson CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Watson NamedEntityTag=PERSON]
+[Text=beat CharacterOffsetBegin=7 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=beat NamedEntityTag=O]
+[Text=Ken CharacterOffsetBegin=12 CharacterOffsetEnd=15 PartOfSpeech=NNP Lemma=Ken NamedEntityTag=PERSON]
+[Text=at CharacterOffsetBegin=16 CharacterOffsetEnd=18 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=Jeopardy CharacterOffsetBegin=19 CharacterOffsetEnd=27 PartOfSpeech=NNP Lemma=Jeopardy NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=28 CharacterOffsetEnd=35 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=39 CharacterOffsetEnd=41 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=an CharacterOffsetBegin=42 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=inferior CharacterOffsetBegin=45 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=inferior NamedEntityTag=O]
+[Text=human CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=JJ Lemma=human NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Watson))
+    (VP (VBD beat)
+      (NP (NNP Ken))
+      (PP (IN at)
+        (NP (NNP Jeopardy)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBZ is)
+            (NP (DT an) (JJ inferior) (JJ human))))))))
+
+root(ROOT-0, beat-2)
+nsubj(beat-2, Watson-1)
+dobj(beat-2, Ken-3)
+case(Jeopardy-5, at-4)
+nmod:at(beat-2, Jeopardy-5)
+mark(human-11, because-6)
+nsubj(human-11, he-7)
+cop(human-11, is-8)
+det(human-11, an-9)
+amod(human-11, inferior-10)
+advcl:because(beat-2, human-11)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,1,[1,2]), that is: "he" -> "Watson"
+	(1,11,[9,12]) -> (1,1,[1,2]), that is: "an inferior human" -> "Watson"

@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The girls ate the apples because they were hungry
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=girls CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NNS Lemma=girl NamedEntityTag=O]
+[Text=ate CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=eat NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=apples CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=NNS Lemma=apple NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=25 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=33 CharacterOffsetEnd=37 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=38 CharacterOffsetEnd=42 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=hungry CharacterOffsetBegin=43 CharacterOffsetEnd=49 PartOfSpeech=JJ Lemma=hungry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS girls))
+    (VP (VBD ate)
+      (NP (DT the) (NNS apples))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP (JJ hungry))))))))
+
+root(ROOT-0, ate-3)
+det(girls-2, The-1)
+nsubj(ate-3, girls-2)
+det(apples-5, the-4)
+dobj(ate-3, apples-5)
+mark(hungry-9, because-6)
+nsubj(hungry-9, they-7)
+cop(hungry-9, were-8)
+advcl:because(ate-3, hungry-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "they" -> "The girls"

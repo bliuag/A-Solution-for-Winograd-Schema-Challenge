@@ -1,0 +1,49 @@
+Sentence #1 (12 tokens):
+Olivia wants to make amends with Emily, but she is apprehensive
+[Text=Olivia CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=JJ Lemma=olivia NamedEntityTag=PERSON]
+[Text=wants CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=VBZ Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=13 CharacterOffsetEnd=15 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=make CharacterOffsetBegin=16 CharacterOffsetEnd=20 PartOfSpeech=VB Lemma=make NamedEntityTag=O]
+[Text=amends CharacterOffsetBegin=21 CharacterOffsetEnd=27 PartOfSpeech=NNS Lemma=amends NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=28 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=Emily CharacterOffsetBegin=33 CharacterOffsetEnd=38 PartOfSpeech=NNP Lemma=Emily NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=38 CharacterOffsetEnd=39 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=apprehensive CharacterOffsetBegin=51 CharacterOffsetEnd=63 PartOfSpeech=JJ Lemma=apprehensive NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (JJ Olivia))
+        (VP (VBZ wants)
+          (S
+            (VP (TO to)
+              (VP (VB make)
+                (NP (NNS amends))
+                (PP (IN with)
+                  (NP (NNP Emily))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP she))
+        (VP (VBZ is)
+          (ADJP (JJ apprehensive)))))))
+
+root(ROOT-0, wants-2)
+nsubj(wants-2, Olivia-1)
+nsubj:xsubj(make-4, Olivia-1)
+mark(make-4, to-3)
+xcomp(wants-2, make-4)
+dobj(make-4, amends-5)
+case(Emily-7, with-6)
+nmod:with(make-4, Emily-7)
+punct(wants-2, ,-8)
+cc(wants-2, but-9)
+nsubj(apprehensive-12, she-10)
+cop(apprehensive-12, is-11)
+conj:but(wants-2, apprehensive-12)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,1,[1,2]), that is: "she" -> "Olivia"

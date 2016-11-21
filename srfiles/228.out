@@ -1,0 +1,35 @@
+Sentence #1 (9 tokens):
+Pigs are better than sheep because they make bacon
+[Text=Pigs CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNS Lemma=pig NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=9 CharacterOffsetEnd=15 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=16 CharacterOffsetEnd=20 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=sheep CharacterOffsetBegin=21 CharacterOffsetEnd=26 PartOfSpeech=NN Lemma=sheep NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=27 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=35 CharacterOffsetEnd=39 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=make CharacterOffsetBegin=40 CharacterOffsetEnd=44 PartOfSpeech=VBP Lemma=make NamedEntityTag=O]
+[Text=bacon CharacterOffsetBegin=45 CharacterOffsetEnd=50 PartOfSpeech=NN Lemma=bacon NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNS Pigs))
+    (VP (VBP are)
+      (ADJP
+        (ADJP (JJR better)
+          (PP (IN than)
+            (NP (NN sheep))))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBP make)
+              (NP (NN bacon)))))))))
+
+root(ROOT-0, better-3)
+nsubj(better-3, Pigs-1)
+cop(better-3, are-2)
+case(sheep-5, than-4)
+nmod:than(better-3, sheep-5)
+mark(make-8, because-6)
+nsubj(make-8, they-7)
+ccomp(better-3, make-8)
+dobj(make-8, bacon-9)
+

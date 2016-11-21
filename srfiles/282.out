@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+Mary likes Joe because she has a cool name
+[Text=Mary CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Mary NamedEntityTag=PERSON]
+[Text=likes CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=VBZ Lemma=like NamedEntityTag=O]
+[Text=Joe CharacterOffsetBegin=11 CharacterOffsetEnd=14 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=15 CharacterOffsetEnd=22 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=27 CharacterOffsetEnd=30 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=31 CharacterOffsetEnd=32 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=cool CharacterOffsetBegin=33 CharacterOffsetEnd=37 PartOfSpeech=JJ Lemma=cool NamedEntityTag=O]
+[Text=name CharacterOffsetBegin=38 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=name NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Mary))
+    (VP (VBZ likes)
+      (NP (NNP Joe))
+      (SBAR (IN because)
+        (S
+          (NP (PRP she))
+          (VP (VBZ has)
+            (NP (DT a) (JJ cool) (NN name))))))))
+
+root(ROOT-0, likes-2)
+nsubj(likes-2, Mary-1)
+dobj(likes-2, Joe-3)
+mark(has-6, because-4)
+nsubj(has-6, she-5)
+advcl:because(likes-2, has-6)
+det(name-9, a-7)
+amod(name-9, cool-8)
+dobj(has-6, name-9)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "she" -> "Mary"

@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The sniper shot the terrorist because he had orders
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=sniper CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=sniper NamedEntityTag=O]
+[Text=shot CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=shoot NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=16 CharacterOffsetEnd=19 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=terrorist CharacterOffsetBegin=20 CharacterOffsetEnd=29 PartOfSpeech=JJ Lemma=terrorist NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=orders CharacterOffsetBegin=45 CharacterOffsetEnd=51 PartOfSpeech=NNS Lemma=order NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN sniper))
+    (VP (VBD shot)
+      (NP (DT the) (JJ terrorist))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD had)
+            (NP (NNS orders))))))))
+
+root(ROOT-0, shot-3)
+det(sniper-2, The-1)
+nsubj(shot-3, sniper-2)
+det(terrorist-5, the-4)
+dobj(shot-3, terrorist-5)
+mark(had-8, because-6)
+nsubj(had-8, he-7)
+advcl:because(shot-3, had-8)
+dobj(had-8, orders-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "he" -> "The sniper"

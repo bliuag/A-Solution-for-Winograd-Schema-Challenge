@@ -1,0 +1,43 @@
+Sentence #1 (13 tokens):
+The chimpanzee could not use Linux because it uses different commands than Windows
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=chimpanzee CharacterOffsetBegin=4 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=chimpanzee NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=15 CharacterOffsetEnd=20 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=21 CharacterOffsetEnd=24 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=use CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=VB Lemma=use NamedEntityTag=O]
+[Text=Linux CharacterOffsetBegin=29 CharacterOffsetEnd=34 PartOfSpeech=NN Lemma=linux NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=35 CharacterOffsetEnd=42 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=uses CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=VBZ Lemma=use NamedEntityTag=O]
+[Text=different CharacterOffsetBegin=51 CharacterOffsetEnd=60 PartOfSpeech=JJ Lemma=different NamedEntityTag=O]
+[Text=commands CharacterOffsetBegin=61 CharacterOffsetEnd=69 PartOfSpeech=NNS Lemma=command NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=70 CharacterOffsetEnd=74 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=Windows CharacterOffsetBegin=75 CharacterOffsetEnd=82 PartOfSpeech=NNP Lemma=Windows NamedEntityTag=MISC]
+(ROOT
+  (S
+    (NP (DT The) (NN chimpanzee))
+    (VP (MD could) (RB not)
+      (VP (VB use)
+        (NP (NN Linux))
+        (SBAR (IN because)
+          (S
+            (NP (PRP it))
+            (VP (VBZ uses)
+              (NP (JJ different) (NNS commands))
+              (PP (IN than)
+                (NP (NNP Windows))))))))))
+
+root(ROOT-0, use-5)
+det(chimpanzee-2, The-1)
+nsubj(use-5, chimpanzee-2)
+aux(use-5, could-3)
+neg(use-5, not-4)
+dobj(use-5, Linux-6)
+mark(uses-9, because-7)
+nsubj(uses-9, it-8)
+advcl:because(use-5, uses-9)
+amod(commands-11, different-10)
+dobj(uses-9, commands-11)
+case(Windows-13, than-12)
+nmod:than(uses-9, Windows-13)
+

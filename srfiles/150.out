@@ -1,0 +1,34 @@
+Sentence #1 (8 tokens):
+The light hit the mirror and it reflected
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=light CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=light NamedEntityTag=O]
+[Text=hit CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=hit NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=mirror CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=NN Lemma=mirror NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=reflected CharacterOffsetBegin=32 CharacterOffsetEnd=41 PartOfSpeech=VBD Lemma=reflect NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN light))
+    (VP (VBD hit)
+      (SBAR
+        (S
+          (NP
+            (NP (DT the) (NN mirror))
+            (CC and)
+            (NP (PRP it)))
+          (VP (VBD reflected)))))))
+
+root(ROOT-0, hit-3)
+det(light-2, The-1)
+nsubj(hit-3, light-2)
+det(mirror-5, the-4)
+nsubj(reflected-8, mirror-5)
+cc(mirror-5, and-6)
+conj:and(mirror-5, it-7)
+nsubj(reflected-8, it-7)
+ccomp(hit-3, reflected-8)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,5,[4,6]), that is: "it" -> "the mirror"

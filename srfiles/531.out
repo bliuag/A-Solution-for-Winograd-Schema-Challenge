@@ -1,0 +1,87 @@
+Sentence #1 (25 tokens):
+Kung Fu teachers try to pass on discipline to their disciples, but they do not always learn what they are being taught very well
+[Text=Kung CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Kung NamedEntityTag=PERSON]
+[Text=Fu CharacterOffsetBegin=5 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Fu NamedEntityTag=PERSON]
+[Text=teachers CharacterOffsetBegin=8 CharacterOffsetEnd=16 PartOfSpeech=NNS Lemma=teacher NamedEntityTag=O]
+[Text=try CharacterOffsetBegin=17 CharacterOffsetEnd=20 PartOfSpeech=VBP Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=21 CharacterOffsetEnd=23 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=pass CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=VB Lemma=pass NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=discipline CharacterOffsetBegin=32 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=discipline NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=46 CharacterOffsetEnd=51 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=disciples CharacterOffsetBegin=52 CharacterOffsetEnd=61 PartOfSpeech=NNS Lemma=disciple NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=61 CharacterOffsetEnd=62 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=67 CharacterOffsetEnd=71 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=72 CharacterOffsetEnd=74 PartOfSpeech=VBP Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=75 CharacterOffsetEnd=78 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=always CharacterOffsetBegin=79 CharacterOffsetEnd=85 PartOfSpeech=RB Lemma=always NamedEntityTag=O]
+[Text=learn CharacterOffsetBegin=86 CharacterOffsetEnd=91 PartOfSpeech=VB Lemma=learn NamedEntityTag=O]
+[Text=what CharacterOffsetBegin=92 CharacterOffsetEnd=96 PartOfSpeech=WP Lemma=what NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=97 CharacterOffsetEnd=101 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=102 CharacterOffsetEnd=105 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=106 CharacterOffsetEnd=111 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=taught CharacterOffsetBegin=112 CharacterOffsetEnd=118 PartOfSpeech=VBD Lemma=teach NamedEntityTag=O]
+[Text=very CharacterOffsetBegin=119 CharacterOffsetEnd=123 PartOfSpeech=RB Lemma=very NamedEntityTag=O]
+[Text=well CharacterOffsetBegin=124 CharacterOffsetEnd=128 PartOfSpeech=RB Lemma=well NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Kung) (NNP Fu) (NNS teachers))
+        (VP (VBP try)
+          (S
+            (VP (TO to)
+              (VP (VB pass)
+                (PP (IN on)
+                  (NP (NN discipline)))
+                (PP (TO to)
+                  (NP (PRP$ their) (NNS disciples))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBP do) (RB not)
+          (ADVP (RB always))
+          (VP (VB learn)
+            (SBAR
+              (WHNP (WP what))
+              (S
+                (NP (PRP they))
+                (VP (VBP are)
+                  (VP (VBG being)
+                    (VP (VBD taught)
+                      (ADVP (RB very) (RB well)))))))))))))
+
+root(ROOT-0, try-4)
+compound(teachers-3, Kung-1)
+compound(teachers-3, Fu-2)
+nsubj(try-4, teachers-3)
+nsubj:xsubj(pass-6, teachers-3)
+mark(pass-6, to-5)
+xcomp(try-4, pass-6)
+case(discipline-8, on-7)
+nmod:on(pass-6, discipline-8)
+case(disciples-11, to-9)
+nmod:poss(disciples-11, their-10)
+nmod:to(pass-6, disciples-11)
+punct(try-4, ,-12)
+cc(try-4, but-13)
+nsubj(learn-18, they-14)
+aux(learn-18, do-15)
+neg(learn-18, not-16)
+advmod(learn-18, always-17)
+conj:but(try-4, learn-18)
+dobj(taught-23, what-19)
+nsubjpass(taught-23, they-20)
+aux(taught-23, are-21)
+auxpass(taught-23, being-22)
+ccomp(learn-18, taught-23)
+advmod(well-25, very-24)
+advmod(taught-23, well-25)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,3,[1,4]), that is: "their" -> "Kung Fu teachers"
+	(1,14,[14,15]) -> (1,3,[1,4]), that is: "they" -> "Kung Fu teachers"
+	(1,20,[20,21]) -> (1,3,[1,4]), that is: "they" -> "Kung Fu teachers"

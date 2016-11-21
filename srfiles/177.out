@@ -1,0 +1,37 @@
+Sentence #1 (10 tokens):
+The violin fell off the table because it was unstable
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=violin CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=violin NamedEntityTag=O]
+[Text=fell CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=fall NamedEntityTag=O]
+[Text=off CharacterOffsetBegin=16 CharacterOffsetEnd=19 PartOfSpeech=RP Lemma=off NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=table CharacterOffsetBegin=24 CharacterOffsetEnd=29 PartOfSpeech=NN Lemma=table NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=unstable CharacterOffsetBegin=45 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=unstable NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN violin))
+    (VP (VBD fell)
+      (PRT (RP off))
+      (NP (DT the) (NN table))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD was)
+            (ADJP (JJ unstable))))))))
+
+root(ROOT-0, fell-3)
+det(violin-2, The-1)
+nsubj(fell-3, violin-2)
+compound:prt(fell-3, off-4)
+det(table-6, the-5)
+dobj(fell-3, table-6)
+mark(unstable-10, because-7)
+nsubj(unstable-10, it-8)
+cop(unstable-10, was-9)
+advcl:because(fell-3, unstable-10)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,2,[1,3]), that is: "it" -> "The violin"

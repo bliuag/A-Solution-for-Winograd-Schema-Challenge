@@ -1,0 +1,57 @@
+Sentence #1 (17 tokens):
+The city council granted a permit to the construction workers because they were elected to encourage business
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=city CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=city NamedEntityTag=O]
+[Text=council CharacterOffsetBegin=9 CharacterOffsetEnd=16 PartOfSpeech=NN Lemma=council NamedEntityTag=O]
+[Text=granted CharacterOffsetBegin=17 CharacterOffsetEnd=24 PartOfSpeech=VBD Lemma=grant NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=25 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=permit CharacterOffsetBegin=27 CharacterOffsetEnd=33 PartOfSpeech=NN Lemma=permit NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=construction CharacterOffsetBegin=41 CharacterOffsetEnd=53 PartOfSpeech=NN Lemma=construction NamedEntityTag=O]
+[Text=workers CharacterOffsetBegin=54 CharacterOffsetEnd=61 PartOfSpeech=NNS Lemma=worker NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=62 CharacterOffsetEnd=69 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=70 CharacterOffsetEnd=74 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=75 CharacterOffsetEnd=79 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=elected CharacterOffsetBegin=80 CharacterOffsetEnd=87 PartOfSpeech=VBN Lemma=elect NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=88 CharacterOffsetEnd=90 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=encourage CharacterOffsetBegin=91 CharacterOffsetEnd=100 PartOfSpeech=VB Lemma=encourage NamedEntityTag=O]
+[Text=business CharacterOffsetBegin=101 CharacterOffsetEnd=109 PartOfSpeech=NN Lemma=business NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN city) (NN council))
+    (VP (VBD granted)
+      (NP (DT a) (NN permit))
+      (PP (TO to)
+        (NP (DT the) (NN construction) (NNS workers)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (VP (VBN elected)
+              (S
+                (VP (TO to)
+                  (VP (VB encourage)
+                    (NP (NN business))))))))))))
+
+root(ROOT-0, granted-4)
+det(council-3, The-1)
+compound(council-3, city-2)
+nsubj(granted-4, council-3)
+det(permit-6, a-5)
+dobj(granted-4, permit-6)
+case(workers-10, to-7)
+det(workers-10, the-8)
+compound(workers-10, construction-9)
+nmod:to(granted-4, workers-10)
+mark(elected-14, because-11)
+nsubjpass(elected-14, they-12)
+nsubj:xsubj(encourage-16, they-12)
+auxpass(elected-14, were-13)
+advcl:because(granted-4, elected-14)
+mark(encourage-16, to-15)
+xcomp(elected-14, encourage-16)
+dobj(encourage-16, business-17)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,10,[8,11]), that is: "they" -> "the construction workers"

@@ -1,0 +1,61 @@
+Sentence #1 (17 tokens):
+The management provided bonuses to the employees since they need to be kept happy to stay productive
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=management CharacterOffsetBegin=4 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=management NamedEntityTag=O]
+[Text=provided CharacterOffsetBegin=15 CharacterOffsetEnd=23 PartOfSpeech=VBD Lemma=provide NamedEntityTag=O]
+[Text=bonuses CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=NNS Lemma=bonus NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=employees CharacterOffsetBegin=39 CharacterOffsetEnd=48 PartOfSpeech=NNS Lemma=employee NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=49 CharacterOffsetEnd=54 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=55 CharacterOffsetEnd=59 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=need CharacterOffsetBegin=60 CharacterOffsetEnd=64 PartOfSpeech=VBP Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=65 CharacterOffsetEnd=67 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=68 CharacterOffsetEnd=70 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=kept CharacterOffsetBegin=71 CharacterOffsetEnd=75 PartOfSpeech=VBN Lemma=keep NamedEntityTag=O]
+[Text=happy CharacterOffsetBegin=76 CharacterOffsetEnd=81 PartOfSpeech=JJ Lemma=happy NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=82 CharacterOffsetEnd=84 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=stay CharacterOffsetBegin=85 CharacterOffsetEnd=89 PartOfSpeech=VB Lemma=stay NamedEntityTag=O]
+[Text=productive CharacterOffsetBegin=90 CharacterOffsetEnd=100 PartOfSpeech=JJ Lemma=productive NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN management))
+    (VP (VBD provided)
+      (NP (NNS bonuses))
+      (PP (TO to)
+        (NP (DT the) (NNS employees)))
+      (SBAR (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBP need)
+            (S
+              (VP (TO to)
+                (VP (VB be)
+                  (VP (VBN kept)
+                    (ADJP (JJ happy)
+                      (S
+                        (VP (TO to)
+                          (VP (VB stay)
+                            (ADJP (JJ productive))))))))))))))))
+
+root(ROOT-0, provided-3)
+det(management-2, The-1)
+nsubj(provided-3, management-2)
+dobj(provided-3, bonuses-4)
+case(employees-7, to-5)
+det(employees-7, the-6)
+nmod:to(provided-3, employees-7)
+mark(need-10, since-8)
+nsubj(need-10, they-9)
+nsubjpass:xsubj(kept-13, they-9)
+advcl:since(provided-3, need-10)
+mark(kept-13, to-11)
+auxpass(kept-13, be-12)
+xcomp(need-10, kept-13)
+xcomp(kept-13, happy-14)
+mark(stay-16, to-15)
+xcomp(happy-14, stay-16)
+xcomp(stay-16, productive-17)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,7,[6,8]), that is: "they" -> "the employees"

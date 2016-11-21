@@ -1,0 +1,42 @@
+Sentence #1 (13 tokens):
+The off-campus apartments were preferred to the on-campus apartments because they were cheaper
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=off-campus CharacterOffsetBegin=4 CharacterOffsetEnd=14 PartOfSpeech=JJ Lemma=off-campus NamedEntityTag=O]
+[Text=apartments CharacterOffsetBegin=15 CharacterOffsetEnd=25 PartOfSpeech=NNS Lemma=apartment NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=26 CharacterOffsetEnd=30 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=preferred CharacterOffsetBegin=31 CharacterOffsetEnd=40 PartOfSpeech=VBN Lemma=prefer NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=41 CharacterOffsetEnd=43 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=on-campus CharacterOffsetBegin=48 CharacterOffsetEnd=57 PartOfSpeech=JJ Lemma=on-campus NamedEntityTag=O]
+[Text=apartments CharacterOffsetBegin=58 CharacterOffsetEnd=68 PartOfSpeech=NNS Lemma=apartment NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=69 CharacterOffsetEnd=76 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=77 CharacterOffsetEnd=81 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=82 CharacterOffsetEnd=86 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=cheaper CharacterOffsetBegin=87 CharacterOffsetEnd=94 PartOfSpeech=JJR Lemma=cheaper NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (JJ off-campus) (NNS apartments))
+    (VP (VBD were)
+      (VP (VBN preferred)
+        (PP (TO to)
+          (NP (DT the) (JJ on-campus) (NNS apartments)))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBD were)
+              (ADJP (JJR cheaper)))))))))
+
+root(ROOT-0, preferred-5)
+det(apartments-3, The-1)
+amod(apartments-3, off-campus-2)
+nsubjpass(preferred-5, apartments-3)
+auxpass(preferred-5, were-4)
+case(apartments-9, to-6)
+det(apartments-9, the-7)
+amod(apartments-9, on-campus-8)
+nmod:to(preferred-5, apartments-9)
+mark(cheaper-13, because-10)
+nsubj(cheaper-13, they-11)
+cop(cheaper-13, were-12)
+advcl:because(preferred-5, cheaper-13)
+

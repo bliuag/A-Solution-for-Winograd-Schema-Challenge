@@ -1,0 +1,66 @@
+Sentence #1 (19 tokens):
+Canada is bigger than the United Kingdom, but they do not have the population to back it up
+[Text=Canada CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Canada NamedEntityTag=LOCATION]
+[Text=is CharacterOffsetBegin=7 CharacterOffsetEnd=9 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=bigger CharacterOffsetBegin=10 CharacterOffsetEnd=16 PartOfSpeech=JJR Lemma=bigger NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=17 CharacterOffsetEnd=21 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=United CharacterOffsetBegin=26 CharacterOffsetEnd=32 PartOfSpeech=NNP Lemma=United NamedEntityTag=LOCATION]
+[Text=Kingdom CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=NNP Lemma=Kingdom NamedEntityTag=LOCATION]
+[Text=, CharacterOffsetBegin=40 CharacterOffsetEnd=41 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=42 CharacterOffsetEnd=45 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=51 CharacterOffsetEnd=53 PartOfSpeech=VBP Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=VB Lemma=have NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=population CharacterOffsetBegin=67 CharacterOffsetEnd=77 PartOfSpeech=NN Lemma=population NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=78 CharacterOffsetEnd=80 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=back CharacterOffsetBegin=81 CharacterOffsetEnd=85 PartOfSpeech=VB Lemma=back NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=86 CharacterOffsetEnd=88 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=up CharacterOffsetBegin=89 CharacterOffsetEnd=91 PartOfSpeech=RP Lemma=up NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Canada))
+        (VP (VBZ is)
+          (ADJP
+            (ADJP (JJR bigger))
+            (PP (IN than)
+              (NP (DT the) (NNP United) (NNP Kingdom))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBP do) (RB not)
+          (VP (VB have)
+            (NP (DT the) (NN population)
+              (S
+                (VP (TO to)
+                  (VP (VB back)
+                    (NP (PRP it))
+                    (PRT (RP up))))))))))))
+
+root(ROOT-0, bigger-3)
+nsubj(bigger-3, Canada-1)
+cop(bigger-3, is-2)
+case(Kingdom-7, than-4)
+det(Kingdom-7, the-5)
+compound(Kingdom-7, United-6)
+nmod:than(bigger-3, Kingdom-7)
+punct(bigger-3, ,-8)
+cc(bigger-3, but-9)
+nsubj(have-13, they-10)
+aux(have-13, do-11)
+neg(have-13, not-12)
+conj:but(bigger-3, have-13)
+det(population-15, the-14)
+dobj(have-13, population-15)
+mark(back-17, to-16)
+acl:to(population-15, back-17)
+dobj(back-17, it-18)
+compound:prt(back-17, up-19)
+
+Coreference set:
+	(1,18,[18,19]) -> (1,1,[1,2]), that is: "it" -> "Canada"

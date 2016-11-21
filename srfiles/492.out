@@ -1,0 +1,87 @@
+Sentence #1 (25 tokens):
+Paypal has to settle millions of disputes every year by disgruntled users since they are sometimes a victim of fraud from purchasing through the internet
+[Text=Paypal CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Paypal NamedEntityTag=ORGANIZATION]
+[Text=has CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=settle CharacterOffsetBegin=14 CharacterOffsetEnd=20 PartOfSpeech=VB Lemma=settle NamedEntityTag=O]
+[Text=millions CharacterOffsetBegin=21 CharacterOffsetEnd=29 PartOfSpeech=NNS Lemma=million NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=disputes CharacterOffsetBegin=33 CharacterOffsetEnd=41 PartOfSpeech=NNS Lemma=dispute NamedEntityTag=O]
+[Text=every CharacterOffsetBegin=42 CharacterOffsetEnd=47 PartOfSpeech=DT Lemma=every NamedEntityTag=SET Timex=<TIMEX3 periodicity="P1Y" quant="every" tid="t1" type="SET" value="P1Y">every year</TIMEX3>]
+[Text=year CharacterOffsetBegin=48 CharacterOffsetEnd=52 PartOfSpeech=NN Lemma=year NamedEntityTag=SET Timex=<TIMEX3 periodicity="P1Y" quant="every" tid="t1" type="SET" value="P1Y">every year</TIMEX3>]
+[Text=by CharacterOffsetBegin=53 CharacterOffsetEnd=55 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=disgruntled CharacterOffsetBegin=56 CharacterOffsetEnd=67 PartOfSpeech=JJ Lemma=disgruntled NamedEntityTag=O]
+[Text=users CharacterOffsetBegin=68 CharacterOffsetEnd=73 PartOfSpeech=NNS Lemma=user NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=74 CharacterOffsetEnd=79 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=80 CharacterOffsetEnd=84 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=85 CharacterOffsetEnd=88 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=sometimes CharacterOffsetBegin=89 CharacterOffsetEnd=98 PartOfSpeech=RB Lemma=sometimes NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=99 CharacterOffsetEnd=100 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=victim CharacterOffsetBegin=101 CharacterOffsetEnd=107 PartOfSpeech=NN Lemma=victim NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=108 CharacterOffsetEnd=110 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=fraud CharacterOffsetBegin=111 CharacterOffsetEnd=116 PartOfSpeech=NN Lemma=fraud NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=117 CharacterOffsetEnd=121 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=purchasing CharacterOffsetBegin=122 CharacterOffsetEnd=132 PartOfSpeech=VBG Lemma=purchase NamedEntityTag=O]
+[Text=through CharacterOffsetBegin=133 CharacterOffsetEnd=140 PartOfSpeech=IN Lemma=through NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=141 CharacterOffsetEnd=144 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=internet CharacterOffsetBegin=145 CharacterOffsetEnd=153 PartOfSpeech=NN Lemma=internet NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Paypal))
+    (VP (VBZ has)
+      (S
+        (VP (TO to)
+          (VP (VB settle)
+            (NP
+              (NP (NNS millions))
+              (PP (IN of)
+                (NP
+                  (NP (NNS disputes))
+                  (NP (DT every) (NN year)))))
+            (PP (IN by)
+              (NP (JJ disgruntled) (NNS users)))
+            (SBAR (IN since)
+              (S
+                (NP (PRP they))
+                (VP (VBP are)
+                  (ADVP (RB sometimes))
+                  (NP
+                    (NP (DT a) (NN victim))
+                    (PP (IN of)
+                      (NP
+                        (NP (NN fraud))
+                        (PP (IN from)
+                          (S
+                            (VP (VBG purchasing)
+                              (PP (IN through)
+                                (NP (DT the) (NN internet))))))))))))))))))
+
+root(ROOT-0, has-2)
+nsubj(has-2, Paypal-1)
+nsubj:xsubj(settle-4, Paypal-1)
+mark(settle-4, to-3)
+xcomp(has-2, settle-4)
+det:qmod(disputes-7, millions-5)
+mwe(millions-5, of-6)
+dobj(settle-4, disputes-7)
+det(year-9, every-8)
+dep(disputes-7, year-9)
+case(users-12, by-10)
+amod(users-12, disgruntled-11)
+nmod:by(settle-4, users-12)
+mark(victim-18, since-13)
+nsubj(victim-18, they-14)
+cop(victim-18, are-15)
+advmod(victim-18, sometimes-16)
+det(victim-18, a-17)
+advcl:since(settle-4, victim-18)
+case(fraud-20, of-19)
+nmod:of(victim-18, fraud-20)
+mark(purchasing-22, from-21)
+acl:from(fraud-20, purchasing-22)
+case(internet-25, through-23)
+det(internet-25, the-24)
+nmod:through(purchasing-22, internet-25)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,5,[5,10]), that is: "they" -> "millions of disputes every year"

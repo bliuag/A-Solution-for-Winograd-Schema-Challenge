@@ -1,0 +1,60 @@
+Sentence #1 (18 tokens):
+Christian Bale once lost his temper at the man holding his lighting because he has a short temper
+[Text=Christian CharacterOffsetBegin=0 CharacterOffsetEnd=9 PartOfSpeech=JJ Lemma=christian NamedEntityTag=PERSON]
+[Text=Bale CharacterOffsetBegin=10 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=bale NamedEntityTag=PERSON]
+[Text=once CharacterOffsetBegin=15 CharacterOffsetEnd=19 PartOfSpeech=RB Lemma=once NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">once</TIMEX3>]
+[Text=lost CharacterOffsetBegin=20 CharacterOffsetEnd=24 PartOfSpeech=VBD Lemma=lose NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=temper CharacterOffsetBegin=29 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=temper NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=man CharacterOffsetBegin=43 CharacterOffsetEnd=46 PartOfSpeech=NN Lemma=man NamedEntityTag=O]
+[Text=holding CharacterOffsetBegin=47 CharacterOffsetEnd=54 PartOfSpeech=VBG Lemma=hold NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=lighting CharacterOffsetBegin=59 CharacterOffsetEnd=67 PartOfSpeech=NN Lemma=lighting NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=68 CharacterOffsetEnd=75 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=76 CharacterOffsetEnd=78 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=79 CharacterOffsetEnd=82 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=83 CharacterOffsetEnd=84 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=short CharacterOffsetBegin=85 CharacterOffsetEnd=90 PartOfSpeech=JJ Lemma=short NamedEntityTag=O]
+[Text=temper CharacterOffsetBegin=91 CharacterOffsetEnd=97 PartOfSpeech=NN Lemma=temper NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (JJ Christian) (NN Bale))
+    (VP
+      (ADVP (RB once))
+      (VBD lost)
+      (NP (PRP$ his) (NN temper))
+      (PP (IN at)
+        (NP
+          (NP (DT the) (NN man))
+          (VP (VBG holding)
+            (NP (PRP$ his) (NN lighting))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBZ has)
+                  (NP (DT a) (JJ short) (NN temper)))))))))))
+
+root(ROOT-0, lost-4)
+amod(Bale-2, Christian-1)
+nsubj(lost-4, Bale-2)
+advmod(lost-4, once-3)
+nmod:poss(temper-6, his-5)
+dobj(lost-4, temper-6)
+case(man-9, at-7)
+det(man-9, the-8)
+nmod:at(lost-4, man-9)
+acl(man-9, holding-10)
+nmod:poss(lighting-12, his-11)
+dobj(holding-10, lighting-12)
+mark(has-15, because-13)
+nsubj(has-15, he-14)
+advcl:because(holding-10, has-15)
+det(temper-18, a-16)
+amod(temper-18, short-17)
+dobj(has-15, temper-18)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,5,[5,6]), that is: "his" -> "his"
+	(1,14,[14,15]) -> (1,5,[5,6]), that is: "he" -> "his"

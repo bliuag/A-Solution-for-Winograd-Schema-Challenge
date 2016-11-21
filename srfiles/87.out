@@ -1,0 +1,35 @@
+Sentence #1 (10 tokens):
+The leech latched onto the hippo because it was hungry
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=leech CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=leech NamedEntityTag=O]
+[Text=latched CharacterOffsetBegin=10 CharacterOffsetEnd=17 PartOfSpeech=VBD Lemma=latch NamedEntityTag=O]
+[Text=onto CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=IN Lemma=onto NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=hippo CharacterOffsetBegin=27 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=hippo NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=41 CharacterOffsetEnd=43 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=hungry CharacterOffsetBegin=48 CharacterOffsetEnd=54 PartOfSpeech=JJ Lemma=hungry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN leech))
+    (VP (VBD latched)
+      (PP (IN onto)
+        (NP (DT the) (NN hippo)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD was)
+            (ADJP (JJ hungry))))))))
+
+root(ROOT-0, latched-3)
+det(leech-2, The-1)
+nsubj(latched-3, leech-2)
+case(hippo-6, onto-4)
+det(hippo-6, the-5)
+nmod:onto(latched-3, hippo-6)
+mark(hungry-10, because-7)
+nsubj(hungry-10, it-8)
+cop(hungry-10, was-9)
+advcl:because(latched-3, hungry-10)
+

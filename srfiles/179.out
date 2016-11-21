@@ -1,0 +1,35 @@
+Sentence #1 (9 tokens):
+Lily gave Amber a hug because she was sorry
+[Text=Lily CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Lily NamedEntityTag=PERSON]
+[Text=gave CharacterOffsetBegin=5 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=give NamedEntityTag=O]
+[Text=Amber CharacterOffsetBegin=10 CharacterOffsetEnd=15 PartOfSpeech=NNP Lemma=Amber NamedEntityTag=ORGANIZATION]
+[Text=a CharacterOffsetBegin=16 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=hug CharacterOffsetBegin=18 CharacterOffsetEnd=21 PartOfSpeech=NN Lemma=hug NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=22 CharacterOffsetEnd=29 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=30 CharacterOffsetEnd=33 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=34 CharacterOffsetEnd=37 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=sorry CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=JJ Lemma=sorry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Lily))
+    (VP (VBD gave)
+      (NP (NNP Amber))
+      (NP (DT a) (NN hug))
+      (SBAR (IN because)
+        (S
+          (NP (PRP she))
+          (VP (VBD was)
+            (ADJP (JJ sorry))))))))
+
+root(ROOT-0, gave-2)
+nsubj(gave-2, Lily-1)
+iobj(gave-2, Amber-3)
+det(hug-5, a-4)
+dobj(gave-2, hug-5)
+mark(sorry-9, because-6)
+nsubj(sorry-9, she-7)
+cop(sorry-9, was-8)
+advcl:because(gave-2, sorry-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,1,[1,2]), that is: "she" -> "Lily"

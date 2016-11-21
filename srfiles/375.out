@@ -1,0 +1,62 @@
+Sentence #1 (17 tokens):
+Sony recently locked 90000 users from their accounts because they had hackers compromise their customer's information
+[Text=Sony CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Sony NamedEntityTag=ORGANIZATION]
+[Text=recently CharacterOffsetBegin=5 CharacterOffsetEnd=13 PartOfSpeech=RB Lemma=recently NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">recently</TIMEX3>]
+[Text=locked CharacterOffsetBegin=14 CharacterOffsetEnd=20 PartOfSpeech=VBD Lemma=lock NamedEntityTag=O]
+[Text=90000 CharacterOffsetBegin=21 CharacterOffsetEnd=26 PartOfSpeech=CD Lemma=90000 NamedEntityTag=NUMBER NormalizedNamedEntityTag=90000.0]
+[Text=users CharacterOffsetBegin=27 CharacterOffsetEnd=32 PartOfSpeech=NNS Lemma=user NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=33 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=accounts CharacterOffsetBegin=44 CharacterOffsetEnd=52 PartOfSpeech=NNS Lemma=account NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=53 CharacterOffsetEnd=60 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=61 CharacterOffsetEnd=65 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=66 CharacterOffsetEnd=69 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=hackers CharacterOffsetBegin=70 CharacterOffsetEnd=77 PartOfSpeech=NNS Lemma=hacker NamedEntityTag=O]
+[Text=compromise CharacterOffsetBegin=78 CharacterOffsetEnd=88 PartOfSpeech=VB Lemma=compromise NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=89 CharacterOffsetEnd=94 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=customer CharacterOffsetBegin=95 CharacterOffsetEnd=103 PartOfSpeech=NN Lemma=customer NamedEntityTag=O]
+[Text='s CharacterOffsetBegin=103 CharacterOffsetEnd=105 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=information CharacterOffsetBegin=106 CharacterOffsetEnd=117 PartOfSpeech=NN Lemma=information NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Sony))
+    (VP
+      (ADVP (RB recently))
+      (VBD locked)
+      (NP (CD 90000) (NNS users))
+      (PP (IN from)
+        (NP (PRP$ their) (NNS accounts)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD had)
+            (S
+              (NP (NNS hackers))
+              (VP (VB compromise)
+                (NP
+                  (NP (PRP$ their) (NN customer) (POS 's))
+                  (NN information))))))))))
+
+root(ROOT-0, locked-3)
+nsubj(locked-3, Sony-1)
+advmod(locked-3, recently-2)
+nummod(users-5, 90000-4)
+dobj(locked-3, users-5)
+case(accounts-8, from-6)
+nmod:poss(accounts-8, their-7)
+nmod:from(locked-3, accounts-8)
+mark(had-11, because-9)
+nsubj(had-11, they-10)
+advcl:because(locked-3, had-11)
+nsubj(compromise-13, hackers-12)
+ccomp(had-11, compromise-13)
+nmod:poss(customer-15, their-14)
+nmod:poss(information-17, customer-15)
+case(customer-15, 's-16)
+dobj(compromise-13, information-17)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,5,[4,6]), that is: "their" -> "90000 users"
+	(1,10,[10,11]) -> (1,5,[4,6]), that is: "they" -> "90000 users"
+Coreference set:
+	(1,14,[14,15]) -> (1,12,[12,13]), that is: "their" -> "hackers"

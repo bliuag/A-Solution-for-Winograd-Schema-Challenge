@@ -1,0 +1,53 @@
+Sentence #1 (15 tokens):
+Bill Clinton speaks better than George Bush, since he is not a practiced orator
+[Text=Bill CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Bill NamedEntityTag=PERSON]
+[Text=Clinton CharacterOffsetBegin=5 CharacterOffsetEnd=12 PartOfSpeech=NNP Lemma=Clinton NamedEntityTag=PERSON]
+[Text=speaks CharacterOffsetBegin=13 CharacterOffsetEnd=19 PartOfSpeech=VBZ Lemma=speak NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=20 CharacterOffsetEnd=26 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=27 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=George CharacterOffsetBegin=32 CharacterOffsetEnd=38 PartOfSpeech=NNP Lemma=George NamedEntityTag=PERSON]
+[Text=Bush CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=NNP Lemma=Bush NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=43 CharacterOffsetEnd=44 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=45 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=51 CharacterOffsetEnd=53 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=54 CharacterOffsetEnd=56 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=61 CharacterOffsetEnd=62 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=practiced CharacterOffsetBegin=63 CharacterOffsetEnd=72 PartOfSpeech=VBN Lemma=practice NamedEntityTag=O]
+[Text=orator CharacterOffsetBegin=73 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=orator NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Bill) (NNP Clinton))
+    (VP (VBZ speaks)
+      (ADJP
+        (ADJP (JJR better))
+        (PP (IN than)
+          (NP (NNP George) (NNP Bush))))
+      (, ,)
+      (SBAR (IN since)
+        (S
+          (NP (PRP he))
+          (VP (VBZ is)
+            (NP
+              (NP (RB not) (DT a))
+              (VP (VBN practiced)
+                (NP (NN orator))))))))))
+
+root(ROOT-0, speaks-3)
+compound(Clinton-2, Bill-1)
+nsubj(speaks-3, Clinton-2)
+xcomp(speaks-3, better-4)
+case(Bush-7, than-5)
+compound(Bush-7, George-6)
+nmod:than(better-4, Bush-7)
+punct(speaks-3, ,-8)
+mark(a-13, since-9)
+nsubj(a-13, he-10)
+cop(a-13, is-11)
+neg(a-13, not-12)
+advcl:since(speaks-3, a-13)
+acl(a-13, practiced-14)
+dobj(practiced-14, orator-15)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,2,[1,3]), that is: "he" -> "Bill Clinton"

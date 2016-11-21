@@ -1,0 +1,70 @@
+Sentence #1 (20 tokens):
+Rick Perry is doing stronger than Mitt Romney in the polls, but he is confident to maintain the lead
+[Text=Rick CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Rick NamedEntityTag=PERSON]
+[Text=Perry CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=NNP Lemma=Perry NamedEntityTag=PERSON]
+[Text=is CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=doing CharacterOffsetBegin=14 CharacterOffsetEnd=19 PartOfSpeech=VBG Lemma=do NamedEntityTag=O]
+[Text=stronger CharacterOffsetBegin=20 CharacterOffsetEnd=28 PartOfSpeech=JJR Lemma=stronger NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=29 CharacterOffsetEnd=33 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=Mitt CharacterOffsetBegin=34 CharacterOffsetEnd=38 PartOfSpeech=NNP Lemma=Mitt NamedEntityTag=PERSON]
+[Text=Romney CharacterOffsetBegin=39 CharacterOffsetEnd=45 PartOfSpeech=NNP Lemma=Romney NamedEntityTag=PERSON]
+[Text=in CharacterOffsetBegin=46 CharacterOffsetEnd=48 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=polls CharacterOffsetBegin=53 CharacterOffsetEnd=58 PartOfSpeech=NNS Lemma=poll NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=58 CharacterOffsetEnd=59 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=60 CharacterOffsetEnd=63 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=64 CharacterOffsetEnd=66 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=67 CharacterOffsetEnd=69 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=confident CharacterOffsetBegin=70 CharacterOffsetEnd=79 PartOfSpeech=JJ Lemma=confident NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=80 CharacterOffsetEnd=82 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=maintain CharacterOffsetBegin=83 CharacterOffsetEnd=91 PartOfSpeech=VB Lemma=maintain NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=92 CharacterOffsetEnd=95 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=lead CharacterOffsetBegin=96 CharacterOffsetEnd=100 PartOfSpeech=NN Lemma=lead NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Rick) (NNP Perry))
+        (VP (VBZ is)
+          (VP (VBG doing)
+            (NP (JJR stronger))
+            (PP (IN than)
+              (NP
+                (NP (NNP Mitt) (NNP Romney))
+                (PP (IN in)
+                  (NP (DT the) (NNS polls))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP (VBZ is)
+          (ADJP (JJ confident)
+            (S
+              (VP (TO to)
+                (VP (VB maintain)
+                  (NP (DT the) (NN lead)))))))))))
+
+root(ROOT-0, doing-4)
+compound(Perry-2, Rick-1)
+nsubj(doing-4, Perry-2)
+aux(doing-4, is-3)
+dobj(doing-4, stronger-5)
+case(Romney-8, than-6)
+compound(Romney-8, Mitt-7)
+nmod:than(doing-4, Romney-8)
+case(polls-11, in-9)
+det(polls-11, the-10)
+nmod:in(Romney-8, polls-11)
+punct(doing-4, ,-12)
+cc(doing-4, but-13)
+nsubj(confident-16, he-14)
+nsubj:xsubj(maintain-18, he-14)
+cop(confident-16, is-15)
+conj:but(doing-4, confident-16)
+mark(maintain-18, to-17)
+xcomp(confident-16, maintain-18)
+det(lead-20, the-19)
+dobj(maintain-18, lead-20)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,2,[1,3]), that is: "he" -> "Rick Perry"

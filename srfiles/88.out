@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The people protested the government because they were hungry
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=people CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNS Lemma=people NamedEntityTag=O]
+[Text=protested CharacterOffsetBegin=11 CharacterOffsetEnd=20 PartOfSpeech=VBD Lemma=protest NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=21 CharacterOffsetEnd=24 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=government CharacterOffsetBegin=25 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=government NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=49 CharacterOffsetEnd=53 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=hungry CharacterOffsetBegin=54 CharacterOffsetEnd=60 PartOfSpeech=JJ Lemma=hungry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS people))
+    (VP (VBD protested)
+      (NP (DT the) (NN government))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP (JJ hungry))))))))
+
+root(ROOT-0, protested-3)
+det(people-2, The-1)
+nsubj(protested-3, people-2)
+det(government-5, the-4)
+dobj(protested-3, government-5)
+mark(hungry-9, because-6)
+nsubj(hungry-9, they-7)
+cop(hungry-9, were-8)
+advcl:because(protested-3, hungry-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "they" -> "The people"

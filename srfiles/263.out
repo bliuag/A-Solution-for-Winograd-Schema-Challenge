@@ -1,0 +1,46 @@
+Sentence #1 (13 tokens):
+Gorden got mad at his brother because he did not get good sleep
+[Text=Gorden CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Gorden NamedEntityTag=PERSON]
+[Text=got CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=mad CharacterOffsetBegin=11 CharacterOffsetEnd=14 PartOfSpeech=JJ Lemma=mad NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=15 CharacterOffsetEnd=17 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=18 CharacterOffsetEnd=21 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=brother CharacterOffsetBegin=22 CharacterOffsetEnd=29 PartOfSpeech=NN Lemma=brother NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=get CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=VB Lemma=get NamedEntityTag=O]
+[Text=good CharacterOffsetBegin=53 CharacterOffsetEnd=57 PartOfSpeech=JJ Lemma=good NamedEntityTag=O]
+[Text=sleep CharacterOffsetBegin=58 CharacterOffsetEnd=63 PartOfSpeech=NN Lemma=sleep NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Gorden))
+    (VP (VBD got)
+      (ADJP (JJ mad)
+        (PP (IN at)
+          (NP (PRP$ his) (NN brother))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD did) (RB not)
+            (VP (VB get)
+              (NP (JJ good) (NN sleep)))))))))
+
+root(ROOT-0, got-2)
+nsubj(got-2, Gorden-1)
+xcomp(got-2, mad-3)
+case(brother-6, at-4)
+nmod:poss(brother-6, his-5)
+nmod:at(mad-3, brother-6)
+mark(get-11, because-7)
+nsubj(get-11, he-8)
+aux(get-11, did-9)
+neg(get-11, not-10)
+advcl:because(got-2, get-11)
+amod(sleep-13, good-12)
+dobj(get-11, sleep-13)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "his" -> "Gorden"
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Gorden"

@@ -1,0 +1,39 @@
+Sentence #1 (10 tokens):
+John visited Luke in the hospital because he was sick
+[Text=John CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=visited CharacterOffsetBegin=5 CharacterOffsetEnd=12 PartOfSpeech=VBD Lemma=visit NamedEntityTag=O]
+[Text=Luke CharacterOffsetBegin=13 CharacterOffsetEnd=17 PartOfSpeech=NNP Lemma=Luke NamedEntityTag=PERSON]
+[Text=in CharacterOffsetBegin=18 CharacterOffsetEnd=20 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=21 CharacterOffsetEnd=24 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=hospital CharacterOffsetBegin=25 CharacterOffsetEnd=33 PartOfSpeech=NN Lemma=hospital NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=34 CharacterOffsetEnd=41 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=42 CharacterOffsetEnd=44 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=sick CharacterOffsetBegin=49 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=sick NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP John))
+    (VP (VBD visited)
+      (NP
+        (NP (NNP Luke))
+        (PP (IN in)
+          (NP (DT the) (NN hospital))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (ADJP (JJ sick))))))))
+
+root(ROOT-0, visited-2)
+nsubj(visited-2, John-1)
+dobj(visited-2, Luke-3)
+case(hospital-6, in-4)
+det(hospital-6, the-5)
+nmod:in(Luke-3, hospital-6)
+mark(sick-10, because-7)
+nsubj(sick-10, he-8)
+cop(sick-10, was-9)
+advcl:because(visited-2, sick-10)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "John"

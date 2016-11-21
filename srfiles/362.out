@@ -1,0 +1,39 @@
+Sentence #1 (11 tokens):
+The ruling class treats the citizens poorly because they are superior
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=ruling CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=ruling NamedEntityTag=O]
+[Text=class CharacterOffsetBegin=11 CharacterOffsetEnd=16 PartOfSpeech=NN Lemma=class NamedEntityTag=O]
+[Text=treats CharacterOffsetBegin=17 CharacterOffsetEnd=23 PartOfSpeech=VBZ Lemma=treat NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=citizens CharacterOffsetBegin=28 CharacterOffsetEnd=36 PartOfSpeech=NNS Lemma=citizen NamedEntityTag=O]
+[Text=poorly CharacterOffsetBegin=37 CharacterOffsetEnd=43 PartOfSpeech=RB Lemma=poorly NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=44 CharacterOffsetEnd=51 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=52 CharacterOffsetEnd=56 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=superior CharacterOffsetBegin=61 CharacterOffsetEnd=69 PartOfSpeech=JJ Lemma=superior NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN ruling) (NN class))
+    (VP (VBZ treats)
+      (NP (DT the) (NNS citizens))
+      (ADVP (RB poorly))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBP are)
+            (ADJP (JJ superior))))))))
+
+root(ROOT-0, treats-4)
+det(class-3, The-1)
+compound(class-3, ruling-2)
+nsubj(treats-4, class-3)
+det(citizens-6, the-5)
+dobj(treats-4, citizens-6)
+advmod(treats-4, poorly-7)
+mark(superior-11, because-8)
+nsubj(superior-11, they-9)
+cop(superior-11, are-10)
+advcl:because(treats-4, superior-11)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,6,[5,7]), that is: "they" -> "the citizens"

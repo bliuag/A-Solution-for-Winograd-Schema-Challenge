@@ -1,0 +1,52 @@
+Sentence #1 (13 tokens):
+Mary smiled at Susan, but she was not happy to see her
+[Text=Mary CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Mary NamedEntityTag=PERSON]
+[Text=smiled CharacterOffsetBegin=5 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=smile NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=12 CharacterOffsetEnd=14 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=Susan CharacterOffsetBegin=15 CharacterOffsetEnd=20 PartOfSpeech=NNP Lemma=Susan NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=20 CharacterOffsetEnd=21 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=30 CharacterOffsetEnd=33 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=34 CharacterOffsetEnd=37 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=happy CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=JJ Lemma=happy NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=see CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=VB Lemma=see NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Mary))
+        (VP (VBD smiled)
+          (PP (IN at)
+            (NP (NNP Susan)))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP she))
+        (VP (VBD was) (RB not)
+          (ADJP (JJ happy)
+            (S
+              (VP (TO to)
+                (VP (VB see)
+                  (NP (PRP$ her)))))))))))
+
+root(ROOT-0, smiled-2)
+nsubj(smiled-2, Mary-1)
+case(Susan-4, at-3)
+nmod:at(smiled-2, Susan-4)
+punct(smiled-2, ,-5)
+cc(smiled-2, but-6)
+nsubj(happy-10, she-7)
+nsubj:xsubj(see-12, she-7)
+cop(happy-10, was-8)
+neg(happy-10, not-9)
+conj:but(smiled-2, happy-10)
+mark(see-12, to-11)
+xcomp(happy-10, see-12)
+dobj(see-12, her-13)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,1,[1,2]), that is: "she" -> "Mary"
+	(1,13,[13,14]) -> (1,1,[1,2]), that is: "her" -> "Mary"

@@ -1,0 +1,36 @@
+Sentence #1 (10 tokens):
+The man killed the boss because he hated the job
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=man CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=man NamedEntityTag=O]
+[Text=killed CharacterOffsetBegin=8 CharacterOffsetEnd=14 PartOfSpeech=VBD Lemma=kill NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=15 CharacterOffsetEnd=18 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=boss CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=NN Lemma=boss NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=hated CharacterOffsetBegin=35 CharacterOffsetEnd=40 PartOfSpeech=VBD Lemma=hate NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=job CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=NN Lemma=job NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN man))
+    (VP (VBD killed)
+      (NP (DT the) (NN boss))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD hated)
+            (NP (DT the) (NN job))))))))
+
+root(ROOT-0, killed-3)
+det(man-2, The-1)
+nsubj(killed-3, man-2)
+det(boss-5, the-4)
+dobj(killed-3, boss-5)
+mark(hated-8, because-6)
+nsubj(hated-8, he-7)
+advcl:because(killed-3, hated-8)
+det(job-10, the-9)
+dobj(hated-8, job-10)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "he" -> "The man"

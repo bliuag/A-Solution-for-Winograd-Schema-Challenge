@@ -1,0 +1,45 @@
+Sentence #1 (12 tokens):
+Jason built Rocky a robot, so he had more free time
+[Text=Jason CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Jason NamedEntityTag=PERSON]
+[Text=built CharacterOffsetBegin=6 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=build NamedEntityTag=O]
+[Text=Rocky CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=NNP Lemma=Rocky NamedEntityTag=PERSON]
+[Text=a CharacterOffsetBegin=18 CharacterOffsetEnd=19 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=robot CharacterOffsetBegin=20 CharacterOffsetEnd=25 PartOfSpeech=NN Lemma=robot NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=25 CharacterOffsetEnd=26 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=27 CharacterOffsetEnd=29 PartOfSpeech=RB Lemma=so NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=33 CharacterOffsetEnd=36 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=37 CharacterOffsetEnd=41 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=free CharacterOffsetBegin=42 CharacterOffsetEnd=46 PartOfSpeech=JJ Lemma=free NamedEntityTag=O]
+[Text=time CharacterOffsetBegin=47 CharacterOffsetEnd=51 PartOfSpeech=NN Lemma=time NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Jason))
+    (VP (VBD built)
+      (S
+        (NP (NNP Rocky))
+        (NP (DT a) (NN robot)))
+      (, ,)
+      (SBAR (RB so)
+        (S
+          (NP (PRP he))
+          (VP (VBD had)
+            (NP
+              (ADJP (RBR more) (JJ free))
+              (NN time))))))))
+
+root(ROOT-0, built-2)
+nsubj(built-2, Jason-1)
+nsubj(robot-5, Rocky-3)
+det(robot-5, a-4)
+xcomp(built-2, robot-5)
+punct(built-2, ,-6)
+advmod(had-9, so-7)
+nsubj(had-9, he-8)
+ccomp(built-2, had-9)
+advmod(free-11, more-10)
+amod(time-12, free-11)
+dobj(had-9, time-12)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Jason"

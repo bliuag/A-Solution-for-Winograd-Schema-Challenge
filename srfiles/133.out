@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The cheetah outran the antelope so it got eaten
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=cheetah CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NN Lemma=cheetah NamedEntityTag=O]
+[Text=outran CharacterOffsetBegin=12 CharacterOffsetEnd=18 PartOfSpeech=VBD Lemma=outrun NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=19 CharacterOffsetEnd=22 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=antelope CharacterOffsetBegin=23 CharacterOffsetEnd=31 PartOfSpeech=NNS Lemma=antelope NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=got CharacterOffsetBegin=38 CharacterOffsetEnd=41 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=eaten CharacterOffsetBegin=42 CharacterOffsetEnd=47 PartOfSpeech=VBN Lemma=eat NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN cheetah))
+    (VP (VBD outran)
+      (NP (DT the) (NNS antelope))
+      (SBAR (IN so)
+        (S
+          (NP (PRP it))
+          (VP (VBD got)
+            (VP (VBN eaten))))))))
+
+root(ROOT-0, outran-3)
+det(cheetah-2, The-1)
+nsubj(outran-3, cheetah-2)
+det(antelope-5, the-4)
+dobj(outran-3, antelope-5)
+mark(eaten-9, so-6)
+nsubjpass(eaten-9, it-7)
+auxpass(eaten-9, got-8)
+advcl:so(outran-3, eaten-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "it" -> "The cheetah"

@@ -1,0 +1,51 @@
+Sentence #1 (13 tokens):
+Gorden got mad at his brother because he forgot to bring him chocolate
+[Text=Gorden CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Gorden NamedEntityTag=PERSON]
+[Text=got CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=mad CharacterOffsetBegin=11 CharacterOffsetEnd=14 PartOfSpeech=JJ Lemma=mad NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=15 CharacterOffsetEnd=17 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=18 CharacterOffsetEnd=21 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=brother CharacterOffsetBegin=22 CharacterOffsetEnd=29 PartOfSpeech=NN Lemma=brother NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=forgot CharacterOffsetBegin=41 CharacterOffsetEnd=47 PartOfSpeech=VBD Lemma=forget NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=bring CharacterOffsetBegin=51 CharacterOffsetEnd=56 PartOfSpeech=VB Lemma=bring NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=chocolate CharacterOffsetBegin=61 CharacterOffsetEnd=70 PartOfSpeech=NN Lemma=chocolate NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Gorden))
+    (VP (VBD got)
+      (ADJP (JJ mad)
+        (PP (IN at)
+          (NP (PRP$ his) (NN brother))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD forgot)
+            (S
+              (VP (TO to)
+                (VP (VB bring)
+                  (NP (PRP him))
+                  (NP (NN chocolate)))))))))))
+
+root(ROOT-0, got-2)
+nsubj(got-2, Gorden-1)
+xcomp(got-2, mad-3)
+case(brother-6, at-4)
+nmod:poss(brother-6, his-5)
+nmod:at(mad-3, brother-6)
+mark(forgot-9, because-7)
+nsubj(forgot-9, he-8)
+nsubj:xsubj(bring-11, he-8)
+advcl:because(got-2, forgot-9)
+mark(bring-11, to-10)
+xcomp(forgot-9, bring-11)
+iobj(bring-11, him-12)
+dobj(bring-11, chocolate-13)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "his" -> "Gorden"
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Gorden"
+	(1,12,[12,13]) -> (1,1,[1,2]), that is: "him" -> "Gorden"

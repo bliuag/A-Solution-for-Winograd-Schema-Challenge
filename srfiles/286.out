@@ -1,0 +1,37 @@
+Sentence #1 (10 tokens):
+The knife sliced through the flesh because it was sharp
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=knife CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=knife NamedEntityTag=O]
+[Text=sliced CharacterOffsetBegin=10 CharacterOffsetEnd=16 PartOfSpeech=VBN Lemma=slice NamedEntityTag=O]
+[Text=through CharacterOffsetBegin=17 CharacterOffsetEnd=24 PartOfSpeech=IN Lemma=through NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=flesh CharacterOffsetBegin=29 CharacterOffsetEnd=34 PartOfSpeech=NN Lemma=flesh NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=35 CharacterOffsetEnd=42 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=sharp CharacterOffsetBegin=50 CharacterOffsetEnd=55 PartOfSpeech=JJ Lemma=sharp NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN knife))
+    (VP (VBN sliced)
+      (PP (IN through)
+        (NP (DT the) (NN flesh)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD was)
+            (ADJP (JJ sharp))))))))
+
+root(ROOT-0, sliced-3)
+det(knife-2, The-1)
+nsubj(sliced-3, knife-2)
+case(flesh-6, through-4)
+det(flesh-6, the-5)
+nmod:through(sliced-3, flesh-6)
+mark(sharp-10, because-7)
+nsubj(sharp-10, it-8)
+cop(sharp-10, was-9)
+advcl:because(sliced-3, sharp-10)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,2,[1,3]), that is: "it" -> "The knife"

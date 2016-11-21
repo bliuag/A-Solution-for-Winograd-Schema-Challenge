@@ -1,0 +1,38 @@
+Sentence #1 (10 tokens):
+The outlet powered the lamp when it was plugged in
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=outlet CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=outlet NamedEntityTag=O]
+[Text=powered CharacterOffsetBegin=11 CharacterOffsetEnd=18 PartOfSpeech=VBD Lemma=power NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=19 CharacterOffsetEnd=22 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=lamp CharacterOffsetBegin=23 CharacterOffsetEnd=27 PartOfSpeech=NN Lemma=lamp NamedEntityTag=O]
+[Text=when CharacterOffsetBegin=28 CharacterOffsetEnd=32 PartOfSpeech=WRB Lemma=when NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=plugged CharacterOffsetBegin=40 CharacterOffsetEnd=47 PartOfSpeech=VBN Lemma=plug NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN outlet))
+    (VP (VBD powered)
+      (NP (DT the) (NN lamp))
+      (SBAR
+        (WHADVP (WRB when))
+        (S
+          (NP (PRP it))
+          (VP (VBD was)
+            (VP (VBN plugged)
+              (PP (IN in)))))))))
+
+root(ROOT-0, powered-3)
+det(outlet-2, The-1)
+nsubj(powered-3, outlet-2)
+det(lamp-5, the-4)
+dobj(powered-3, lamp-5)
+advmod(plugged-9, when-6)
+nsubjpass(plugged-9, it-7)
+auxpass(plugged-9, was-8)
+advcl(powered-3, plugged-9)
+nmod(plugged-9, in-10)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "it" -> "The outlet"

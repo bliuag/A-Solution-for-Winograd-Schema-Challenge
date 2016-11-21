@@ -1,0 +1,52 @@
+Sentence #1 (15 tokens):
+Canada is bigger than the United Kingdom, but they have a much larger population
+[Text=Canada CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Canada NamedEntityTag=LOCATION]
+[Text=is CharacterOffsetBegin=7 CharacterOffsetEnd=9 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=bigger CharacterOffsetBegin=10 CharacterOffsetEnd=16 PartOfSpeech=JJR Lemma=bigger NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=17 CharacterOffsetEnd=21 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=United CharacterOffsetBegin=26 CharacterOffsetEnd=32 PartOfSpeech=NNP Lemma=United NamedEntityTag=LOCATION]
+[Text=Kingdom CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=NNP Lemma=Kingdom NamedEntityTag=LOCATION]
+[Text=, CharacterOffsetBegin=40 CharacterOffsetEnd=41 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=42 CharacterOffsetEnd=45 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=51 CharacterOffsetEnd=55 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=56 CharacterOffsetEnd=57 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=much CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=RB Lemma=much NamedEntityTag=O]
+[Text=larger CharacterOffsetBegin=63 CharacterOffsetEnd=69 PartOfSpeech=JJR Lemma=larger NamedEntityTag=O]
+[Text=population CharacterOffsetBegin=70 CharacterOffsetEnd=80 PartOfSpeech=NN Lemma=population NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Canada))
+        (VP (VBZ is)
+          (ADJP
+            (ADJP (JJR bigger))
+            (PP (IN than)
+              (NP (DT the) (NNP United) (NNP Kingdom))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBP have)
+          (NP (DT a)
+            (ADJP (RB much) (JJR larger))
+            (NN population)))))))
+
+root(ROOT-0, bigger-3)
+nsubj(bigger-3, Canada-1)
+cop(bigger-3, is-2)
+case(Kingdom-7, than-4)
+det(Kingdom-7, the-5)
+compound(Kingdom-7, United-6)
+nmod:than(bigger-3, Kingdom-7)
+punct(bigger-3, ,-8)
+cc(bigger-3, but-9)
+nsubj(have-11, they-10)
+conj:but(bigger-3, have-11)
+det(population-15, a-12)
+advmod(larger-14, much-13)
+amod(population-15, larger-14)
+dobj(have-11, population-15)
+

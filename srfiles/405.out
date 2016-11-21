@@ -1,0 +1,51 @@
+Sentence #1 (15 tokens):
+Lloyd traded his truck to Roger for his motorcycle since he preferred a small vehicle
+[Text=Lloyd CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Lloyd NamedEntityTag=ORGANIZATION]
+[Text=traded CharacterOffsetBegin=6 CharacterOffsetEnd=12 PartOfSpeech=VBD Lemma=trade NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=13 CharacterOffsetEnd=16 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=truck CharacterOffsetBegin=17 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=truck NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=Roger CharacterOffsetBegin=26 CharacterOffsetEnd=31 PartOfSpeech=NNP Lemma=Roger NamedEntityTag=PERSON]
+[Text=for CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=motorcycle CharacterOffsetBegin=40 CharacterOffsetEnd=50 PartOfSpeech=NN Lemma=motorcycle NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=51 CharacterOffsetEnd=56 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=57 CharacterOffsetEnd=59 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=preferred CharacterOffsetBegin=60 CharacterOffsetEnd=69 PartOfSpeech=VBD Lemma=prefer NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=70 CharacterOffsetEnd=71 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=small CharacterOffsetBegin=72 CharacterOffsetEnd=77 PartOfSpeech=JJ Lemma=small NamedEntityTag=O]
+[Text=vehicle CharacterOffsetBegin=78 CharacterOffsetEnd=85 PartOfSpeech=NN Lemma=vehicle NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Lloyd))
+    (VP (VBD traded)
+      (NP (PRP$ his) (NN truck))
+      (PP (TO to)
+        (NP (NNP Roger)))
+      (PP (IN for)
+        (NP (PRP$ his) (NN motorcycle)))
+      (SBAR (IN since)
+        (S
+          (NP (PRP he))
+          (VP (VBD preferred)
+            (NP (DT a) (JJ small) (NN vehicle))))))))
+
+root(ROOT-0, traded-2)
+nsubj(traded-2, Lloyd-1)
+nmod:poss(truck-4, his-3)
+dobj(traded-2, truck-4)
+case(Roger-6, to-5)
+nmod:to(traded-2, Roger-6)
+case(motorcycle-9, for-7)
+nmod:poss(motorcycle-9, his-8)
+nmod:for(traded-2, motorcycle-9)
+mark(preferred-12, since-10)
+nsubj(preferred-12, he-11)
+advcl:since(traded-2, preferred-12)
+det(vehicle-15, a-13)
+amod(vehicle-15, small-14)
+dobj(preferred-12, vehicle-15)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,3,[3,4]), that is: "his" -> "his"
+	(1,11,[11,12]) -> (1,3,[3,4]), that is: "he" -> "his"

@@ -1,0 +1,74 @@
+Sentence #1 (22 tokens):
+The U.S.S Enterprise tried to assist a sister ship, but they did not receive help quick enough to prevent their demise
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=U.S.S CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NNP Lemma=U.S.S NamedEntityTag=ORGANIZATION]
+[Text=Enterprise CharacterOffsetBegin=10 CharacterOffsetEnd=20 PartOfSpeech=NNP Lemma=Enterprise NamedEntityTag=ORGANIZATION]
+[Text=tried CharacterOffsetBegin=21 CharacterOffsetEnd=26 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=27 CharacterOffsetEnd=29 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=assist CharacterOffsetBegin=30 CharacterOffsetEnd=36 PartOfSpeech=VB Lemma=assist NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=37 CharacterOffsetEnd=38 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=sister CharacterOffsetBegin=39 CharacterOffsetEnd=45 PartOfSpeech=NN Lemma=sister NamedEntityTag=O]
+[Text=ship CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=NN Lemma=ship NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=50 CharacterOffsetEnd=51 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=52 CharacterOffsetEnd=55 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=61 CharacterOffsetEnd=64 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=65 CharacterOffsetEnd=68 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=receive CharacterOffsetBegin=69 CharacterOffsetEnd=76 PartOfSpeech=VB Lemma=receive NamedEntityTag=O]
+[Text=help CharacterOffsetBegin=77 CharacterOffsetEnd=81 PartOfSpeech=NN Lemma=help NamedEntityTag=O]
+[Text=quick CharacterOffsetBegin=82 CharacterOffsetEnd=87 PartOfSpeech=JJ Lemma=quick NamedEntityTag=O]
+[Text=enough CharacterOffsetBegin=88 CharacterOffsetEnd=94 PartOfSpeech=JJ Lemma=enough NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=95 CharacterOffsetEnd=97 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=prevent CharacterOffsetBegin=98 CharacterOffsetEnd=105 PartOfSpeech=VB Lemma=prevent NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=106 CharacterOffsetEnd=111 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=demise CharacterOffsetBegin=112 CharacterOffsetEnd=118 PartOfSpeech=NN Lemma=demise NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (NNP U.S.S) (NNP Enterprise))
+        (VP (VBD tried)
+          (S
+            (VP (TO to)
+              (VP (VB assist)
+                (NP (DT a) (NN sister) (NN ship)))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBD did) (RB not)
+          (VP (VB receive)
+            (NP
+              (NP (NN help))
+              (ADJP (JJ quick) (JJ enough)))
+            (S
+              (VP (TO to)
+                (VP (VB prevent)
+                  (NP (PRP$ their) (NN demise)))))))))))
+
+root(ROOT-0, tried-4)
+det(Enterprise-3, The-1)
+compound(Enterprise-3, U.S.S-2)
+nsubj(tried-4, Enterprise-3)
+nsubj:xsubj(assist-6, Enterprise-3)
+mark(assist-6, to-5)
+xcomp(tried-4, assist-6)
+det(ship-9, a-7)
+compound(ship-9, sister-8)
+dobj(assist-6, ship-9)
+punct(tried-4, ,-10)
+cc(tried-4, but-11)
+nsubj(receive-15, they-12)
+aux(receive-15, did-13)
+neg(receive-15, not-14)
+conj:but(tried-4, receive-15)
+dobj(receive-15, help-16)
+amod(enough-18, quick-17)
+amod(help-16, enough-18)
+mark(prevent-20, to-19)
+advcl:to(receive-15, prevent-20)
+nmod:poss(demise-22, their-21)
+dobj(prevent-20, demise-22)
+
+Coreference set:
+	(1,21,[21,22]) -> (1,12,[12,13]), that is: "their" -> "they"

@@ -1,0 +1,39 @@
+Sentence #1 (11 tokens):
+Sentient machines will kill all humans because they are inferior beings
+[Text=Sentient CharacterOffsetBegin=0 CharacterOffsetEnd=8 PartOfSpeech=JJ Lemma=sentient NamedEntityTag=O]
+[Text=machines CharacterOffsetBegin=9 CharacterOffsetEnd=17 PartOfSpeech=NNS Lemma=machine NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=kill CharacterOffsetBegin=23 CharacterOffsetEnd=27 PartOfSpeech=VB Lemma=kill NamedEntityTag=O]
+[Text=all CharacterOffsetBegin=28 CharacterOffsetEnd=31 PartOfSpeech=DT Lemma=all NamedEntityTag=O]
+[Text=humans CharacterOffsetBegin=32 CharacterOffsetEnd=38 PartOfSpeech=NNS Lemma=human NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=39 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=47 CharacterOffsetEnd=51 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=52 CharacterOffsetEnd=55 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=inferior CharacterOffsetBegin=56 CharacterOffsetEnd=64 PartOfSpeech=JJ Lemma=inferior NamedEntityTag=O]
+[Text=beings CharacterOffsetBegin=65 CharacterOffsetEnd=71 PartOfSpeech=NNS Lemma=being NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (JJ Sentient) (NNS machines))
+    (VP (MD will)
+      (VP (VB kill)
+        (NP (DT all) (NNS humans))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBP are)
+              (NP (JJ inferior) (NNS beings)))))))))
+
+root(ROOT-0, kill-4)
+amod(machines-2, Sentient-1)
+nsubj(kill-4, machines-2)
+aux(kill-4, will-3)
+det(humans-6, all-5)
+dobj(kill-4, humans-6)
+mark(beings-11, because-7)
+nsubj(beings-11, they-8)
+cop(beings-11, are-9)
+amod(beings-11, inferior-10)
+advcl:because(kill-4, beings-11)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,11,[10,12]), that is: "they" -> "inferior beings"

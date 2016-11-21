@@ -1,0 +1,41 @@
+Sentence #1 (12 tokens):
+The chef held the waiter so that he did not fall off
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=chef CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=chef NamedEntityTag=O]
+[Text=held CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=hold NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=waiter CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=NN Lemma=waiter NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=25 CharacterOffsetEnd=27 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=28 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=that NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=fall CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=VB Lemma=fall NamedEntityTag=O]
+[Text=off CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=RP Lemma=off NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN chef))
+    (VP (VBD held)
+      (NP (DT the) (NN waiter))
+      (SBAR (IN so) (IN that)
+        (S
+          (NP (PRP he))
+          (VP (VBD did) (RB not)
+            (VP (VB fall)
+              (PRT (RP off)))))))))
+
+root(ROOT-0, held-3)
+det(chef-2, The-1)
+nsubj(held-3, chef-2)
+det(waiter-5, the-4)
+dobj(held-3, waiter-5)
+mark(fall-11, so-6)
+mwe(so-6, that-7)
+nsubj(fall-11, he-8)
+aux(fall-11, did-9)
+neg(fall-11, not-10)
+advcl:so_that(held-3, fall-11)
+compound:prt(fall-11, off-12)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,2,[1,3]), that is: "he" -> "The chef"

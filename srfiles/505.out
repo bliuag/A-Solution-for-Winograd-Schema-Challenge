@@ -1,0 +1,72 @@
+Sentence #1 (23 tokens):
+The CIA control intelligence gathering for the United States since they need to stay one step ahead of others to remain a superpower
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=CIA CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=CIA NamedEntityTag=ORGANIZATION]
+[Text=control CharacterOffsetBegin=8 CharacterOffsetEnd=15 PartOfSpeech=NN Lemma=control NamedEntityTag=O]
+[Text=intelligence CharacterOffsetBegin=16 CharacterOffsetEnd=28 PartOfSpeech=NN Lemma=intelligence NamedEntityTag=O]
+[Text=gathering CharacterOffsetBegin=29 CharacterOffsetEnd=38 PartOfSpeech=NN Lemma=gathering NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=43 CharacterOffsetEnd=46 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=United CharacterOffsetBegin=47 CharacterOffsetEnd=53 PartOfSpeech=NNP Lemma=United NamedEntityTag=LOCATION]
+[Text=States CharacterOffsetBegin=54 CharacterOffsetEnd=60 PartOfSpeech=NNPS Lemma=States NamedEntityTag=LOCATION]
+[Text=since CharacterOffsetBegin=61 CharacterOffsetEnd=66 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=67 CharacterOffsetEnd=71 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=need CharacterOffsetBegin=72 CharacterOffsetEnd=76 PartOfSpeech=VBP Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=77 CharacterOffsetEnd=79 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=stay CharacterOffsetBegin=80 CharacterOffsetEnd=84 PartOfSpeech=VB Lemma=stay NamedEntityTag=O]
+[Text=one CharacterOffsetBegin=85 CharacterOffsetEnd=88 PartOfSpeech=CD Lemma=one NamedEntityTag=NUMBER NormalizedNamedEntityTag=1.0]
+[Text=step CharacterOffsetBegin=89 CharacterOffsetEnd=93 PartOfSpeech=NN Lemma=step NamedEntityTag=O]
+[Text=ahead CharacterOffsetBegin=94 CharacterOffsetEnd=99 PartOfSpeech=RB Lemma=ahead NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=100 CharacterOffsetEnd=102 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=others CharacterOffsetBegin=103 CharacterOffsetEnd=109 PartOfSpeech=NNS Lemma=other NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=110 CharacterOffsetEnd=112 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=remain CharacterOffsetBegin=113 CharacterOffsetEnd=119 PartOfSpeech=VB Lemma=remain NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=120 CharacterOffsetEnd=121 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=superpower CharacterOffsetBegin=122 CharacterOffsetEnd=132 PartOfSpeech=NN Lemma=superpower NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (NP
+      (NP (DT The) (NNP CIA) (NN control) (NN intelligence) (NN gathering))
+      (PP (IN for)
+        (NP (DT the) (NNP United) (NNPS States))))
+    (SBAR (IN since)
+      (S
+        (NP (PRP they))
+        (VP (VBP need)
+          (S
+            (VP (TO to)
+              (VP (VB stay)
+                (NP
+                  (NP (CD one) (NN step))
+                  (PP (RB ahead) (IN of)
+                    (NP (NNS others))))
+                (S
+                  (VP (TO to)
+                    (VP (VB remain)
+                      (NP (DT a) (NN superpower)))))))))))))
+
+root(ROOT-0, gathering-5)
+det(gathering-5, The-1)
+compound(gathering-5, CIA-2)
+compound(gathering-5, control-3)
+compound(gathering-5, intelligence-4)
+case(States-9, for-6)
+det(States-9, the-7)
+compound(States-9, United-8)
+nmod:for(gathering-5, States-9)
+mark(need-12, since-10)
+nsubj(need-12, they-11)
+nsubj:xsubj(stay-14, they-11)
+dep(gathering-5, need-12)
+mark(stay-14, to-13)
+xcomp(need-12, stay-14)
+nummod(step-16, one-15)
+dobj(stay-14, step-16)
+advmod(others-19, ahead-17)
+case(others-19, of-18)
+nmod:of(step-16, others-19)
+mark(remain-21, to-20)
+advcl:to(stay-14, remain-21)
+det(superpower-23, a-22)
+xcomp(remain-21, superpower-23)
+

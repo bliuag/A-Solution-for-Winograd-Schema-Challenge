@@ -1,0 +1,87 @@
+Sentence #1 (25 tokens):
+Some enthusiastic Black Friday shoppers are already lining up at retail stores because they have some really low priced items that will be on sale
+[Text=Some CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=enthusiastic CharacterOffsetBegin=5 CharacterOffsetEnd=17 PartOfSpeech=JJ Lemma=enthusiastic NamedEntityTag=O]
+[Text=Black CharacterOffsetBegin=18 CharacterOffsetEnd=23 PartOfSpeech=JJ Lemma=black NamedEntityTag=O]
+[Text=Friday CharacterOffsetBegin=24 CharacterOffsetEnd=30 PartOfSpeech=NNP Lemma=Friday NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-WXX-5 Timex=<TIMEX3 tid="t1" type="DATE" value="XXXX-WXX-5">Friday</TIMEX3>]
+[Text=shoppers CharacterOffsetBegin=31 CharacterOffsetEnd=39 PartOfSpeech=NNS Lemma=shopper NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=already CharacterOffsetBegin=44 CharacterOffsetEnd=51 PartOfSpeech=RB Lemma=already NamedEntityTag=O]
+[Text=lining CharacterOffsetBegin=52 CharacterOffsetEnd=58 PartOfSpeech=VBG Lemma=line NamedEntityTag=O]
+[Text=up CharacterOffsetBegin=59 CharacterOffsetEnd=61 PartOfSpeech=RP Lemma=up NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=62 CharacterOffsetEnd=64 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=retail CharacterOffsetBegin=65 CharacterOffsetEnd=71 PartOfSpeech=JJ Lemma=retail NamedEntityTag=O]
+[Text=stores CharacterOffsetBegin=72 CharacterOffsetEnd=78 PartOfSpeech=NNS Lemma=store NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=79 CharacterOffsetEnd=86 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=87 CharacterOffsetEnd=91 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=92 CharacterOffsetEnd=96 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=97 CharacterOffsetEnd=101 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=really CharacterOffsetBegin=102 CharacterOffsetEnd=108 PartOfSpeech=RB Lemma=really NamedEntityTag=O]
+[Text=low CharacterOffsetBegin=109 CharacterOffsetEnd=112 PartOfSpeech=JJ Lemma=low NamedEntityTag=O]
+[Text=priced CharacterOffsetBegin=113 CharacterOffsetEnd=119 PartOfSpeech=VBN Lemma=price NamedEntityTag=O]
+[Text=items CharacterOffsetBegin=120 CharacterOffsetEnd=125 PartOfSpeech=NNS Lemma=item NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=126 CharacterOffsetEnd=130 PartOfSpeech=WDT Lemma=that NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=131 CharacterOffsetEnd=135 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=136 CharacterOffsetEnd=138 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=139 CharacterOffsetEnd=141 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=sale CharacterOffsetBegin=142 CharacterOffsetEnd=146 PartOfSpeech=NN Lemma=sale NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT Some)
+      (ADJP (JJ enthusiastic)
+        (NP-TMP (JJ Black) (NNP Friday)))
+      (NNS shoppers))
+    (VP (VBP are)
+      (ADVP (RB already))
+      (VP (VBG lining)
+        (PRT (RP up))
+        (PP (IN at)
+          (NP (JJ retail) (NNS stores)))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBP have)
+              (S
+                (NP (DT some))
+                (ADJP (RB really) (JJ low))
+                (S
+                  (VP (VBN priced)
+                    (NP
+                      (NP (NNS items))
+                      (SBAR
+                        (WHNP (WDT that))
+                        (S
+                          (VP (MD will)
+                            (VP (VB be)
+                              (PP (IN on)
+                                (NP (NN sale))))))))))))))))))
+
+root(ROOT-0, lining-8)
+det(shoppers-5, Some-1)
+amod(shoppers-5, enthusiastic-2)
+amod(Friday-4, Black-3)
+nmod:tmod(enthusiastic-2, Friday-4)
+nsubj(lining-8, shoppers-5)
+aux(lining-8, are-6)
+advmod(lining-8, already-7)
+compound:prt(lining-8, up-9)
+case(stores-12, at-10)
+amod(stores-12, retail-11)
+nmod:at(lining-8, stores-12)
+mark(have-15, because-13)
+nsubj(have-15, they-14)
+advcl:because(lining-8, have-15)
+nsubj(priced-19, some-16)
+advmod(low-18, really-17)
+dep(priced-19, low-18)
+xcomp(have-15, priced-19)
+dobj(priced-19, items-20)
+nsubj(sale-25, items-20)
+ref(items-20, that-21)
+aux(sale-25, will-22)
+cop(sale-25, be-23)
+case(sale-25, on-24)
+acl:relcl(items-20, sale-25)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,5,[1,6]), that is: "they" -> "Some enthusiastic Black Friday shoppers"

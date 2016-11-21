@@ -1,0 +1,55 @@
+Sentence #1 (16 tokens):
+The pen is mightier than the sword because it can be used to write world-changing documents
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=pen CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=pen NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=8 CharacterOffsetEnd=10 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=mightier CharacterOffsetBegin=11 CharacterOffsetEnd=19 PartOfSpeech=JJR Lemma=mightier NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=20 CharacterOffsetEnd=24 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=sword CharacterOffsetBegin=29 CharacterOffsetEnd=34 PartOfSpeech=NN Lemma=sword NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=35 CharacterOffsetEnd=42 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=can CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=MD Lemma=can NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=50 CharacterOffsetEnd=52 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=used CharacterOffsetBegin=53 CharacterOffsetEnd=57 PartOfSpeech=VBN Lemma=use NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=58 CharacterOffsetEnd=60 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=write CharacterOffsetBegin=61 CharacterOffsetEnd=66 PartOfSpeech=VB Lemma=write NamedEntityTag=O]
+[Text=world-changing CharacterOffsetBegin=67 CharacterOffsetEnd=81 PartOfSpeech=JJ Lemma=world-changing NamedEntityTag=O]
+[Text=documents CharacterOffsetBegin=82 CharacterOffsetEnd=91 PartOfSpeech=NNS Lemma=document NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN pen))
+    (VP (VBZ is)
+      (ADJP
+        (ADJP (JJR mightier))
+        (PP (IN than)
+          (NP (DT the) (NN sword))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (MD can)
+            (VP (VB be)
+              (VP (VBN used)
+                (S
+                  (VP (TO to)
+                    (VP (VB write)
+                      (NP (JJ world-changing) (NNS documents)))))))))))))
+
+root(ROOT-0, mightier-4)
+det(pen-2, The-1)
+nsubj(mightier-4, pen-2)
+cop(mightier-4, is-3)
+case(sword-7, than-5)
+det(sword-7, the-6)
+nmod:than(mightier-4, sword-7)
+mark(used-12, because-8)
+nsubjpass(used-12, it-9)
+nsubj:xsubj(write-14, it-9)
+aux(used-12, can-10)
+auxpass(used-12, be-11)
+advcl:because(mightier-4, used-12)
+mark(write-14, to-13)
+xcomp(used-12, write-14)
+amod(documents-16, world-changing-15)
+dobj(write-14, documents-16)
+

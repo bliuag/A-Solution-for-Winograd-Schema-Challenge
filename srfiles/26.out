@@ -1,0 +1,37 @@
+Sentence #1 (11 tokens):
+Rice beat Texas, even though they were a smaller school
+[Text=Rice CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Rice NamedEntityTag=PERSON]
+[Text=beat CharacterOffsetBegin=5 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=beat NamedEntityTag=O]
+[Text=Texas CharacterOffsetBegin=10 CharacterOffsetEnd=15 PartOfSpeech=NNP Lemma=Texas NamedEntityTag=LOCATION]
+[Text=, CharacterOffsetBegin=15 CharacterOffsetEnd=16 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=even CharacterOffsetBegin=17 CharacterOffsetEnd=21 PartOfSpeech=RB Lemma=even NamedEntityTag=O]
+[Text=though CharacterOffsetBegin=22 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=though NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=29 CharacterOffsetEnd=33 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=34 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=39 CharacterOffsetEnd=40 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=smaller CharacterOffsetBegin=41 CharacterOffsetEnd=48 PartOfSpeech=JJR Lemma=smaller NamedEntityTag=O]
+[Text=school CharacterOffsetBegin=49 CharacterOffsetEnd=55 PartOfSpeech=NN Lemma=school NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Rice))
+    (VP (VBD beat)
+      (NP (NNP Texas))
+      (, ,)
+      (SBAR (RB even) (IN though)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (NP (DT a) (JJR smaller) (NN school))))))))
+
+root(ROOT-0, beat-2)
+nsubj(beat-2, Rice-1)
+dobj(beat-2, Texas-3)
+punct(beat-2, ,-4)
+advmod(school-11, even-5)
+mark(school-11, though-6)
+nsubj(school-11, they-7)
+cop(school-11, were-8)
+det(school-11, a-9)
+amod(school-11, smaller-10)
+advcl:though(beat-2, school-11)
+

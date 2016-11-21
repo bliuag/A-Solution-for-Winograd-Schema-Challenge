@@ -1,0 +1,77 @@
+Sentence #1 (24 tokens):
+The board of directors reviewed the findings of the scientists to determine funding because they are interested in the potential profits for the company
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=board CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=board NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=directors CharacterOffsetBegin=13 CharacterOffsetEnd=22 PartOfSpeech=NNS Lemma=director NamedEntityTag=O]
+[Text=reviewed CharacterOffsetBegin=23 CharacterOffsetEnd=31 PartOfSpeech=VBN Lemma=review NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=findings CharacterOffsetBegin=36 CharacterOffsetEnd=44 PartOfSpeech=NNS Lemma=finding NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=45 CharacterOffsetEnd=47 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=48 CharacterOffsetEnd=51 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=scientists CharacterOffsetBegin=52 CharacterOffsetEnd=62 PartOfSpeech=NNS Lemma=scientist NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=63 CharacterOffsetEnd=65 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=determine CharacterOffsetBegin=66 CharacterOffsetEnd=75 PartOfSpeech=VB Lemma=determine NamedEntityTag=O]
+[Text=funding CharacterOffsetBegin=76 CharacterOffsetEnd=83 PartOfSpeech=NN Lemma=funding NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=84 CharacterOffsetEnd=91 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=92 CharacterOffsetEnd=96 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=97 CharacterOffsetEnd=100 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=interested CharacterOffsetBegin=101 CharacterOffsetEnd=111 PartOfSpeech=JJ Lemma=interested NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=112 CharacterOffsetEnd=114 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=115 CharacterOffsetEnd=118 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=potential CharacterOffsetBegin=119 CharacterOffsetEnd=128 PartOfSpeech=JJ Lemma=potential NamedEntityTag=O]
+[Text=profits CharacterOffsetBegin=129 CharacterOffsetEnd=136 PartOfSpeech=NNS Lemma=profit NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=137 CharacterOffsetEnd=140 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=141 CharacterOffsetEnd=144 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=company CharacterOffsetBegin=145 CharacterOffsetEnd=152 PartOfSpeech=NN Lemma=company NamedEntityTag=O]
+(ROOT
+  (NP
+    (NP (DT The) (NN board))
+    (PP (IN of)
+      (NP
+        (NP (NNS directors))
+        (VP (VBN reviewed)
+          (NP
+            (NP (DT the) (NNS findings))
+            (PP (IN of)
+              (NP (DT the) (NNS scientists))))
+          (S
+            (VP (TO to)
+              (VP (VB determine)
+                (NP (NN funding))
+                (SBAR (IN because)
+                  (S
+                    (NP (PRP they))
+                    (VP (VBP are)
+                      (ADJP (JJ interested)
+                        (PP (IN in)
+                          (NP
+                            (NP (DT the) (JJ potential) (NNS profits))
+                            (PP (IN for)
+                              (NP (DT the) (NN company)))))))))))))))))
+
+root(ROOT-0, board-2)
+det(board-2, The-1)
+case(directors-4, of-3)
+nmod:of(board-2, directors-4)
+acl(directors-4, reviewed-5)
+det(findings-7, the-6)
+dobj(reviewed-5, findings-7)
+case(scientists-10, of-8)
+det(scientists-10, the-9)
+nmod:of(findings-7, scientists-10)
+mark(determine-12, to-11)
+advcl:to(reviewed-5, determine-12)
+dobj(determine-12, funding-13)
+mark(interested-17, because-14)
+nsubj(interested-17, they-15)
+cop(interested-17, are-16)
+advcl:because(determine-12, interested-17)
+case(profits-21, in-18)
+det(profits-21, the-19)
+amod(profits-21, potential-20)
+nmod:in(interested-17, profits-21)
+case(company-24, for-22)
+det(company-24, the-23)
+nmod:for(profits-21, company-24)
+

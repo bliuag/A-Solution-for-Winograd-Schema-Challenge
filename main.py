@@ -123,6 +123,7 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
     # for token in p2["sentences"][0]["tokens"]:
     #     if token["index"] == r2index:
     #             r2 = token["lemma"]
+    # print("# %d"%(i))
     total = 0
     for dependency in p1["sentences"][0]["enhancedDependencies"]:
         if "subj" in dependency['dep'] and dependency['dependentGloss'] in c0:
@@ -132,6 +133,7 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
                     r1.append(token["lemma"])
                     if 'pass' in dependency['dep']:
                         mark1.append('pass')
+                        # print('****')
                     else:
                         mark1.append('acti')
 
@@ -143,6 +145,7 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
                     r2.append(token["lemma"])
                     if 'pass' in dependency['dep']:
                         mark2.append('pass')
+                        # print('####')
                     else:
                         mark2.append('acti')
 
@@ -162,7 +165,7 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
     # print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
     if total == 0:
         return "No Decision"
-    print(1.0 * s_o / total)
+    # print(1.0 * s_o / total)
     if 1.0 * s_o / total > 0.3:
         return c0
     elif 1.0 * s_o / total < -0.3:
@@ -302,24 +305,24 @@ fileList.close()
 os.system('corenlp.sh -props prop.properties')
 
 # use Stanford Resolve
-srsubdirectory = "srfiles"
-srfilelist = open('srFileList.txt')
+# srsubdirectory = "srfiles"
+# srfilelist = open('srFileList.txt','w')
 
-try:
-    os.system('rm -fr '+srsubdirectory)
-    os.mkdir(srsubdirectory)
-except Exception:
-    pass
-
-for i in range(size):
-    tempf = open(os.path.join(srsubdirectory, str(i)+'.in'), 'w')
-    tempf.write(sentences[i])
-    fileList.write(os.path.join(srsubdirectory, str(i)+'.in')+'\n')
-    tempf.close()
-
-fileList.close()
-
-os.system('corenlp.sh -props stanRes.properties')
+# try:
+#     os.system('rm -fr '+srsubdirectory)
+#     os.mkdir(srsubdirectory)
+# except Exception:
+#     pass
+#
+# for i in range(size):
+#     tempf = open(os.path.join(srsubdirectory, str(i)+'.in'), 'w')
+#     tempf.write(sentences[i])
+#     srfilelist.write(os.path.join(srsubdirectory, str(i)+'.in')+'\n')
+#     tempf.close()
+#
+# srfilelist.close()
+#
+# os.system('corenlp.sh -props stanRes.properties')
 
 # for each question
 for i in range(size):
@@ -331,8 +334,25 @@ for i in range(size):
         ans = pick_ans(p1, p2, prons[i], choice0[i], choice1[i], i)
         # print(ans)
         flags[i] = ans
+        # use Stanford Resolver to try to find the answer
+        # if flags[i] == "No Decision" or flags[i] == "waiting":
+        #     with open(os.path.join(srsubdirectory, str(i)+'.out'),'r') as tempf:
+        #         mark = False
+        #         for line in tempf:
+        #             if "Coreference" in line:
+        #                 mark = True
+        #                 pass
+        #             if mark == True:
+        #                 print('****')
+        #                 if prons[i] in line:
+        #                     if choice0[i] in line:
+        #                         flags[i] = choice0[i]
+        #                     elif choice1[i] in line:
+        #                         flags[i] = choice1[i]
+        #     if flags[i] == 'waiting':
+        #         flags[i] = 'No Decision'
 
-# print(check_nc("give", "want", 's'))
+
 
 
 # evaluation

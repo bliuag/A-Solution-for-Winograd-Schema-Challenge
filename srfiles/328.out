@@ -1,0 +1,39 @@
+Sentence #1 (10 tokens):
+Californians are better than New Yorkers because they have Hollywood
+[Text=Californians CharacterOffsetBegin=0 CharacterOffsetEnd=12 PartOfSpeech=NNPS Lemma=Californians NamedEntityTag=MISC]
+[Text=are CharacterOffsetBegin=13 CharacterOffsetEnd=16 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=17 CharacterOffsetEnd=23 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=New CharacterOffsetBegin=29 CharacterOffsetEnd=32 PartOfSpeech=NNP Lemma=New NamedEntityTag=O]
+[Text=Yorkers CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=NNPS Lemma=Yorkers NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=41 CharacterOffsetEnd=48 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=49 CharacterOffsetEnd=53 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=54 CharacterOffsetEnd=58 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=Hollywood CharacterOffsetBegin=59 CharacterOffsetEnd=68 PartOfSpeech=NNP Lemma=Hollywood NamedEntityTag=LOCATION]
+(ROOT
+  (S
+    (NP (NNPS Californians))
+    (VP (VBP are)
+      (ADJP
+        (ADJP (JJR better)
+          (PP (IN than)
+            (NP (NNP New) (NNPS Yorkers))))
+        (SBAR (IN because)
+          (S
+            (NP (PRP they))
+            (VP (VBP have)
+              (NP (NNP Hollywood)))))))))
+
+root(ROOT-0, better-3)
+nsubj(better-3, Californians-1)
+cop(better-3, are-2)
+case(Yorkers-6, than-4)
+compound(Yorkers-6, New-5)
+nmod:than(better-3, Yorkers-6)
+mark(have-9, because-7)
+nsubj(have-9, they-8)
+ccomp(better-3, have-9)
+dobj(have-9, Hollywood-10)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,6,[5,7]), that is: "they" -> "New Yorkers"

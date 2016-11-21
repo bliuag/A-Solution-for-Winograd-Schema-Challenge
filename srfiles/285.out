@@ -1,0 +1,44 @@
+Sentence #1 (13 tokens):
+The bat hit the ball because it flew straight at the poor animal
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=bat CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=bat NamedEntityTag=O]
+[Text=hit CharacterOffsetBegin=8 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=hit NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=12 CharacterOffsetEnd=15 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=ball CharacterOffsetBegin=16 CharacterOffsetEnd=20 PartOfSpeech=NN Lemma=ball NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=21 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=flew CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=VBD Lemma=fly NamedEntityTag=O]
+[Text=straight CharacterOffsetBegin=37 CharacterOffsetEnd=45 PartOfSpeech=RB Lemma=straight NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=46 CharacterOffsetEnd=48 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=poor CharacterOffsetBegin=53 CharacterOffsetEnd=57 PartOfSpeech=JJ Lemma=poor NamedEntityTag=O]
+[Text=animal CharacterOffsetBegin=58 CharacterOffsetEnd=64 PartOfSpeech=NN Lemma=animal NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN bat))
+    (VP (VBD hit)
+      (NP (DT the) (NN ball))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD flew)
+            (ADVP (RB straight))
+            (PP (IN at)
+              (NP (DT the) (JJ poor) (NN animal)))))))))
+
+root(ROOT-0, hit-3)
+det(bat-2, The-1)
+nsubj(hit-3, bat-2)
+det(ball-5, the-4)
+dobj(hit-3, ball-5)
+mark(flew-8, because-6)
+nsubj(flew-8, it-7)
+advcl:because(hit-3, flew-8)
+advmod(flew-8, straight-9)
+case(animal-13, at-10)
+det(animal-13, the-11)
+amod(animal-13, poor-12)
+nmod:at(flew-8, animal-13)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "it" -> "The bat"

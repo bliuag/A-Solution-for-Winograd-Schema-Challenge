@@ -1,0 +1,39 @@
+Sentence #1 (11 tokens):
+The disease center quarantined the people because they may be infected
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=disease CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NN Lemma=disease NamedEntityTag=O]
+[Text=center CharacterOffsetBegin=12 CharacterOffsetEnd=18 PartOfSpeech=NN Lemma=center NamedEntityTag=O]
+[Text=quarantined CharacterOffsetBegin=19 CharacterOffsetEnd=30 PartOfSpeech=VBD Lemma=quarantine NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=31 CharacterOffsetEnd=34 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=people CharacterOffsetBegin=35 CharacterOffsetEnd=41 PartOfSpeech=NNS Lemma=people NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=42 CharacterOffsetEnd=49 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=50 CharacterOffsetEnd=54 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=may CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=MD Lemma=may NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=59 CharacterOffsetEnd=61 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=infected CharacterOffsetBegin=62 CharacterOffsetEnd=70 PartOfSpeech=VBN Lemma=infect NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN disease) (NN center))
+    (VP (VBD quarantined)
+      (NP (DT the) (NNS people))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (MD may)
+            (VP (VB be)
+              (VP (VBN infected)))))))))
+
+root(ROOT-0, quarantined-4)
+det(center-3, The-1)
+compound(center-3, disease-2)
+nsubj(quarantined-4, center-3)
+det(people-6, the-5)
+dobj(quarantined-4, people-6)
+mark(infected-11, because-7)
+nsubjpass(infected-11, they-8)
+aux(infected-11, may-9)
+auxpass(infected-11, be-10)
+advcl:because(quarantined-4, infected-11)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,6,[5,7]), that is: "they" -> "the people"

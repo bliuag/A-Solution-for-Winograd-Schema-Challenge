@@ -1,0 +1,80 @@
+Sentence #1 (23 tokens):
+Apple was in talks with Verizon to be their dedicated phone provider initially because they were a prime candidate to provide their service
+[Text=Apple CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Apple NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=6 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=talks CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=NNS Lemma=talk NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=Verizon CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=NNP Lemma=Verizon NamedEntityTag=ORGANIZATION]
+[Text=to CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=dedicated CharacterOffsetBegin=44 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=dedicated NamedEntityTag=O]
+[Text=phone CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=NN Lemma=phone NamedEntityTag=O]
+[Text=provider CharacterOffsetBegin=60 CharacterOffsetEnd=68 PartOfSpeech=NN Lemma=provider NamedEntityTag=O]
+[Text=initially CharacterOffsetBegin=69 CharacterOffsetEnd=78 PartOfSpeech=RB Lemma=initially NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=79 CharacterOffsetEnd=86 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=87 CharacterOffsetEnd=91 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=92 CharacterOffsetEnd=96 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=97 CharacterOffsetEnd=98 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=prime CharacterOffsetBegin=99 CharacterOffsetEnd=104 PartOfSpeech=JJ Lemma=prime NamedEntityTag=O]
+[Text=candidate CharacterOffsetBegin=105 CharacterOffsetEnd=114 PartOfSpeech=NN Lemma=candidate NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=115 CharacterOffsetEnd=117 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=provide CharacterOffsetBegin=118 CharacterOffsetEnd=125 PartOfSpeech=VB Lemma=provide NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=126 CharacterOffsetEnd=131 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=service CharacterOffsetBegin=132 CharacterOffsetEnd=139 PartOfSpeech=NN Lemma=service NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Apple))
+    (VP (VBD was)
+      (PP (IN in)
+        (NP
+          (NP (NNS talks))
+          (PP (IN with)
+            (NP (NNP Verizon)))))
+      (S
+        (VP (TO to)
+          (VP (VB be)
+            (NP (PRP$ their)
+              (ADJP (JJ dedicated))
+              (NN phone) (NN provider))
+            (SBAR
+              (ADVP (RB initially))
+              (IN because)
+              (S
+                (NP (PRP they))
+                (VP (VBD were)
+                  (NP (DT a) (JJ prime) (NN candidate)
+                    (S
+                      (VP (TO to)
+                        (VP (VB provide)
+                          (NP (PRP$ their) (NN service)))))))))))))))
+
+root(ROOT-0, talks-4)
+nsubj(talks-4, Apple-1)
+nsubj:xsubj(provider-12, Apple-1)
+cop(talks-4, was-2)
+case(talks-4, in-3)
+case(Verizon-6, with-5)
+nmod:with(talks-4, Verizon-6)
+mark(provider-12, to-7)
+cop(provider-12, be-8)
+nmod:poss(provider-12, their-9)
+amod(provider-12, dedicated-10)
+compound(provider-12, phone-11)
+xcomp(talks-4, provider-12)
+advmod(candidate-19, initially-13)
+mark(candidate-19, because-14)
+nsubj(candidate-19, they-15)
+cop(candidate-19, were-16)
+det(candidate-19, a-17)
+amod(candidate-19, prime-18)
+advcl:because(provider-12, candidate-19)
+mark(provide-21, to-20)
+acl:to(candidate-19, provide-21)
+nmod:poss(service-23, their-22)
+dobj(provide-21, service-23)
+
+Coreference set:
+	(1,15,[15,16]) -> (1,9,[9,10]), that is: "they" -> "their"
+	(1,22,[22,23]) -> (1,9,[9,10]), that is: "their" -> "their"

@@ -1,0 +1,91 @@
+Sentence #1 (26 tokens):
+Two deserted crusaders agreed to transport a girl for the priests, since they needed more fellow priests to assist in removing the evil from her
+[Text=Two CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=CD Lemma=two NamedEntityTag=NUMBER NormalizedNamedEntityTag=2.0]
+[Text=deserted CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=VBN Lemma=desert NamedEntityTag=O]
+[Text=crusaders CharacterOffsetBegin=13 CharacterOffsetEnd=22 PartOfSpeech=NNS Lemma=crusader NamedEntityTag=O]
+[Text=agreed CharacterOffsetBegin=23 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=agree NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=transport CharacterOffsetBegin=33 CharacterOffsetEnd=42 PartOfSpeech=VB Lemma=transport NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=43 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=girl CharacterOffsetBegin=45 CharacterOffsetEnd=49 PartOfSpeech=NN Lemma=girl NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=priests CharacterOffsetBegin=58 CharacterOffsetEnd=65 PartOfSpeech=NNS Lemma=priest NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=65 CharacterOffsetEnd=66 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=67 CharacterOffsetEnd=72 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=73 CharacterOffsetEnd=77 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=needed CharacterOffsetBegin=78 CharacterOffsetEnd=84 PartOfSpeech=VBD Lemma=need NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=85 CharacterOffsetEnd=89 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=fellow CharacterOffsetBegin=90 CharacterOffsetEnd=96 PartOfSpeech=JJ Lemma=fellow NamedEntityTag=O]
+[Text=priests CharacterOffsetBegin=97 CharacterOffsetEnd=104 PartOfSpeech=NNS Lemma=priest NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=105 CharacterOffsetEnd=107 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=assist CharacterOffsetBegin=108 CharacterOffsetEnd=114 PartOfSpeech=VB Lemma=assist NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=115 CharacterOffsetEnd=117 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=removing CharacterOffsetBegin=118 CharacterOffsetEnd=126 PartOfSpeech=VBG Lemma=remove NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=127 CharacterOffsetEnd=130 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=evil CharacterOffsetBegin=131 CharacterOffsetEnd=135 PartOfSpeech=NN Lemma=evil NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=136 CharacterOffsetEnd=140 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=141 CharacterOffsetEnd=144 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+(ROOT
+  (S
+    (NP
+      (NP (CD Two))
+      (VP (VBN deserted)
+        (NP (NNS crusaders))))
+    (VP (VBD agreed)
+      (S
+        (VP (TO to)
+          (VP (VB transport)
+            (NP
+              (NP (DT a) (NN girl))
+              (PP (IN for)
+                (NP (DT the) (NNS priests)))))))
+      (, ,)
+      (SBAR (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBD needed)
+            (S
+              (NP (RBR more) (JJ fellow) (NNS priests))
+              (VP (TO to)
+                (VP (VB assist)
+                  (PP (IN in)
+                    (S
+                      (VP (VBG removing)
+                        (NP (DT the) (NN evil))
+                        (PP (IN from)
+                          (NP (PRP$ her)))))))))))))))
+
+root(ROOT-0, agreed-4)
+nsubj(agreed-4, Two-1)
+nsubj:xsubj(transport-6, Two-1)
+acl(Two-1, deserted-2)
+dobj(deserted-2, crusaders-3)
+mark(transport-6, to-5)
+xcomp(agreed-4, transport-6)
+det(girl-8, a-7)
+dobj(transport-6, girl-8)
+case(priests-11, for-9)
+det(priests-11, the-10)
+nmod:for(girl-8, priests-11)
+punct(agreed-4, ,-12)
+mark(needed-15, since-13)
+nsubj(needed-15, they-14)
+advcl:since(agreed-4, needed-15)
+advmod(priests-18, more-16)
+amod(priests-18, fellow-17)
+dobj(needed-15, priests-18)
+nsubj:xsubj(assist-20, priests-18)
+mark(assist-20, to-19)
+xcomp(needed-15, assist-20)
+mark(removing-22, in-21)
+advcl:in(assist-20, removing-22)
+det(evil-24, the-23)
+dobj(removing-22, evil-24)
+case(her-26, from-25)
+nmod:from(removing-22, her-26)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,3,[3,4]), that is: "they" -> "crusaders"
+Coreference set:
+	(1,26,[26,27]) -> (1,8,[7,12]), that is: "her" -> "a girl for the priests"

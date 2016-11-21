@@ -1,0 +1,39 @@
+Sentence #1 (10 tokens):
+The boy escaped the cop but he continued to flee
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=boy CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=boy NamedEntityTag=O]
+[Text=escaped CharacterOffsetBegin=8 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=escape NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=16 CharacterOffsetEnd=19 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=cop CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=NN Lemma=cop NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=28 CharacterOffsetEnd=30 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=continued CharacterOffsetBegin=31 CharacterOffsetEnd=40 PartOfSpeech=VBD Lemma=continue NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=41 CharacterOffsetEnd=43 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=flee CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=VB Lemma=flee NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN boy))
+    (VP (VBD escaped)
+      (NP (DT the) (NN cop))
+      (SBAR (CC but)
+        (S
+          (NP (PRP he))
+          (VP (VBD continued)
+            (S
+              (VP (TO to)
+                (VP (VB flee))))))))))
+
+root(ROOT-0, escaped-3)
+det(boy-2, The-1)
+nsubj(escaped-3, boy-2)
+det(cop-5, the-4)
+dobj(escaped-3, cop-5)
+cc(continued-8, but-6)
+nsubj(continued-8, he-7)
+nsubj:xsubj(flee-10, he-7)
+dep(escaped-3, continued-8)
+mark(flee-10, to-9)
+xcomp(continued-8, flee-10)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "he" -> "The boy"

@@ -1,0 +1,32 @@
+Sentence #1 (9 tokens):
+The birds ate the seeds because they were hungry
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=birds CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NNS Lemma=bird NamedEntityTag=O]
+[Text=ate CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=eat NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=seeds CharacterOffsetBegin=18 CharacterOffsetEnd=23 PartOfSpeech=NNS Lemma=seed NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=37 CharacterOffsetEnd=41 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=hungry CharacterOffsetBegin=42 CharacterOffsetEnd=48 PartOfSpeech=JJ Lemma=hungry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS birds))
+    (VP (VBD ate)
+      (NP (DT the) (NNS seeds))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP (JJ hungry))))))))
+
+root(ROOT-0, ate-3)
+det(birds-2, The-1)
+nsubj(ate-3, birds-2)
+det(seeds-5, the-4)
+dobj(ate-3, seeds-5)
+mark(hungry-9, because-6)
+nsubj(hungry-9, they-7)
+cop(hungry-9, were-8)
+advcl:because(ate-3, hungry-9)
+

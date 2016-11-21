@@ -1,0 +1,39 @@
+Sentence #1 (11 tokens):
+The sniper shot the terrorist because he was a bad guy
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=sniper CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=sniper NamedEntityTag=O]
+[Text=shot CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=shoot NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=16 CharacterOffsetEnd=19 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=terrorist CharacterOffsetBegin=20 CharacterOffsetEnd=29 PartOfSpeech=JJ Lemma=terrorist NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=45 CharacterOffsetEnd=46 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=bad CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=JJ Lemma=bad NamedEntityTag=O]
+[Text=guy CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=NN Lemma=guy NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN sniper))
+    (VP (VBD shot)
+      (NP (DT the) (JJ terrorist))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (NP (DT a) (JJ bad) (NN guy))))))))
+
+root(ROOT-0, shot-3)
+det(sniper-2, The-1)
+nsubj(shot-3, sniper-2)
+det(terrorist-5, the-4)
+dobj(shot-3, terrorist-5)
+mark(guy-11, because-6)
+nsubj(guy-11, he-7)
+cop(guy-11, was-8)
+det(guy-11, a-9)
+amod(guy-11, bad-10)
+advcl:because(shot-3, guy-11)
+
+Coreference set:
+	(1,2,[1,3]) -> (1,11,[9,12]), that is: "The sniper" -> "a bad guy"
+	(1,7,[7,8]) -> (1,11,[9,12]), that is: "he" -> "a bad guy"

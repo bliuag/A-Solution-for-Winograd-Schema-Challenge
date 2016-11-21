@@ -1,0 +1,56 @@
+Sentence #1 (16 tokens):
+The slaves were forced to do the bidding of the nobles since they have no rights
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=slaves CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNS Lemma=slave NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=forced CharacterOffsetBegin=16 CharacterOffsetEnd=22 PartOfSpeech=VBN Lemma=force NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=26 CharacterOffsetEnd=28 PartOfSpeech=VB Lemma=do NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=29 CharacterOffsetEnd=32 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=bidding CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=NN Lemma=bidding NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=41 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=nobles CharacterOffsetBegin=48 CharacterOffsetEnd=54 PartOfSpeech=NNS Lemma=noble NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=55 CharacterOffsetEnd=60 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=61 CharacterOffsetEnd=65 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=66 CharacterOffsetEnd=70 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=no CharacterOffsetBegin=71 CharacterOffsetEnd=73 PartOfSpeech=DT Lemma=no NamedEntityTag=O]
+[Text=rights CharacterOffsetBegin=74 CharacterOffsetEnd=80 PartOfSpeech=NNS Lemma=rights NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS slaves))
+    (VP (VBD were)
+      (VP (VBN forced)
+        (S
+          (VP (TO to)
+            (VP (VB do)
+              (NP
+                (NP (DT the) (NN bidding))
+                (PP (IN of)
+                  (NP (DT the) (NNS nobles))))
+              (SBAR (IN since)
+                (S
+                  (NP (PRP they))
+                  (VP (VBP have)
+                    (NP (DT no) (NNS rights))))))))))))
+
+root(ROOT-0, forced-4)
+det(slaves-2, The-1)
+nsubjpass(forced-4, slaves-2)
+nsubj:xsubj(do-6, slaves-2)
+auxpass(forced-4, were-3)
+mark(do-6, to-5)
+xcomp(forced-4, do-6)
+det(bidding-8, the-7)
+dobj(do-6, bidding-8)
+case(nobles-11, of-9)
+det(nobles-11, the-10)
+nmod:of(bidding-8, nobles-11)
+mark(have-14, since-12)
+nsubj(have-14, they-13)
+advcl:since(do-6, have-14)
+neg(rights-16, no-15)
+dobj(have-14, rights-16)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,11,[10,12]), that is: "they" -> "the nobles"

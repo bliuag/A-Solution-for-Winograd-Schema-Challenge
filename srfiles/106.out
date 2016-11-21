@@ -1,0 +1,49 @@
+Sentence #1 (14 tokens):
+My phone is working better than your phone because it is a newer model
+[Text=My CharacterOffsetBegin=0 CharacterOffsetEnd=2 PartOfSpeech=PRP$ Lemma=my NamedEntityTag=O]
+[Text=phone CharacterOffsetBegin=3 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=phone NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=9 CharacterOffsetEnd=11 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=working CharacterOffsetBegin=12 CharacterOffsetEnd=19 PartOfSpeech=VBG Lemma=work NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=20 CharacterOffsetEnd=26 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=27 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=your CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=PRP$ Lemma=you NamedEntityTag=O]
+[Text=phone CharacterOffsetBegin=37 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=phone NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=43 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=51 CharacterOffsetEnd=53 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=54 CharacterOffsetEnd=56 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=57 CharacterOffsetEnd=58 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=newer CharacterOffsetBegin=59 CharacterOffsetEnd=64 PartOfSpeech=JJR Lemma=newer NamedEntityTag=O]
+[Text=model CharacterOffsetBegin=65 CharacterOffsetEnd=70 PartOfSpeech=NN Lemma=model NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (PRP$ My) (NN phone))
+    (VP (VBZ is)
+      (VP (VBG working)
+        (NP (JJR better))
+        (PP (IN than)
+          (NP (PRP$ your) (NN phone)))
+        (SBAR (IN because)
+          (S
+            (NP (PRP it))
+            (VP (VBZ is)
+              (NP (DT a) (JJR newer) (NN model)))))))))
+
+root(ROOT-0, working-4)
+nmod:poss(phone-2, My-1)
+nsubj(working-4, phone-2)
+aux(working-4, is-3)
+dobj(working-4, better-5)
+case(phone-8, than-6)
+nmod:poss(phone-8, your-7)
+nmod:than(working-4, phone-8)
+mark(model-14, because-9)
+nsubj(model-14, it-10)
+cop(model-14, is-11)
+det(model-14, a-12)
+amod(model-14, newer-13)
+advcl:because(working-4, model-14)
+
+Coreference set:
+	(1,2,[1,3]) -> (1,14,[12,15]), that is: "My phone" -> "a newer model"
+	(1,8,[7,9]) -> (1,14,[12,15]), that is: "your phone" -> "a newer model"
+	(1,10,[10,11]) -> (1,14,[12,15]), that is: "it" -> "a newer model"

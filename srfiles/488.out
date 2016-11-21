@@ -1,0 +1,62 @@
+Sentence #1 (18 tokens):
+The patrons enjoyed the food made by the chefs immensely because they made the food with exquisite sauces
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=patrons CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNS Lemma=patron NamedEntityTag=O]
+[Text=enjoyed CharacterOffsetBegin=12 CharacterOffsetEnd=19 PartOfSpeech=VBD Lemma=enjoy NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=food CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=NN Lemma=food NamedEntityTag=O]
+[Text=made CharacterOffsetBegin=29 CharacterOffsetEnd=33 PartOfSpeech=VBN Lemma=make NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=chefs CharacterOffsetBegin=41 CharacterOffsetEnd=46 PartOfSpeech=NNS Lemma=chef NamedEntityTag=O]
+[Text=immensely CharacterOffsetBegin=47 CharacterOffsetEnd=56 PartOfSpeech=RB Lemma=immensely NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=57 CharacterOffsetEnd=64 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=65 CharacterOffsetEnd=69 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=made CharacterOffsetBegin=70 CharacterOffsetEnd=74 PartOfSpeech=VBD Lemma=make NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=75 CharacterOffsetEnd=78 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=food CharacterOffsetBegin=79 CharacterOffsetEnd=83 PartOfSpeech=NN Lemma=food NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=84 CharacterOffsetEnd=88 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=exquisite CharacterOffsetBegin=89 CharacterOffsetEnd=98 PartOfSpeech=JJ Lemma=exquisite NamedEntityTag=O]
+[Text=sauces CharacterOffsetBegin=99 CharacterOffsetEnd=105 PartOfSpeech=NNS Lemma=sauce NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS patrons))
+    (VP (VBD enjoyed)
+      (S
+        (NP
+          (NP (DT the) (NN food))
+          (VP (VBN made)
+            (PP (IN by)
+              (NP (DT the) (NNS chefs)))))
+        (ADJP (RB immensely)
+          (SBAR (IN because)
+            (S
+              (NP (PRP they))
+              (VP (VBD made)
+                (NP (DT the) (NN food))
+                (PP (IN with)
+                  (NP (JJ exquisite) (NNS sauces)))))))))))
+
+root(ROOT-0, enjoyed-3)
+det(patrons-2, The-1)
+nsubj(enjoyed-3, patrons-2)
+det(food-5, the-4)
+nsubj(immensely-10, food-5)
+acl(food-5, made-6)
+case(chefs-9, by-7)
+det(chefs-9, the-8)
+nmod:by(made-6, chefs-9)
+xcomp(enjoyed-3, immensely-10)
+mark(made-13, because-11)
+nsubj(made-13, they-12)
+ccomp(immensely-10, made-13)
+det(food-15, the-14)
+dobj(made-13, food-15)
+case(sauces-18, with-16)
+amod(sauces-18, exquisite-17)
+nmod:with(made-13, sauces-18)
+
+Coreference set:
+	(1,15,[14,16]) -> (1,5,[4,10]), that is: "the food" -> "the food made by the chefs"
+Coreference set:
+	(1,12,[12,13]) -> (1,9,[8,10]), that is: "they" -> "the chefs"

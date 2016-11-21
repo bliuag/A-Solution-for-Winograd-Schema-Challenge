@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+The hyenas scavenged from the lions because they had left scraps
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=hyenas CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNS Lemma=hyena NamedEntityTag=O]
+[Text=scavenged CharacterOffsetBegin=11 CharacterOffsetEnd=20 PartOfSpeech=VBN Lemma=scavenge NamedEntityTag=O]
+[Text=from CharacterOffsetBegin=21 CharacterOffsetEnd=25 PartOfSpeech=IN Lemma=from NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=lions CharacterOffsetBegin=30 CharacterOffsetEnd=35 PartOfSpeech=NNS Lemma=lion NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=left CharacterOffsetBegin=53 CharacterOffsetEnd=57 PartOfSpeech=VBN Lemma=leave NamedEntityTag=O]
+[Text=scraps CharacterOffsetBegin=58 CharacterOffsetEnd=64 PartOfSpeech=NNS Lemma=scrap NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS hyenas))
+    (VP (VBN scavenged)
+      (PP (IN from)
+        (NP (DT the) (NNS lions)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD had)
+            (VP (VBN left)
+              (NP (NNS scraps)))))))))
+
+root(ROOT-0, scavenged-3)
+det(hyenas-2, The-1)
+nsubj(scavenged-3, hyenas-2)
+case(lions-6, from-4)
+det(lions-6, the-5)
+nmod:from(scavenged-3, lions-6)
+mark(left-10, because-7)
+nsubj(left-10, they-8)
+aux(left-10, had-9)
+advcl:because(scavenged-3, left-10)
+dobj(left-10, scraps-11)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,2,[1,3]), that is: "they" -> "The hyenas"

@@ -1,0 +1,87 @@
+Sentence #1 (24 tokens):
+The Walking Dead is proving to be a big hit among zombie enthusiasts because they have made a series that greatly appeals to them
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Walking CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=VBG Lemma=walk NamedEntityTag=O]
+[Text=Dead CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=NNP Lemma=Dead NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=17 CharacterOffsetEnd=19 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=proving CharacterOffsetBegin=20 CharacterOffsetEnd=27 PartOfSpeech=VBG Lemma=prove NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=28 CharacterOffsetEnd=30 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=31 CharacterOffsetEnd=33 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=34 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=big CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=JJ Lemma=big NamedEntityTag=O]
+[Text=hit CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=hit NamedEntityTag=O]
+[Text=among CharacterOffsetBegin=44 CharacterOffsetEnd=49 PartOfSpeech=IN Lemma=among NamedEntityTag=O]
+[Text=zombie CharacterOffsetBegin=50 CharacterOffsetEnd=56 PartOfSpeech=NN Lemma=zombie NamedEntityTag=O]
+[Text=enthusiasts CharacterOffsetBegin=57 CharacterOffsetEnd=68 PartOfSpeech=NNS Lemma=enthusiast NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=69 CharacterOffsetEnd=76 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=77 CharacterOffsetEnd=81 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=82 CharacterOffsetEnd=86 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=made CharacterOffsetBegin=87 CharacterOffsetEnd=91 PartOfSpeech=VBN Lemma=make NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=92 CharacterOffsetEnd=93 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=series CharacterOffsetBegin=94 CharacterOffsetEnd=100 PartOfSpeech=NN Lemma=series NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=101 CharacterOffsetEnd=105 PartOfSpeech=WDT Lemma=that NamedEntityTag=O]
+[Text=greatly CharacterOffsetBegin=106 CharacterOffsetEnd=113 PartOfSpeech=RB Lemma=greatly NamedEntityTag=O]
+[Text=appeals CharacterOffsetBegin=114 CharacterOffsetEnd=121 PartOfSpeech=NNS Lemma=appeal NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=122 CharacterOffsetEnd=124 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=them CharacterOffsetBegin=125 CharacterOffsetEnd=129 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+(ROOT
+  (S
+    (NP
+      (NP (DT The) (VBG Walking))
+      (SBAR
+        (S
+          (NP (NNP Dead))
+          (VP (VBZ is)
+            (VP (VBG proving)
+              (S
+                (VP (TO to)
+                  (VP (VB be)
+                    (NP
+                      (NP (DT a) (JJ big) (NN hit))
+                      (PP (IN among)
+                        (NP (NN zombie) (NNS enthusiasts))))
+                    (SBAR (IN because)
+                      (S
+                        (NP (PRP they))
+                        (VP (VBP have)
+                          (VP (VBN made)
+                            (NP
+                              (NP (DT a) (NN series))
+                              (SBAR
+                                (WHNP (WDT that))
+                                (S
+                                  (ADVP (RB greatly))
+                                  (NP (NNS appeals))
+                                  (PP (TO to)
+                                    (NP (PRP them))))))))))))))))))))
+
+root(ROOT-0, The-1)
+amod(The-1, Walking-2)
+nsubj(proving-5, Dead-3)
+nsubj:xsubj(hit-10, Dead-3)
+aux(proving-5, is-4)
+acl:relcl(The-1, proving-5)
+mark(hit-10, to-6)
+cop(hit-10, be-7)
+det(hit-10, a-8)
+amod(hit-10, big-9)
+xcomp(proving-5, hit-10)
+case(enthusiasts-13, among-11)
+compound(enthusiasts-13, zombie-12)
+nmod:among(hit-10, enthusiasts-13)
+mark(made-17, because-14)
+nsubj(made-17, they-15)
+aux(made-17, have-16)
+advcl:because(hit-10, made-17)
+det(series-19, a-18)
+dobj(made-17, series-19)
+dep(appeals-22, series-19)
+ref(series-19, that-20)
+advmod(appeals-22, greatly-21)
+acl:relcl(series-19, appeals-22)
+case(them-24, to-23)
+dep(appeals-22, them-24)
+
+Coreference set:
+	(1,15,[15,16]) -> (1,13,[12,14]), that is: "they" -> "zombie enthusiasts"
+	(1,24,[24,25]) -> (1,13,[12,14]), that is: "them" -> "zombie enthusiasts"

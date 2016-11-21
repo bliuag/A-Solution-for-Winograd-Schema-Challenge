@@ -1,0 +1,69 @@
+Sentence #1 (20 tokens):
+The Marines are considerably afraid of the aliens, but they will still use their discipline to overcome their fears
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Marines CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNPS Lemma=Marines NamedEntityTag=ORGANIZATION]
+[Text=are CharacterOffsetBegin=12 CharacterOffsetEnd=15 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=considerably CharacterOffsetBegin=16 CharacterOffsetEnd=28 PartOfSpeech=RB Lemma=considerably NamedEntityTag=O]
+[Text=afraid CharacterOffsetBegin=29 CharacterOffsetEnd=35 PartOfSpeech=JJ Lemma=afraid NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=aliens CharacterOffsetBegin=43 CharacterOffsetEnd=49 PartOfSpeech=NNS Lemma=alien NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=49 CharacterOffsetEnd=50 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=55 CharacterOffsetEnd=59 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=60 CharacterOffsetEnd=64 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=still CharacterOffsetBegin=65 CharacterOffsetEnd=70 PartOfSpeech=RB Lemma=still NamedEntityTag=O]
+[Text=use CharacterOffsetBegin=71 CharacterOffsetEnd=74 PartOfSpeech=VB Lemma=use NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=75 CharacterOffsetEnd=80 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=discipline CharacterOffsetBegin=81 CharacterOffsetEnd=91 PartOfSpeech=NN Lemma=discipline NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=92 CharacterOffsetEnd=94 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=overcome CharacterOffsetBegin=95 CharacterOffsetEnd=103 PartOfSpeech=VB Lemma=overcome NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=104 CharacterOffsetEnd=109 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=fears CharacterOffsetBegin=110 CharacterOffsetEnd=115 PartOfSpeech=NNS Lemma=fear NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (NNPS Marines))
+        (VP (VBP are)
+          (ADJP (RB considerably) (JJ afraid)
+            (PP (IN of)
+              (NP (DT the) (NNS aliens))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (MD will)
+          (ADVP (RB still))
+          (VP (VB use)
+            (NP (PRP$ their) (NN discipline)
+              (S
+                (VP (TO to)
+                  (VP (VB overcome)
+                    (NP (PRP$ their) (NNS fears))))))))))))
+
+root(ROOT-0, afraid-5)
+det(Marines-2, The-1)
+nsubj(afraid-5, Marines-2)
+cop(afraid-5, are-3)
+advmod(afraid-5, considerably-4)
+case(aliens-8, of-6)
+det(aliens-8, the-7)
+nmod:of(afraid-5, aliens-8)
+punct(afraid-5, ,-9)
+cc(afraid-5, but-10)
+nsubj(use-14, they-11)
+aux(use-14, will-12)
+advmod(use-14, still-13)
+conj:but(afraid-5, use-14)
+nmod:poss(discipline-16, their-15)
+dobj(use-14, discipline-16)
+mark(overcome-18, to-17)
+acl:to(discipline-16, overcome-18)
+nmod:poss(fears-20, their-19)
+dobj(overcome-18, fears-20)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,8,[7,9]), that is: "they" -> "the aliens"
+	(1,15,[15,16]) -> (1,8,[7,9]), that is: "their" -> "the aliens"
+	(1,19,[19,20]) -> (1,8,[7,9]), that is: "their" -> "the aliens"

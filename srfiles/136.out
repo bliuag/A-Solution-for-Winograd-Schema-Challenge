@@ -1,0 +1,72 @@
+Sentence #1 (23 tokens):
+The racquetball players were annoyed by the other students in the activity center because they were using the racquetball courts to play badminton
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=racquetball CharacterOffsetBegin=4 CharacterOffsetEnd=15 PartOfSpeech=NN Lemma=racquetball NamedEntityTag=O]
+[Text=players CharacterOffsetBegin=16 CharacterOffsetEnd=23 PartOfSpeech=NNS Lemma=player NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=annoyed CharacterOffsetBegin=29 CharacterOffsetEnd=36 PartOfSpeech=VBN Lemma=annoy NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=37 CharacterOffsetEnd=39 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=other CharacterOffsetBegin=44 CharacterOffsetEnd=49 PartOfSpeech=JJ Lemma=other NamedEntityTag=O]
+[Text=students CharacterOffsetBegin=50 CharacterOffsetEnd=58 PartOfSpeech=NNS Lemma=student NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=59 CharacterOffsetEnd=61 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=62 CharacterOffsetEnd=65 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=activity CharacterOffsetBegin=66 CharacterOffsetEnd=74 PartOfSpeech=NN Lemma=activity NamedEntityTag=O]
+[Text=center CharacterOffsetBegin=75 CharacterOffsetEnd=81 PartOfSpeech=NN Lemma=center NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=82 CharacterOffsetEnd=89 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=90 CharacterOffsetEnd=94 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=95 CharacterOffsetEnd=99 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=using CharacterOffsetBegin=100 CharacterOffsetEnd=105 PartOfSpeech=VBG Lemma=use NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=106 CharacterOffsetEnd=109 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=racquetball CharacterOffsetBegin=110 CharacterOffsetEnd=121 PartOfSpeech=NN Lemma=racquetball NamedEntityTag=O]
+[Text=courts CharacterOffsetBegin=122 CharacterOffsetEnd=128 PartOfSpeech=NNS Lemma=court NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=129 CharacterOffsetEnd=131 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=play CharacterOffsetBegin=132 CharacterOffsetEnd=136 PartOfSpeech=VB Lemma=play NamedEntityTag=O]
+[Text=badminton CharacterOffsetBegin=137 CharacterOffsetEnd=146 PartOfSpeech=NN Lemma=badminton NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN racquetball) (NNS players))
+    (VP (VBD were)
+      (ADJP (VBN annoyed)
+        (PP (IN by)
+          (NP
+            (NP (DT the) (JJ other) (NNS students))
+            (PP (IN in)
+              (NP (DT the) (NN activity) (NN center))))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (VP (VBG using)
+              (NP (DT the) (NN racquetball) (NNS courts))
+              (S
+                (VP (TO to)
+                  (VP (VB play)
+                    (NP (NN badminton))))))))))))
+
+root(ROOT-0, annoyed-5)
+det(players-3, The-1)
+compound(players-3, racquetball-2)
+nsubjpass(annoyed-5, players-3)
+auxpass(annoyed-5, were-4)
+case(students-9, by-6)
+det(students-9, the-7)
+amod(students-9, other-8)
+nmod:agent(annoyed-5, students-9)
+case(center-13, in-10)
+det(center-13, the-11)
+compound(center-13, activity-12)
+nmod:in(students-9, center-13)
+mark(using-17, because-14)
+nsubj(using-17, they-15)
+aux(using-17, were-16)
+advcl:because(annoyed-5, using-17)
+det(courts-20, the-18)
+compound(courts-20, racquetball-19)
+dobj(using-17, courts-20)
+mark(play-22, to-21)
+advcl:to(using-17, play-22)
+dobj(play-22, badminton-23)
+
+Coreference set:
+	(1,15,[15,16]) -> (1,3,[1,4]), that is: "they" -> "The racquetball players"

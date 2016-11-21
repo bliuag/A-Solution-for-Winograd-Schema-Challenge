@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+Mary had a little lamb until she was stolen by Cindy
+[Text=Mary CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Mary NamedEntityTag=PERSON]
+[Text=had CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=9 CharacterOffsetEnd=10 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=little CharacterOffsetBegin=11 CharacterOffsetEnd=17 PartOfSpeech=JJ Lemma=little NamedEntityTag=O]
+[Text=lamb CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=lamb NamedEntityTag=O]
+[Text=until CharacterOffsetBegin=23 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=until NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=29 CharacterOffsetEnd=32 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=33 CharacterOffsetEnd=36 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=stolen CharacterOffsetBegin=37 CharacterOffsetEnd=43 PartOfSpeech=VBN Lemma=steal NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=Cindy CharacterOffsetBegin=47 CharacterOffsetEnd=52 PartOfSpeech=NNP Lemma=Cindy NamedEntityTag=PERSON]
+(ROOT
+  (S
+    (NP (NNP Mary))
+    (VP (VBD had)
+      (NP (DT a) (JJ little) (NN lamb))
+      (SBAR (IN until)
+        (S
+          (NP (PRP she))
+          (VP (VBD was)
+            (VP (VBN stolen)
+              (PP (IN by)
+                (NP (NNP Cindy))))))))))
+
+root(ROOT-0, had-2)
+nsubj(had-2, Mary-1)
+det(lamb-5, a-3)
+amod(lamb-5, little-4)
+dobj(had-2, lamb-5)
+mark(stolen-9, until-6)
+nsubjpass(stolen-9, she-7)
+auxpass(stolen-9, was-8)
+advcl:until(had-2, stolen-9)
+case(Cindy-11, by-10)
+nmod:agent(stolen-9, Cindy-11)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,1,[1,2]), that is: "she" -> "Mary"

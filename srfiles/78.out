@@ -1,0 +1,32 @@
+Sentence #1 (8 tokens):
+Nelson punched Milhouse but he was not hurt
+[Text=Nelson CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Nelson NamedEntityTag=PERSON]
+[Text=punched CharacterOffsetBegin=7 CharacterOffsetEnd=14 PartOfSpeech=VBD Lemma=punch NamedEntityTag=O]
+[Text=Milhouse CharacterOffsetBegin=15 CharacterOffsetEnd=23 PartOfSpeech=NNP Lemma=Milhouse NamedEntityTag=PERSON]
+[Text=but CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=28 CharacterOffsetEnd=30 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=31 CharacterOffsetEnd=34 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=hurt CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=VB Lemma=hurt NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Nelson))
+    (VP (VBD punched)
+      (NP (NNP Milhouse))
+      (SBAR (CC but)
+        (S
+          (NP (PRP he))
+          (VP (VBD was) (RB not)
+            (VP (VB hurt))))))))
+
+root(ROOT-0, punched-2)
+nsubj(punched-2, Nelson-1)
+dobj(punched-2, Milhouse-3)
+cc(hurt-8, but-4)
+nsubj(hurt-8, he-5)
+aux(hurt-8, was-6)
+neg(hurt-8, not-7)
+dep(punched-2, hurt-8)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "he" -> "Nelson"

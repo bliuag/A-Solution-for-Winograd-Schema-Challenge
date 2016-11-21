@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+Joe has more money than Adam since he has no job
+[Text=Joe CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=has CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=8 CharacterOffsetEnd=12 PartOfSpeech=JJR Lemma=more NamedEntityTag=O]
+[Text=money CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=Adam CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=NNP Lemma=Adam NamedEntityTag=PERSON]
+[Text=since CharacterOffsetBegin=29 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=38 CharacterOffsetEnd=41 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=no CharacterOffsetBegin=42 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=no NamedEntityTag=O]
+[Text=job CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=NN Lemma=job NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Joe))
+    (VP (VBZ has)
+      (NP (JJR more) (NN money))
+      (PP (IN than)
+        (NP (NNP Adam)))
+      (SBAR (IN since)
+        (S
+          (NP (PRP he))
+          (VP (VBZ has)
+            (NP (DT no) (NN job))))))))
+
+root(ROOT-0, has-2)
+nsubj(has-2, Joe-1)
+amod(money-4, more-3)
+dobj(has-2, money-4)
+case(Adam-6, than-5)
+nmod:than(has-2, Adam-6)
+mark(has-9, since-7)
+nsubj(has-9, he-8)
+advcl:since(has-2, has-9)
+neg(job-11, no-10)
+dobj(has-9, job-11)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Joe"

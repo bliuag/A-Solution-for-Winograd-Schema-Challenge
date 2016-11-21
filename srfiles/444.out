@@ -1,0 +1,53 @@
+Sentence #1 (15 tokens):
+Lois was scolded by her daughter because she was accused of being a terrible mother
+[Text=Lois CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Lois NamedEntityTag=PERSON]
+[Text=was CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=scolded CharacterOffsetBegin=9 CharacterOffsetEnd=16 PartOfSpeech=VBN Lemma=scold NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=17 CharacterOffsetEnd=19 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+[Text=daughter CharacterOffsetBegin=24 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=daughter NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=33 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=accused CharacterOffsetBegin=49 CharacterOffsetEnd=56 PartOfSpeech=VBN Lemma=accuse NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=57 CharacterOffsetEnd=59 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=60 CharacterOffsetEnd=65 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=66 CharacterOffsetEnd=67 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=terrible CharacterOffsetBegin=68 CharacterOffsetEnd=76 PartOfSpeech=JJ Lemma=terrible NamedEntityTag=O]
+[Text=mother CharacterOffsetBegin=77 CharacterOffsetEnd=83 PartOfSpeech=NN Lemma=mother NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Lois))
+    (VP (VBD was)
+      (VP (VBN scolded)
+        (PP (IN by)
+          (NP (PRP$ her) (NN daughter)))
+        (SBAR (IN because)
+          (S
+            (NP (PRP she))
+            (VP (VBD was)
+              (VP (VBN accused)
+                (PP (IN of)
+                  (S
+                    (VP (VBG being)
+                      (NP (DT a) (JJ terrible) (NN mother)))))))))))))
+
+root(ROOT-0, scolded-3)
+nsubjpass(scolded-3, Lois-1)
+auxpass(scolded-3, was-2)
+case(daughter-6, by-4)
+nmod:poss(daughter-6, her-5)
+nmod:agent(scolded-3, daughter-6)
+mark(accused-10, because-7)
+nsubjpass(accused-10, she-8)
+auxpass(accused-10, was-9)
+advcl:because(scolded-3, accused-10)
+mark(mother-15, of-11)
+cop(mother-15, being-12)
+det(mother-15, a-13)
+amod(mother-15, terrible-14)
+advcl:of(accused-10, mother-15)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "her" -> "Lois"
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "she" -> "Lois"

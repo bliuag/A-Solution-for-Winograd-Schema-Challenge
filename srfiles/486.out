@@ -1,0 +1,67 @@
+Sentence #1 (20 tokens):
+Hair Stylists transformed the Cowboy's Cheerleaders into beauties, since they need to look top notch for the game
+[Text=Hair CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NN Lemma=hair NamedEntityTag=O]
+[Text=Stylists CharacterOffsetBegin=5 CharacterOffsetEnd=13 PartOfSpeech=NNS Lemma=stylist NamedEntityTag=O]
+[Text=transformed CharacterOffsetBegin=14 CharacterOffsetEnd=25 PartOfSpeech=VBD Lemma=transform NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Cowboy CharacterOffsetBegin=30 CharacterOffsetEnd=36 PartOfSpeech=NNP Lemma=Cowboy NamedEntityTag=PERSON]
+[Text='s CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=Cheerleaders CharacterOffsetBegin=39 CharacterOffsetEnd=51 PartOfSpeech=NNPS Lemma=Cheerleaders NamedEntityTag=O]
+[Text=into CharacterOffsetBegin=52 CharacterOffsetEnd=56 PartOfSpeech=IN Lemma=into NamedEntityTag=O]
+[Text=beauties CharacterOffsetBegin=57 CharacterOffsetEnd=65 PartOfSpeech=NNS Lemma=beauty NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=65 CharacterOffsetEnd=66 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=67 CharacterOffsetEnd=72 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=73 CharacterOffsetEnd=77 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=need CharacterOffsetBegin=78 CharacterOffsetEnd=82 PartOfSpeech=VBP Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=83 CharacterOffsetEnd=85 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=look CharacterOffsetBegin=86 CharacterOffsetEnd=90 PartOfSpeech=VB Lemma=look NamedEntityTag=O]
+[Text=top CharacterOffsetBegin=91 CharacterOffsetEnd=94 PartOfSpeech=JJ Lemma=top NamedEntityTag=O]
+[Text=notch CharacterOffsetBegin=95 CharacterOffsetEnd=100 PartOfSpeech=NN Lemma=notch NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=101 CharacterOffsetEnd=104 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=105 CharacterOffsetEnd=108 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=game CharacterOffsetBegin=109 CharacterOffsetEnd=113 PartOfSpeech=NN Lemma=game NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NN Hair) (NNS Stylists))
+    (VP (VBD transformed)
+      (NP
+        (NP (DT the) (NNP Cowboy) (POS 's))
+        (NNPS Cheerleaders))
+      (PP (IN into)
+        (NP (NNS beauties)))
+      (, ,)
+      (SBAR (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBP need)
+            (S
+              (VP (TO to)
+                (VP (VB look)
+                  (NP (JJ top) (NN notch))
+                  (PP (IN for)
+                    (NP (DT the) (NN game))))))))))))
+
+root(ROOT-0, transformed-3)
+compound(Stylists-2, Hair-1)
+nsubj(transformed-3, Stylists-2)
+det(Cowboy-5, the-4)
+nmod:poss(Cheerleaders-7, Cowboy-5)
+case(Cowboy-5, 's-6)
+dobj(transformed-3, Cheerleaders-7)
+case(beauties-9, into-8)
+nmod:into(transformed-3, beauties-9)
+punct(transformed-3, ,-10)
+mark(need-13, since-11)
+nsubj(need-13, they-12)
+nsubj:xsubj(look-15, they-12)
+advcl:since(transformed-3, need-13)
+mark(look-15, to-14)
+xcomp(need-13, look-15)
+amod(notch-17, top-16)
+dobj(look-15, notch-17)
+case(game-20, for-18)
+det(game-20, the-19)
+nmod:for(look-15, game-20)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,2,[1,3]), that is: "they" -> "Hair Stylists"

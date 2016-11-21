@@ -1,0 +1,62 @@
+Sentence #1 (16 tokens):
+Kelly neglected to tell Katie that their rent was due, but she told her later
+[Text=Kelly CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Kelly NamedEntityTag=PERSON]
+[Text=neglected CharacterOffsetBegin=6 CharacterOffsetEnd=15 PartOfSpeech=VBN Lemma=neglect NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=16 CharacterOffsetEnd=18 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=tell CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=VB Lemma=tell NamedEntityTag=O]
+[Text=Katie CharacterOffsetBegin=24 CharacterOffsetEnd=29 PartOfSpeech=NNP Lemma=Katie NamedEntityTag=PERSON]
+[Text=that CharacterOffsetBegin=30 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=that NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=35 CharacterOffsetEnd=40 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=rent CharacterOffsetBegin=41 CharacterOffsetEnd=45 PartOfSpeech=NN Lemma=rent NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=due CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=due NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=53 CharacterOffsetEnd=54 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=59 CharacterOffsetEnd=62 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=told CharacterOffsetBegin=63 CharacterOffsetEnd=67 PartOfSpeech=VBD Lemma=tell NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=68 CharacterOffsetEnd=71 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=later CharacterOffsetBegin=72 CharacterOffsetEnd=77 PartOfSpeech=RB Lemma=later NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Kelly))
+    (VP (VBN neglected)
+      (S
+        (VP (TO to)
+          (VP (VB tell)
+            (NP (NNP Katie))
+            (SBAR (IN that)
+              (S
+                (S
+                  (NP (PRP$ their) (NN rent))
+                  (VP (VBD was)
+                    (ADJP (JJ due))))
+                (, ,)
+                (CC but)
+                (S
+                  (NP (PRP she))
+                  (VP (VBD told)
+                    (NP (PRP her))
+                    (ADVP (RB later))))))))))))
+
+root(ROOT-0, neglected-2)
+nsubj(neglected-2, Kelly-1)
+nsubj:xsubj(tell-4, Kelly-1)
+mark(tell-4, to-3)
+xcomp(neglected-2, tell-4)
+dobj(tell-4, Katie-5)
+mark(due-10, that-6)
+nmod:poss(rent-8, their-7)
+nsubj(due-10, rent-8)
+cop(due-10, was-9)
+ccomp(tell-4, due-10)
+punct(due-10, ,-11)
+cc(due-10, but-12)
+nsubj(told-14, she-13)
+ccomp(tell-4, told-14)
+conj:but(due-10, told-14)
+dobj(told-14, her-15)
+advmod(told-14, later-16)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,5,[5,6]), that is: "she" -> "Katie"
+	(1,15,[15,16]) -> (1,5,[5,6]), that is: "her" -> "Katie"

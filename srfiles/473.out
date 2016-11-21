@@ -1,0 +1,67 @@
+Sentence #1 (18 tokens):
+Planet 343's sandstorm forces the inhabitants underground, but they have plenty of food sources stored away
+[Text=Planet CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NN Lemma=planet NamedEntityTag=O]
+[Text=343 CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=CD Lemma=343 NamedEntityTag=NUMBER NormalizedNamedEntityTag=343.0]
+[Text='s CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=sandstorm CharacterOffsetBegin=13 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=sandstorm NamedEntityTag=O]
+[Text=forces CharacterOffsetBegin=23 CharacterOffsetEnd=29 PartOfSpeech=VBZ Lemma=force NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=30 CharacterOffsetEnd=33 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=inhabitants CharacterOffsetBegin=34 CharacterOffsetEnd=45 PartOfSpeech=NNS Lemma=inhabitant NamedEntityTag=O]
+[Text=underground CharacterOffsetBegin=46 CharacterOffsetEnd=57 PartOfSpeech=RB Lemma=underground NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=57 CharacterOffsetEnd=58 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=59 CharacterOffsetEnd=62 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=63 CharacterOffsetEnd=67 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=68 CharacterOffsetEnd=72 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=plenty CharacterOffsetBegin=73 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=plenty NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=80 CharacterOffsetEnd=82 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=food CharacterOffsetBegin=83 CharacterOffsetEnd=87 PartOfSpeech=NN Lemma=food NamedEntityTag=O]
+[Text=sources CharacterOffsetBegin=88 CharacterOffsetEnd=95 PartOfSpeech=NNS Lemma=source NamedEntityTag=O]
+[Text=stored CharacterOffsetBegin=96 CharacterOffsetEnd=102 PartOfSpeech=VBD Lemma=store NamedEntityTag=O]
+[Text=away CharacterOffsetBegin=103 CharacterOffsetEnd=107 PartOfSpeech=RB Lemma=away NamedEntityTag=O]
+(ROOT
+  (S
+    (NP
+      (NP (NN Planet))
+      (SBAR
+        (S
+          (S
+            (NP
+              (NP (CD 343) (POS 's))
+              (NN sandstorm))
+            (VP (VBZ forces)
+              (NP (DT the) (NNS inhabitants))
+              (ADVP (RB underground))))
+          (, ,)
+          (CC but)
+          (S
+            (NP (PRP they))
+            (VP (VBP have)
+              (NP
+                (NP (NN plenty))
+                (PP (IN of)
+                  (NP (NN food) (NNS sources)))))))))
+    (VP (VBD stored)
+      (ADVP (RB away)))))
+
+root(ROOT-0, stored-17)
+nsubj(stored-17, Planet-1)
+nmod:poss(sandstorm-4, 343-2)
+case(343-2, 's-3)
+nsubj(forces-5, sandstorm-4)
+acl:relcl(Planet-1, forces-5)
+det(inhabitants-7, the-6)
+dobj(forces-5, inhabitants-7)
+advmod(forces-5, underground-8)
+punct(forces-5, ,-9)
+cc(forces-5, but-10)
+nsubj(have-12, they-11)
+acl:relcl(Planet-1, have-12)
+conj:but(forces-5, have-12)
+det:qmod(sources-16, plenty-13)
+mwe(plenty-13, of-14)
+compound(sources-16, food-15)
+dobj(have-12, sources-16)
+advmod(stored-17, away-18)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,7,[6,8]), that is: "they" -> "the inhabitants"

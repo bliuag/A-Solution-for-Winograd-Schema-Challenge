@@ -1,0 +1,48 @@
+Sentence #1 (13 tokens):
+The gym teachers trained the students because they wanted to teach them discipline
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=gym CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=gym NamedEntityTag=O]
+[Text=teachers CharacterOffsetBegin=8 CharacterOffsetEnd=16 PartOfSpeech=NNS Lemma=teacher NamedEntityTag=O]
+[Text=trained CharacterOffsetBegin=17 CharacterOffsetEnd=24 PartOfSpeech=VBD Lemma=train NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=students CharacterOffsetBegin=29 CharacterOffsetEnd=37 PartOfSpeech=NNS Lemma=student NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=38 CharacterOffsetEnd=45 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=46 CharacterOffsetEnd=50 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=wanted CharacterOffsetBegin=51 CharacterOffsetEnd=57 PartOfSpeech=VBD Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=58 CharacterOffsetEnd=60 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=teach CharacterOffsetBegin=61 CharacterOffsetEnd=66 PartOfSpeech=VB Lemma=teach NamedEntityTag=O]
+[Text=them CharacterOffsetBegin=67 CharacterOffsetEnd=71 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=discipline CharacterOffsetBegin=72 CharacterOffsetEnd=82 PartOfSpeech=NN Lemma=discipline NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN gym) (NNS teachers))
+    (VP (VBD trained)
+      (NP (DT the) (NNS students))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD wanted)
+            (S
+              (VP (TO to)
+                (VP (VB teach)
+                  (NP (PRP them))
+                  (NP (NN discipline)))))))))))
+
+root(ROOT-0, trained-4)
+det(teachers-3, The-1)
+compound(teachers-3, gym-2)
+nsubj(trained-4, teachers-3)
+det(students-6, the-5)
+dobj(trained-4, students-6)
+mark(wanted-9, because-7)
+nsubj(wanted-9, they-8)
+nsubj:xsubj(teach-11, they-8)
+advcl:because(trained-4, wanted-9)
+mark(teach-11, to-10)
+xcomp(wanted-9, teach-11)
+iobj(teach-11, them-12)
+dobj(teach-11, discipline-13)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,3,[1,4]), that is: "they" -> "The gym teachers"
+	(1,12,[12,13]) -> (1,3,[1,4]), that is: "them" -> "The gym teachers"

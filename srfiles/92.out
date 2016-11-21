@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+The employer talked to the employee about being loyal to him
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=employer CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=NN Lemma=employer NamedEntityTag=O]
+[Text=talked CharacterOffsetBegin=13 CharacterOffsetEnd=19 PartOfSpeech=VBD Lemma=talk NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=20 CharacterOffsetEnd=22 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=employee CharacterOffsetBegin=27 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=employee NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=36 CharacterOffsetEnd=41 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=42 CharacterOffsetEnd=47 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=loyal CharacterOffsetBegin=48 CharacterOffsetEnd=53 PartOfSpeech=JJ Lemma=loyal NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=54 CharacterOffsetEnd=56 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN employer))
+    (VP (VBD talked)
+      (PP (TO to)
+        (NP (DT the) (NN employee)))
+      (PP (IN about)
+        (S
+          (VP (VBG being)
+            (ADJP (JJ loyal)
+              (PP (TO to)
+                (NP (PRP him))))))))))
+
+root(ROOT-0, talked-3)
+det(employer-2, The-1)
+nsubj(talked-3, employer-2)
+case(employee-6, to-4)
+det(employee-6, the-5)
+nmod:to(talked-3, employee-6)
+mark(loyal-9, about-7)
+cop(loyal-9, being-8)
+advcl:about(talked-3, loyal-9)
+case(him-11, to-10)
+nmod:to(loyal-9, him-11)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,2,[1,3]), that is: "him" -> "The employer"

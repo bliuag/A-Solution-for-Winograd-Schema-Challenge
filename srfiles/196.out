@@ -1,0 +1,37 @@
+Sentence #1 (10 tokens):
+Yuri owed Ivan money because he paid for the vodka
+[Text=Yuri CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Yuri NamedEntityTag=PERSON]
+[Text=owed CharacterOffsetBegin=5 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=owe NamedEntityTag=O]
+[Text=Ivan CharacterOffsetBegin=10 CharacterOffsetEnd=14 PartOfSpeech=NNP Lemma=Ivan NamedEntityTag=PERSON]
+[Text=money CharacterOffsetBegin=15 CharacterOffsetEnd=20 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=21 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=paid CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=VBD Lemma=pay NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=41 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=vodka CharacterOffsetBegin=45 CharacterOffsetEnd=50 PartOfSpeech=NN Lemma=vodka NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Yuri))
+    (VP (VBD owed)
+      (NP (NNP Ivan) (NN money))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD paid)
+            (PP (IN for)
+              (NP (DT the) (NN vodka)))))))))
+
+root(ROOT-0, owed-2)
+nsubj(owed-2, Yuri-1)
+compound(money-4, Ivan-3)
+dobj(owed-2, money-4)
+mark(paid-7, because-5)
+nsubj(paid-7, he-6)
+advcl:because(owed-2, paid-7)
+case(vodka-10, for-8)
+det(vodka-10, the-9)
+nmod:for(paid-7, vodka-10)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,1,[1,2]), that is: "he" -> "Yuri"

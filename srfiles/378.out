@@ -1,0 +1,43 @@
+Sentence #1 (13 tokens):
+Toyota has the luxury brand Lexus: they are built for the rich
+[Text=Toyota CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Toyota NamedEntityTag=ORGANIZATION]
+[Text=has CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=11 CharacterOffsetEnd=14 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=luxury CharacterOffsetBegin=15 CharacterOffsetEnd=21 PartOfSpeech=NN Lemma=luxury NamedEntityTag=O]
+[Text=brand CharacterOffsetBegin=22 CharacterOffsetEnd=27 PartOfSpeech=NN Lemma=brand NamedEntityTag=O]
+[Text=Lexus CharacterOffsetBegin=28 CharacterOffsetEnd=33 PartOfSpeech=NNP Lemma=Lexus NamedEntityTag=MISC]
+[Text=: CharacterOffsetBegin=33 CharacterOffsetEnd=34 PartOfSpeech=: Lemma=: NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=35 CharacterOffsetEnd=39 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=built CharacterOffsetBegin=44 CharacterOffsetEnd=49 PartOfSpeech=VBN Lemma=build NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=rich CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=JJ Lemma=rich NamedEntityTag=O]
+(ROOT
+  (S
+    (S
+      (NP (NNP Toyota))
+      (VP (VBZ has)
+        (NP (DT the) (NN luxury) (NN brand) (NNP Lexus))))
+    (: :)
+    (S
+      (NP (PRP they))
+      (VP (VBP are)
+        (VP (VBN built)
+          (PP (IN for)
+            (NP (DT the) (JJ rich))))))))
+
+root(ROOT-0, has-2)
+nsubj(has-2, Toyota-1)
+det(Lexus-6, the-3)
+compound(Lexus-6, luxury-4)
+compound(Lexus-6, brand-5)
+dobj(has-2, Lexus-6)
+punct(has-2, :-7)
+nsubjpass(built-10, they-8)
+auxpass(built-10, are-9)
+parataxis(has-2, built-10)
+case(rich-13, for-11)
+det(rich-13, the-12)
+nmod:for(built-10, rich-13)
+

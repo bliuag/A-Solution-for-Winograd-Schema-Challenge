@@ -1,0 +1,87 @@
+Sentence #1 (24 tokens):
+Christian Bale once lost his temper at the man holding his lighting, but he did not do anything that earned getting yelled at
+[Text=Christian CharacterOffsetBegin=0 CharacterOffsetEnd=9 PartOfSpeech=JJ Lemma=christian NamedEntityTag=PERSON]
+[Text=Bale CharacterOffsetBegin=10 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=bale NamedEntityTag=PERSON]
+[Text=once CharacterOffsetBegin=15 CharacterOffsetEnd=19 PartOfSpeech=RB Lemma=once NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">once</TIMEX3>]
+[Text=lost CharacterOffsetBegin=20 CharacterOffsetEnd=24 PartOfSpeech=VBD Lemma=lose NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=temper CharacterOffsetBegin=29 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=temper NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=man CharacterOffsetBegin=43 CharacterOffsetEnd=46 PartOfSpeech=NN Lemma=man NamedEntityTag=O]
+[Text=holding CharacterOffsetBegin=47 CharacterOffsetEnd=54 PartOfSpeech=VBG Lemma=hold NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=lighting CharacterOffsetBegin=59 CharacterOffsetEnd=67 PartOfSpeech=NN Lemma=lighting NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=67 CharacterOffsetEnd=68 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=69 CharacterOffsetEnd=72 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=73 CharacterOffsetEnd=75 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=76 CharacterOffsetEnd=79 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=80 CharacterOffsetEnd=83 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=84 CharacterOffsetEnd=86 PartOfSpeech=VB Lemma=do NamedEntityTag=O]
+[Text=anything CharacterOffsetBegin=87 CharacterOffsetEnd=95 PartOfSpeech=NN Lemma=anything NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=96 CharacterOffsetEnd=100 PartOfSpeech=WDT Lemma=that NamedEntityTag=O]
+[Text=earned CharacterOffsetBegin=101 CharacterOffsetEnd=107 PartOfSpeech=VBD Lemma=earn NamedEntityTag=O]
+[Text=getting CharacterOffsetBegin=108 CharacterOffsetEnd=115 PartOfSpeech=VBG Lemma=get NamedEntityTag=O]
+[Text=yelled CharacterOffsetBegin=116 CharacterOffsetEnd=122 PartOfSpeech=VBD Lemma=yell NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=123 CharacterOffsetEnd=125 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (JJ Christian) (NN Bale))
+        (ADVP (RB once))
+        (VP (VBD lost)
+          (NP (PRP$ his) (NN temper))
+          (PP (IN at)
+            (NP
+              (NP (DT the) (NN man))
+              (VP (VBG holding)
+                (NP (PRP$ his) (NN lighting)))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP (VBD did) (RB not)
+          (VP (VB do)
+            (NP
+              (NP (NN anything))
+              (SBAR
+                (WHNP (WDT that))
+                (S
+                  (VP (VBD earned)
+                    (SBAR
+                      (S
+                        (S
+                          (VP (VBG getting)))
+                        (VP (VBD yelled)
+                          (PP (IN at)))))))))))))))
+
+root(ROOT-0, lost-4)
+amod(Bale-2, Christian-1)
+nsubj(lost-4, Bale-2)
+advmod(lost-4, once-3)
+nmod:poss(temper-6, his-5)
+dobj(lost-4, temper-6)
+case(man-9, at-7)
+det(man-9, the-8)
+nmod:at(lost-4, man-9)
+acl(man-9, holding-10)
+nmod:poss(lighting-12, his-11)
+dobj(holding-10, lighting-12)
+punct(lost-4, ,-13)
+cc(lost-4, but-14)
+nsubj(do-18, he-15)
+aux(do-18, did-16)
+neg(do-18, not-17)
+conj:but(lost-4, do-18)
+dobj(do-18, anything-19)
+nsubj(earned-21, anything-19)
+ref(anything-19, that-20)
+acl:relcl(anything-19, earned-21)
+csubj(yelled-23, getting-22)
+ccomp(earned-21, yelled-23)
+nmod(yelled-23, at-24)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,5,[5,6]), that is: "his" -> "his"
+	(1,15,[15,16]) -> (1,5,[5,6]), that is: "he" -> "his"

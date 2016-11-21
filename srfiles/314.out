@@ -1,0 +1,47 @@
+Sentence #1 (14 tokens):
+The Detroit Lions beat the Dallas Cowboys because they had more desire to win
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Detroit CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNP Lemma=Detroit NamedEntityTag=ORGANIZATION]
+[Text=Lions CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=NNPS Lemma=Lions NamedEntityTag=ORGANIZATION]
+[Text=beat CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=VBD Lemma=beat NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Dallas CharacterOffsetBegin=27 CharacterOffsetEnd=33 PartOfSpeech=NNP Lemma=Dallas NamedEntityTag=ORGANIZATION]
+[Text=Cowboys CharacterOffsetBegin=34 CharacterOffsetEnd=41 PartOfSpeech=NNPS Lemma=Cowboys NamedEntityTag=ORGANIZATION]
+[Text=because CharacterOffsetBegin=42 CharacterOffsetEnd=49 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=50 CharacterOffsetEnd=54 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=59 CharacterOffsetEnd=63 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=desire CharacterOffsetBegin=64 CharacterOffsetEnd=70 PartOfSpeech=NN Lemma=desire NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=71 CharacterOffsetEnd=73 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=win CharacterOffsetBegin=74 CharacterOffsetEnd=77 PartOfSpeech=VB Lemma=win NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNP Detroit) (NNPS Lions))
+    (VP (VBD beat)
+      (NP (DT the) (NNP Dallas) (NNPS Cowboys))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD had)
+            (NP
+              (ADVP (RBR more))
+              (NN desire))
+            (S
+              (VP (TO to)
+                (VP (VB win))))))))))
+
+root(ROOT-0, beat-4)
+det(Lions-3, The-1)
+compound(Lions-3, Detroit-2)
+nsubj(beat-4, Lions-3)
+det(Cowboys-7, the-5)
+compound(Cowboys-7, Dallas-6)
+dobj(beat-4, Cowboys-7)
+mark(had-10, because-8)
+nsubj(had-10, they-9)
+advcl:because(beat-4, had-10)
+advmod(desire-12, more-11)
+dobj(had-10, desire-12)
+mark(win-14, to-13)
+advcl:to(had-10, win-14)
+

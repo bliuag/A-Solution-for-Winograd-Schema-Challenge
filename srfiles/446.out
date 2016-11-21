@@ -1,0 +1,89 @@
+Sentence #1 (27 tokens):
+The priests quoted the words of the Bible for all the suspected witches they found, since they needed to quote holy words to rid the evil
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=priests CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNS Lemma=priest NamedEntityTag=O]
+[Text=quoted CharacterOffsetBegin=12 CharacterOffsetEnd=18 PartOfSpeech=VBD Lemma=quote NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=19 CharacterOffsetEnd=22 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=words CharacterOffsetBegin=23 CharacterOffsetEnd=28 PartOfSpeech=NNS Lemma=word NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Bible CharacterOffsetBegin=36 CharacterOffsetEnd=41 PartOfSpeech=NNP Lemma=Bible NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=42 CharacterOffsetEnd=45 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=all CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=PDT Lemma=all NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=suspected CharacterOffsetBegin=54 CharacterOffsetEnd=63 PartOfSpeech=VBN Lemma=suspect NamedEntityTag=O]
+[Text=witches CharacterOffsetBegin=64 CharacterOffsetEnd=71 PartOfSpeech=NNS Lemma=witch NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=72 CharacterOffsetEnd=76 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=found CharacterOffsetBegin=77 CharacterOffsetEnd=82 PartOfSpeech=VBD Lemma=find NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=82 CharacterOffsetEnd=83 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=84 CharacterOffsetEnd=89 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=90 CharacterOffsetEnd=94 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=needed CharacterOffsetBegin=95 CharacterOffsetEnd=101 PartOfSpeech=VBD Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=102 CharacterOffsetEnd=104 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=quote CharacterOffsetBegin=105 CharacterOffsetEnd=110 PartOfSpeech=VB Lemma=quote NamedEntityTag=O]
+[Text=holy CharacterOffsetBegin=111 CharacterOffsetEnd=115 PartOfSpeech=JJ Lemma=holy NamedEntityTag=O]
+[Text=words CharacterOffsetBegin=116 CharacterOffsetEnd=121 PartOfSpeech=NNS Lemma=word NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=122 CharacterOffsetEnd=124 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=rid CharacterOffsetBegin=125 CharacterOffsetEnd=128 PartOfSpeech=VB Lemma=rid NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=129 CharacterOffsetEnd=132 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=evil CharacterOffsetBegin=133 CharacterOffsetEnd=137 PartOfSpeech=NN Lemma=evil NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS priests))
+    (VP (VBD quoted)
+      (NP
+        (NP (DT the) (NNS words))
+        (PP (IN of)
+          (NP (DT the) (NNP Bible))))
+      (PP (IN for)
+        (NP
+          (NP (PDT all) (DT the) (VBN suspected) (NNS witches))
+          (SBAR
+            (S
+              (NP (PRP they))
+              (VP (VBD found) (, ,)
+                (SBAR (IN since)
+                  (S
+                    (NP (PRP they))
+                    (VP (VBD needed)
+                      (S
+                        (VP (TO to)
+                          (VP (VB quote)
+                            (NP (JJ holy) (NNS words))
+                            (S
+                              (VP (TO to)
+                                (VP (VB rid)
+                                  (NP (DT the) (NN evil)))))))))))))))))))
+
+root(ROOT-0, quoted-3)
+det(priests-2, The-1)
+nsubj(quoted-3, priests-2)
+det(words-5, the-4)
+dobj(quoted-3, words-5)
+case(Bible-8, of-6)
+det(Bible-8, the-7)
+nmod:of(words-5, Bible-8)
+case(witches-13, for-9)
+det:predet(witches-13, all-10)
+det(witches-13, the-11)
+amod(witches-13, suspected-12)
+nmod:for(quoted-3, witches-13)
+nsubj(found-15, they-14)
+acl:relcl(witches-13, found-15)
+punct(found-15, ,-16)
+mark(needed-19, since-17)
+nsubj(needed-19, they-18)
+nsubj:xsubj(quote-21, they-18)
+advcl:since(found-15, needed-19)
+mark(quote-21, to-20)
+xcomp(needed-19, quote-21)
+amod(words-23, holy-22)
+dobj(quote-21, words-23)
+mark(rid-25, to-24)
+advcl:to(quote-21, rid-25)
+det(evil-27, the-26)
+dobj(rid-25, evil-27)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,2,[1,3]), that is: "they" -> "The priests"
+	(1,18,[18,19]) -> (1,2,[1,3]), that is: "they" -> "The priests"

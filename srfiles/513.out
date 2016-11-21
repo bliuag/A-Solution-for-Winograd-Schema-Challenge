@@ -1,0 +1,74 @@
+Sentence #1 (22 tokens):
+Malware has increased over four hundred percent on the Android platform since they do not need to get vetted to be uploaded
+[Text=Malware CharacterOffsetBegin=0 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Malware NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=8 CharacterOffsetEnd=11 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=increased CharacterOffsetBegin=12 CharacterOffsetEnd=21 PartOfSpeech=VBN Lemma=increase NamedEntityTag=O]
+[Text=over CharacterOffsetBegin=22 CharacterOffsetEnd=26 PartOfSpeech=IN Lemma=over NamedEntityTag=O]
+[Text=four CharacterOffsetBegin=27 CharacterOffsetEnd=31 PartOfSpeech=CD Lemma=four NamedEntityTag=PERCENT NormalizedNamedEntityTag=>%400.0]
+[Text=hundred CharacterOffsetBegin=32 CharacterOffsetEnd=39 PartOfSpeech=CD Lemma=hundred NamedEntityTag=PERCENT NormalizedNamedEntityTag=>%400.0]
+[Text=percent CharacterOffsetBegin=40 CharacterOffsetEnd=47 PartOfSpeech=NN Lemma=percent NamedEntityTag=PERCENT NormalizedNamedEntityTag=>%400.0]
+[Text=on CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Android CharacterOffsetBegin=55 CharacterOffsetEnd=62 PartOfSpeech=NN Lemma=android NamedEntityTag=O]
+[Text=platform CharacterOffsetBegin=63 CharacterOffsetEnd=71 PartOfSpeech=NN Lemma=platform NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=72 CharacterOffsetEnd=77 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=78 CharacterOffsetEnd=82 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=83 CharacterOffsetEnd=85 PartOfSpeech=VBP Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=86 CharacterOffsetEnd=89 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=need CharacterOffsetBegin=90 CharacterOffsetEnd=94 PartOfSpeech=VB Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=95 CharacterOffsetEnd=97 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=get CharacterOffsetBegin=98 CharacterOffsetEnd=101 PartOfSpeech=VB Lemma=get NamedEntityTag=O]
+[Text=vetted CharacterOffsetBegin=102 CharacterOffsetEnd=108 PartOfSpeech=VBN Lemma=vet NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=109 CharacterOffsetEnd=111 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=112 CharacterOffsetEnd=114 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=uploaded CharacterOffsetBegin=115 CharacterOffsetEnd=123 PartOfSpeech=VBN Lemma=upload NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Malware))
+    (VP (VBZ has)
+      (VP (VBN increased)
+        (PP (IN over)
+          (NP
+            (NP
+              (QP (CD four) (CD hundred))
+              (NN percent))
+            (PP (IN on)
+              (NP (DT the) (NN Android) (NN platform)))))
+        (SBAR (IN since)
+          (S
+            (NP (PRP they))
+            (VP (VBP do) (RB not)
+              (VP (VB need)
+                (S
+                  (VP (TO to)
+                    (VP (VB get)
+                      (VP (VBN vetted)
+                        (S
+                          (VP (TO to)
+                            (VP (VB be)
+                              (VP (VBN uploaded)))))))))))))))))
+
+root(ROOT-0, increased-3)
+nsubj(increased-3, Malware-1)
+aux(increased-3, has-2)
+case(percent-7, over-4)
+compound(hundred-6, four-5)
+nummod(percent-7, hundred-6)
+nmod:over(increased-3, percent-7)
+case(platform-11, on-8)
+det(platform-11, the-9)
+compound(platform-11, Android-10)
+nmod:on(percent-7, platform-11)
+mark(need-16, since-12)
+nsubj(need-16, they-13)
+nsubjpass:xsubj(vetted-19, they-13)
+aux(need-16, do-14)
+neg(need-16, not-15)
+advcl:since(increased-3, need-16)
+mark(vetted-19, to-17)
+auxpass(vetted-19, get-18)
+xcomp(need-16, vetted-19)
+mark(uploaded-22, to-20)
+auxpass(uploaded-22, be-21)
+xcomp(vetted-19, uploaded-22)
+

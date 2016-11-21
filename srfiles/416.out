@@ -1,0 +1,65 @@
+Sentence #1 (20 tokens):
+The drug cartel enlists the help of the local population to work their fields since they are considered cheap labor
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=drug CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=drug NamedEntityTag=O]
+[Text=cartel CharacterOffsetBegin=9 CharacterOffsetEnd=15 PartOfSpeech=NN Lemma=cartel NamedEntityTag=O]
+[Text=enlists CharacterOffsetBegin=16 CharacterOffsetEnd=23 PartOfSpeech=VBZ Lemma=enlist NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=help CharacterOffsetBegin=28 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=help NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=local CharacterOffsetBegin=40 CharacterOffsetEnd=45 PartOfSpeech=JJ Lemma=local NamedEntityTag=O]
+[Text=population CharacterOffsetBegin=46 CharacterOffsetEnd=56 PartOfSpeech=NN Lemma=population NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=57 CharacterOffsetEnd=59 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=work CharacterOffsetBegin=60 CharacterOffsetEnd=64 PartOfSpeech=VB Lemma=work NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=65 CharacterOffsetEnd=70 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=fields CharacterOffsetBegin=71 CharacterOffsetEnd=77 PartOfSpeech=NNS Lemma=field NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=78 CharacterOffsetEnd=83 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=84 CharacterOffsetEnd=88 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=89 CharacterOffsetEnd=92 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=considered CharacterOffsetBegin=93 CharacterOffsetEnd=103 PartOfSpeech=VBN Lemma=consider NamedEntityTag=O]
+[Text=cheap CharacterOffsetBegin=104 CharacterOffsetEnd=109 PartOfSpeech=JJ Lemma=cheap NamedEntityTag=O]
+[Text=labor CharacterOffsetBegin=110 CharacterOffsetEnd=115 PartOfSpeech=NN Lemma=labor NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN drug) (NN cartel))
+    (VP (VBZ enlists)
+      (S
+        (NP
+          (NP (DT the) (NN help))
+          (PP (IN of)
+            (NP (DT the) (JJ local) (NN population))))
+        (VP (TO to)
+          (VP (VB work)
+            (NP (PRP$ their) (NNS fields))
+            (SBAR (IN since)
+              (S
+                (NP (PRP they))
+                (VP (VBP are)
+                  (VP (VBN considered)
+                    (NP (JJ cheap) (NN labor))))))))))))
+
+root(ROOT-0, enlists-4)
+det(cartel-3, The-1)
+compound(cartel-3, drug-2)
+nsubj(enlists-4, cartel-3)
+det(help-6, the-5)
+dobj(enlists-4, help-6)
+nsubj:xsubj(work-12, help-6)
+case(population-10, of-7)
+det(population-10, the-8)
+amod(population-10, local-9)
+nmod:of(help-6, population-10)
+mark(work-12, to-11)
+xcomp(enlists-4, work-12)
+nmod:poss(fields-14, their-13)
+dobj(work-12, fields-14)
+mark(considered-18, since-15)
+nsubjpass(considered-18, they-16)
+auxpass(considered-18, are-17)
+advcl:since(work-12, considered-18)
+amod(labor-20, cheap-19)
+dobj(considered-18, labor-20)
+
+Coreference set:
+	(1,16,[16,17]) -> (1,13,[13,14]), that is: "they" -> "their"

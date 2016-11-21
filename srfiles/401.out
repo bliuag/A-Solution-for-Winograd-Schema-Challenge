@@ -1,0 +1,64 @@
+Sentence #1 (18 tokens):
+Andrea threw a promotion party in honor of Lindsay because she wanted to do something special for her
+[Text=Andrea CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Andrea NamedEntityTag=PERSON]
+[Text=threw CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=VBD Lemma=throw NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=13 CharacterOffsetEnd=14 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=promotion CharacterOffsetBegin=15 CharacterOffsetEnd=24 PartOfSpeech=NN Lemma=promotion NamedEntityTag=O]
+[Text=party CharacterOffsetBegin=25 CharacterOffsetEnd=30 PartOfSpeech=NN Lemma=party NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=31 CharacterOffsetEnd=33 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=honor CharacterOffsetBegin=34 CharacterOffsetEnd=39 PartOfSpeech=NN Lemma=honor NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=40 CharacterOffsetEnd=42 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=Lindsay CharacterOffsetBegin=43 CharacterOffsetEnd=50 PartOfSpeech=NNP Lemma=Lindsay NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=51 CharacterOffsetEnd=58 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=59 CharacterOffsetEnd=62 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=wanted CharacterOffsetBegin=63 CharacterOffsetEnd=69 PartOfSpeech=VBD Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=70 CharacterOffsetEnd=72 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=73 CharacterOffsetEnd=75 PartOfSpeech=VB Lemma=do NamedEntityTag=O]
+[Text=something CharacterOffsetBegin=76 CharacterOffsetEnd=85 PartOfSpeech=NN Lemma=something NamedEntityTag=O]
+[Text=special CharacterOffsetBegin=86 CharacterOffsetEnd=93 PartOfSpeech=JJ Lemma=special NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=94 CharacterOffsetEnd=97 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=98 CharacterOffsetEnd=101 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Andrea))
+    (VP (VBD threw)
+      (NP (DT a) (NN promotion) (NN party))
+      (PP (IN in)
+        (NP
+          (NP (NN honor))
+          (PP (IN of)
+            (NP (NNP Lindsay)))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP she))
+          (VP (VBD wanted)
+            (S
+              (VP (TO to)
+                (VP (VB do)
+                  (NP (NN something) (JJ special))
+                  (PP (IN for)
+                    (NP (PRP$ her))))))))))))
+
+root(ROOT-0, threw-2)
+nsubj(threw-2, Andrea-1)
+det(party-5, a-3)
+compound(party-5, promotion-4)
+dobj(threw-2, party-5)
+case(honor-7, in-6)
+nmod:in(threw-2, honor-7)
+case(Lindsay-9, of-8)
+nmod:of(honor-7, Lindsay-9)
+mark(wanted-12, because-10)
+nsubj(wanted-12, she-11)
+nsubj:xsubj(do-14, she-11)
+advcl:because(threw-2, wanted-12)
+mark(do-14, to-13)
+xcomp(wanted-12, do-14)
+dobj(do-14, something-15)
+amod(something-15, special-16)
+case(her-18, for-17)
+nmod:for(do-14, her-18)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,1,[1,2]), that is: "she" -> "Andrea"
+	(1,18,[18,19]) -> (1,1,[1,2]), that is: "her" -> "Andrea"

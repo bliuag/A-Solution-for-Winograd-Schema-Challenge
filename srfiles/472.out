@@ -1,0 +1,63 @@
+Sentence #1 (17 tokens):
+Planet 343's sandstorm forces the inhabitants underground because they have winds of upwards to 50 mph
+[Text=Planet CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NN Lemma=planet NamedEntityTag=O]
+[Text=343 CharacterOffsetBegin=7 CharacterOffsetEnd=10 PartOfSpeech=CD Lemma=343 NamedEntityTag=NUMBER NormalizedNamedEntityTag=343.0]
+[Text='s CharacterOffsetBegin=10 CharacterOffsetEnd=12 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=sandstorm CharacterOffsetBegin=13 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=sandstorm NamedEntityTag=O]
+[Text=forces CharacterOffsetBegin=23 CharacterOffsetEnd=29 PartOfSpeech=VBZ Lemma=force NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=30 CharacterOffsetEnd=33 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=inhabitants CharacterOffsetBegin=34 CharacterOffsetEnd=45 PartOfSpeech=NNS Lemma=inhabitant NamedEntityTag=O]
+[Text=underground CharacterOffsetBegin=46 CharacterOffsetEnd=57 PartOfSpeech=RB Lemma=underground NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=58 CharacterOffsetEnd=65 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=66 CharacterOffsetEnd=70 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=71 CharacterOffsetEnd=75 PartOfSpeech=VBP Lemma=have NamedEntityTag=O]
+[Text=winds CharacterOffsetBegin=76 CharacterOffsetEnd=81 PartOfSpeech=NNS Lemma=wind NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=82 CharacterOffsetEnd=84 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=upwards CharacterOffsetBegin=85 CharacterOffsetEnd=92 PartOfSpeech=NNS Lemma=upward NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=93 CharacterOffsetEnd=95 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=50 CharacterOffsetBegin=96 CharacterOffsetEnd=98 PartOfSpeech=CD Lemma=50 NamedEntityTag=NUMBER NormalizedNamedEntityTag=50.0]
+[Text=mph CharacterOffsetBegin=99 CharacterOffsetEnd=102 PartOfSpeech=NN Lemma=mph NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (NP
+      (NP (NN Planet))
+      (SBAR
+        (S
+          (NP
+            (NP (CD 343) (POS 's))
+            (NN sandstorm))
+          (VP (VBZ forces)
+            (NP (DT the) (NNS inhabitants))
+            (ADVP (RB underground))
+            (SBAR (IN because)
+              (S
+                (NP (PRP they))
+                (VP (VBP have)
+                  (NP
+                    (NP (NNS winds))
+                    (PP (IN of)
+                      (NP
+                        (NP (NNS upwards))
+                        (PP (TO to)
+                          (NP (CD 50) (NN mph)))))))))))))))
+
+root(ROOT-0, Planet-1)
+nmod:poss(sandstorm-4, 343-2)
+case(343-2, 's-3)
+nsubj(forces-5, sandstorm-4)
+acl:relcl(Planet-1, forces-5)
+det(inhabitants-7, the-6)
+dobj(forces-5, inhabitants-7)
+advmod(forces-5, underground-8)
+mark(have-11, because-9)
+nsubj(have-11, they-10)
+advcl:because(forces-5, have-11)
+dobj(have-11, winds-12)
+case(upwards-14, of-13)
+nmod:of(winds-12, upwards-14)
+case(mph-17, to-15)
+nummod(mph-17, 50-16)
+nmod:to(upwards-14, mph-17)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,7,[6,8]), that is: "they" -> "the inhabitants"

@@ -1,0 +1,37 @@
+Sentence #1 (9 tokens):
+Paul screamed at Jack since he was ignoring him
+[Text=Paul CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Paul NamedEntityTag=PERSON]
+[Text=screamed CharacterOffsetBegin=5 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=scream NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=14 CharacterOffsetEnd=16 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=Jack CharacterOffsetBegin=17 CharacterOffsetEnd=21 PartOfSpeech=NNP Lemma=Jack NamedEntityTag=PERSON]
+[Text=since CharacterOffsetBegin=22 CharacterOffsetEnd=27 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=28 CharacterOffsetEnd=30 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=31 CharacterOffsetEnd=34 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=ignoring CharacterOffsetBegin=35 CharacterOffsetEnd=43 PartOfSpeech=VBG Lemma=ignore NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Paul))
+    (VP (VBD screamed)
+      (PP (IN at)
+        (NP (NNP Jack)))
+      (SBAR (IN since)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (VP (VBG ignoring)
+              (NP (PRP him)))))))))
+
+root(ROOT-0, screamed-2)
+nsubj(screamed-2, Paul-1)
+case(Jack-4, at-3)
+nmod:at(screamed-2, Jack-4)
+mark(ignoring-8, since-5)
+nsubj(ignoring-8, he-6)
+aux(ignoring-8, was-7)
+advcl:since(screamed-2, ignoring-8)
+dobj(ignoring-8, him-9)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,1,[1,2]), that is: "he" -> "Paul"
+	(1,9,[9,10]) -> (1,1,[1,2]), that is: "him" -> "Paul"

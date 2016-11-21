@@ -1,0 +1,51 @@
+Sentence #1 (13 tokens):
+Mark tried to sabotage Tom, but he got caught in the process
+[Text=Mark CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Mark NamedEntityTag=PERSON]
+[Text=tried CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=sabotage CharacterOffsetBegin=14 CharacterOffsetEnd=22 PartOfSpeech=VB Lemma=sabotage NamedEntityTag=O]
+[Text=Tom CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=NNP Lemma=Tom NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=26 CharacterOffsetEnd=27 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=28 CharacterOffsetEnd=31 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=got CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=caught CharacterOffsetBegin=39 CharacterOffsetEnd=45 PartOfSpeech=VBN Lemma=catch NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=46 CharacterOffsetEnd=48 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=process CharacterOffsetBegin=53 CharacterOffsetEnd=60 PartOfSpeech=NN Lemma=process NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Mark))
+        (VP (VBD tried)
+          (S
+            (VP (TO to)
+              (VP (VB sabotage)
+                (NP (NNP Tom)))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP (VBD got)
+          (VP (VBN caught)
+            (PP (IN in)
+              (NP (DT the) (NN process)))))))))
+
+root(ROOT-0, tried-2)
+nsubj(tried-2, Mark-1)
+nsubj:xsubj(sabotage-4, Mark-1)
+mark(sabotage-4, to-3)
+xcomp(tried-2, sabotage-4)
+dobj(sabotage-4, Tom-5)
+punct(tried-2, ,-6)
+cc(tried-2, but-7)
+nsubjpass(caught-10, he-8)
+auxpass(caught-10, got-9)
+conj:but(tried-2, caught-10)
+case(process-13, in-11)
+det(process-13, the-12)
+nmod:in(caught-10, process-13)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Mark"

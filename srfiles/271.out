@@ -1,0 +1,33 @@
+Sentence #1 (8 tokens):
+John killed Bill because he was a zombie
+[Text=John CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=killed CharacterOffsetBegin=5 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=kill NamedEntityTag=O]
+[Text=Bill CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=NNP Lemma=Bill NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=17 CharacterOffsetEnd=24 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=25 CharacterOffsetEnd=27 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=28 CharacterOffsetEnd=31 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=32 CharacterOffsetEnd=33 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=zombie CharacterOffsetBegin=34 CharacterOffsetEnd=40 PartOfSpeech=NN Lemma=zombie NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP John))
+    (VP (VBD killed)
+      (NP (NNP Bill))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (NP (DT a) (NN zombie))))))))
+
+root(ROOT-0, killed-2)
+nsubj(killed-2, John-1)
+dobj(killed-2, Bill-3)
+mark(zombie-8, because-4)
+nsubj(zombie-8, he-5)
+cop(zombie-8, was-6)
+det(zombie-8, a-7)
+advcl:because(killed-2, zombie-8)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "he" -> "John"
+	(1,8,[7,9]) -> (1,1,[1,2]), that is: "a zombie" -> "John"

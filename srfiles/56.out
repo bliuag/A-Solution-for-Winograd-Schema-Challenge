@@ -1,0 +1,70 @@
+Sentence #1 (21 tokens):
+The Mad Hatter tried to offer a cup of tea to the March Hare, but his hat was too distracting
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Mad CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Mad NamedEntityTag=O]
+[Text=Hatter CharacterOffsetBegin=8 CharacterOffsetEnd=14 PartOfSpeech=NNP Lemma=Hatter NamedEntityTag=O]
+[Text=tried CharacterOffsetBegin=15 CharacterOffsetEnd=20 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=21 CharacterOffsetEnd=23 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=offer CharacterOffsetBegin=24 CharacterOffsetEnd=29 PartOfSpeech=VB Lemma=offer NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=30 CharacterOffsetEnd=31 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=cup CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=cup NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=36 CharacterOffsetEnd=38 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=tea CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=tea NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=43 CharacterOffsetEnd=45 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=March CharacterOffsetBegin=50 CharacterOffsetEnd=55 PartOfSpeech=NNP Lemma=March NamedEntityTag=DATE NormalizedNamedEntityTag=XXXX-03 Timex=<TIMEX3 tid="t1" type="DATE" value="XXXX-03">March</TIMEX3>]
+[Text=Hare CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=NNP Lemma=Hare NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=60 CharacterOffsetEnd=61 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=62 CharacterOffsetEnd=65 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=66 CharacterOffsetEnd=69 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=hat CharacterOffsetBegin=70 CharacterOffsetEnd=73 PartOfSpeech=NN Lemma=hat NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=74 CharacterOffsetEnd=77 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=too CharacterOffsetBegin=78 CharacterOffsetEnd=81 PartOfSpeech=RB Lemma=too NamedEntityTag=O]
+[Text=distracting CharacterOffsetBegin=82 CharacterOffsetEnd=93 PartOfSpeech=JJ Lemma=distracting NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (NNP Mad) (NNP Hatter))
+        (VP (VBD tried)
+          (S
+            (VP (TO to)
+              (VP (VB offer)
+                (NP
+                  (NP (DT a) (NN cup))
+                  (PP (IN of)
+                    (NP (NN tea))))
+                (PP (TO to)
+                  (NP (DT the) (NNP March) (NNP Hare))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP$ his) (NN hat))
+        (VP (VBD was)
+          (ADJP (RB too) (JJ distracting)))))))
+
+root(ROOT-0, tried-4)
+det(Hatter-3, The-1)
+compound(Hatter-3, Mad-2)
+nsubj(tried-4, Hatter-3)
+nsubj:xsubj(offer-6, Hatter-3)
+mark(offer-6, to-5)
+xcomp(tried-4, offer-6)
+det(cup-8, a-7)
+dobj(offer-6, cup-8)
+case(tea-10, of-9)
+nmod:of(cup-8, tea-10)
+case(Hare-14, to-11)
+det(Hare-14, the-12)
+compound(Hare-14, March-13)
+nmod:to(offer-6, Hare-14)
+punct(tried-4, ,-15)
+cc(tried-4, but-16)
+nmod:poss(hat-18, his-17)
+nsubj(distracting-21, hat-18)
+cop(distracting-21, was-19)
+advmod(distracting-21, too-20)
+conj:but(tried-4, distracting-21)
+
+Coreference set:
+	(1,17,[17,18]) -> (1,3,[1,4]), that is: "his" -> "The Mad Hatter"

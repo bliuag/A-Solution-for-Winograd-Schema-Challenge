@@ -1,0 +1,33 @@
+Sentence #1 (8 tokens):
+John rated Bill because he was a contestant
+[Text=John CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=rated CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=rate NamedEntityTag=O]
+[Text=Bill CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=NNP Lemma=Bill NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=16 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=24 CharacterOffsetEnd=26 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=27 CharacterOffsetEnd=30 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=31 CharacterOffsetEnd=32 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=contestant CharacterOffsetBegin=33 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=contestant NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP John))
+    (VP (VBD rated)
+      (NP (NNP Bill))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD was)
+            (NP (DT a) (NN contestant))))))))
+
+root(ROOT-0, rated-2)
+nsubj(rated-2, John-1)
+dobj(rated-2, Bill-3)
+mark(contestant-8, because-4)
+nsubj(contestant-8, he-5)
+cop(contestant-8, was-6)
+det(contestant-8, a-7)
+advcl:because(rated-2, contestant-8)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "he" -> "John"
+	(1,8,[7,9]) -> (1,1,[1,2]), that is: "a contestant" -> "John"

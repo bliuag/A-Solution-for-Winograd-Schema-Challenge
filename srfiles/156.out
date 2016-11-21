@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The cat caught the mouse because it was clever
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=cat CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=cat NamedEntityTag=O]
+[Text=caught CharacterOffsetBegin=8 CharacterOffsetEnd=14 PartOfSpeech=VBD Lemma=catch NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=15 CharacterOffsetEnd=18 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=mouse CharacterOffsetBegin=19 CharacterOffsetEnd=24 PartOfSpeech=NN Lemma=mouse NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=25 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=clever CharacterOffsetBegin=40 CharacterOffsetEnd=46 PartOfSpeech=JJ Lemma=clever NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN cat))
+    (VP (VBD caught)
+      (NP (DT the) (NN mouse))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD was)
+            (ADJP (JJ clever))))))))
+
+root(ROOT-0, caught-3)
+det(cat-2, The-1)
+nsubj(caught-3, cat-2)
+det(mouse-5, the-4)
+dobj(caught-3, mouse-5)
+mark(clever-9, because-6)
+nsubj(clever-9, it-7)
+cop(clever-9, was-8)
+advcl:because(caught-3, clever-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,5,[4,6]), that is: "it" -> "the mouse"

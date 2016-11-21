@@ -1,0 +1,44 @@
+Sentence #1 (11 tokens):
+Joe raced against Steven because he thought it would be easy
+[Text=Joe CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=raced CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=race NamedEntityTag=O]
+[Text=against CharacterOffsetBegin=10 CharacterOffsetEnd=17 PartOfSpeech=IN Lemma=against NamedEntityTag=O]
+[Text=Steven CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=NNP Lemma=Steven NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=25 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=thought CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=VBD Lemma=think NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=would CharacterOffsetBegin=47 CharacterOffsetEnd=52 PartOfSpeech=MD Lemma=would NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=53 CharacterOffsetEnd=55 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=easy CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=JJ Lemma=easy NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Joe))
+    (VP (VBD raced)
+      (PP (IN against)
+        (NP (NNP Steven)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBD thought)
+            (SBAR
+              (S
+                (NP (PRP it))
+                (VP (MD would)
+                  (VP (VB be)
+                    (ADJP (JJ easy))))))))))))
+
+root(ROOT-0, raced-2)
+nsubj(raced-2, Joe-1)
+case(Steven-4, against-3)
+nmod:against(raced-2, Steven-4)
+mark(thought-7, because-5)
+nsubj(thought-7, he-6)
+advcl:because(raced-2, thought-7)
+nsubj(easy-11, it-8)
+aux(easy-11, would-9)
+cop(easy-11, be-10)
+ccomp(thought-7, easy-11)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,1,[1,2]), that is: "he" -> "Joe"

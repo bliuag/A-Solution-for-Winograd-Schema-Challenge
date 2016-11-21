@@ -1,0 +1,50 @@
+Sentence #1 (15 tokens):
+A banana and an apple go walking, when the red one does the talking
+[Text=A CharacterOffsetBegin=0 CharacterOffsetEnd=1 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=banana CharacterOffsetBegin=2 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=banana NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=9 CharacterOffsetEnd=12 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=an CharacterOffsetBegin=13 CharacterOffsetEnd=15 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=apple CharacterOffsetBegin=16 CharacterOffsetEnd=21 PartOfSpeech=NN Lemma=apple NamedEntityTag=O]
+[Text=go CharacterOffsetBegin=22 CharacterOffsetEnd=24 PartOfSpeech=VB Lemma=go NamedEntityTag=O]
+[Text=walking CharacterOffsetBegin=25 CharacterOffsetEnd=32 PartOfSpeech=VBG Lemma=walk NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=32 CharacterOffsetEnd=33 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=when CharacterOffsetBegin=34 CharacterOffsetEnd=38 PartOfSpeech=WRB Lemma=when NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=red CharacterOffsetBegin=43 CharacterOffsetEnd=46 PartOfSpeech=JJ Lemma=red NamedEntityTag=O]
+[Text=one CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=NN Lemma=one NamedEntityTag=NUMBER NormalizedNamedEntityTag=1.0]
+[Text=does CharacterOffsetBegin=51 CharacterOffsetEnd=55 PartOfSpeech=VBZ Lemma=do NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=56 CharacterOffsetEnd=59 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=talking CharacterOffsetBegin=60 CharacterOffsetEnd=67 PartOfSpeech=VBG Lemma=talk NamedEntityTag=O]
+(ROOT
+  (S
+    (NP
+      (NP (DT A) (NN banana))
+      (CC and)
+      (NP (DT an) (NN apple)
+        (S
+          (VP (VB go)
+            (VP (VBG walking) (, ,)
+              (SBAR
+                (WHADVP (WRB when))
+                (FRAG
+                  (NP (DT the) (JJ red) (NN one)))))))))
+    (VP (VBZ does)
+      (NP (DT the) (VBG talking)))))
+
+root(ROOT-0, does-13)
+det(banana-2, A-1)
+nsubj(does-13, banana-2)
+cc(banana-2, and-3)
+det(apple-5, an-4)
+conj:and(banana-2, apple-5)
+nsubj(does-13, apple-5)
+dep(apple-5, go-6)
+xcomp(go-6, walking-7)
+punct(walking-7, ,-8)
+advmod(one-12, when-9)
+det(one-12, the-10)
+amod(one-12, red-11)
+advcl(walking-7, one-12)
+dobj(does-13, the-14)
+amod(the-14, talking-15)
+

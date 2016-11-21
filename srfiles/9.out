@@ -1,0 +1,46 @@
+Sentence #1 (12 tokens):
+Bill likes to play with Bob but he did not want to
+[Text=Bill CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Bill NamedEntityTag=PERSON]
+[Text=likes CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=VBZ Lemma=like NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=play CharacterOffsetBegin=14 CharacterOffsetEnd=18 PartOfSpeech=VB Lemma=play NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=Bob CharacterOffsetBegin=24 CharacterOffsetEnd=27 PartOfSpeech=NNP Lemma=Bob NamedEntityTag=PERSON]
+[Text=but CharacterOffsetBegin=28 CharacterOffsetEnd=31 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=want CharacterOffsetBegin=43 CharacterOffsetEnd=47 PartOfSpeech=VB Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Bill))
+    (VP (VBZ likes)
+      (S
+        (VP (TO to)
+          (VP (VB play)
+            (PP (IN with)
+              (NP (NNP Bob)))
+            (SBAR (CC but)
+              (S
+                (NP (PRP he))
+                (VP (VBD did) (RB not)
+                  (VP (VB want)
+                    (PP (TO to))))))))))))
+
+root(ROOT-0, likes-2)
+nsubj(likes-2, Bill-1)
+nsubj:xsubj(play-4, Bill-1)
+mark(play-4, to-3)
+xcomp(likes-2, play-4)
+case(Bob-6, with-5)
+nmod:with(play-4, Bob-6)
+cc(want-11, but-7)
+nsubj(want-11, he-8)
+aux(want-11, did-9)
+neg(want-11, not-10)
+ccomp(play-4, want-11)
+nmod(want-11, to-12)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,6,[6,7]), that is: "he" -> "Bob"

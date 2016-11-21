@@ -1,0 +1,55 @@
+Sentence #1 (14 tokens):
+Mark tried to sabotage Tom because he wants to be employee of the month
+[Text=Mark CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Mark NamedEntityTag=O]
+[Text=tried CharacterOffsetBegin=5 CharacterOffsetEnd=10 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=sabotage CharacterOffsetBegin=14 CharacterOffsetEnd=22 PartOfSpeech=VB Lemma=sabotage NamedEntityTag=O]
+[Text=Tom CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=NNP Lemma=Tom NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=27 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=35 CharacterOffsetEnd=37 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=wants CharacterOffsetBegin=38 CharacterOffsetEnd=43 PartOfSpeech=VBZ Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=47 CharacterOffsetEnd=49 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=employee CharacterOffsetBegin=50 CharacterOffsetEnd=58 PartOfSpeech=NN Lemma=employee NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=59 CharacterOffsetEnd=61 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=62 CharacterOffsetEnd=65 PartOfSpeech=DT Lemma=the NamedEntityTag=DATE NormalizedNamedEntityTag=THIS P1M Timex=<TIMEX3 alt_value="THIS P1M" anchorTimeID="t0" temporalFunction="true" tid="t1" type="DATE" valueFromFunction="tf0">the month</TIMEX3>]
+[Text=month CharacterOffsetBegin=66 CharacterOffsetEnd=71 PartOfSpeech=NN Lemma=month NamedEntityTag=DATE NormalizedNamedEntityTag=THIS P1M Timex=<TIMEX3 alt_value="THIS P1M" anchorTimeID="t0" temporalFunction="true" tid="t1" type="DATE" valueFromFunction="tf0">the month</TIMEX3>]
+(ROOT
+  (S
+    (NP (NNP Mark))
+    (VP (VBD tried)
+      (S
+        (VP (TO to)
+          (VP (VB sabotage)
+            (NP (NNP Tom))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBZ wants)
+                  (S
+                    (VP (TO to)
+                      (VP (VB be)
+                        (NP
+                          (NP (NN employee))
+                          (PP (IN of)
+                            (NP (DT the) (NN month))))))))))))))))
+
+root(ROOT-0, tried-2)
+nsubj(tried-2, Mark-1)
+nsubj:xsubj(sabotage-4, Mark-1)
+mark(sabotage-4, to-3)
+xcomp(tried-2, sabotage-4)
+dobj(sabotage-4, Tom-5)
+mark(wants-8, because-6)
+nsubj(wants-8, he-7)
+nsubj:xsubj(employee-11, he-7)
+advcl:because(sabotage-4, wants-8)
+mark(employee-11, to-9)
+cop(employee-11, be-10)
+xcomp(wants-8, employee-11)
+case(month-14, of-12)
+det(month-14, the-13)
+nmod:of(employee-11, month-14)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,5,[5,6]), that is: "he" -> "Tom"

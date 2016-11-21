@@ -1,0 +1,57 @@
+Sentence #1 (18 tokens):
+Pei Wei sells sesame chicken as a signature dish, so they are constantly picked as an order
+[Text=Pei CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Pei NamedEntityTag=PERSON]
+[Text=Wei CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Wei NamedEntityTag=PERSON]
+[Text=sells CharacterOffsetBegin=8 CharacterOffsetEnd=13 PartOfSpeech=VBZ Lemma=sell NamedEntityTag=O]
+[Text=sesame CharacterOffsetBegin=14 CharacterOffsetEnd=20 PartOfSpeech=JJ Lemma=sesame NamedEntityTag=O]
+[Text=chicken CharacterOffsetBegin=21 CharacterOffsetEnd=28 PartOfSpeech=NN Lemma=chicken NamedEntityTag=O]
+[Text=as CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=as NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=32 CharacterOffsetEnd=33 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=signature CharacterOffsetBegin=34 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=signature NamedEntityTag=O]
+[Text=dish CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=NN Lemma=dish NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=48 CharacterOffsetEnd=49 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=50 CharacterOffsetEnd=52 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=53 CharacterOffsetEnd=57 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=58 CharacterOffsetEnd=61 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=constantly CharacterOffsetBegin=62 CharacterOffsetEnd=72 PartOfSpeech=RB Lemma=constantly NamedEntityTag=O]
+[Text=picked CharacterOffsetBegin=73 CharacterOffsetEnd=79 PartOfSpeech=VBN Lemma=pick NamedEntityTag=O]
+[Text=as CharacterOffsetBegin=80 CharacterOffsetEnd=82 PartOfSpeech=IN Lemma=as NamedEntityTag=O]
+[Text=an CharacterOffsetBegin=83 CharacterOffsetEnd=85 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=order CharacterOffsetBegin=86 CharacterOffsetEnd=91 PartOfSpeech=NN Lemma=order NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Pei) (NNP Wei))
+    (VP (VBZ sells)
+      (NP
+        (NP (JJ sesame) (NN chicken))
+        (PP (IN as)
+          (NP (DT a) (NN signature) (NN dish))))
+      (, ,)
+      (SBAR (IN so)
+        (S
+          (NP (PRP they))
+          (VP (VBP are)
+            (ADVP (RB constantly))
+            (VP (VBN picked)
+              (PP (IN as)
+                (NP (DT an) (NN order))))))))))
+
+root(ROOT-0, sells-3)
+compound(Wei-2, Pei-1)
+nsubj(sells-3, Wei-2)
+amod(chicken-5, sesame-4)
+dobj(sells-3, chicken-5)
+case(dish-9, as-6)
+det(dish-9, a-7)
+compound(dish-9, signature-8)
+nmod:as(chicken-5, dish-9)
+punct(sells-3, ,-10)
+mark(picked-15, so-11)
+nsubjpass(picked-15, they-12)
+auxpass(picked-15, are-13)
+advmod(picked-15, constantly-14)
+advcl:so(sells-3, picked-15)
+case(order-18, as-16)
+det(order-18, an-17)
+nmod:as(picked-15, order-18)
+

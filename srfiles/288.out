@@ -1,0 +1,77 @@
+Sentence #1 (21 tokens):
+The boy lied to his father about the crime, but he still felt uneasy and was slowly overcome with guilt
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=boy CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=NN Lemma=boy NamedEntityTag=O]
+[Text=lied CharacterOffsetBegin=8 CharacterOffsetEnd=12 PartOfSpeech=VBD Lemma=lie NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=13 CharacterOffsetEnd=15 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=16 CharacterOffsetEnd=19 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=father CharacterOffsetBegin=20 CharacterOffsetEnd=26 PartOfSpeech=NN Lemma=father NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=27 CharacterOffsetEnd=32 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=33 CharacterOffsetEnd=36 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=crime CharacterOffsetBegin=37 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=crime NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=42 CharacterOffsetEnd=43 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=still CharacterOffsetBegin=51 CharacterOffsetEnd=56 PartOfSpeech=RB Lemma=still NamedEntityTag=O]
+[Text=felt CharacterOffsetBegin=57 CharacterOffsetEnd=61 PartOfSpeech=VBD Lemma=feel NamedEntityTag=O]
+[Text=uneasy CharacterOffsetBegin=62 CharacterOffsetEnd=68 PartOfSpeech=JJ Lemma=uneasy NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=69 CharacterOffsetEnd=72 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=73 CharacterOffsetEnd=76 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=slowly CharacterOffsetBegin=77 CharacterOffsetEnd=83 PartOfSpeech=RB Lemma=slowly NamedEntityTag=O]
+[Text=overcome CharacterOffsetBegin=84 CharacterOffsetEnd=92 PartOfSpeech=VBN Lemma=overcome NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=93 CharacterOffsetEnd=97 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=guilt CharacterOffsetBegin=98 CharacterOffsetEnd=103 PartOfSpeech=NN Lemma=guilt NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (NN boy))
+        (VP (VBD lied)
+          (PP (TO to)
+            (NP (PRP$ his) (NN father)))
+          (PP (IN about)
+            (NP (DT the) (NN crime)))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP
+          (VP
+            (ADVP (RB still))
+            (VBD felt)
+            (ADJP (JJ uneasy)))
+          (CC and)
+          (VP (VBD was)
+            (VP
+              (ADVP (RB slowly))
+              (VBN overcome)
+              (PP (IN with)
+                (NP (NN guilt))))))))))
+
+root(ROOT-0, lied-3)
+det(boy-2, The-1)
+nsubj(lied-3, boy-2)
+case(father-6, to-4)
+nmod:poss(father-6, his-5)
+nmod:to(lied-3, father-6)
+case(crime-9, about-7)
+det(crime-9, the-8)
+nmod:about(lied-3, crime-9)
+punct(lied-3, ,-10)
+cc(lied-3, but-11)
+nsubj(felt-14, he-12)
+nsubjpass(overcome-19, he-12)
+advmod(felt-14, still-13)
+conj:but(lied-3, felt-14)
+xcomp(felt-14, uneasy-15)
+cc(felt-14, and-16)
+auxpass(overcome-19, was-17)
+advmod(overcome-19, slowly-18)
+conj:but(lied-3, overcome-19)
+conj:and(felt-14, overcome-19)
+case(guilt-21, with-20)
+nmod:with(overcome-19, guilt-21)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,2,[1,3]), that is: "his" -> "The boy"
+	(1,12,[12,13]) -> (1,2,[1,3]), that is: "he" -> "The boy"

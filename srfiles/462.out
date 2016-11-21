@@ -1,0 +1,74 @@
+Sentence #1 (22 tokens):
+Mel got in trouble with a collector named Bohr because he lost a huge sum of money due to his gambling habit
+[Text=Mel CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Mel NamedEntityTag=PERSON]
+[Text=got CharacterOffsetBegin=4 CharacterOffsetEnd=7 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=8 CharacterOffsetEnd=10 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=trouble CharacterOffsetBegin=11 CharacterOffsetEnd=18 PartOfSpeech=NN Lemma=trouble NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=24 CharacterOffsetEnd=25 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=collector CharacterOffsetBegin=26 CharacterOffsetEnd=35 PartOfSpeech=NN Lemma=collector NamedEntityTag=O]
+[Text=named CharacterOffsetBegin=36 CharacterOffsetEnd=41 PartOfSpeech=VBN Lemma=name NamedEntityTag=O]
+[Text=Bohr CharacterOffsetBegin=42 CharacterOffsetEnd=46 PartOfSpeech=NNP Lemma=Bohr NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=47 CharacterOffsetEnd=54 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=55 CharacterOffsetEnd=57 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=lost CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=VBD Lemma=lose NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=63 CharacterOffsetEnd=64 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=huge CharacterOffsetBegin=65 CharacterOffsetEnd=69 PartOfSpeech=JJ Lemma=huge NamedEntityTag=O]
+[Text=sum CharacterOffsetBegin=70 CharacterOffsetEnd=73 PartOfSpeech=NN Lemma=sum NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=74 CharacterOffsetEnd=76 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=money CharacterOffsetBegin=77 CharacterOffsetEnd=82 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+[Text=due CharacterOffsetBegin=83 CharacterOffsetEnd=86 PartOfSpeech=JJ Lemma=due NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=87 CharacterOffsetEnd=89 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=90 CharacterOffsetEnd=93 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=gambling CharacterOffsetBegin=94 CharacterOffsetEnd=102 PartOfSpeech=VBG Lemma=gamble NamedEntityTag=O]
+[Text=habit CharacterOffsetBegin=103 CharacterOffsetEnd=108 PartOfSpeech=NN Lemma=habit NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Mel))
+    (VP (VBD got)
+      (PP (IN in)
+        (NP (NN trouble)))
+      (PP (IN with)
+        (NP
+          (NP (DT a) (NN collector))
+          (VP (VBN named)
+            (NP (NNP Bohr))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBD lost)
+                  (S
+                    (NP
+                      (NP (DT a) (JJ huge) (NN sum))
+                      (PP (IN of)
+                        (NP (NN money))))
+                    (ADJP (JJ due)
+                      (PP (TO to)
+                        (NP (PRP$ his) (VBG gambling) (NN habit))))))))))))))
+
+root(ROOT-0, got-2)
+nsubj(got-2, Mel-1)
+case(trouble-4, in-3)
+nmod:in(got-2, trouble-4)
+case(collector-7, with-5)
+det(collector-7, a-6)
+nmod:with(got-2, collector-7)
+acl(collector-7, named-8)
+dobj(named-8, Bohr-9)
+mark(lost-12, because-10)
+nsubj(lost-12, he-11)
+advcl:because(named-8, lost-12)
+det(sum-15, a-13)
+amod(sum-15, huge-14)
+nsubj(due-18, sum-15)
+case(money-17, of-16)
+nmod:of(sum-15, money-17)
+xcomp(lost-12, due-18)
+case(habit-22, to-19)
+nmod:poss(habit-22, his-20)
+amod(habit-22, gambling-21)
+nmod:to(due-18, habit-22)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,1,[1,2]), that is: "he" -> "Mel"
+	(1,20,[20,21]) -> (1,1,[1,2]), that is: "his" -> "Mel"

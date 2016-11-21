@@ -1,0 +1,48 @@
+Sentence #1 (12 tokens):
+Joe crashed into Mike and he had to pay for the damage
+[Text=Joe CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Joe NamedEntityTag=PERSON]
+[Text=crashed CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=crash NamedEntityTag=O]
+[Text=into CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=IN Lemma=into NamedEntityTag=O]
+[Text=Mike CharacterOffsetBegin=17 CharacterOffsetEnd=21 PartOfSpeech=NNP Lemma=Mike NamedEntityTag=PERSON]
+[Text=and CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=26 CharacterOffsetEnd=28 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=29 CharacterOffsetEnd=32 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=pay CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=VB Lemma=pay NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=damage CharacterOffsetBegin=48 CharacterOffsetEnd=54 PartOfSpeech=NN Lemma=damage NamedEntityTag=O]
+(ROOT
+  (NP
+    (S
+      (S
+        (NP (NNP Joe))
+        (VP (VBD crashed)
+          (PP (IN into)
+            (NP (NNP Mike)))))
+      (CC and)
+      (S
+        (NP (PRP he))
+        (VP (VBD had)
+          (S
+            (VP (TO to)
+              (VP (VB pay)
+                (PP (IN for)
+                  (NP (DT the) (NN damage)))))))))))
+
+root(ROOT-0, crashed-2)
+nsubj(crashed-2, Joe-1)
+case(Mike-4, into-3)
+nmod:into(crashed-2, Mike-4)
+cc(crashed-2, and-5)
+nsubj(had-7, he-6)
+nsubj:xsubj(pay-9, he-6)
+conj:and(crashed-2, had-7)
+mark(pay-9, to-8)
+xcomp(had-7, pay-9)
+case(damage-12, for-10)
+det(damage-12, the-11)
+nmod:for(pay-9, damage-12)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,1,[1,2]), that is: "he" -> "Joe"

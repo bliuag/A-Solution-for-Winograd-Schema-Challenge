@@ -1,0 +1,52 @@
+Sentence #1 (16 tokens):
+Steven Seagal challenged Jean Claude Van Damme to a fight because he is a worthy opponent
+[Text=Steven CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Steven NamedEntityTag=PERSON]
+[Text=Seagal CharacterOffsetBegin=7 CharacterOffsetEnd=13 PartOfSpeech=NNP Lemma=Seagal NamedEntityTag=PERSON]
+[Text=challenged CharacterOffsetBegin=14 CharacterOffsetEnd=24 PartOfSpeech=VBD Lemma=challenge NamedEntityTag=O]
+[Text=Jean CharacterOffsetBegin=25 CharacterOffsetEnd=29 PartOfSpeech=NNP Lemma=Jean NamedEntityTag=PERSON]
+[Text=Claude CharacterOffsetBegin=30 CharacterOffsetEnd=36 PartOfSpeech=NNP Lemma=Claude NamedEntityTag=PERSON]
+[Text=Van CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=NNP Lemma=Van NamedEntityTag=PERSON]
+[Text=Damme CharacterOffsetBegin=41 CharacterOffsetEnd=46 PartOfSpeech=NNP Lemma=Damme NamedEntityTag=PERSON]
+[Text=to CharacterOffsetBegin=47 CharacterOffsetEnd=49 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=50 CharacterOffsetEnd=51 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=fight CharacterOffsetBegin=52 CharacterOffsetEnd=57 PartOfSpeech=NN Lemma=fight NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=58 CharacterOffsetEnd=65 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=66 CharacterOffsetEnd=68 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=69 CharacterOffsetEnd=71 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=72 CharacterOffsetEnd=73 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=worthy CharacterOffsetBegin=74 CharacterOffsetEnd=80 PartOfSpeech=JJ Lemma=worthy NamedEntityTag=O]
+[Text=opponent CharacterOffsetBegin=81 CharacterOffsetEnd=89 PartOfSpeech=NN Lemma=opponent NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Steven) (NNP Seagal))
+    (VP (VBD challenged)
+      (NP
+        (NP (NNP Jean) (NNP Claude) (NNP Van) (NNP Damme))
+        (PP (TO to)
+          (NP (DT a) (NN fight))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP he))
+          (VP (VBZ is)
+            (NP (DT a) (JJ worthy) (NN opponent))))))))
+
+root(ROOT-0, challenged-3)
+compound(Seagal-2, Steven-1)
+nsubj(challenged-3, Seagal-2)
+compound(Damme-7, Jean-4)
+compound(Damme-7, Claude-5)
+compound(Damme-7, Van-6)
+dobj(challenged-3, Damme-7)
+case(fight-10, to-8)
+det(fight-10, a-9)
+nmod:to(Damme-7, fight-10)
+mark(opponent-16, because-11)
+nsubj(opponent-16, he-12)
+cop(opponent-16, is-13)
+det(opponent-16, a-14)
+amod(opponent-16, worthy-15)
+advcl:because(challenged-3, opponent-16)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,2,[1,3]), that is: "he" -> "Steven Seagal"
+	(1,16,[14,17]) -> (1,2,[1,3]), that is: "a worthy opponent" -> "Steven Seagal"

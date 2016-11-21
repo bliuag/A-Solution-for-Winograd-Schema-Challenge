@@ -1,0 +1,47 @@
+Sentence #1 (13 tokens):
+Jack got more votes than John because the people did not like him
+[Text=Jack CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Jack NamedEntityTag=PERSON]
+[Text=got CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBD Lemma=get NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=votes CharacterOffsetBegin=14 CharacterOffsetEnd=19 PartOfSpeech=NNS Lemma=vote NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=20 CharacterOffsetEnd=24 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=John CharacterOffsetBegin=25 CharacterOffsetEnd=29 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=30 CharacterOffsetEnd=37 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=38 CharacterOffsetEnd=41 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=people CharacterOffsetBegin=42 CharacterOffsetEnd=48 PartOfSpeech=NNS Lemma=people NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=49 CharacterOffsetEnd=52 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=53 CharacterOffsetEnd=56 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=like CharacterOffsetBegin=57 CharacterOffsetEnd=61 PartOfSpeech=VB Lemma=like NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=62 CharacterOffsetEnd=65 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Jack))
+    (VP (VBD got)
+      (NP
+        (QP (RBR more))
+        (NNS votes))
+      (PP (IN than)
+        (NP (NNP John)))
+      (SBAR (IN because)
+        (S
+          (NP (DT the) (NNS people))
+          (VP (VBD did) (RB not)
+            (VP (VB like)
+              (NP (PRP him)))))))))
+
+root(ROOT-0, got-2)
+nsubj(got-2, Jack-1)
+nummod(votes-4, more-3)
+dobj(got-2, votes-4)
+case(John-6, than-5)
+nmod:than(got-2, John-6)
+mark(like-12, because-7)
+det(people-9, the-8)
+nsubj(like-12, people-9)
+aux(like-12, did-10)
+neg(like-12, not-11)
+advcl:because(got-2, like-12)
+dobj(like-12, him-13)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,1,[1,2]), that is: "him" -> "Jack"

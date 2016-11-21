@@ -1,0 +1,57 @@
+Sentence #1 (17 tokens):
+The security team locked the scientists inside the building because they had to keep confidential information inside
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=security CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=NN Lemma=security NamedEntityTag=O]
+[Text=team CharacterOffsetBegin=13 CharacterOffsetEnd=17 PartOfSpeech=NN Lemma=team NamedEntityTag=O]
+[Text=locked CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=VBN Lemma=lock NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=scientists CharacterOffsetBegin=29 CharacterOffsetEnd=39 PartOfSpeech=NNS Lemma=scientist NamedEntityTag=O]
+[Text=inside CharacterOffsetBegin=40 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=inside NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=building CharacterOffsetBegin=51 CharacterOffsetEnd=59 PartOfSpeech=NN Lemma=building NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=60 CharacterOffsetEnd=67 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=68 CharacterOffsetEnd=72 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=73 CharacterOffsetEnd=76 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=77 CharacterOffsetEnd=79 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=keep CharacterOffsetBegin=80 CharacterOffsetEnd=84 PartOfSpeech=VB Lemma=keep NamedEntityTag=O]
+[Text=confidential CharacterOffsetBegin=85 CharacterOffsetEnd=97 PartOfSpeech=JJ Lemma=confidential NamedEntityTag=O]
+[Text=information CharacterOffsetBegin=98 CharacterOffsetEnd=109 PartOfSpeech=NN Lemma=information NamedEntityTag=O]
+[Text=inside CharacterOffsetBegin=110 CharacterOffsetEnd=116 PartOfSpeech=IN Lemma=inside NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN security) (NN team))
+    (VP (VBN locked)
+      (NP (DT the) (NNS scientists))
+      (PP (IN inside)
+        (NP (DT the) (NN building)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD had)
+            (S
+              (VP (TO to)
+                (VP (VB keep)
+                  (NP (JJ confidential) (NN information))
+                  (PP (IN inside)))))))))))
+
+root(ROOT-0, locked-4)
+det(team-3, The-1)
+compound(team-3, security-2)
+nsubj(locked-4, team-3)
+det(scientists-6, the-5)
+dobj(locked-4, scientists-6)
+case(building-9, inside-7)
+det(building-9, the-8)
+nmod:inside(locked-4, building-9)
+mark(had-12, because-10)
+nsubj(had-12, they-11)
+nsubj:xsubj(keep-14, they-11)
+advcl:because(locked-4, had-12)
+mark(keep-14, to-13)
+xcomp(had-12, keep-14)
+amod(information-16, confidential-15)
+dobj(keep-14, information-16)
+nmod(keep-14, inside-17)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,6,[5,7]), that is: "they" -> "the scientists"

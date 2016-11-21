@@ -1,0 +1,49 @@
+Sentence #1 (13 tokens):
+John wanted George to run for President because he did not want to
+[Text=John CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=wanted CharacterOffsetBegin=5 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=want NamedEntityTag=O]
+[Text=George CharacterOffsetBegin=12 CharacterOffsetEnd=18 PartOfSpeech=NNP Lemma=George NamedEntityTag=PERSON]
+[Text=to CharacterOffsetBegin=19 CharacterOffsetEnd=21 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=run CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=VB Lemma=run NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=President CharacterOffsetBegin=30 CharacterOffsetEnd=39 PartOfSpeech=NNP Lemma=President NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=40 CharacterOffsetEnd=47 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=want CharacterOffsetBegin=59 CharacterOffsetEnd=63 PartOfSpeech=VB Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=64 CharacterOffsetEnd=66 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP John))
+    (VP (VBD wanted)
+      (S
+        (NP (NNP George))
+        (VP (TO to)
+          (VP (VB run)
+            (PP (IN for)
+              (NP (NNP President)))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBD did) (RB not)
+                  (VP (VB want)
+                    (PP (TO to))))))))))))
+
+root(ROOT-0, wanted-2)
+nsubj(wanted-2, John-1)
+dobj(wanted-2, George-3)
+nsubj:xsubj(run-5, George-3)
+mark(run-5, to-4)
+xcomp(wanted-2, run-5)
+case(President-7, for-6)
+nmod:for(run-5, President-7)
+mark(want-12, because-8)
+nsubj(want-12, he-9)
+aux(want-12, did-10)
+neg(want-12, not-11)
+advcl:because(run-5, want-12)
+nmod(want-12, to-13)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,3,[3,4]), that is: "he" -> "George"

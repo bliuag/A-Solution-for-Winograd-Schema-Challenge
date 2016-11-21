@@ -1,0 +1,77 @@
+Sentence #1 (22 tokens):
+The security team locked the scientists inside the building since they had access to confidential materials that need to be kept secret
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=security CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=NN Lemma=security NamedEntityTag=O]
+[Text=team CharacterOffsetBegin=13 CharacterOffsetEnd=17 PartOfSpeech=NN Lemma=team NamedEntityTag=O]
+[Text=locked CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=VBN Lemma=lock NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=scientists CharacterOffsetBegin=29 CharacterOffsetEnd=39 PartOfSpeech=NNS Lemma=scientist NamedEntityTag=O]
+[Text=inside CharacterOffsetBegin=40 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=inside NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=building CharacterOffsetBegin=51 CharacterOffsetEnd=59 PartOfSpeech=NN Lemma=building NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=60 CharacterOffsetEnd=65 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=66 CharacterOffsetEnd=70 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=71 CharacterOffsetEnd=74 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=access CharacterOffsetBegin=75 CharacterOffsetEnd=81 PartOfSpeech=NN Lemma=access NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=82 CharacterOffsetEnd=84 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=confidential CharacterOffsetBegin=85 CharacterOffsetEnd=97 PartOfSpeech=JJ Lemma=confidential NamedEntityTag=O]
+[Text=materials CharacterOffsetBegin=98 CharacterOffsetEnd=107 PartOfSpeech=NNS Lemma=material NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=108 CharacterOffsetEnd=112 PartOfSpeech=WDT Lemma=that NamedEntityTag=O]
+[Text=need CharacterOffsetBegin=113 CharacterOffsetEnd=117 PartOfSpeech=VBP Lemma=need NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=118 CharacterOffsetEnd=120 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=121 CharacterOffsetEnd=123 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=kept CharacterOffsetBegin=124 CharacterOffsetEnd=128 PartOfSpeech=VBN Lemma=keep NamedEntityTag=O]
+[Text=secret CharacterOffsetBegin=129 CharacterOffsetEnd=135 PartOfSpeech=NN Lemma=secret NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN security) (NN team))
+    (VP (VBN locked)
+      (NP (DT the) (NNS scientists))
+      (PP (IN inside)
+        (NP (DT the) (NN building)))
+      (SBAR (IN since)
+        (S
+          (NP (PRP they))
+          (VP (VBD had)
+            (NP
+              (NP (NN access))
+              (PP (TO to)
+                (NP (JJ confidential) (NNS materials)))
+              (SBAR
+                (WHNP (WDT that))
+                (S
+                  (VP (VBP need)
+                    (S
+                      (VP (TO to)
+                        (VP (VB be)
+                          (VP (VBN kept)
+                            (S
+                              (ADJP (NN secret)))))))))))))))))
+
+root(ROOT-0, locked-4)
+det(team-3, The-1)
+compound(team-3, security-2)
+nsubj(locked-4, team-3)
+det(scientists-6, the-5)
+dobj(locked-4, scientists-6)
+case(building-9, inside-7)
+det(building-9, the-8)
+nmod:inside(locked-4, building-9)
+mark(had-12, since-10)
+nsubj(had-12, they-11)
+advcl:since(locked-4, had-12)
+dobj(had-12, access-13)
+nsubj(need-18, access-13)
+nsubjpass:xsubj(kept-21, access-13)
+case(materials-16, to-14)
+amod(materials-16, confidential-15)
+nmod:to(access-13, materials-16)
+ref(access-13, that-17)
+acl:relcl(access-13, need-18)
+mark(kept-21, to-19)
+auxpass(kept-21, be-20)
+xcomp(need-18, kept-21)
+xcomp(kept-21, secret-22)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,6,[5,7]), that is: "they" -> "the scientists"

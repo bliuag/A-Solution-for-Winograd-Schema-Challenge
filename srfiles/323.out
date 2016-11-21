@@ -1,0 +1,58 @@
+Sentence #1 (17 tokens):
+Taylor Swift is higher in record sales over Beyonce because people are not passionate about her music
+[Text=Taylor CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Taylor NamedEntityTag=PERSON]
+[Text=Swift CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=NNP Lemma=Swift NamedEntityTag=PERSON]
+[Text=is CharacterOffsetBegin=13 CharacterOffsetEnd=15 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=higher CharacterOffsetBegin=16 CharacterOffsetEnd=22 PartOfSpeech=JJR Lemma=higher NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=record CharacterOffsetBegin=26 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=record NamedEntityTag=O]
+[Text=sales CharacterOffsetBegin=33 CharacterOffsetEnd=38 PartOfSpeech=NNS Lemma=sale NamedEntityTag=O]
+[Text=over CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=over NamedEntityTag=O]
+[Text=Beyonce CharacterOffsetBegin=44 CharacterOffsetEnd=51 PartOfSpeech=NNP Lemma=Beyonce NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=52 CharacterOffsetEnd=59 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=people CharacterOffsetBegin=60 CharacterOffsetEnd=66 PartOfSpeech=NNS Lemma=people NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=67 CharacterOffsetEnd=70 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=71 CharacterOffsetEnd=74 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=passionate CharacterOffsetBegin=75 CharacterOffsetEnd=85 PartOfSpeech=JJ Lemma=passionate NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=86 CharacterOffsetEnd=91 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=92 CharacterOffsetEnd=95 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+[Text=music CharacterOffsetBegin=96 CharacterOffsetEnd=101 PartOfSpeech=NN Lemma=music NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Taylor) (NNP Swift))
+    (VP (VBZ is)
+      (ADJP
+        (ADJP (JJR higher))
+        (PP (IN in)
+          (NP
+            (NP (NN record) (NNS sales))
+            (PP (IN over)
+              (NP (NNP Beyonce))))))
+      (SBAR (IN because)
+        (S
+          (NP (NNS people))
+          (VP (VBP are) (RB not)
+            (ADJP (JJ passionate)
+              (PP (IN about)
+                (NP (PRP$ her) (NN music))))))))))
+
+root(ROOT-0, higher-4)
+compound(Swift-2, Taylor-1)
+nsubj(higher-4, Swift-2)
+cop(higher-4, is-3)
+case(sales-7, in-5)
+compound(sales-7, record-6)
+nmod:in(higher-4, sales-7)
+case(Beyonce-9, over-8)
+nmod:over(sales-7, Beyonce-9)
+mark(passionate-14, because-10)
+nsubj(passionate-14, people-11)
+cop(passionate-14, are-12)
+neg(passionate-14, not-13)
+advcl:because(higher-4, passionate-14)
+case(music-17, about-15)
+nmod:poss(music-17, her-16)
+nmod:about(passionate-14, music-17)
+
+Coreference set:
+	(1,16,[16,17]) -> (1,9,[9,10]), that is: "her" -> "Beyonce"

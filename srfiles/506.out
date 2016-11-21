@@ -1,0 +1,67 @@
+Sentence #1 (19 tokens):
+Sentinel tried to betray Optimus by enslaving the human race, but he did not succeed in his plan
+[Text=Sentinel CharacterOffsetBegin=0 CharacterOffsetEnd=8 PartOfSpeech=NNP Lemma=Sentinel NamedEntityTag=O]
+[Text=tried CharacterOffsetBegin=9 CharacterOffsetEnd=14 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=15 CharacterOffsetEnd=17 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=betray CharacterOffsetBegin=18 CharacterOffsetEnd=24 PartOfSpeech=VB Lemma=betray NamedEntityTag=O]
+[Text=Optimus CharacterOffsetBegin=25 CharacterOffsetEnd=32 PartOfSpeech=NNP Lemma=Optimus NamedEntityTag=ORGANIZATION]
+[Text=by CharacterOffsetBegin=33 CharacterOffsetEnd=35 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=enslaving CharacterOffsetBegin=36 CharacterOffsetEnd=45 PartOfSpeech=VBG Lemma=enslave NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=46 CharacterOffsetEnd=49 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=human CharacterOffsetBegin=50 CharacterOffsetEnd=55 PartOfSpeech=JJ Lemma=human NamedEntityTag=O]
+[Text=race CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=NN Lemma=race NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=60 CharacterOffsetEnd=61 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=62 CharacterOffsetEnd=65 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=66 CharacterOffsetEnd=68 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=69 CharacterOffsetEnd=72 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=73 CharacterOffsetEnd=76 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=succeed CharacterOffsetBegin=77 CharacterOffsetEnd=84 PartOfSpeech=VB Lemma=succeed NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=85 CharacterOffsetEnd=87 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=88 CharacterOffsetEnd=91 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=plan CharacterOffsetBegin=92 CharacterOffsetEnd=96 PartOfSpeech=NN Lemma=plan NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Sentinel))
+        (VP (VBD tried)
+          (S
+            (VP (TO to)
+              (VP (VB betray)
+                (NP (NNP Optimus))
+                (PP (IN by)
+                  (S
+                    (VP (VBG enslaving)
+                      (NP (DT the) (JJ human) (NN race))))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP (VBD did) (RB not)
+          (VP (VB succeed)
+            (PP (IN in)
+              (NP (PRP$ his) (NN plan)))))))))
+
+root(ROOT-0, tried-2)
+nsubj(tried-2, Sentinel-1)
+nsubj:xsubj(betray-4, Sentinel-1)
+mark(betray-4, to-3)
+xcomp(tried-2, betray-4)
+dobj(betray-4, Optimus-5)
+mark(enslaving-7, by-6)
+advcl:by(betray-4, enslaving-7)
+det(race-10, the-8)
+amod(race-10, human-9)
+dobj(enslaving-7, race-10)
+punct(tried-2, ,-11)
+cc(tried-2, but-12)
+nsubj(succeed-16, he-13)
+aux(succeed-16, did-14)
+neg(succeed-16, not-15)
+conj:but(tried-2, succeed-16)
+case(plan-19, in-17)
+nmod:poss(plan-19, his-18)
+nmod:in(succeed-16, plan-19)
+
+Coreference set:
+	(1,18,[18,19]) -> (1,13,[13,14]), that is: "his" -> "he"

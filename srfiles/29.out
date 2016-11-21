@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+The state executes prisoners because they were convicted of heinous crimes
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=state CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=state NamedEntityTag=O]
+[Text=executes CharacterOffsetBegin=10 CharacterOffsetEnd=18 PartOfSpeech=VBZ Lemma=execute NamedEntityTag=O]
+[Text=prisoners CharacterOffsetBegin=19 CharacterOffsetEnd=28 PartOfSpeech=NNS Lemma=prisoner NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=29 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=37 CharacterOffsetEnd=41 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=42 CharacterOffsetEnd=46 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=convicted CharacterOffsetBegin=47 CharacterOffsetEnd=56 PartOfSpeech=VBN Lemma=convict NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=57 CharacterOffsetEnd=59 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=heinous CharacterOffsetBegin=60 CharacterOffsetEnd=67 PartOfSpeech=JJ Lemma=heinous NamedEntityTag=O]
+[Text=crimes CharacterOffsetBegin=68 CharacterOffsetEnd=74 PartOfSpeech=NNS Lemma=crime NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN state))
+    (VP (VBZ executes)
+      (NP (NNS prisoners))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (VP (VBN convicted)
+              (PP (IN of)
+                (NP (JJ heinous) (NNS crimes))))))))))
+
+root(ROOT-0, executes-3)
+det(state-2, The-1)
+nsubj(executes-3, state-2)
+dobj(executes-3, prisoners-4)
+mark(convicted-8, because-5)
+nsubjpass(convicted-8, they-6)
+auxpass(convicted-8, were-7)
+advcl:because(executes-3, convicted-8)
+case(crimes-11, of-9)
+amod(crimes-11, heinous-10)
+nmod:of(convicted-8, crimes-11)
+
+Coreference set:
+	(1,6,[6,7]) -> (1,4,[4,5]), that is: "they" -> "prisoners"

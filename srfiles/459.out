@@ -1,0 +1,67 @@
+Sentence #1 (20 tokens):
+The blacksmith refused to repair the armor for the knight because he did not have any money to pay with
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=blacksmith CharacterOffsetBegin=4 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=blacksmith NamedEntityTag=O]
+[Text=refused CharacterOffsetBegin=15 CharacterOffsetEnd=22 PartOfSpeech=VBD Lemma=refuse NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=repair CharacterOffsetBegin=26 CharacterOffsetEnd=32 PartOfSpeech=VB Lemma=repair NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=33 CharacterOffsetEnd=36 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=armor CharacterOffsetBegin=37 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=armor NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=43 CharacterOffsetEnd=46 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=47 CharacterOffsetEnd=50 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=knight CharacterOffsetBegin=51 CharacterOffsetEnd=57 PartOfSpeech=NN Lemma=knight NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=58 CharacterOffsetEnd=65 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=66 CharacterOffsetEnd=68 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=69 CharacterOffsetEnd=72 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=73 CharacterOffsetEnd=76 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=have CharacterOffsetBegin=77 CharacterOffsetEnd=81 PartOfSpeech=VB Lemma=have NamedEntityTag=O]
+[Text=any CharacterOffsetBegin=82 CharacterOffsetEnd=85 PartOfSpeech=DT Lemma=any NamedEntityTag=O]
+[Text=money CharacterOffsetBegin=86 CharacterOffsetEnd=91 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=92 CharacterOffsetEnd=94 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=pay CharacterOffsetBegin=95 CharacterOffsetEnd=98 PartOfSpeech=VB Lemma=pay NamedEntityTag=O]
+[Text=with CharacterOffsetBegin=99 CharacterOffsetEnd=103 PartOfSpeech=IN Lemma=with NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN blacksmith))
+    (VP (VBD refused)
+      (S
+        (VP (TO to)
+          (VP (VB repair)
+            (NP (DT the) (NN armor))
+            (PP (IN for)
+              (NP (DT the) (NN knight)))
+            (SBAR (IN because)
+              (S
+                (NP (PRP he))
+                (VP (VBD did) (RB not)
+                  (VP (VB have)
+                    (NP (DT any) (NN money)
+                      (S
+                        (VP (TO to)
+                          (VP (VB pay)
+                            (PP (IN with))))))))))))))))
+
+root(ROOT-0, refused-3)
+det(blacksmith-2, The-1)
+nsubj(refused-3, blacksmith-2)
+nsubj:xsubj(repair-5, blacksmith-2)
+mark(repair-5, to-4)
+xcomp(refused-3, repair-5)
+det(armor-7, the-6)
+dobj(repair-5, armor-7)
+case(knight-10, for-8)
+det(knight-10, the-9)
+nmod:for(repair-5, knight-10)
+mark(have-15, because-11)
+nsubj(have-15, he-12)
+aux(have-15, did-13)
+neg(have-15, not-14)
+advcl:because(repair-5, have-15)
+det(money-17, any-16)
+dobj(have-15, money-17)
+mark(pay-19, to-18)
+acl:to(money-17, pay-19)
+nmod(pay-19, with-20)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,10,[9,11]), that is: "he" -> "the knight"

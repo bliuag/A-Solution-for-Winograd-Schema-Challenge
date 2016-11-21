@@ -1,0 +1,29 @@
+Sentence #1 (7 tokens):
+Girls like puppies because they are adorable
+[Text=Girls CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNS Lemma=girl NamedEntityTag=O]
+[Text=like CharacterOffsetBegin=6 CharacterOffsetEnd=10 PartOfSpeech=IN Lemma=like NamedEntityTag=O]
+[Text=puppies CharacterOffsetBegin=11 CharacterOffsetEnd=18 PartOfSpeech=NNS Lemma=puppy NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=19 CharacterOffsetEnd=26 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=27 CharacterOffsetEnd=31 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=adorable CharacterOffsetBegin=36 CharacterOffsetEnd=44 PartOfSpeech=JJ Lemma=adorable NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (NP
+      (NP (NNS Girls))
+      (PP (IN like)
+        (NP (NNS puppies))))
+    (SBAR (IN because)
+      (S
+        (NP (PRP they))
+        (VP (VBP are)
+          (ADJP (JJ adorable)))))))
+
+root(ROOT-0, Girls-1)
+case(puppies-3, like-2)
+nmod:like(Girls-1, puppies-3)
+mark(adorable-7, because-4)
+nsubj(adorable-7, they-5)
+cop(adorable-7, are-6)
+dep(Girls-1, adorable-7)
+

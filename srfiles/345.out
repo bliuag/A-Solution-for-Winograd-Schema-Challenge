@@ -1,0 +1,59 @@
+Sentence #1 (15 tokens):
+The Police feared allowing the protesters to organize, but they decided to organize anyway
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Police CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNP Lemma=Police NamedEntityTag=O]
+[Text=feared CharacterOffsetBegin=11 CharacterOffsetEnd=17 PartOfSpeech=VBD Lemma=fear NamedEntityTag=O]
+[Text=allowing CharacterOffsetBegin=18 CharacterOffsetEnd=26 PartOfSpeech=VBG Lemma=allow NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=27 CharacterOffsetEnd=30 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=protesters CharacterOffsetBegin=31 CharacterOffsetEnd=41 PartOfSpeech=NNS Lemma=protester NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=42 CharacterOffsetEnd=44 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=organize CharacterOffsetBegin=45 CharacterOffsetEnd=53 PartOfSpeech=VB Lemma=organize NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=53 CharacterOffsetEnd=54 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=59 CharacterOffsetEnd=63 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=decided CharacterOffsetBegin=64 CharacterOffsetEnd=71 PartOfSpeech=VBD Lemma=decide NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=72 CharacterOffsetEnd=74 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=organize CharacterOffsetBegin=75 CharacterOffsetEnd=83 PartOfSpeech=VB Lemma=organize NamedEntityTag=O]
+[Text=anyway CharacterOffsetBegin=84 CharacterOffsetEnd=90 PartOfSpeech=RB Lemma=anyway NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (NNP Police))
+        (VP (VBD feared)
+          (S
+            (VP (VBG allowing)
+              (S
+                (NP (DT the) (NNS protesters))
+                (VP (TO to)
+                  (VP (VB organize))))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (VBD decided)
+          (S
+            (VP (TO to)
+              (VP (VB organize)
+                (ADVP (RB anyway))))))))))
+
+root(ROOT-0, feared-3)
+det(Police-2, The-1)
+nsubj(feared-3, Police-2)
+xcomp(feared-3, allowing-4)
+det(protesters-6, the-5)
+dobj(allowing-4, protesters-6)
+nsubj:xsubj(organize-8, protesters-6)
+mark(organize-8, to-7)
+xcomp(allowing-4, organize-8)
+punct(feared-3, ,-9)
+cc(feared-3, but-10)
+nsubj(decided-12, they-11)
+nsubj:xsubj(organize-14, they-11)
+conj:but(feared-3, decided-12)
+mark(organize-14, to-13)
+xcomp(decided-12, organize-14)
+advmod(organize-14, anyway-15)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,6,[5,7]), that is: "they" -> "the protesters"

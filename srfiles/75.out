@@ -1,0 +1,35 @@
+Sentence #1 (9 tokens):
+Bob asked Tom if he could lend some money
+[Text=Bob CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Bob NamedEntityTag=PERSON]
+[Text=asked CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=ask NamedEntityTag=O]
+[Text=Tom CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=NNP Lemma=Tom NamedEntityTag=PERSON]
+[Text=if CharacterOffsetBegin=14 CharacterOffsetEnd=16 PartOfSpeech=IN Lemma=if NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=17 CharacterOffsetEnd=19 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=20 CharacterOffsetEnd=25 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=lend CharacterOffsetBegin=26 CharacterOffsetEnd=30 PartOfSpeech=VB Lemma=lend NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=31 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=money CharacterOffsetBegin=36 CharacterOffsetEnd=41 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Bob))
+    (VP (VBD asked)
+      (NP (NNP Tom))
+      (SBAR (IN if)
+        (S
+          (NP (PRP he))
+          (VP (MD could)
+            (VP (VB lend)
+              (NP (DT some) (NN money)))))))))
+
+root(ROOT-0, asked-2)
+nsubj(asked-2, Bob-1)
+dobj(asked-2, Tom-3)
+mark(lend-7, if-4)
+nsubj(lend-7, he-5)
+aux(lend-7, could-6)
+advcl:if(asked-2, lend-7)
+det(money-9, some-8)
+dobj(lend-7, money-9)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "he" -> "Bob"

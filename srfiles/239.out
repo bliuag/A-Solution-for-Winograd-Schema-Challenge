@@ -1,0 +1,40 @@
+Sentence #1 (11 tokens):
+The humans were afraid of the robots because they were strong
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=humans CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNS Lemma=human NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=11 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=afraid CharacterOffsetBegin=16 CharacterOffsetEnd=22 PartOfSpeech=JJ Lemma=afraid NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=23 CharacterOffsetEnd=25 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=26 CharacterOffsetEnd=29 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=robots CharacterOffsetBegin=30 CharacterOffsetEnd=36 PartOfSpeech=NNS Lemma=robot NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=37 CharacterOffsetEnd=44 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=45 CharacterOffsetEnd=49 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=50 CharacterOffsetEnd=54 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=strong CharacterOffsetBegin=55 CharacterOffsetEnd=61 PartOfSpeech=JJ Lemma=strong NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS humans))
+    (VP (VBD were)
+      (ADJP (JJ afraid)
+        (PP (IN of)
+          (NP (DT the) (NNS robots))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP (JJ strong))))))))
+
+root(ROOT-0, afraid-4)
+det(humans-2, The-1)
+nsubj(afraid-4, humans-2)
+cop(afraid-4, were-3)
+case(robots-7, of-5)
+det(robots-7, the-6)
+nmod:of(afraid-4, robots-7)
+mark(strong-11, because-8)
+nsubj(strong-11, they-9)
+cop(strong-11, were-10)
+advcl:because(afraid-4, strong-11)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,2,[1,3]), that is: "they" -> "The humans"

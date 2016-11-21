@@ -1,0 +1,72 @@
+Sentence #1 (21 tokens):
+The Walking Dead is proving to be a big hit among zombie enthusiasts so they are watching the show every week
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Walking CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=VBG Lemma=walk NamedEntityTag=O]
+[Text=Dead CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=NNP Lemma=Dead NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=17 CharacterOffsetEnd=19 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=proving CharacterOffsetBegin=20 CharacterOffsetEnd=27 PartOfSpeech=VBG Lemma=prove NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=28 CharacterOffsetEnd=30 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=31 CharacterOffsetEnd=33 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=34 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=big CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=JJ Lemma=big NamedEntityTag=O]
+[Text=hit CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=hit NamedEntityTag=O]
+[Text=among CharacterOffsetBegin=44 CharacterOffsetEnd=49 PartOfSpeech=IN Lemma=among NamedEntityTag=O]
+[Text=zombie CharacterOffsetBegin=50 CharacterOffsetEnd=56 PartOfSpeech=NN Lemma=zombie NamedEntityTag=O]
+[Text=enthusiasts CharacterOffsetBegin=57 CharacterOffsetEnd=68 PartOfSpeech=NNS Lemma=enthusiast NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=69 CharacterOffsetEnd=71 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=72 CharacterOffsetEnd=76 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=77 CharacterOffsetEnd=80 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=watching CharacterOffsetBegin=81 CharacterOffsetEnd=89 PartOfSpeech=VBG Lemma=watch NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=90 CharacterOffsetEnd=93 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=show CharacterOffsetBegin=94 CharacterOffsetEnd=98 PartOfSpeech=NN Lemma=show NamedEntityTag=O]
+[Text=every CharacterOffsetBegin=99 CharacterOffsetEnd=104 PartOfSpeech=DT Lemma=every NamedEntityTag=SET Timex=<TIMEX3 periodicity="P1W" quant="every" tid="t1" type="SET" value="P1W">every week</TIMEX3>]
+[Text=week CharacterOffsetBegin=105 CharacterOffsetEnd=109 PartOfSpeech=NN Lemma=week NamedEntityTag=SET Timex=<TIMEX3 periodicity="P1W" quant="every" tid="t1" type="SET" value="P1W">every week</TIMEX3>]
+(ROOT
+  (S
+    (NP
+      (NP (DT The) (VBG Walking))
+      (SBAR
+        (S
+          (NP (NNP Dead))
+          (VP (VBZ is)
+            (VP (VBG proving)
+              (S
+                (VP (TO to)
+                  (VP (VB be)
+                    (NP
+                      (NP (DT a) (JJ big) (NN hit))
+                      (PP (IN among)
+                        (NP (NN zombie) (NNS enthusiasts))))
+                    (SBAR (IN so)
+                      (S
+                        (NP (PRP they))
+                        (VP (VBP are)
+                          (VP (VBG watching)
+                            (NP (DT the) (NN show))
+                            (NP-TMP (DT every) (NN week))))))))))))))))
+
+root(ROOT-0, The-1)
+amod(The-1, Walking-2)
+nsubj(proving-5, Dead-3)
+nsubj:xsubj(hit-10, Dead-3)
+aux(proving-5, is-4)
+acl:relcl(The-1, proving-5)
+mark(hit-10, to-6)
+cop(hit-10, be-7)
+det(hit-10, a-8)
+amod(hit-10, big-9)
+xcomp(proving-5, hit-10)
+case(enthusiasts-13, among-11)
+compound(enthusiasts-13, zombie-12)
+nmod:among(hit-10, enthusiasts-13)
+mark(watching-17, so-14)
+nsubj(watching-17, they-15)
+aux(watching-17, are-16)
+advcl:so(hit-10, watching-17)
+det(show-19, the-18)
+dobj(watching-17, show-19)
+det(week-21, every-20)
+nmod:tmod(watching-17, week-21)
+
+Coreference set:
+	(1,15,[15,16]) -> (1,13,[12,14]), that is: "they" -> "zombie enthusiasts"

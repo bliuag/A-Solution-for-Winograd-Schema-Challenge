@@ -1,0 +1,32 @@
+Sentence #1 (9 tokens):
+The dogs hate the fleas because they suck blood
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=dogs CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=NNS Lemma=dog NamedEntityTag=O]
+[Text=hate CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=VBP Lemma=hate NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=fleas CharacterOffsetBegin=18 CharacterOffsetEnd=23 PartOfSpeech=NNS Lemma=flea NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=suck CharacterOffsetBegin=37 CharacterOffsetEnd=41 PartOfSpeech=VBP Lemma=suck NamedEntityTag=O]
+[Text=blood CharacterOffsetBegin=42 CharacterOffsetEnd=47 PartOfSpeech=NN Lemma=blood NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS dogs))
+    (VP (VBP hate)
+      (NP (DT the) (NNS fleas))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBP suck)
+            (NP (NN blood))))))))
+
+root(ROOT-0, hate-3)
+det(dogs-2, The-1)
+nsubj(hate-3, dogs-2)
+det(fleas-5, the-4)
+dobj(hate-3, fleas-5)
+mark(suck-8, because-6)
+nsubj(suck-8, they-7)
+advcl:because(hate-3, suck-8)
+dobj(suck-8, blood-9)
+

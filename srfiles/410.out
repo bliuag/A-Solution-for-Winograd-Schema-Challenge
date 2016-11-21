@@ -1,0 +1,67 @@
+Sentence #1 (21 tokens):
+The teaching staff wanted to treat the students to a special lunch because they did so well on their standardized tests
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=teaching CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=NN Lemma=teaching NamedEntityTag=O]
+[Text=staff CharacterOffsetBegin=13 CharacterOffsetEnd=18 PartOfSpeech=NN Lemma=staff NamedEntityTag=O]
+[Text=wanted CharacterOffsetBegin=19 CharacterOffsetEnd=25 PartOfSpeech=VBD Lemma=want NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=26 CharacterOffsetEnd=28 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=treat CharacterOffsetBegin=29 CharacterOffsetEnd=34 PartOfSpeech=VB Lemma=treat NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=35 CharacterOffsetEnd=38 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=students CharacterOffsetBegin=39 CharacterOffsetEnd=47 PartOfSpeech=NNS Lemma=student NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=51 CharacterOffsetEnd=52 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=special CharacterOffsetBegin=53 CharacterOffsetEnd=60 PartOfSpeech=JJ Lemma=special NamedEntityTag=O]
+[Text=lunch CharacterOffsetBegin=61 CharacterOffsetEnd=66 PartOfSpeech=NN Lemma=lunch NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=67 CharacterOffsetEnd=74 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=75 CharacterOffsetEnd=79 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=did CharacterOffsetBegin=80 CharacterOffsetEnd=83 PartOfSpeech=VBD Lemma=do NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=84 CharacterOffsetEnd=86 PartOfSpeech=RB Lemma=so NamedEntityTag=O]
+[Text=well CharacterOffsetBegin=87 CharacterOffsetEnd=91 PartOfSpeech=RB Lemma=well NamedEntityTag=O]
+[Text=on CharacterOffsetBegin=92 CharacterOffsetEnd=94 PartOfSpeech=IN Lemma=on NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=95 CharacterOffsetEnd=100 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=standardized CharacterOffsetBegin=101 CharacterOffsetEnd=113 PartOfSpeech=JJ Lemma=standardized NamedEntityTag=O]
+[Text=tests CharacterOffsetBegin=114 CharacterOffsetEnd=119 PartOfSpeech=NNS Lemma=test NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN teaching) (NN staff))
+    (VP (VBD wanted)
+      (S
+        (VP (TO to)
+          (VP (VB treat)
+            (NP (DT the) (NNS students))
+            (PP (TO to)
+              (NP (DT a) (JJ special) (NN lunch)))
+            (SBAR (IN because)
+              (S
+                (NP (PRP they))
+                (VP (VBD did)
+                  (ADVP (RB so) (RB well))
+                  (PP (IN on)
+                    (NP (PRP$ their) (JJ standardized) (NNS tests))))))))))))
+
+root(ROOT-0, wanted-4)
+det(staff-3, The-1)
+compound(staff-3, teaching-2)
+nsubj(wanted-4, staff-3)
+nsubj:xsubj(treat-6, staff-3)
+mark(treat-6, to-5)
+xcomp(wanted-4, treat-6)
+det(students-8, the-7)
+dobj(treat-6, students-8)
+case(lunch-12, to-9)
+det(lunch-12, a-10)
+amod(lunch-12, special-11)
+nmod:to(treat-6, lunch-12)
+mark(did-15, because-13)
+nsubj(did-15, they-14)
+advcl:because(treat-6, did-15)
+advmod(well-17, so-16)
+advmod(did-15, well-17)
+case(tests-21, on-18)
+nmod:poss(tests-21, their-19)
+amod(tests-21, standardized-20)
+nmod:on(did-15, tests-21)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,8,[7,9]), that is: "they" -> "the students"
+	(1,19,[19,20]) -> (1,8,[7,9]), that is: "their" -> "the students"

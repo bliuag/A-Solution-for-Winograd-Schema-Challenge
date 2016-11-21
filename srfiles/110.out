@@ -1,0 +1,57 @@
+Sentence #1 (17 tokens):
+Sheila tried to repair the old jalopy, even though she had not run in three decades
+[Text=Sheila CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Sheila NamedEntityTag=PERSON]
+[Text=tried CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=13 CharacterOffsetEnd=15 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=repair CharacterOffsetBegin=16 CharacterOffsetEnd=22 PartOfSpeech=VB Lemma=repair NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=old CharacterOffsetBegin=27 CharacterOffsetEnd=30 PartOfSpeech=JJ Lemma=old NamedEntityTag=O]
+[Text=jalopy CharacterOffsetBegin=31 CharacterOffsetEnd=37 PartOfSpeech=NN Lemma=jalopy NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=37 CharacterOffsetEnd=38 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=even CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=RB Lemma=even NamedEntityTag=O]
+[Text=though CharacterOffsetBegin=44 CharacterOffsetEnd=50 PartOfSpeech=IN Lemma=though NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=had CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=VBD Lemma=have NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=59 CharacterOffsetEnd=62 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=run CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=VB Lemma=run NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=67 CharacterOffsetEnd=69 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=three CharacterOffsetBegin=70 CharacterOffsetEnd=75 PartOfSpeech=CD Lemma=three NamedEntityTag=DURATION NormalizedNamedEntityTag=P30Y Timex=<TIMEX3 tid="t1" type="DURATION" value="P30Y">three decades</TIMEX3>]
+[Text=decades CharacterOffsetBegin=76 CharacterOffsetEnd=83 PartOfSpeech=NNS Lemma=decade NamedEntityTag=DURATION NormalizedNamedEntityTag=P30Y Timex=<TIMEX3 tid="t1" type="DURATION" value="P30Y">three decades</TIMEX3>]
+(ROOT
+  (S
+    (NP (NNP Sheila))
+    (VP (VBD tried)
+      (S
+        (VP (TO to)
+          (VP (VB repair)
+            (NP (DT the) (JJ old) (NN jalopy)))))
+      (, ,)
+      (SBAR (RB even) (IN though)
+        (S
+          (NP (PRP she))
+          (VP (VBD had) (RB not)
+            (VP (VB run)
+              (PP (IN in)
+                (NP (CD three) (NNS decades))))))))))
+
+root(ROOT-0, tried-2)
+nsubj(tried-2, Sheila-1)
+nsubj:xsubj(repair-4, Sheila-1)
+mark(repair-4, to-3)
+xcomp(tried-2, repair-4)
+det(jalopy-7, the-5)
+amod(jalopy-7, old-6)
+dobj(repair-4, jalopy-7)
+punct(tried-2, ,-8)
+advmod(run-14, even-9)
+mark(run-14, though-10)
+nsubj(run-14, she-11)
+aux(run-14, had-12)
+neg(run-14, not-13)
+advcl:though(tried-2, run-14)
+case(decades-17, in-15)
+nummod(decades-17, three-16)
+nmod:in(run-14, decades-17)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,1,[1,2]), that is: "she" -> "Sheila"

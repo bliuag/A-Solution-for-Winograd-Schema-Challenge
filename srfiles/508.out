@@ -1,0 +1,58 @@
+Sentence #1 (17 tokens):
+Amazon prime encourages Netflix users to switch because they offer a lower cost and additional benefits program
+[Text=Amazon CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Amazon NamedEntityTag=ORGANIZATION]
+[Text=prime CharacterOffsetBegin=7 CharacterOffsetEnd=12 PartOfSpeech=JJ Lemma=prime NamedEntityTag=O]
+[Text=encourages CharacterOffsetBegin=13 CharacterOffsetEnd=23 PartOfSpeech=VBZ Lemma=encourage NamedEntityTag=O]
+[Text=Netflix CharacterOffsetBegin=24 CharacterOffsetEnd=31 PartOfSpeech=NNP Lemma=Netflix NamedEntityTag=ORGANIZATION]
+[Text=users CharacterOffsetBegin=32 CharacterOffsetEnd=37 PartOfSpeech=NNS Lemma=user NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=switch CharacterOffsetBegin=41 CharacterOffsetEnd=47 PartOfSpeech=VB Lemma=switch NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=48 CharacterOffsetEnd=55 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=56 CharacterOffsetEnd=60 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=offer CharacterOffsetBegin=61 CharacterOffsetEnd=66 PartOfSpeech=VBP Lemma=offer NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=67 CharacterOffsetEnd=68 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=lower CharacterOffsetBegin=69 CharacterOffsetEnd=74 PartOfSpeech=JJR Lemma=lower NamedEntityTag=O]
+[Text=cost CharacterOffsetBegin=75 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=cost NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=80 CharacterOffsetEnd=83 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=additional CharacterOffsetBegin=84 CharacterOffsetEnd=94 PartOfSpeech=JJ Lemma=additional NamedEntityTag=O]
+[Text=benefits CharacterOffsetBegin=95 CharacterOffsetEnd=103 PartOfSpeech=NNS Lemma=benefit NamedEntityTag=O]
+[Text=program CharacterOffsetBegin=104 CharacterOffsetEnd=111 PartOfSpeech=NN Lemma=program NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Amazon) (JJ prime))
+    (VP (VBZ encourages)
+      (S
+        (NP (NNP Netflix) (NNS users))
+        (VP (TO to)
+          (VP (VB switch)
+            (SBAR (IN because)
+              (S
+                (NP (PRP they))
+                (VP (VBP offer)
+                  (NP
+                    (NP (DT a) (JJR lower) (NN cost))
+                    (CC and)
+                    (NP (JJ additional) (NNS benefits) (NN program))))))))))))
+
+root(ROOT-0, encourages-3)
+nsubj(encourages-3, Amazon-1)
+amod(Amazon-1, prime-2)
+compound(users-5, Netflix-4)
+dobj(encourages-3, users-5)
+nsubj:xsubj(switch-7, users-5)
+mark(switch-7, to-6)
+xcomp(encourages-3, switch-7)
+mark(offer-10, because-8)
+nsubj(offer-10, they-9)
+advcl:because(switch-7, offer-10)
+det(cost-13, a-11)
+amod(cost-13, lower-12)
+dobj(offer-10, cost-13)
+cc(cost-13, and-14)
+amod(program-17, additional-15)
+compound(program-17, benefits-16)
+dobj(offer-10, program-17)
+conj:and(cost-13, program-17)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,5,[4,6]), that is: "they" -> "Netflix users"

@@ -1,0 +1,55 @@
+Sentence #1 (16 tokens):
+Arnold Schwarzenegger cannot terminate John Conner, because he is the leader of the resistance
+[Text=Arnold CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Arnold NamedEntityTag=PERSON]
+[Text=Schwarzenegger CharacterOffsetBegin=7 CharacterOffsetEnd=21 PartOfSpeech=NNP Lemma=Schwarzenegger NamedEntityTag=PERSON]
+[Text=can CharacterOffsetBegin=22 CharacterOffsetEnd=25 PartOfSpeech=MD Lemma=can NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=terminate CharacterOffsetBegin=29 CharacterOffsetEnd=38 PartOfSpeech=VB Lemma=terminate NamedEntityTag=O]
+[Text=John CharacterOffsetBegin=39 CharacterOffsetEnd=43 PartOfSpeech=NNP Lemma=John NamedEntityTag=PERSON]
+[Text=Conner CharacterOffsetBegin=44 CharacterOffsetEnd=50 PartOfSpeech=NNP Lemma=Conner NamedEntityTag=PERSON]
+[Text=, CharacterOffsetBegin=50 CharacterOffsetEnd=51 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=52 CharacterOffsetEnd=59 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=60 CharacterOffsetEnd=62 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=63 CharacterOffsetEnd=65 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=66 CharacterOffsetEnd=69 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=leader CharacterOffsetBegin=70 CharacterOffsetEnd=76 PartOfSpeech=NN Lemma=leader NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=77 CharacterOffsetEnd=79 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=80 CharacterOffsetEnd=83 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=resistance CharacterOffsetBegin=84 CharacterOffsetEnd=94 PartOfSpeech=NN Lemma=resistance NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Arnold) (NNP Schwarzenegger))
+    (VP (MD can) (RB not)
+      (VP (VB terminate)
+        (NP
+          (NP (NNP John) (NNP Conner))
+          (, ,)
+          (SBAR (IN because)
+            (S
+              (NP (PRP he))
+              (VP (VBZ is)
+                (NP
+                  (NP (DT the) (NN leader))
+                  (PP (IN of)
+                    (NP (DT the) (NN resistance))))))))))))
+
+root(ROOT-0, terminate-5)
+compound(Schwarzenegger-2, Arnold-1)
+nsubj(terminate-5, Schwarzenegger-2)
+aux(terminate-5, can-3)
+neg(terminate-5, not-4)
+compound(Conner-7, John-6)
+dobj(terminate-5, Conner-7)
+punct(Conner-7, ,-8)
+mark(leader-13, because-9)
+nsubj(leader-13, he-10)
+cop(leader-13, is-11)
+det(leader-13, the-12)
+dep(Conner-7, leader-13)
+case(resistance-16, of-14)
+det(resistance-16, the-15)
+nmod:of(leader-13, resistance-16)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,2,[1,3]), that is: "he" -> "Arnold Schwarzenegger"
+	(1,13,[12,17]) -> (1,2,[1,3]), that is: "the leader of the resistance" -> "Arnold Schwarzenegger"

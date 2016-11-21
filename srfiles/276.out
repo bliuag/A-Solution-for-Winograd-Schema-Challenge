@@ -1,0 +1,35 @@
+Sentence #1 (9 tokens):
+The wolves chased the deer because they were predators
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=wolves CharacterOffsetBegin=4 CharacterOffsetEnd=10 PartOfSpeech=NNS Lemma=wolf NamedEntityTag=O]
+[Text=chased CharacterOffsetBegin=11 CharacterOffsetEnd=17 PartOfSpeech=VBD Lemma=chase NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=18 CharacterOffsetEnd=21 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=deer CharacterOffsetBegin=22 CharacterOffsetEnd=26 PartOfSpeech=NNS Lemma=deer NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=27 CharacterOffsetEnd=34 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=35 CharacterOffsetEnd=39 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=40 CharacterOffsetEnd=44 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=predators CharacterOffsetBegin=45 CharacterOffsetEnd=54 PartOfSpeech=NNS Lemma=predator NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS wolves))
+    (VP (VBD chased)
+      (NP (DT the) (NNS deer))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (NP (NNS predators))))))))
+
+root(ROOT-0, chased-3)
+det(wolves-2, The-1)
+nsubj(chased-3, wolves-2)
+det(deer-5, the-4)
+dobj(chased-3, deer-5)
+mark(predators-9, because-6)
+nsubj(predators-9, they-7)
+cop(predators-9, were-8)
+advcl:because(chased-3, predators-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "they" -> "The wolves"
+	(1,9,[9,10]) -> (1,2,[1,3]), that is: "predators" -> "The wolves"

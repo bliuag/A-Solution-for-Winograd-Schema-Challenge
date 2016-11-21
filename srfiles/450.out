@@ -1,0 +1,74 @@
+Sentence #1 (20 tokens):
+Two deserted crusaders agreed to transport a girl for the priests, but they agreed in exchange for being pardoned
+[Text=Two CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=CD Lemma=two NamedEntityTag=NUMBER NormalizedNamedEntityTag=2.0]
+[Text=deserted CharacterOffsetBegin=4 CharacterOffsetEnd=12 PartOfSpeech=VBN Lemma=desert NamedEntityTag=O]
+[Text=crusaders CharacterOffsetBegin=13 CharacterOffsetEnd=22 PartOfSpeech=NNS Lemma=crusader NamedEntityTag=O]
+[Text=agreed CharacterOffsetBegin=23 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=agree NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=transport CharacterOffsetBegin=33 CharacterOffsetEnd=42 PartOfSpeech=VB Lemma=transport NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=43 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=girl CharacterOffsetBegin=45 CharacterOffsetEnd=49 PartOfSpeech=NN Lemma=girl NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=50 CharacterOffsetEnd=53 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=priests CharacterOffsetBegin=58 CharacterOffsetEnd=65 PartOfSpeech=NNS Lemma=priest NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=65 CharacterOffsetEnd=66 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=67 CharacterOffsetEnd=70 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=71 CharacterOffsetEnd=75 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=agreed CharacterOffsetBegin=76 CharacterOffsetEnd=82 PartOfSpeech=VBD Lemma=agree NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=83 CharacterOffsetEnd=85 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=exchange CharacterOffsetBegin=86 CharacterOffsetEnd=94 PartOfSpeech=NN Lemma=exchange NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=95 CharacterOffsetEnd=98 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=99 CharacterOffsetEnd=104 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=pardoned CharacterOffsetBegin=105 CharacterOffsetEnd=113 PartOfSpeech=VBN Lemma=pardon NamedEntityTag=O]
+(ROOT
+  (SINV
+    (NP (CD Two))
+    (VP (VBN deserted)
+      (SBAR
+        (S
+          (NP (NNS crusaders))
+          (VP (VBD agreed)
+            (S
+              (VP (TO to)
+                (VP (VB transport)
+                  (NP
+                    (NP (DT a) (NN girl))
+                    (PP (IN for)
+                      (NP (DT the) (NNS priests)))))))))
+        (, ,)
+        (CC but)
+        (S
+          (NP (PRP they))
+          (VP (VBD agreed)
+            (PP (IN in)
+              (NP (NN exchange)))
+            (PP (IN for)
+              (S
+                (VP (VBG being)
+                  (VP (VBN pardoned)))))))))))
+
+root(ROOT-0, deserted-2)
+nsubj(deserted-2, Two-1)
+nsubj(agreed-4, crusaders-3)
+nsubj:xsubj(transport-6, crusaders-3)
+ccomp(deserted-2, agreed-4)
+mark(transport-6, to-5)
+xcomp(agreed-4, transport-6)
+det(girl-8, a-7)
+dobj(transport-6, girl-8)
+case(priests-11, for-9)
+det(priests-11, the-10)
+nmod:for(girl-8, priests-11)
+punct(agreed-4, ,-12)
+cc(agreed-4, but-13)
+nsubj(agreed-15, they-14)
+ccomp(deserted-2, agreed-15)
+conj:but(agreed-4, agreed-15)
+case(exchange-17, in-16)
+nmod:in(agreed-15, exchange-17)
+mark(pardoned-20, for-18)
+auxpass(pardoned-20, being-19)
+advcl:for(agreed-15, pardoned-20)
+
+Coreference set:
+	(1,14,[14,15]) -> (1,3,[3,4]), that is: "they" -> "crusaders"

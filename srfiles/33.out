@@ -1,0 +1,31 @@
+Sentence #1 (9 tokens):
+My heart pumps blood because it is a muscle
+[Text=My CharacterOffsetBegin=0 CharacterOffsetEnd=2 PartOfSpeech=PRP$ Lemma=my NamedEntityTag=O]
+[Text=heart CharacterOffsetBegin=3 CharacterOffsetEnd=8 PartOfSpeech=NN Lemma=heart NamedEntityTag=O]
+[Text=pumps CharacterOffsetBegin=9 CharacterOffsetEnd=14 PartOfSpeech=NNS Lemma=pump NamedEntityTag=O]
+[Text=blood CharacterOffsetBegin=15 CharacterOffsetEnd=20 PartOfSpeech=NN Lemma=blood NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=21 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=32 CharacterOffsetEnd=34 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=35 CharacterOffsetEnd=36 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=muscle CharacterOffsetBegin=37 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=muscle NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (PRP$ My) (NN heart) (NNS pumps))
+    (VP (NN blood)
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBZ is)
+            (NP (DT a) (NN muscle))))))))
+
+root(ROOT-0, blood-4)
+nmod:poss(pumps-3, My-1)
+compound(pumps-3, heart-2)
+nsubj(blood-4, pumps-3)
+mark(muscle-9, because-5)
+nsubj(muscle-9, it-6)
+cop(muscle-9, is-7)
+det(muscle-9, a-8)
+advcl:because(blood-4, muscle-9)
+

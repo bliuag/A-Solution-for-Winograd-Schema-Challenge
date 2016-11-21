@@ -1,0 +1,37 @@
+Sentence #1 (11 tokens):
+Liverpool lost to Manchester United because they were a superior team
+[Text=Liverpool CharacterOffsetBegin=0 CharacterOffsetEnd=9 PartOfSpeech=NNP Lemma=Liverpool NamedEntityTag=ORGANIZATION]
+[Text=lost CharacterOffsetBegin=10 CharacterOffsetEnd=14 PartOfSpeech=VBD Lemma=lose NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=15 CharacterOffsetEnd=17 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=Manchester CharacterOffsetBegin=18 CharacterOffsetEnd=28 PartOfSpeech=NNP Lemma=Manchester NamedEntityTag=ORGANIZATION]
+[Text=United CharacterOffsetBegin=29 CharacterOffsetEnd=35 PartOfSpeech=NNP Lemma=United NamedEntityTag=ORGANIZATION]
+[Text=because CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=44 CharacterOffsetEnd=48 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=49 CharacterOffsetEnd=53 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=54 CharacterOffsetEnd=55 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=superior CharacterOffsetBegin=56 CharacterOffsetEnd=64 PartOfSpeech=JJ Lemma=superior NamedEntityTag=O]
+[Text=team CharacterOffsetBegin=65 CharacterOffsetEnd=69 PartOfSpeech=NN Lemma=team NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Liverpool))
+    (VP (VBD lost)
+      (PP (TO to)
+        (NP (NNP Manchester) (NNP United)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (NP (DT a) (JJ superior) (NN team))))))))
+
+root(ROOT-0, lost-2)
+nsubj(lost-2, Liverpool-1)
+case(United-5, to-3)
+compound(United-5, Manchester-4)
+nmod:to(lost-2, United-5)
+mark(team-11, because-6)
+nsubj(team-11, they-7)
+cop(team-11, were-8)
+det(team-11, a-9)
+amod(team-11, superior-10)
+advcl:because(lost-2, team-11)
+

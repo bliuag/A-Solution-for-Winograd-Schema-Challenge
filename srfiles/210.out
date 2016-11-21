@@ -1,0 +1,45 @@
+Sentence #1 (11 tokens):
+Jill saw Jane fall down, and she helped her up
+[Text=Jill CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Jill NamedEntityTag=PERSON]
+[Text=saw CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBD Lemma=see NamedEntityTag=O]
+[Text=Jane CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=NNP Lemma=Jane NamedEntityTag=PERSON]
+[Text=fall CharacterOffsetBegin=14 CharacterOffsetEnd=18 PartOfSpeech=VB Lemma=fall NamedEntityTag=O]
+[Text=down CharacterOffsetBegin=19 CharacterOffsetEnd=23 PartOfSpeech=RP Lemma=down NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=23 CharacterOffsetEnd=24 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=25 CharacterOffsetEnd=28 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=29 CharacterOffsetEnd=32 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=helped CharacterOffsetBegin=33 CharacterOffsetEnd=39 PartOfSpeech=VBD Lemma=help NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+[Text=up CharacterOffsetBegin=44 CharacterOffsetEnd=46 PartOfSpeech=RP Lemma=up NamedEntityTag=O]
+(ROOT
+  (S
+    (S
+      (NP (NNP Jill))
+      (VP (VBD saw)
+        (S
+          (NP (NNP Jane))
+          (VP (VB fall)
+            (PRT (RP down))))))
+    (, ,)
+    (CC and)
+    (S
+      (NP (PRP she))
+      (VP (VBD helped)
+        (NP (PRP$ her))
+        (PRT (RP up))))))
+
+root(ROOT-0, saw-2)
+nsubj(saw-2, Jill-1)
+nsubj(fall-4, Jane-3)
+ccomp(saw-2, fall-4)
+compound:prt(fall-4, down-5)
+punct(saw-2, ,-6)
+cc(saw-2, and-7)
+nsubj(helped-9, she-8)
+conj:and(saw-2, helped-9)
+dobj(helped-9, her-10)
+compound:prt(helped-9, up-11)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "she" -> "Jill"
+	(1,10,[10,11]) -> (1,1,[1,2]), that is: "her" -> "Jill"

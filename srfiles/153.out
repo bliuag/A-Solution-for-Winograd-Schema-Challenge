@@ -1,0 +1,69 @@
+Sentence #1 (19 tokens):
+Google Plus is expected to be a replacement for Facebook but it still has a lot more active users
+[Text=Google CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Google NamedEntityTag=ORGANIZATION]
+[Text=Plus CharacterOffsetBegin=7 CharacterOffsetEnd=11 PartOfSpeech=NNP Lemma=Plus NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=12 CharacterOffsetEnd=14 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=expected CharacterOffsetBegin=15 CharacterOffsetEnd=23 PartOfSpeech=VBN Lemma=expect NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=24 CharacterOffsetEnd=26 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=27 CharacterOffsetEnd=29 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=30 CharacterOffsetEnd=31 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=replacement CharacterOffsetBegin=32 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=replacement NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=44 CharacterOffsetEnd=47 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=Facebook CharacterOffsetBegin=48 CharacterOffsetEnd=56 PartOfSpeech=NNP Lemma=Facebook NamedEntityTag=ORGANIZATION]
+[Text=but CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=61 CharacterOffsetEnd=63 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=still CharacterOffsetBegin=64 CharacterOffsetEnd=69 PartOfSpeech=RB Lemma=still NamedEntityTag=O]
+[Text=has CharacterOffsetBegin=70 CharacterOffsetEnd=73 PartOfSpeech=VBZ Lemma=have NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=74 CharacterOffsetEnd=75 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=lot CharacterOffsetBegin=76 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=lot NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=80 CharacterOffsetEnd=84 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=active CharacterOffsetBegin=85 CharacterOffsetEnd=91 PartOfSpeech=JJ Lemma=active NamedEntityTag=O]
+[Text=users CharacterOffsetBegin=92 CharacterOffsetEnd=97 PartOfSpeech=NNS Lemma=user NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Google) (NNP Plus))
+    (VP (VBZ is)
+      (VP (VBN expected)
+        (S
+          (VP (TO to)
+            (VP (VB be)
+              (NP
+                (NP (DT a) (NN replacement))
+                (PP (IN for)
+                  (NP (NNP Facebook))))
+              (SBAR (CC but)
+                (S
+                  (NP (PRP it))
+                  (ADVP (RB still))
+                  (VP (VBZ has)
+                    (NP
+                      (ADJP
+                        (ADVP
+                          (NP (DT a) (NN lot))
+                          (RBR more))
+                        (JJ active))
+                      (NNS users))))))))))))
+
+root(ROOT-0, expected-4)
+compound(Plus-2, Google-1)
+nsubjpass(expected-4, Plus-2)
+nsubj:xsubj(replacement-8, Plus-2)
+auxpass(expected-4, is-3)
+mark(replacement-8, to-5)
+cop(replacement-8, be-6)
+det(replacement-8, a-7)
+xcomp(expected-4, replacement-8)
+case(Facebook-10, for-9)
+nmod:for(replacement-8, Facebook-10)
+cc(has-14, but-11)
+nsubj(has-14, it-12)
+advmod(has-14, still-13)
+dep(replacement-8, has-14)
+det(lot-16, a-15)
+nmod:npmod(more-17, lot-16)
+advmod(active-18, more-17)
+amod(users-19, active-18)
+dobj(has-14, users-19)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,10,[10,11]), that is: "it" -> "Facebook"

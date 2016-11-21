@@ -1,0 +1,53 @@
+Sentence #1 (14 tokens):
+Audrey Hepburn made more movies than Katherine Hepburn because she was pretty and talented
+[Text=Audrey CharacterOffsetBegin=0 CharacterOffsetEnd=6 PartOfSpeech=NNP Lemma=Audrey NamedEntityTag=PERSON]
+[Text=Hepburn CharacterOffsetBegin=7 CharacterOffsetEnd=14 PartOfSpeech=NNP Lemma=Hepburn NamedEntityTag=PERSON]
+[Text=made CharacterOffsetBegin=15 CharacterOffsetEnd=19 PartOfSpeech=VBD Lemma=make NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=20 CharacterOffsetEnd=24 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=movies CharacterOffsetBegin=25 CharacterOffsetEnd=31 PartOfSpeech=NNS Lemma=movie NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=32 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=Katherine CharacterOffsetBegin=37 CharacterOffsetEnd=46 PartOfSpeech=NNP Lemma=Katherine NamedEntityTag=PERSON]
+[Text=Hepburn CharacterOffsetBegin=47 CharacterOffsetEnd=54 PartOfSpeech=NNP Lemma=Hepburn NamedEntityTag=PERSON]
+[Text=because CharacterOffsetBegin=55 CharacterOffsetEnd=62 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=67 CharacterOffsetEnd=70 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=pretty CharacterOffsetBegin=71 CharacterOffsetEnd=77 PartOfSpeech=RB Lemma=pretty NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=78 CharacterOffsetEnd=81 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=talented CharacterOffsetBegin=82 CharacterOffsetEnd=90 PartOfSpeech=VBD Lemma=talent NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Audrey) (NNP Hepburn))
+    (VP (VBD made)
+      (NP
+        (QP (RBR more))
+        (NNS movies))
+      (PP (IN than)
+        (NP (NNP Katherine) (NNP Hepburn)))
+      (SBAR (IN because)
+        (S
+          (NP (PRP she))
+          (VP
+            (VP (VBD was)
+              (ADVP (RB pretty)))
+            (CC and)
+            (VP (VBD talented))))))))
+
+root(ROOT-0, made-3)
+compound(Hepburn-2, Audrey-1)
+nsubj(made-3, Hepburn-2)
+nummod(movies-5, more-4)
+dobj(made-3, movies-5)
+case(Hepburn-8, than-6)
+compound(Hepburn-8, Katherine-7)
+nmod:than(made-3, Hepburn-8)
+mark(was-11, because-9)
+nsubj(was-11, she-10)
+nsubj(talented-14, she-10)
+advcl:because(made-3, was-11)
+advmod(was-11, pretty-12)
+cc(was-11, and-13)
+advcl:because(made-3, talented-14)
+conj:and(was-11, talented-14)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,2,[1,3]), that is: "she" -> "Audrey Hepburn"

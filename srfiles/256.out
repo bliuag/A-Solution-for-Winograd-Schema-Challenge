@@ -1,0 +1,56 @@
+Sentence #1 (15 tokens):
+Nola shot Christina in the head because she threatened to take all of her money
+[Text=Nola CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Nola NamedEntityTag=PERSON]
+[Text=shot CharacterOffsetBegin=5 CharacterOffsetEnd=9 PartOfSpeech=VBD Lemma=shoot NamedEntityTag=O]
+[Text=Christina CharacterOffsetBegin=10 CharacterOffsetEnd=19 PartOfSpeech=NNP Lemma=Christina NamedEntityTag=PERSON]
+[Text=in CharacterOffsetBegin=20 CharacterOffsetEnd=22 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=head CharacterOffsetBegin=27 CharacterOffsetEnd=31 PartOfSpeech=NN Lemma=head NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=32 CharacterOffsetEnd=39 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=threatened CharacterOffsetBegin=44 CharacterOffsetEnd=54 PartOfSpeech=VBD Lemma=threaten NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=55 CharacterOffsetEnd=57 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=take CharacterOffsetBegin=58 CharacterOffsetEnd=62 PartOfSpeech=VB Lemma=take NamedEntityTag=O]
+[Text=all CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=DT Lemma=all NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=67 CharacterOffsetEnd=69 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=70 CharacterOffsetEnd=73 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+[Text=money CharacterOffsetBegin=74 CharacterOffsetEnd=79 PartOfSpeech=NN Lemma=money NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Nola))
+    (VP (VBD shot)
+      (NP
+        (NP (NNP Christina))
+        (PP (IN in)
+          (NP (DT the) (NN head))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP she))
+          (VP (VBD threatened)
+            (S
+              (VP (TO to)
+                (VP (VB take)
+                  (NP
+                    (NP (DT all))
+                    (PP (IN of)
+                      (NP (PRP$ her) (NN money)))))))))))))
+
+root(ROOT-0, shot-2)
+nsubj(shot-2, Nola-1)
+dobj(shot-2, Christina-3)
+case(head-6, in-4)
+det(head-6, the-5)
+nmod:in(Christina-3, head-6)
+mark(threatened-9, because-7)
+nsubj(threatened-9, she-8)
+nsubj:xsubj(take-11, she-8)
+advcl:because(shot-2, threatened-9)
+mark(take-11, to-10)
+xcomp(threatened-9, take-11)
+dobj(take-11, all-12)
+case(money-15, of-13)
+nmod:poss(money-15, her-14)
+nmod:of(all-12, money-15)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "she" -> "Nola"

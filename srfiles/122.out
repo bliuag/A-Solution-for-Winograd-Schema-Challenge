@@ -1,0 +1,39 @@
+Sentence #1 (11 tokens):
+The scientists gave the chimps some bananas because they were hungry
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=scientists CharacterOffsetBegin=4 CharacterOffsetEnd=14 PartOfSpeech=NNS Lemma=scientist NamedEntityTag=O]
+[Text=gave CharacterOffsetBegin=15 CharacterOffsetEnd=19 PartOfSpeech=VBD Lemma=give NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=chimps CharacterOffsetBegin=24 CharacterOffsetEnd=30 PartOfSpeech=NNS Lemma=chimp NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=31 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=bananas CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=NNS Lemma=banana NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=44 CharacterOffsetEnd=51 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=52 CharacterOffsetEnd=56 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=57 CharacterOffsetEnd=61 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=hungry CharacterOffsetBegin=62 CharacterOffsetEnd=68 PartOfSpeech=JJ Lemma=hungry NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS scientists))
+    (VP (VBD gave)
+      (NP (DT the) (NNS chimps))
+      (NP (DT some) (NNS bananas))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBD were)
+            (ADJP (JJ hungry))))))))
+
+root(ROOT-0, gave-3)
+det(scientists-2, The-1)
+nsubj(gave-3, scientists-2)
+det(chimps-5, the-4)
+iobj(gave-3, chimps-5)
+det(bananas-7, some-6)
+dobj(gave-3, bananas-7)
+mark(hungry-11, because-8)
+nsubj(hungry-11, they-9)
+cop(hungry-11, were-10)
+advcl:because(gave-3, hungry-11)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,2,[1,3]), that is: "they" -> "The scientists"

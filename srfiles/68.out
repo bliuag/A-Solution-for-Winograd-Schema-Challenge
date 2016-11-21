@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The winners were given the awards after they won
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=winners CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNS Lemma=winner NamedEntityTag=O]
+[Text=were CharacterOffsetBegin=12 CharacterOffsetEnd=16 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=given CharacterOffsetBegin=17 CharacterOffsetEnd=22 PartOfSpeech=VBN Lemma=give NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=23 CharacterOffsetEnd=26 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=awards CharacterOffsetBegin=27 CharacterOffsetEnd=33 PartOfSpeech=NNS Lemma=award NamedEntityTag=O]
+[Text=after CharacterOffsetBegin=34 CharacterOffsetEnd=39 PartOfSpeech=IN Lemma=after NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=40 CharacterOffsetEnd=44 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=won CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=VBD Lemma=win NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NNS winners))
+    (VP (VBD were)
+      (VP (VBN given)
+        (NP (DT the) (NNS awards))
+        (SBAR (IN after)
+          (S
+            (NP (PRP they))
+            (VP (VBD won))))))))
+
+root(ROOT-0, given-4)
+det(winners-2, The-1)
+nsubjpass(given-4, winners-2)
+auxpass(given-4, were-3)
+det(awards-6, the-5)
+dobj(given-4, awards-6)
+mark(won-9, after-7)
+nsubj(won-9, they-8)
+advcl:after(given-4, won-9)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,2,[1,3]), that is: "they" -> "The winners"

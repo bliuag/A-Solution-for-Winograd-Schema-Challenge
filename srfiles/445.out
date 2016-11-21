@@ -1,0 +1,60 @@
+Sentence #1 (16 tokens):
+Lois was scolded by her daughter, so she thought about how she could be better
+[Text=Lois CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNP Lemma=Lois NamedEntityTag=PERSON]
+[Text=was CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=scolded CharacterOffsetBegin=9 CharacterOffsetEnd=16 PartOfSpeech=VBN Lemma=scold NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=17 CharacterOffsetEnd=19 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=her CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=PRP$ Lemma=she NamedEntityTag=O]
+[Text=daughter CharacterOffsetBegin=24 CharacterOffsetEnd=32 PartOfSpeech=NN Lemma=daughter NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=32 CharacterOffsetEnd=33 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=thought CharacterOffsetBegin=41 CharacterOffsetEnd=48 PartOfSpeech=VBD Lemma=think NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=49 CharacterOffsetEnd=54 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=how CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=WRB Lemma=how NamedEntityTag=O]
+[Text=she CharacterOffsetBegin=59 CharacterOffsetEnd=62 PartOfSpeech=PRP Lemma=she NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=63 CharacterOffsetEnd=68 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=69 CharacterOffsetEnd=71 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=better CharacterOffsetBegin=72 CharacterOffsetEnd=78 PartOfSpeech=JJR Lemma=better NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Lois))
+    (VP (VBD was)
+      (VP (VBN scolded)
+        (PP (IN by)
+          (NP (PRP$ her) (NN daughter)))
+        (, ,)
+        (SBAR (IN so)
+          (S
+            (NP (PRP she))
+            (VP (VBD thought)
+              (PP (IN about)
+                (SBAR
+                  (WHADVP (WRB how))
+                  (S
+                    (NP (PRP she))
+                    (VP (MD could)
+                      (VP (VB be)
+                        (ADJP (JJR better))))))))))))))
+
+root(ROOT-0, scolded-3)
+nsubjpass(scolded-3, Lois-1)
+auxpass(scolded-3, was-2)
+case(daughter-6, by-4)
+nmod:poss(daughter-6, her-5)
+nmod:agent(scolded-3, daughter-6)
+punct(scolded-3, ,-7)
+mark(thought-10, so-8)
+nsubj(thought-10, she-9)
+advcl:so(scolded-3, thought-10)
+mark(better-16, about-11)
+advmod(better-16, how-12)
+nsubj(better-16, she-13)
+aux(better-16, could-14)
+cop(better-16, be-15)
+advcl:about(thought-10, better-16)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "her" -> "Lois"
+	(1,9,[9,10]) -> (1,1,[1,2]), that is: "she" -> "Lois"
+	(1,13,[13,14]) -> (1,1,[1,2]), that is: "she" -> "Lois"

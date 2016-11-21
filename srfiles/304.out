@@ -1,0 +1,50 @@
+Sentence #1 (14 tokens):
+My teacher asked a student to make sentences because he was late to class
+[Text=My CharacterOffsetBegin=0 CharacterOffsetEnd=2 PartOfSpeech=PRP$ Lemma=my NamedEntityTag=O]
+[Text=teacher CharacterOffsetBegin=3 CharacterOffsetEnd=10 PartOfSpeech=NN Lemma=teacher NamedEntityTag=O]
+[Text=asked CharacterOffsetBegin=11 CharacterOffsetEnd=16 PartOfSpeech=VBD Lemma=ask NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=17 CharacterOffsetEnd=18 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=student CharacterOffsetBegin=19 CharacterOffsetEnd=26 PartOfSpeech=NN Lemma=student NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=27 CharacterOffsetEnd=29 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=make CharacterOffsetBegin=30 CharacterOffsetEnd=34 PartOfSpeech=VB Lemma=make NamedEntityTag=O]
+[Text=sentences CharacterOffsetBegin=35 CharacterOffsetEnd=44 PartOfSpeech=NNS Lemma=sentence NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=45 CharacterOffsetEnd=52 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=53 CharacterOffsetEnd=55 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=56 CharacterOffsetEnd=59 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=late CharacterOffsetBegin=60 CharacterOffsetEnd=64 PartOfSpeech=JJ Lemma=late NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=65 CharacterOffsetEnd=67 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=class CharacterOffsetBegin=68 CharacterOffsetEnd=73 PartOfSpeech=NN Lemma=class NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (PRP$ My) (NN teacher))
+    (VP (VBD asked)
+      (NP (DT a) (NN student)
+        (S
+          (VP (TO to)
+            (VP (VB make)
+              (NP (NNS sentences))
+              (SBAR (IN because)
+                (S
+                  (NP (PRP he))
+                  (VP (VBD was)
+                    (ADJP (JJ late)
+                      (PP (TO to)
+                        (NP (NN class))))))))))))))
+
+root(ROOT-0, asked-3)
+nmod:poss(teacher-2, My-1)
+nsubj(asked-3, teacher-2)
+det(student-5, a-4)
+dobj(asked-3, student-5)
+mark(make-7, to-6)
+acl:to(student-5, make-7)
+dobj(make-7, sentences-8)
+mark(late-12, because-9)
+nsubj(late-12, he-10)
+cop(late-12, was-11)
+advcl:because(make-7, late-12)
+case(class-14, to-13)
+nmod:to(late-12, class-14)
+
+Coreference set:
+	(1,10,[10,11]) -> (1,2,[1,3]), that is: "he" -> "My teacher"

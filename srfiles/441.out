@@ -1,0 +1,75 @@
+Sentence #1 (22 tokens):
+The Next Generation was well received by Trekkies, but they will always perceive the first Star Trek to be the best
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Next CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=JJ Lemma=next NamedEntityTag=O]
+[Text=Generation CharacterOffsetBegin=9 CharacterOffsetEnd=19 PartOfSpeech=NN Lemma=generation NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=20 CharacterOffsetEnd=23 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=well CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=RB Lemma=well NamedEntityTag=O]
+[Text=received CharacterOffsetBegin=29 CharacterOffsetEnd=37 PartOfSpeech=VBN Lemma=receive NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=38 CharacterOffsetEnd=40 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=Trekkies CharacterOffsetBegin=41 CharacterOffsetEnd=49 PartOfSpeech=NNPS Lemma=Trekkies NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=49 CharacterOffsetEnd=50 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=51 CharacterOffsetEnd=54 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=55 CharacterOffsetEnd=59 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=will CharacterOffsetBegin=60 CharacterOffsetEnd=64 PartOfSpeech=MD Lemma=will NamedEntityTag=O]
+[Text=always CharacterOffsetBegin=65 CharacterOffsetEnd=71 PartOfSpeech=RB Lemma=always NamedEntityTag=O]
+[Text=perceive CharacterOffsetBegin=72 CharacterOffsetEnd=80 PartOfSpeech=VB Lemma=perceive NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=81 CharacterOffsetEnd=84 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=first CharacterOffsetBegin=85 CharacterOffsetEnd=90 PartOfSpeech=JJ Lemma=first NamedEntityTag=ORDINAL NormalizedNamedEntityTag=1.0]
+[Text=Star CharacterOffsetBegin=91 CharacterOffsetEnd=95 PartOfSpeech=NNP Lemma=Star NamedEntityTag=O]
+[Text=Trek CharacterOffsetBegin=96 CharacterOffsetEnd=100 PartOfSpeech=NNP Lemma=Trek NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=101 CharacterOffsetEnd=103 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=104 CharacterOffsetEnd=106 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=107 CharacterOffsetEnd=110 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=best CharacterOffsetBegin=111 CharacterOffsetEnd=115 PartOfSpeech=JJS Lemma=best NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (DT The) (JJ Next) (NN Generation))
+        (VP (VBD was)
+          (ADVP (RB well))
+          (VP (VBN received)
+            (PP (IN by)
+              (NP (NNPS Trekkies))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP they))
+        (VP (MD will)
+          (ADVP (RB always))
+          (VP (VB perceive)
+            (S
+              (NP (DT the) (JJ first) (NNP Star) (NNP Trek))
+              (VP (TO to)
+                (VP (VB be)
+                  (NP (DT the) (JJS best)))))))))))
+
+root(ROOT-0, received-6)
+det(Generation-3, The-1)
+amod(Generation-3, Next-2)
+nsubjpass(received-6, Generation-3)
+auxpass(received-6, was-4)
+advmod(received-6, well-5)
+case(Trekkies-8, by-7)
+nmod:agent(received-6, Trekkies-8)
+punct(received-6, ,-9)
+cc(received-6, but-10)
+nsubj(perceive-14, they-11)
+aux(perceive-14, will-12)
+advmod(perceive-14, always-13)
+conj:but(received-6, perceive-14)
+det(Trek-18, the-15)
+amod(Trek-18, first-16)
+compound(Trek-18, Star-17)
+dobj(perceive-14, Trek-18)
+nsubj:xsubj(best-22, Trek-18)
+mark(best-22, to-19)
+cop(best-22, be-20)
+det(best-22, the-21)
+xcomp(perceive-14, best-22)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,8,[8,9]), that is: "they" -> "Trekkies"
+Coreference set:
+	(1,22,[21,23]) -> (1,18,[15,19]), that is: "the best" -> "the first Star Trek"

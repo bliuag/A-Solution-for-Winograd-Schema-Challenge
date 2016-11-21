@@ -1,0 +1,60 @@
+Sentence #1 (18 tokens):
+Banks usually offer bonus points for new credit card applicants because they are often enticed by free offerings
+[Text=Banks CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNS Lemma=bank NamedEntityTag=O]
+[Text=usually CharacterOffsetBegin=6 CharacterOffsetEnd=13 PartOfSpeech=RB Lemma=usually NamedEntityTag=O]
+[Text=offer CharacterOffsetBegin=14 CharacterOffsetEnd=19 PartOfSpeech=VBP Lemma=offer NamedEntityTag=O]
+[Text=bonus CharacterOffsetBegin=20 CharacterOffsetEnd=25 PartOfSpeech=NN Lemma=bonus NamedEntityTag=O]
+[Text=points CharacterOffsetBegin=26 CharacterOffsetEnd=32 PartOfSpeech=NNS Lemma=point NamedEntityTag=O]
+[Text=for CharacterOffsetBegin=33 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=new CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=JJ Lemma=new NamedEntityTag=O]
+[Text=credit CharacterOffsetBegin=41 CharacterOffsetEnd=47 PartOfSpeech=NN Lemma=credit NamedEntityTag=O]
+[Text=card CharacterOffsetBegin=48 CharacterOffsetEnd=52 PartOfSpeech=NN Lemma=card NamedEntityTag=O]
+[Text=applicants CharacterOffsetBegin=53 CharacterOffsetEnd=63 PartOfSpeech=NNS Lemma=applicant NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=64 CharacterOffsetEnd=71 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=72 CharacterOffsetEnd=76 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=77 CharacterOffsetEnd=80 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=often CharacterOffsetBegin=81 CharacterOffsetEnd=86 PartOfSpeech=RB Lemma=often NamedEntityTag=O]
+[Text=enticed CharacterOffsetBegin=87 CharacterOffsetEnd=94 PartOfSpeech=VBN Lemma=entice NamedEntityTag=O]
+[Text=by CharacterOffsetBegin=95 CharacterOffsetEnd=97 PartOfSpeech=IN Lemma=by NamedEntityTag=O]
+[Text=free CharacterOffsetBegin=98 CharacterOffsetEnd=102 PartOfSpeech=JJ Lemma=free NamedEntityTag=O]
+[Text=offerings CharacterOffsetBegin=103 CharacterOffsetEnd=112 PartOfSpeech=NNS Lemma=offering NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNS Banks))
+    (VP
+      (ADVP (RB usually))
+      (VBP offer)
+      (NP
+        (NP (NN bonus) (NNS points))
+        (PP (IN for)
+          (NP (JJ new) (NN credit) (NN card) (NNS applicants))))
+      (SBAR (IN because)
+        (S
+          (NP (PRP they))
+          (VP (VBP are)
+            (ADVP (RB often))
+            (VP (VBN enticed)
+              (PP (IN by)
+                (NP (JJ free) (NNS offerings))))))))))
+
+root(ROOT-0, offer-3)
+nsubj(offer-3, Banks-1)
+advmod(offer-3, usually-2)
+compound(points-5, bonus-4)
+dobj(offer-3, points-5)
+case(applicants-10, for-6)
+amod(applicants-10, new-7)
+compound(applicants-10, credit-8)
+compound(applicants-10, card-9)
+nmod:for(points-5, applicants-10)
+mark(enticed-15, because-11)
+nsubjpass(enticed-15, they-12)
+auxpass(enticed-15, are-13)
+advmod(enticed-15, often-14)
+advcl:because(offer-3, enticed-15)
+case(offerings-18, by-16)
+amod(offerings-18, free-17)
+nmod:agent(enticed-15, offerings-18)
+
+Coreference set:
+	(1,12,[12,13]) -> (1,10,[7,11]), that is: "they" -> "new credit card applicants"

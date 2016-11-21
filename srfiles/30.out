@@ -1,0 +1,49 @@
+Sentence #1 (12 tokens):
+Jason built Rocky a robot, and he gave it to him
+[Text=Jason CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Jason NamedEntityTag=PERSON]
+[Text=built CharacterOffsetBegin=6 CharacterOffsetEnd=11 PartOfSpeech=VBD Lemma=build NamedEntityTag=O]
+[Text=Rocky CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=NNP Lemma=Rocky NamedEntityTag=MISC]
+[Text=a CharacterOffsetBegin=18 CharacterOffsetEnd=19 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=robot CharacterOffsetBegin=20 CharacterOffsetEnd=25 PartOfSpeech=NN Lemma=robot NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=25 CharacterOffsetEnd=26 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=27 CharacterOffsetEnd=30 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=31 CharacterOffsetEnd=33 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=gave CharacterOffsetBegin=34 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=give NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=39 CharacterOffsetEnd=41 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=42 CharacterOffsetEnd=44 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=45 CharacterOffsetEnd=48 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+(ROOT
+  (S
+    (S
+      (NP (NNP Jason))
+      (VP (VBD built)
+        (S
+          (NP (NNP Rocky))
+          (NP (DT a) (NN robot)))))
+    (, ,)
+    (CC and)
+    (S
+      (NP (PRP he))
+      (VP (VBD gave)
+        (NP (PRP it))
+        (PP (TO to)
+          (NP (PRP him)))))))
+
+root(ROOT-0, built-2)
+nsubj(built-2, Jason-1)
+nsubj(robot-5, Rocky-3)
+det(robot-5, a-4)
+xcomp(built-2, robot-5)
+punct(built-2, ,-6)
+cc(built-2, and-7)
+nsubj(gave-9, he-8)
+conj:and(built-2, gave-9)
+dobj(gave-9, it-10)
+case(him-12, to-11)
+nmod:to(gave-9, him-12)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "he" -> "Jason"
+	(1,12,[12,13]) -> (1,1,[1,2]), that is: "him" -> "Jason"
+Coreference set:
+	(1,10,[10,11]) -> (1,5,[4,6]), that is: "it" -> "a robot"

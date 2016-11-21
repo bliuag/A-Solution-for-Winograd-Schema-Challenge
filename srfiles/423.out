@@ -1,0 +1,64 @@
+Sentence #1 (19 tokens):
+The Russian Syndicate decided to remove some of their lower members because they knew too much about their operations
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Russian CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=JJ Lemma=russian NamedEntityTag=MISC]
+[Text=Syndicate CharacterOffsetBegin=12 CharacterOffsetEnd=21 PartOfSpeech=NN Lemma=syndicate NamedEntityTag=MISC]
+[Text=decided CharacterOffsetBegin=22 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=decide NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=remove CharacterOffsetBegin=33 CharacterOffsetEnd=39 PartOfSpeech=VB Lemma=remove NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=40 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=45 CharacterOffsetEnd=47 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=48 CharacterOffsetEnd=53 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=lower CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=JJR Lemma=lower NamedEntityTag=O]
+[Text=members CharacterOffsetBegin=60 CharacterOffsetEnd=67 PartOfSpeech=NNS Lemma=member NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=68 CharacterOffsetEnd=75 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=76 CharacterOffsetEnd=80 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=knew CharacterOffsetBegin=81 CharacterOffsetEnd=85 PartOfSpeech=VBD Lemma=know NamedEntityTag=O]
+[Text=too CharacterOffsetBegin=86 CharacterOffsetEnd=89 PartOfSpeech=RB Lemma=too NamedEntityTag=O]
+[Text=much CharacterOffsetBegin=90 CharacterOffsetEnd=94 PartOfSpeech=JJ Lemma=much NamedEntityTag=O]
+[Text=about CharacterOffsetBegin=95 CharacterOffsetEnd=100 PartOfSpeech=IN Lemma=about NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=101 CharacterOffsetEnd=106 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=operations CharacterOffsetBegin=107 CharacterOffsetEnd=117 PartOfSpeech=NNS Lemma=operation NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (JJ Russian) (NN Syndicate))
+    (VP (VBD decided)
+      (S
+        (VP (TO to)
+          (VP (VB remove)
+            (NP
+              (NP (DT some))
+              (PP (IN of)
+                (NP (PRP$ their) (JJR lower) (NNS members))))
+            (SBAR (IN because)
+              (S
+                (NP (PRP they))
+                (VP (VBD knew)
+                  (ADJP (RB too) (JJ much))
+                  (PP (IN about)
+                    (NP (PRP$ their) (NNS operations))))))))))))
+
+root(ROOT-0, decided-4)
+det(Syndicate-3, The-1)
+amod(Syndicate-3, Russian-2)
+nsubj(decided-4, Syndicate-3)
+nsubj:xsubj(remove-6, Syndicate-3)
+mark(remove-6, to-5)
+xcomp(decided-4, remove-6)
+dobj(remove-6, some-7)
+case(members-11, of-8)
+nmod:poss(members-11, their-9)
+amod(members-11, lower-10)
+nmod:of(some-7, members-11)
+mark(knew-14, because-12)
+nsubj(knew-14, they-13)
+advcl:because(remove-6, knew-14)
+advmod(much-16, too-15)
+xcomp(knew-14, much-16)
+case(operations-19, about-17)
+nmod:poss(operations-19, their-18)
+nmod:about(knew-14, operations-19)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,7,[7,12]), that is: "they" -> "some of their lower members"
+	(1,18,[18,19]) -> (1,7,[7,12]), that is: "their" -> "some of their lower members"

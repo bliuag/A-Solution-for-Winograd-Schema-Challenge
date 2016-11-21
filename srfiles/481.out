@@ -1,0 +1,90 @@
+Sentence #1 (26 tokens):
+Range Rover recently revealed their new lineup of cars at Times Square for thousands of New Yorkers so they would be enticed to purchase their cars
+[Text=Range CharacterOffsetBegin=0 CharacterOffsetEnd=5 PartOfSpeech=NNP Lemma=Range NamedEntityTag=O]
+[Text=Rover CharacterOffsetBegin=6 CharacterOffsetEnd=11 PartOfSpeech=NNP Lemma=Rover NamedEntityTag=O]
+[Text=recently CharacterOffsetBegin=12 CharacterOffsetEnd=20 PartOfSpeech=RB Lemma=recently NamedEntityTag=DATE NormalizedNamedEntityTag=PAST_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PAST_REF">recently</TIMEX3>]
+[Text=revealed CharacterOffsetBegin=21 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=reveal NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=30 CharacterOffsetEnd=35 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=new CharacterOffsetBegin=36 CharacterOffsetEnd=39 PartOfSpeech=JJ Lemma=new NamedEntityTag=O]
+[Text=lineup CharacterOffsetBegin=40 CharacterOffsetEnd=46 PartOfSpeech=NN Lemma=lineup NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=47 CharacterOffsetEnd=49 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=cars CharacterOffsetBegin=50 CharacterOffsetEnd=54 PartOfSpeech=NNS Lemma=car NamedEntityTag=O]
+[Text=at CharacterOffsetBegin=55 CharacterOffsetEnd=57 PartOfSpeech=IN Lemma=at NamedEntityTag=O]
+[Text=Times CharacterOffsetBegin=58 CharacterOffsetEnd=63 PartOfSpeech=NNP Lemma=Times NamedEntityTag=LOCATION]
+[Text=Square CharacterOffsetBegin=64 CharacterOffsetEnd=70 PartOfSpeech=NNP Lemma=Square NamedEntityTag=LOCATION]
+[Text=for CharacterOffsetBegin=71 CharacterOffsetEnd=74 PartOfSpeech=IN Lemma=for NamedEntityTag=O]
+[Text=thousands CharacterOffsetBegin=75 CharacterOffsetEnd=84 PartOfSpeech=NNS Lemma=thousand NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=85 CharacterOffsetEnd=87 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=New CharacterOffsetBegin=88 CharacterOffsetEnd=91 PartOfSpeech=NNP Lemma=New NamedEntityTag=O]
+[Text=Yorkers CharacterOffsetBegin=92 CharacterOffsetEnd=99 PartOfSpeech=NNPS Lemma=Yorkers NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=100 CharacterOffsetEnd=102 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=103 CharacterOffsetEnd=107 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=would CharacterOffsetBegin=108 CharacterOffsetEnd=113 PartOfSpeech=MD Lemma=would NamedEntityTag=O]
+[Text=be CharacterOffsetBegin=114 CharacterOffsetEnd=116 PartOfSpeech=VB Lemma=be NamedEntityTag=O]
+[Text=enticed CharacterOffsetBegin=117 CharacterOffsetEnd=124 PartOfSpeech=VBN Lemma=entice NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=125 CharacterOffsetEnd=127 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=purchase CharacterOffsetBegin=128 CharacterOffsetEnd=136 PartOfSpeech=VB Lemma=purchase NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=137 CharacterOffsetEnd=142 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=cars CharacterOffsetBegin=143 CharacterOffsetEnd=147 PartOfSpeech=NNS Lemma=car NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Range) (NNP Rover))
+    (VP
+      (ADVP (RB recently))
+      (VBD revealed)
+      (NP
+        (NP (PRP$ their) (JJ new) (NN lineup))
+        (PP (IN of)
+          (NP (NNS cars))))
+      (PP (IN at)
+        (NP
+          (NP (NNP Times) (NNP Square))
+          (PP (IN for)
+            (NP
+              (NP (NNS thousands))
+              (PP (IN of)
+                (NP (NNP New) (NNPS Yorkers)))))))
+      (SBAR (IN so)
+        (S
+          (NP (PRP they))
+          (VP (MD would)
+            (VP (VB be)
+              (VP (VBN enticed)
+                (S
+                  (VP (TO to)
+                    (VP (VB purchase)
+                      (NP (PRP$ their) (NNS cars)))))))))))))
+
+root(ROOT-0, revealed-4)
+compound(Rover-2, Range-1)
+nsubj(revealed-4, Rover-2)
+advmod(revealed-4, recently-3)
+nmod:poss(lineup-7, their-5)
+amod(lineup-7, new-6)
+dobj(revealed-4, lineup-7)
+case(cars-9, of-8)
+nmod:of(lineup-7, cars-9)
+case(Square-12, at-10)
+compound(Square-12, Times-11)
+nmod:at(revealed-4, Square-12)
+case(thousands-14, for-13)
+det:qmod(Yorkers-17, thousands-14)
+mwe(thousands-14, of-15)
+compound(Yorkers-17, New-16)
+nmod(Square-12, Yorkers-17)
+mark(enticed-22, so-18)
+nsubjpass(enticed-22, they-19)
+nsubj:xsubj(purchase-24, they-19)
+aux(enticed-22, would-20)
+auxpass(enticed-22, be-21)
+advcl:so(revealed-4, enticed-22)
+mark(purchase-24, to-23)
+xcomp(enticed-22, purchase-24)
+nmod:poss(cars-26, their-25)
+dobj(purchase-24, cars-26)
+
+Coreference set:
+	(1,19,[19,20]) -> (1,5,[5,6]), that is: "they" -> "their"
+	(1,25,[25,26]) -> (1,5,[5,6]), that is: "their" -> "their"
+Coreference set:
+	(1,9,[9,10]) -> (1,26,[25,27]), that is: "cars" -> "their cars"

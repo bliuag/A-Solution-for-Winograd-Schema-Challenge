@@ -1,0 +1,44 @@
+Sentence #1 (13 tokens):
+The student couldn't understand the teacher because he wasn't paying attention
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=student CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NN Lemma=student NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=n't CharacterOffsetBegin=17 CharacterOffsetEnd=20 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=understand CharacterOffsetBegin=21 CharacterOffsetEnd=31 PartOfSpeech=VB Lemma=understand NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=32 CharacterOffsetEnd=35 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=teacher CharacterOffsetBegin=36 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=teacher NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=44 CharacterOffsetEnd=51 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=52 CharacterOffsetEnd=54 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=55 CharacterOffsetEnd=58 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=n't CharacterOffsetBegin=58 CharacterOffsetEnd=61 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=paying CharacterOffsetBegin=62 CharacterOffsetEnd=68 PartOfSpeech=VBG Lemma=pay NamedEntityTag=O]
+[Text=attention CharacterOffsetBegin=69 CharacterOffsetEnd=78 PartOfSpeech=NN Lemma=attention NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN student))
+    (VP (MD could) (RB n't)
+      (VP (VB understand)
+        (NP (DT the) (NN teacher))
+        (SBAR (IN because)
+          (S
+            (NP (PRP he))
+            (VP (VBD was) (RB n't)
+              (VP (VBG paying)
+                (NP (NN attention))))))))))
+
+root(ROOT-0, understand-5)
+det(student-2, The-1)
+nsubj(understand-5, student-2)
+aux(understand-5, could-3)
+neg(understand-5, n't-4)
+det(teacher-7, the-6)
+dobj(understand-5, teacher-7)
+mark(paying-12, because-8)
+nsubj(paying-12, he-9)
+aux(paying-12, was-10)
+neg(paying-12, n't-11)
+advcl:because(understand-5, paying-12)
+dobj(paying-12, attention-13)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,2,[1,3]), that is: "he" -> "The student"

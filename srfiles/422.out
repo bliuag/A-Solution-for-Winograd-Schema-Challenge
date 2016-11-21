@@ -1,0 +1,71 @@
+Sentence #1 (21 tokens):
+The Russian Syndicate decided to remove some of their lower members so they could keep their operations as secret as possible
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=Russian CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=JJ Lemma=russian NamedEntityTag=MISC]
+[Text=Syndicate CharacterOffsetBegin=12 CharacterOffsetEnd=21 PartOfSpeech=NN Lemma=syndicate NamedEntityTag=MISC]
+[Text=decided CharacterOffsetBegin=22 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=decide NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=30 CharacterOffsetEnd=32 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=remove CharacterOffsetBegin=33 CharacterOffsetEnd=39 PartOfSpeech=VB Lemma=remove NamedEntityTag=O]
+[Text=some CharacterOffsetBegin=40 CharacterOffsetEnd=44 PartOfSpeech=DT Lemma=some NamedEntityTag=O]
+[Text=of CharacterOffsetBegin=45 CharacterOffsetEnd=47 PartOfSpeech=IN Lemma=of NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=48 CharacterOffsetEnd=53 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=lower CharacterOffsetBegin=54 CharacterOffsetEnd=59 PartOfSpeech=JJR Lemma=lower NamedEntityTag=O]
+[Text=members CharacterOffsetBegin=60 CharacterOffsetEnd=67 PartOfSpeech=NNS Lemma=member NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=68 CharacterOffsetEnd=70 PartOfSpeech=IN Lemma=so NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=71 CharacterOffsetEnd=75 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=76 CharacterOffsetEnd=81 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=keep CharacterOffsetBegin=82 CharacterOffsetEnd=86 PartOfSpeech=VB Lemma=keep NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=87 CharacterOffsetEnd=92 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=operations CharacterOffsetBegin=93 CharacterOffsetEnd=103 PartOfSpeech=NNS Lemma=operation NamedEntityTag=O]
+[Text=as CharacterOffsetBegin=104 CharacterOffsetEnd=106 PartOfSpeech=IN Lemma=as NamedEntityTag=O]
+[Text=secret CharacterOffsetBegin=107 CharacterOffsetEnd=113 PartOfSpeech=JJ Lemma=secret NamedEntityTag=O]
+[Text=as CharacterOffsetBegin=114 CharacterOffsetEnd=116 PartOfSpeech=IN Lemma=as NamedEntityTag=O]
+[Text=possible CharacterOffsetBegin=117 CharacterOffsetEnd=125 PartOfSpeech=JJ Lemma=possible NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (JJ Russian) (NN Syndicate))
+    (VP (VBD decided)
+      (S
+        (VP (TO to)
+          (VP (VB remove)
+            (NP
+              (NP (DT some))
+              (PP (IN of)
+                (NP (PRP$ their) (JJR lower) (NNS members))))
+            (SBAR (IN so)
+              (S
+                (NP (PRP they))
+                (VP (MD could)
+                  (VP (VB keep)
+                    (NP (PRP$ their) (NNS operations))
+                    (PP (IN as)
+                      (ADJP (JJ secret)
+                        (PP (IN as)
+                          (ADJP (JJ possible)))))))))))))))
+
+root(ROOT-0, decided-4)
+det(Syndicate-3, The-1)
+amod(Syndicate-3, Russian-2)
+nsubj(decided-4, Syndicate-3)
+nsubj:xsubj(remove-6, Syndicate-3)
+mark(remove-6, to-5)
+xcomp(decided-4, remove-6)
+dobj(remove-6, some-7)
+case(members-11, of-8)
+nmod:poss(members-11, their-9)
+amod(members-11, lower-10)
+nmod:of(some-7, members-11)
+mark(keep-15, so-12)
+nsubj(keep-15, they-13)
+aux(keep-15, could-14)
+advcl:so(remove-6, keep-15)
+nmod:poss(operations-17, their-16)
+dobj(keep-15, operations-17)
+case(secret-19, as-18)
+advcl:as(keep-15, secret-19)
+case(possible-21, as-20)
+advcl:as(secret-19, possible-21)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,7,[7,12]), that is: "they" -> "some of their lower members"
+	(1,16,[16,17]) -> (1,7,[7,12]), that is: "their" -> "some of their lower members"

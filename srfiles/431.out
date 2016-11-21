@@ -1,0 +1,95 @@
+Sentence #1 (25 tokens):
+Michael decided to freeze himself in cryo-stasis even though his father was against it, so he tried to convince him not to do it
+[Text=Michael CharacterOffsetBegin=0 CharacterOffsetEnd=7 PartOfSpeech=NNP Lemma=Michael NamedEntityTag=PERSON]
+[Text=decided CharacterOffsetBegin=8 CharacterOffsetEnd=15 PartOfSpeech=VBD Lemma=decide NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=16 CharacterOffsetEnd=18 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=freeze CharacterOffsetBegin=19 CharacterOffsetEnd=25 PartOfSpeech=VB Lemma=freeze NamedEntityTag=O]
+[Text=himself CharacterOffsetBegin=26 CharacterOffsetEnd=33 PartOfSpeech=PRP Lemma=himself NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=34 CharacterOffsetEnd=36 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=cryo-stasis CharacterOffsetBegin=37 CharacterOffsetEnd=48 PartOfSpeech=NN Lemma=cryo-stasis NamedEntityTag=O]
+[Text=even CharacterOffsetBegin=49 CharacterOffsetEnd=53 PartOfSpeech=RB Lemma=even NamedEntityTag=O]
+[Text=though CharacterOffsetBegin=54 CharacterOffsetEnd=60 PartOfSpeech=IN Lemma=though NamedEntityTag=O]
+[Text=his CharacterOffsetBegin=61 CharacterOffsetEnd=64 PartOfSpeech=PRP$ Lemma=he NamedEntityTag=O]
+[Text=father CharacterOffsetBegin=65 CharacterOffsetEnd=71 PartOfSpeech=NN Lemma=father NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=72 CharacterOffsetEnd=75 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=against CharacterOffsetBegin=76 CharacterOffsetEnd=83 PartOfSpeech=IN Lemma=against NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=84 CharacterOffsetEnd=86 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=86 CharacterOffsetEnd=87 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=so CharacterOffsetBegin=88 CharacterOffsetEnd=90 PartOfSpeech=RB Lemma=so NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=91 CharacterOffsetEnd=93 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=tried CharacterOffsetBegin=94 CharacterOffsetEnd=99 PartOfSpeech=VBD Lemma=try NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=100 CharacterOffsetEnd=102 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=convince CharacterOffsetBegin=103 CharacterOffsetEnd=111 PartOfSpeech=VB Lemma=convince NamedEntityTag=O]
+[Text=him CharacterOffsetBegin=112 CharacterOffsetEnd=115 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=not CharacterOffsetBegin=116 CharacterOffsetEnd=119 PartOfSpeech=RB Lemma=not NamedEntityTag=O]
+[Text=to CharacterOffsetBegin=120 CharacterOffsetEnd=122 PartOfSpeech=TO Lemma=to NamedEntityTag=O]
+[Text=do CharacterOffsetBegin=123 CharacterOffsetEnd=125 PartOfSpeech=VB Lemma=do NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=126 CharacterOffsetEnd=128 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNP Michael))
+    (VP (VBD decided)
+      (S
+        (VP (TO to)
+          (VP (VB freeze)
+            (NP (PRP himself))
+            (PP (IN in)
+              (NP (NN cryo-stasis)))
+            (SBAR (RB even) (IN though)
+              (S
+                (S
+                  (NP (PRP$ his) (NN father))
+                  (VP (VBD was)
+                    (PP (IN against)
+                      (NP (PRP it)))))
+                (, ,) (RB so)
+                (S
+                  (NP (PRP he))
+                  (VP (VBD tried)
+                    (S
+                      (VP (TO to)
+                        (VP (VB convince)
+                          (S
+                            (NP (PRP him))
+                            (RB not)
+                            (VP (TO to)
+                              (VP (VB do)
+                                (NP (PRP it))))))))))))))))))
+
+root(ROOT-0, decided-2)
+nsubj(decided-2, Michael-1)
+nsubj:xsubj(freeze-4, Michael-1)
+mark(freeze-4, to-3)
+xcomp(decided-2, freeze-4)
+dobj(freeze-4, himself-5)
+case(cryo-stasis-7, in-6)
+nmod:in(freeze-4, cryo-stasis-7)
+advmod(it-14, even-8)
+mark(it-14, though-9)
+nmod:poss(father-11, his-10)
+nsubj(it-14, father-11)
+cop(it-14, was-12)
+case(it-14, against-13)
+advcl:against(freeze-4, it-14)
+punct(it-14, ,-15)
+advmod(it-14, so-16)
+nsubj(tried-18, he-17)
+nsubj:xsubj(convince-20, he-17)
+parataxis(it-14, tried-18)
+mark(convince-20, to-19)
+xcomp(tried-18, convince-20)
+dobj(convince-20, him-21)
+nsubj:xsubj(do-24, him-21)
+neg(do-24, not-22)
+mark(do-24, to-23)
+xcomp(convince-20, do-24)
+dobj(do-24, it-25)
+
+Coreference set:
+	(1,5,[5,6]) -> (1,1,[1,2]), that is: "himself" -> "Michael"
+	(1,10,[10,11]) -> (1,1,[1,2]), that is: "his" -> "Michael"
+Coreference set:
+	(1,17,[17,18]) -> (1,11,[10,12]), that is: "he" -> "his father"
+	(1,21,[21,22]) -> (1,11,[10,12]), that is: "him" -> "his father"
+Coreference set:
+	(1,25,[25,26]) -> (1,14,[14,15]), that is: "it" -> "it"

@@ -1,0 +1,34 @@
+Sentence #1 (9 tokens):
+The blimp hit the tree because it lost air
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=blimp CharacterOffsetBegin=4 CharacterOffsetEnd=9 PartOfSpeech=NN Lemma=blimp NamedEntityTag=O]
+[Text=hit CharacterOffsetBegin=10 CharacterOffsetEnd=13 PartOfSpeech=VBD Lemma=hit NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=tree CharacterOffsetBegin=18 CharacterOffsetEnd=22 PartOfSpeech=NN Lemma=tree NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=23 CharacterOffsetEnd=30 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=31 CharacterOffsetEnd=33 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=lost CharacterOffsetBegin=34 CharacterOffsetEnd=38 PartOfSpeech=VBD Lemma=lose NamedEntityTag=O]
+[Text=air CharacterOffsetBegin=39 CharacterOffsetEnd=42 PartOfSpeech=NN Lemma=air NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN blimp))
+    (VP (VBD hit)
+      (NP (DT the) (NN tree))
+      (SBAR (IN because)
+        (S
+          (NP (PRP it))
+          (VP (VBD lost)
+            (NP (NN air))))))))
+
+root(ROOT-0, hit-3)
+det(blimp-2, The-1)
+nsubj(hit-3, blimp-2)
+det(tree-5, the-4)
+dobj(hit-3, tree-5)
+mark(lost-8, because-6)
+nsubj(lost-8, it-7)
+advcl:because(hit-3, lost-8)
+dobj(lost-8, air-9)
+
+Coreference set:
+	(1,7,[7,8]) -> (1,2,[1,3]), that is: "it" -> "The blimp"

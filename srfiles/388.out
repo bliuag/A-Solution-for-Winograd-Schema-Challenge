@@ -1,0 +1,71 @@
+Sentence #1 (21 tokens):
+Ray William Johnson surpassed NigaHiga in Youtube subscribers, but he considers that being number two is still a huge achievement
+[Text=Ray CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=NNP Lemma=Ray NamedEntityTag=PERSON]
+[Text=William CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NNP Lemma=William NamedEntityTag=PERSON]
+[Text=Johnson CharacterOffsetBegin=12 CharacterOffsetEnd=19 PartOfSpeech=NNP Lemma=Johnson NamedEntityTag=PERSON]
+[Text=surpassed CharacterOffsetBegin=20 CharacterOffsetEnd=29 PartOfSpeech=VBD Lemma=surpass NamedEntityTag=O]
+[Text=NigaHiga CharacterOffsetBegin=30 CharacterOffsetEnd=38 PartOfSpeech=NNP Lemma=NigaHiga NamedEntityTag=O]
+[Text=in CharacterOffsetBegin=39 CharacterOffsetEnd=41 PartOfSpeech=IN Lemma=in NamedEntityTag=O]
+[Text=Youtube CharacterOffsetBegin=42 CharacterOffsetEnd=49 PartOfSpeech=NNP Lemma=Youtube NamedEntityTag=LOCATION]
+[Text=subscribers CharacterOffsetBegin=50 CharacterOffsetEnd=61 PartOfSpeech=NNS Lemma=subscriber NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=61 CharacterOffsetEnd=62 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=63 CharacterOffsetEnd=66 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=he CharacterOffsetBegin=67 CharacterOffsetEnd=69 PartOfSpeech=PRP Lemma=he NamedEntityTag=O]
+[Text=considers CharacterOffsetBegin=70 CharacterOffsetEnd=79 PartOfSpeech=VBZ Lemma=consider NamedEntityTag=O]
+[Text=that CharacterOffsetBegin=80 CharacterOffsetEnd=84 PartOfSpeech=IN Lemma=that NamedEntityTag=O]
+[Text=being CharacterOffsetBegin=85 CharacterOffsetEnd=90 PartOfSpeech=VBG Lemma=be NamedEntityTag=O]
+[Text=number CharacterOffsetBegin=91 CharacterOffsetEnd=97 PartOfSpeech=NN Lemma=number NamedEntityTag=O]
+[Text=two CharacterOffsetBegin=98 CharacterOffsetEnd=101 PartOfSpeech=CD Lemma=two NamedEntityTag=NUMBER NormalizedNamedEntityTag=2.0]
+[Text=is CharacterOffsetBegin=102 CharacterOffsetEnd=104 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=still CharacterOffsetBegin=105 CharacterOffsetEnd=110 PartOfSpeech=RB Lemma=still NamedEntityTag=O]
+[Text=a CharacterOffsetBegin=111 CharacterOffsetEnd=112 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=huge CharacterOffsetBegin=113 CharacterOffsetEnd=117 PartOfSpeech=JJ Lemma=huge NamedEntityTag=O]
+[Text=achievement CharacterOffsetBegin=118 CharacterOffsetEnd=129 PartOfSpeech=NN Lemma=achievement NamedEntityTag=O]
+(ROOT
+  (FRAG
+    (S
+      (S
+        (NP (NNP Ray) (NNP William) (NNP Johnson))
+        (VP (VBD surpassed)
+          (NP
+            (NP (NNP NigaHiga))
+            (PP (IN in)
+              (NP (NNP Youtube) (NNS subscribers))))))
+      (, ,)
+      (CC but)
+      (S
+        (NP (PRP he))
+        (VP (VBZ considers)
+          (SBAR (IN that)
+            (S
+              (S
+                (VP (VBG being)
+                  (NP (NN number) (CD two))))
+              (VP (VBZ is)
+                (ADVP (RB still))
+                (NP (DT a) (JJ huge) (NN achievement))))))))))
+
+root(ROOT-0, surpassed-4)
+compound(Johnson-3, Ray-1)
+compound(Johnson-3, William-2)
+nsubj(surpassed-4, Johnson-3)
+dobj(surpassed-4, NigaHiga-5)
+case(subscribers-8, in-6)
+compound(subscribers-8, Youtube-7)
+nmod:in(NigaHiga-5, subscribers-8)
+punct(surpassed-4, ,-9)
+cc(surpassed-4, but-10)
+nsubj(considers-12, he-11)
+conj:but(surpassed-4, considers-12)
+mark(achievement-21, that-13)
+cop(number-15, being-14)
+csubj(achievement-21, number-15)
+nummod(number-15, two-16)
+cop(achievement-21, is-17)
+advmod(achievement-21, still-18)
+det(achievement-21, a-19)
+amod(achievement-21, huge-20)
+ccomp(considers-12, achievement-21)
+
+Coreference set:
+	(1,11,[11,12]) -> (1,3,[1,4]), that is: "he" -> "Ray William Johnson"

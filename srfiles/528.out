@@ -1,0 +1,59 @@
+Sentence #1 (16 tokens):
+Cats are more territorial than dogs since they always try and insert their dominance over others
+[Text=Cats CharacterOffsetBegin=0 CharacterOffsetEnd=4 PartOfSpeech=NNS Lemma=cat NamedEntityTag=O]
+[Text=are CharacterOffsetBegin=5 CharacterOffsetEnd=8 PartOfSpeech=VBP Lemma=be NamedEntityTag=O]
+[Text=more CharacterOffsetBegin=9 CharacterOffsetEnd=13 PartOfSpeech=RBR Lemma=more NamedEntityTag=O]
+[Text=territorial CharacterOffsetBegin=14 CharacterOffsetEnd=25 PartOfSpeech=JJ Lemma=territorial NamedEntityTag=O]
+[Text=than CharacterOffsetBegin=26 CharacterOffsetEnd=30 PartOfSpeech=IN Lemma=than NamedEntityTag=O]
+[Text=dogs CharacterOffsetBegin=31 CharacterOffsetEnd=35 PartOfSpeech=NNS Lemma=dog NamedEntityTag=O]
+[Text=since CharacterOffsetBegin=36 CharacterOffsetEnd=41 PartOfSpeech=IN Lemma=since NamedEntityTag=O]
+[Text=they CharacterOffsetBegin=42 CharacterOffsetEnd=46 PartOfSpeech=PRP Lemma=they NamedEntityTag=O]
+[Text=always CharacterOffsetBegin=47 CharacterOffsetEnd=53 PartOfSpeech=RB Lemma=always NamedEntityTag=O]
+[Text=try CharacterOffsetBegin=54 CharacterOffsetEnd=57 PartOfSpeech=VBP Lemma=try NamedEntityTag=O]
+[Text=and CharacterOffsetBegin=58 CharacterOffsetEnd=61 PartOfSpeech=CC Lemma=and NamedEntityTag=O]
+[Text=insert CharacterOffsetBegin=62 CharacterOffsetEnd=68 PartOfSpeech=VBP Lemma=insert NamedEntityTag=O]
+[Text=their CharacterOffsetBegin=69 CharacterOffsetEnd=74 PartOfSpeech=PRP$ Lemma=they NamedEntityTag=O]
+[Text=dominance CharacterOffsetBegin=75 CharacterOffsetEnd=84 PartOfSpeech=NN Lemma=dominance NamedEntityTag=O]
+[Text=over CharacterOffsetBegin=85 CharacterOffsetEnd=89 PartOfSpeech=IN Lemma=over NamedEntityTag=O]
+[Text=others CharacterOffsetBegin=90 CharacterOffsetEnd=96 PartOfSpeech=NNS Lemma=other NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (NNS Cats))
+    (VP (VBP are)
+      (ADJP
+        (ADJP (RBR more) (JJ territorial)
+          (PP (IN than)
+            (NP (NNS dogs))))
+        (SBAR (IN since)
+          (S
+            (NP (PRP they))
+            (ADVP (RB always))
+            (VP (VBP try)
+              (CC and)
+              (VBP insert)
+              (NP (PRP$ their) (NN dominance))
+              (PP (IN over)
+                (NP (NNS others))))))))))
+
+root(ROOT-0, territorial-4)
+nsubj(territorial-4, Cats-1)
+cop(territorial-4, are-2)
+advmod(territorial-4, more-3)
+case(dogs-6, than-5)
+nmod:than(territorial-4, dogs-6)
+mark(try-10, since-7)
+nsubj(try-10, they-8)
+nsubj(insert-12, they-8)
+advmod(try-10, always-9)
+ccomp(territorial-4, try-10)
+cc(try-10, and-11)
+ccomp(territorial-4, insert-12)
+conj:and(try-10, insert-12)
+nmod:poss(dominance-14, their-13)
+dobj(try-10, dominance-14)
+case(others-16, over-15)
+nmod:over(try-10, others-16)
+
+Coreference set:
+	(1,8,[8,9]) -> (1,1,[1,2]), that is: "they" -> "Cats"
+	(1,13,[13,14]) -> (1,1,[1,2]), that is: "their" -> "Cats"

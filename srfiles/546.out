@@ -1,0 +1,55 @@
+Sentence #1 (15 tokens):
+Schrodinger's cat walks into an empty building, but where is it now?
+[Text=Schrodinger CharacterOffsetBegin=0 CharacterOffsetEnd=11 PartOfSpeech=NNP Lemma=Schrodinger NamedEntityTag=PERSON]
+[Text='s CharacterOffsetBegin=11 CharacterOffsetEnd=13 PartOfSpeech=POS Lemma='s NamedEntityTag=O]
+[Text=cat CharacterOffsetBegin=14 CharacterOffsetEnd=17 PartOfSpeech=NN Lemma=cat NamedEntityTag=O]
+[Text=walks CharacterOffsetBegin=18 CharacterOffsetEnd=23 PartOfSpeech=VBZ Lemma=walk NamedEntityTag=O]
+[Text=into CharacterOffsetBegin=24 CharacterOffsetEnd=28 PartOfSpeech=IN Lemma=into NamedEntityTag=O]
+[Text=an CharacterOffsetBegin=29 CharacterOffsetEnd=31 PartOfSpeech=DT Lemma=a NamedEntityTag=O]
+[Text=empty CharacterOffsetBegin=32 CharacterOffsetEnd=37 PartOfSpeech=JJ Lemma=empty NamedEntityTag=O]
+[Text=building CharacterOffsetBegin=38 CharacterOffsetEnd=46 PartOfSpeech=NN Lemma=building NamedEntityTag=O]
+[Text=, CharacterOffsetBegin=46 CharacterOffsetEnd=47 PartOfSpeech=, Lemma=, NamedEntityTag=O]
+[Text=but CharacterOffsetBegin=48 CharacterOffsetEnd=51 PartOfSpeech=CC Lemma=but NamedEntityTag=O]
+[Text=where CharacterOffsetBegin=52 CharacterOffsetEnd=57 PartOfSpeech=WRB Lemma=where NamedEntityTag=O]
+[Text=is CharacterOffsetBegin=58 CharacterOffsetEnd=60 PartOfSpeech=VBZ Lemma=be NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=61 CharacterOffsetEnd=63 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=now CharacterOffsetBegin=64 CharacterOffsetEnd=67 PartOfSpeech=RB Lemma=now NamedEntityTag=DATE NormalizedNamedEntityTag=PRESENT_REF Timex=<TIMEX3 tid="t1" type="DATE" value="PRESENT_REF">now</TIMEX3>]
+[Text=? CharacterOffsetBegin=67 CharacterOffsetEnd=68 PartOfSpeech=. Lemma=? NamedEntityTag=O]
+(ROOT
+  (S
+    (NP
+      (NP (NNP Schrodinger) (POS 's))
+      (NN cat))
+    (VP (VBZ walks)
+      (UCP
+        (PP (IN into)
+          (NP (DT an) (JJ empty) (NN building)))
+        (, ,)
+        (CC but)
+        (SBAR
+          (WHADVP (WRB where))
+          (S
+            (VP (VBZ is)
+              (NP (PRP it))
+              (ADVP (RB now)))))))
+    (. ?)))
+
+root(ROOT-0, walks-4)
+nmod:poss(cat-3, Schrodinger-1)
+case(Schrodinger-1, 's-2)
+nsubj(walks-4, cat-3)
+case(building-8, into-5)
+det(building-8, an-6)
+amod(building-8, empty-7)
+dep(walks-4, building-8)
+punct(building-8, ,-9)
+cc(building-8, but-10)
+advmod(it-13, where-11)
+cop(it-13, is-12)
+dep(walks-4, it-13)
+conj:but(building-8, it-13)
+advmod(it-13, now-14)
+punct(walks-4, ?-15)
+
+Coreference set:
+	(1,13,[13,14]) -> (1,8,[6,9]), that is: "it" -> "an empty building"

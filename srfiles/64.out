@@ -1,0 +1,43 @@
+Sentence #1 (12 tokens):
+The program could successfully parse the file because it was programmed well
+[Text=The CharacterOffsetBegin=0 CharacterOffsetEnd=3 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=program CharacterOffsetBegin=4 CharacterOffsetEnd=11 PartOfSpeech=NN Lemma=program NamedEntityTag=O]
+[Text=could CharacterOffsetBegin=12 CharacterOffsetEnd=17 PartOfSpeech=MD Lemma=could NamedEntityTag=O]
+[Text=successfully CharacterOffsetBegin=18 CharacterOffsetEnd=30 PartOfSpeech=RB Lemma=successfully NamedEntityTag=O]
+[Text=parse CharacterOffsetBegin=31 CharacterOffsetEnd=36 PartOfSpeech=VB Lemma=parse NamedEntityTag=O]
+[Text=the CharacterOffsetBegin=37 CharacterOffsetEnd=40 PartOfSpeech=DT Lemma=the NamedEntityTag=O]
+[Text=file CharacterOffsetBegin=41 CharacterOffsetEnd=45 PartOfSpeech=NN Lemma=file NamedEntityTag=O]
+[Text=because CharacterOffsetBegin=46 CharacterOffsetEnd=53 PartOfSpeech=IN Lemma=because NamedEntityTag=O]
+[Text=it CharacterOffsetBegin=54 CharacterOffsetEnd=56 PartOfSpeech=PRP Lemma=it NamedEntityTag=O]
+[Text=was CharacterOffsetBegin=57 CharacterOffsetEnd=60 PartOfSpeech=VBD Lemma=be NamedEntityTag=O]
+[Text=programmed CharacterOffsetBegin=61 CharacterOffsetEnd=71 PartOfSpeech=VBN Lemma=program NamedEntityTag=O]
+[Text=well CharacterOffsetBegin=72 CharacterOffsetEnd=76 PartOfSpeech=RB Lemma=well NamedEntityTag=O]
+(ROOT
+  (S
+    (NP (DT The) (NN program))
+    (VP (MD could)
+      (ADVP (RB successfully))
+      (VP (VB parse)
+        (NP (DT the) (NN file))
+        (SBAR (IN because)
+          (S
+            (NP (PRP it))
+            (VP (VBD was)
+              (VP (VBN programmed)
+                (ADVP (RB well))))))))))
+
+root(ROOT-0, parse-5)
+det(program-2, The-1)
+nsubj(parse-5, program-2)
+aux(parse-5, could-3)
+advmod(parse-5, successfully-4)
+det(file-7, the-6)
+dobj(parse-5, file-7)
+mark(programmed-11, because-8)
+nsubjpass(programmed-11, it-9)
+auxpass(programmed-11, was-10)
+advcl:because(parse-5, programmed-11)
+advmod(programmed-11, well-12)
+
+Coreference set:
+	(1,9,[9,10]) -> (1,2,[1,3]), that is: "it" -> "The program"
