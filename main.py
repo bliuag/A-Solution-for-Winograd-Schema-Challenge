@@ -10,8 +10,6 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree
-import random
-import time
 
 
 def google_search(q):
@@ -35,17 +33,17 @@ def google_search(q):
 
 def pick_by_google(p1, p2, pron, c0, c1, i):
 
-    for token in p1["sentences"][0]["tokens"]:
-        if token["word"] in c0 and token["ner"] == "PERSON":
-            return pick_by_nc(p1, p2, pron, c0, c1, i)
-        elif token["word"] in c1 and token["ner"] == "PERSON":
-            return pick_by_nc(p1, p2, pron, c0, c1, i)
+    # for token in p1["sentences"][0]["tokens"]:
+    #     if token["word"] in c0 and token["ner"] == "PERSON":
+    #         return pick_by_nc(p1, p2, pron, c0, c1, i)
+    #     elif token["word"] in c1 and token["ner"] == "PERSON":
+    #         return pick_by_nc(p1, p2, pron, c0, c1, i)
 
     q0 = sent2[i].replace(pron, c0)
     num0 = google_search(q0)
     q1 = sent2[i].replace(pron, c1)
     num1 = google_search(q1)
-    print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
+    # print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
     if num0 > num1 * 1.2:  # *5 and num1!=0 :
         return c0
     elif num1 > num0 * 1.2:  # *5 and num1!=0:
@@ -68,13 +66,13 @@ def pick_by_google(p1, p2, pron, c0, c1, i):
 
         num0 = google_search(q0)
         num1 = google_search(q1)
-        print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
+        # print(" %s: %d; %s: %d" % (q0, num0, q1, num1))
         if num0 > num1:  # *5 and num1!=0 :
             return c0
         elif num1 > num0:  # *5 and num1!=0:
             return c1
         else:
-            return pick_by_nc(p1, p2, pron, c0, c1, i)
+            return "No Decision"
 
 
 def check_nc(v1, v2, role_of_pron):
@@ -164,20 +162,22 @@ def pick_by_nc(p1, p2, pron, c0, c1, i):
                 temp = -temp
             s_o += temp
     # print("verb1: %s, verb2: %s, role: %s" % (r1, r2, role))
+    # if total != 0:
+    #     print("#%d: %s" %( i, sentences[i]))
     if total == 0:
-        return "No Decision"
+        return pick_by_google(p1, p2, pron, c0, c1, i)
     # print(1.0 * s_o / total)
     if 1.0 * s_o / total > 0.3:
         return c0
     elif 1.0 * s_o / total < -0.3:
         return c1
     else:
-        return "No Decision"
+        return pick_by_google(p1, p2, pron, c0, c1, i)
 
 
 def pick_ans(p1, p2, pron, c0, c1, i):
-    return pick_by_google(p1, p2, pron,c0,c1,i)
-    # return pick_by_nc(p1, p2, pron, c0, c1, i)
+    # return pick_by_google(p1, p2, pron,c0,c1,i)
+    return pick_by_nc(p1, p2, pron, c0, c1, i)
 
 
 sentences = []
@@ -193,7 +193,7 @@ flags = []
 conjList = [' because ', ',because ', ',since ', ' since ', ' or ', ',or ',' but ', ',but ', ' after ', ',after ', ' so ', ',so ',  ' even if ', ',even if ', ' though ', ',though ',  ' and ', ',and ', ' that ', ',that ']
 
 # input the data by txt
-data = open('test.c.txt', 'r')
+data = open('input.txt', 'r')
 counter = 0
 size = 0
 for line in data:
@@ -314,8 +314,8 @@ for i in range(size):
     last = -1
     for conj in conjList:
         while sent.find(conj, last+1) != -1:
-            print (last)
-            print (conj)
+            # print (last)
+            # print (conj)
             if sent.find(conj, last+1) > sent.find(choice0[i]) and sent.find(conj, last+1) > sent.find(choice1[i]):
                 con = conj
                 break
@@ -327,12 +327,12 @@ for i in range(size):
         sent2[i] = subs[1]
     else:
         flags[i] = "No Decision"
-    print(sentences[i])
-    print(sent1[i])
-    print(sent2[i])
-    print(choice0[i])
-    print(choice1[i])
-    print(answer[i])
+    # print(sentences[i])
+    # print(sent1[i])
+    # print(sent2[i])
+    # print(choice0[i])
+    # print(choice1[i])
+    # print(answer[i])
 
 
 # write 2 part of sentences to batches of files with a fileList
@@ -416,8 +416,8 @@ for i in range(size):
 correct = 0
 wrong = 0
 noDecision = 0
-print(flags)
-print(answer)
+# print(flags)
+# print(answer)
 for i in range(size):
     if flags[i] == 'No Decision':
         noDecision += 1
